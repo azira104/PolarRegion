@@ -27,6 +27,8 @@
 
     <link href="{% static 'css/templatemo-topic-listing.css' %}" rel="stylesheet">
 
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
     <!--
 
 TemplateMo 590 topic listing
@@ -208,15 +210,23 @@ https://templatemo.com/tm-590-topic-listing
                 <div class="row">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="dna-tab" data-bs-toggle="tab"
-                                data-bs-target="#dna-tab-pane" type="button" role="tab" aria-controls="dna-tab-pane"
+                            <li class="myDIV" button for="DNA-RNA">DNA/RNA</label>
+                                        <select class="hide" id="DNA-RNA">
+                                            <option value="genome">Genome</option>
+                                            <option value="microbiota">Microbiota</option>
+                                            <option value="soil">Soil Sample</option>
+                                        </select>
+                            </li>
+                            <!-- <button class="nav-link active" id="dna-tab" type="button" role="tab"
                                 aria-selected="true">DNA/RNA</button>
-                        </li>
+                        </li> -->
+
                         <li class="nav-item" role="presentation">
                             <button class="nav-link " id="animal-tab" data-bs-toggle="tab"
                                 data-bs-target="#animal-tab-pane" type="button" role="tab"
                                 aria-controls="animal-tab-pane" aria-selected="true">Animal</button>
                         </li>
+
                         <li class="nav-item" role="presentation">
                             <button class="nav-link " id="design-tab" data-bs-toggle="tab"
                                 data-bs-target="#plant-tab-pane" type="button" role="tab" aria-controls="plant-tab-pane"
@@ -224,9 +234,9 @@ https://templatemo.com/tm-590-topic-listing
                         </li>
 
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="ecosystem-tab-pane" data-bs-toggle="tab"
+                            <button class="nav-link " id="ecosystem-tab-pane" data-bs-toggle="tab"
                                 data-bs-target="#ecosystem-tab-pane" type="button" role="tab"
-                                aria-controls="ecosystem-tab-pane" aria-selected="false">Ecosystem</button>
+                                aria-controls="ecosystem-tab-pane" aria-selected="true">Ecosystem</button>
                         </li>
 
                         <li class="nav-item" role="presentation">
@@ -269,7 +279,7 @@ https://templatemo.com/tm-590-topic-listing
                                             <a href="topics-detail.html">
                                                 <div class="d-flex">
                                                     <div>
-                                                        <h5 class="mb-2">Web Design</h5>
+                                                        <h5 class="mb-2">Genome</h5>
 
                                                         <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
                                                     </div>
@@ -288,7 +298,7 @@ https://templatemo.com/tm-590-topic-listing
                                             <a href="topics-detail.html">
                                                 <div class="d-flex">
                                                     <div>
-                                                        <h5 class="mb-2">Graphic</h5>
+                                                        <h5 class="mb-2">Microbiota</h5>
 
                                                         <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
                                                     </div>
@@ -307,7 +317,7 @@ https://templatemo.com/tm-590-topic-listing
                                             <a href="topics-detail.html">
                                                 <div class="d-flex">
                                                     <div>
-                                                        <h5 class="mb-2">Logo Design</h5>
+                                                        <h5 class="mb-2">Fungus</h5>
 
                                                         <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
                                                     </div>
