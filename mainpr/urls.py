@@ -8,7 +8,6 @@ app_name = 'mainpr'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('contact/', views.contact, name='contact'),
-    path('topics-detail/', views.tDetail, name='topics-detail'),
-    path('topics-listing/', views.tListing, name='topics-listing'),
+    path('inner-page/', views.inner_page, name='inner-page'),
+    path('portfolio-details/', views.portfolio_details, name='portfolio-details'),
 ]
