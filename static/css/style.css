@@ -1554,4 +1554,14 @@ body {
     color: #fff;
   }
 
-  /* TRY AND ERROR */
+  /* TRY AND ERROR */ 
+
+.box1 {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+form {
+  width: 50%;
+}
