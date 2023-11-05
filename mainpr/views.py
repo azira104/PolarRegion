@@ -11,11 +11,8 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'index.html')
 
-def contact(request):
-    return render(request, 'contact.html')
+def inner_page(request):
+    return render(request, 'inner-page.html')
 
-def tDetail(request):
-    return render(request, 'topics-detail.html')
-
-def tListing(request):
-    return render(request, 'topics-listing.html')
+def portfolio_details(request):
+    return render(request, 'portfolio-details.html')
