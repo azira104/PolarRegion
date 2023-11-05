@@ -16,8 +16,8 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'images/favicon.png' %}" rel="icon">
+  <link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -86,10 +86,10 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -249,8 +249,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="image col-lg-6" style='background-image: url("static/images/features.jpg");'
-            data-aos="fade-right"></div>
+          <div class="image col-lg-6" style="background-image: url('../static/images/features.jpg')" data-aos="fade-right"></div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
             <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
               <i class="bx bx-receipt"></i>
@@ -273,7 +272,7 @@
               <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
             </div>
           </div>
-        </div>
+        </div>        
 
       </div>
     </section><!-- End Features Section -->
@@ -358,33 +357,82 @@
       </div>
     </section><!-- End Cta Section -->
 
+    <section>
+      <div class="container">
+        <div class="box">
+          <form action="http://www.example.com/profile.php">
+            <p>What device do you listen to music on?</p>
+            <select name="devices">
+             <option value="ipod">iPod</option>
+             <option value="radio">Radio</option>
+             <option value="computer">Computer</option>
+            </select>
+          </form>
+        </div>
+
+        <div>
+          <form action="http://www.example.com/profile.php">
+            <p>What device do you listen to music on?</p>
+            <select name="devices">
+             <option value="ipod">iPod</option>
+             <option value="radio">Radio</option>
+             <option value="computer">Computer</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li id="menu-products">
+            <a href="#">Products</a>
+            <ul id="dropdown-products">
+              <li><a href="#">Product 1</a></li>
+              <li><a href="#">Product 2</a></li>
+              <li><a href="#">Product 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>      
+    </section>
+
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Dataset</h2>
-          <p>Check our Dataset</p>
-        </div>
+          <h2>DATA BROWSER</h2>
+          <p>Check our DATASET</p>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter= ".filter-card">DNA/RNA</li>
+              <li data-filter= ".filter-web">ANIMAL</li>
+              <li data-filter= ".filter-app">PLANT</li>
+              <li data-filter= ".filter-card">ECOSYSTEM</li>
+              <li data-filter= ".filter-web">POPULATION</li>
+              <li data-filter= ".filter-app">DISEASE</li>
+              <li data-filter= ".filter-card">ARCTIC</li>
+              <li data-filter= ".filter-web">ANTARTICA</li>
+              <li data-filter= ".filter-app">ARCTIC & ANTARTICA</li>
+              <!-- <li data-filter=".filter-app">POPULATION</li>
+              <li data-filter=".filter-card">DISEASE</li>
+              <li data-filter=".filter-web">Web</li> -->
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
+                <h4>Organism</h4>
                 <p>App</p>
                 <div class="portfolio-links">
                   <a href="{% static 'images/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery"
@@ -513,7 +561,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
 
         </div>
 
@@ -677,8 +725,7 @@
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <!-- {% static 'images/about.jpg'%} -->
+              <div class="member-img"> 
                 <img src="{% static 'images/team/team-1.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
