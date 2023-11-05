@@ -7,5 +7,5 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 app_name = 'pr_aa'
 
 urlpatterns = [
-    
+    path('seaice', views.seaice, name='seaice'),
 ]
