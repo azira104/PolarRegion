@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainpr.apps.MainprConfig',
     'pr_aa.apps.PrAaConfig',
+    'pr_animal.apps.PrAnimalConfig',
 ]
 
 MIDDLEWARE = [
