@@ -1578,7 +1578,202 @@ section {
   color: #fff;
 }
 /* searchbar */
-/* option */
+@import
+url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+.search {
+  margin: 20px;
+}
+
+.search > h3 {
+  font-weight: normal;
+}
+
+.search > h1,
+.search > h3 {
+  color: white;
+  margin-bottom: 15px;
+  text-shadow: 0 1px #0091c2;
+  font-size: small;
+}
+
+.search > div {
+  display: inline-block;
+  position: relative;
+  filter: drop-shadow(0 1px #0091c2);
+}
+
+.search > div:after {
+  content: "";
+  background: white;
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top: 40px;
+  right: 2px;
+  transform: rotate(135deg);
+}
+
+.search > div > input {
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px white;
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+  color: #efefef;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+  opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+  width: 250px;
+}
+
+
+/* option button*/
+
 /* read more box */
+/* @import url(https://fonts.googleapis.com/css?family=Montserrat);
+* {
+  border: none;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+  
+}
+
+.badunts {
+  padding: 10px;
+}
+
+.button-wrapper {
+  cursor: pointer;
+  display: block;
+  margin: 40px auto;
+  max-width: 255px;
+  position: relative;
+  transition: all 0.6s ease 0.15s;
+  width: 100%;
+  background-color: #ddd;
+  
+}
+.button-wrapper::before, .button-wrapper::after {
+  background: #398dee;
+  bottom: 2px;
+  content: "";
+  height: 4px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  transition: all 0.6s;
+  width: 25px;
+}
+.button-wrapper::before {
+  right: -12px;
+}
+.button-wrapper::after {
+  left: -12px;
+}
+.button-wrapper:hover {
+  background: #398dee;
+  transition: all 0.6s;
+}
+.button-wrapper:hover::before {
+  background: #fafafa;
+  right: -2px;
+  transform: scaleY(5);
+  width: 200px;
+}
+.button-wrapper:hover::after {
+  background: #fafafa;
+  left: -2px;
+  transform: scaleY(5);
+  width: 200px;
+}
+
+.submit {
+  background: none;
+  border: 2px solid #398dee;
+  color: #2f3b44;
+  cursor: pointer;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  position:relative;
+  padding: 10px; 
+  width: 180px; 
+  height: 40px; 
+  z-index: 3;
+ 
+  font-size: 12px; 
+  line-height: 0px; 
+  transition: all 0.6s ease 0.15s;
+}
+
+.submit + .submit {
+  margin-top: 10px; 
+}
+.submit:hover {
+  border: 2px solid transparent;
+  color: #398dee;
+  transition: all 0.6s;
+} */
+.underline-btn {
+  display: inline-block;
+  padding: 1em 0;
+  border-radius: 0;
+  color: #b2876f;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+.underline-btn:before, .underline-btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 0;
+}
+.underline-btn:before {
+  transition: width 0s ease, background 0.4s ease;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+}
+.underline-btn:after {
+  right: 2.2%;
+  bottom: 6px;
+  background: #b2876f;
+  transition: width 0.4s ease;
+}
+.underline-btn:hover:before {
+  width: 97.8%;
+  background: #b2876f;
+  transition: width 0.4s ease;
+}
+.underline-btn:hover:after {
+  width: 97.8%;
+  background: 0 0;
+  transition: all 0s ease;
+}
+
 
 
