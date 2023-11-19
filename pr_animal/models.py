@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+
 class coral(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
@@ -16,26 +17,7 @@ class coral(models.Model):
 
     def __str__(self):
         return self.name
-
-class gentooPenguin(models.Model):
-    id = models.AutoField(primary_key=True)
-    species = models.CharField(max_length=100)
-    season = models.IntegerField()
-    date_pair_count = models.DateField()
-    total_number_pairs_with_eggs = models.IntegerField()
-    total_number_of_pairs_without_eggs = models.IntegerField()
-    total_number_of_pairs = models.IntegerField()
-    date_chick_count = models.DateField()
-    total_number_of_chicks = models.IntegerField()
-    total_number_of_eggs = models.IntegerField()
-    total_number_of_nests_without_eggs = models.IntegerField()
-    date_fledgling_count = models.DateField()
-    total_number_of_fledglings = models.IntegerField()
-    comments = models.TextField()
-
-    def __str__(self):
-        return f"{self.species} - Season: {self.season}"
-
+    
 class adeliePenguin(models.Model):
     id = models.AutoField(primary_key=True)
     species = models.CharField(max_length=100)
@@ -53,6 +35,25 @@ class adeliePenguin(models.Model):
     total_number_of_fledglings = models.IntegerField()
     comments = models.TextField()
     
+    def __str__(self):
+        return f"{self.species} - Season: {self.season}"
+    
+class gentooPenguin(models.Model):
+    id = models.AutoField(primary_key=True)
+    species = models.CharField(max_length=100)
+    season = models.IntegerField()
+    date_pair_count = models.DateField()
+    total_number_pairs_with_eggs = models.IntegerField()
+    total_number_of_pairs_without_eggs = models.IntegerField()
+    total_number_of_pairs = models.IntegerField()
+    date_chick_count = models.DateField()
+    total_number_of_chicks = models.IntegerField()
+    total_number_of_eggs = models.IntegerField()
+    total_number_of_nests_without_eggs = models.IntegerField()
+    date_fledgling_count = models.DateField()
+    total_number_of_fledglings = models.IntegerField()
+    comments = models.TextField()
+
     def __str__(self):
         return f"{self.species} - Season: {self.season}"
     
@@ -87,7 +88,7 @@ class giantPetrelBird(models.Model):
     
     def __str__(self):
         return self.season
-
+    
 class krillbase(models.Model):
     id = models.AutoField(primary_key=True)
     station = models.CharField(max_length=255)
@@ -139,24 +140,39 @@ class bearBlood(models.Model):
     Neutrophil = models.FloatField()
     Cortisol = models.FloatField()
     Glutamic_acid = models.FloatField()
-
+    
+    def __str__(self):
+        return self.BearID
+    
 class bearAbdominalTemp(models.Model):
     BearID = models.IntegerField(primary_key=True)
     datetimeUTC = models.DateTimeField()
     bodyTemp_abdominal = models.FloatField()
+    
+    def __str__(self):
+        return self.BearID
     
 class bearActivity(models.Model):
     BearID = models.IntegerField(primary_key=True)
     datetimeUTC = models.DateTimeField()
     Activity_count = models.IntegerField()
     
+    def __str__(self):
+        return self.BearID
+    
 class bearPeripheralTemp(models.Model):
     BearID = models.IntegerField(primary_key=True)
     datetimeUTC = models.DateTimeField()
     bodyTemp_peripheral = models.FloatField()
+    
+    def __str__(self):
+        return self.BearID
     
 class bearCapSequence(models.Model):
     BearID = models.IntegerField(primary_key=True)
     datetimeUTC = models.DateTimeField()
     Event = models.CharField(max_length=100)
     Rectal_temp = models.FloatField()
+    
+    def __str__(self):
+        return self.BearID
