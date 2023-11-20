@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'mainpr.apps.MainprConfig',
     'pr_aa.apps.PrAaConfig',
     'pr_animal.apps.PrAnimalConfig',
+    'pr_plant.apps.PrPlantConfig',
 ]
 
 MIDDLEWARE = [
