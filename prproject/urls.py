@@ -25,4 +25,10 @@ urlpatterns = [
     path('', include ('mainpr.urls')),
     path('', include ('pr_aa.urls')),
     path('', include ('pr_animal.urls')),
+    path('', include ('pr_plant.urls')),
+    path('', include ('pr_dna_rna.urls')),
+    path('', include ('pr_ecosystem.urls')),
+    path('', include ('pr_population.urls')),
+    path('', include ('pr_disease.urls')),
+    path('', include ('pr_arctic.urls')),
 ]
