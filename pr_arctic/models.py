@@ -10,18 +10,16 @@ class iceExtent(models.Model):
     def __str__(self):
         return self.year
 
-class g(models.Model):
+class northernClimate(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100)
-    salinity = models.FloatField()
-    january_temp = models.FloatField()
-    june_temp = models.FloatField()
-    area = models.FloatField()
+    city = models.CharField(max_length=100)
+    country= models.CharField(max_length=100)
     latitude = models.FloatField()
     longitude = models.FloatField()
-    type_of_sea = models.FloatField()
-    silt_sulfide = models.FloatField()
-    coral_status = models.FloatField()
+    year = models.IntegerField()
+    hemisphere = models.CharField(max_length=50)
+    average_temperature = models.FloatField()
+    east_west = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.name
+        return self.city
