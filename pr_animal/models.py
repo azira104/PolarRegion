@@ -21,7 +21,7 @@ class coral(models.Model):
 class adeliePenguin(models.Model):
     id = models.AutoField(primary_key=True)
     species = models.CharField(max_length=100)
-    season = models.IntegerField()
+    season = models.CharField(max_length=20)
     colony = models.CharField(max_length=100)
     date_pair_count = models.DateField()
     total_number_pairs_with_eggs = models.IntegerField()
