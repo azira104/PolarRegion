@@ -41,7 +41,7 @@ class adeliePenguin(models.Model):
 class gentooPenguin(models.Model):
     id = models.AutoField(primary_key=True)
     species = models.CharField(max_length=100)
-    season = models.IntegerField()
+    season = models.CharField(max_length=20)
     date_pair_count = models.DateField()
     total_number_pairs_with_eggs = models.IntegerField()
     total_number_of_pairs_without_eggs = models.IntegerField()
@@ -61,7 +61,7 @@ class chinstrapPenguin(models.Model):
     id = models.AutoField(primary_key=True)
     species = models.CharField(max_length=100)
     colony = models.CharField(max_length=100)
-    season = models.IntegerField()
+    season = models.CharField(max_length=20)
     date_pair_count = models.DateField()
     total_number_pairs_with_eggs = models.IntegerField()
     total_number_of_pairs_without_eggs = models.IntegerField()
@@ -79,7 +79,7 @@ class chinstrapPenguin(models.Model):
     
 class giantPetrelBird(models.Model):
     id = models.AutoField(primary_key=True)
-    season = models.IntegerField()
+    season = models.CharField(max_length=20)
     date_of_nest_count = models.DateField()
     total_number_of_nests = models.IntegerField()
     date_chick_count = models.DateField()

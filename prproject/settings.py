@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'pr_aa.apps.PrAaConfig',
     'pr_animal.apps.PrAnimalConfig',
     'pr_plant.apps.PrPlantConfig',
+    'pr_dna_rna.apps.PrDnaRnaConfig',
+    'pr_ecosystem.apps.PrEcosystemConfig',
+    'pr_population.apps.PrPopulationConfig',
+    'pr_disease.apps.PrDiseaseConfig',
+    'pr_arctic.apps.PrArcticConfig',
 ]
 
 MIDDLEWARE = [
