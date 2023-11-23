@@ -122,7 +122,8 @@ class krillbase(models.Model):
         return self.station
 
 class bearBlood(models.Model):
-    BearID = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
+    BearID = models.IntegerField()
     datetimeUTC = models.DateTimeField()
     latitude = models.FloatField()
     longitude = models.FloatField()
@@ -145,7 +146,8 @@ class bearBlood(models.Model):
         return self.BearID
     
 class bearAbdominalTemp(models.Model):
-    BearID = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
+    BearID = models.IntegerField()
     datetimeUTC = models.DateTimeField()
     bodyTemp_abdominal = models.FloatField()
     
@@ -153,7 +155,8 @@ class bearAbdominalTemp(models.Model):
         return self.BearID
     
 class bearActivity(models.Model):
-    BearID = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
+    BearID = models.IntegerField()
     datetimeUTC = models.DateTimeField()
     Activity_count = models.IntegerField()
     
@@ -161,7 +164,8 @@ class bearActivity(models.Model):
         return self.BearID
     
 class bearPeripheralTemp(models.Model):
-    BearID = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
+    BearID = models.IntegerField()
     datetimeUTC = models.DateTimeField()
     bodyTemp_peripheral = models.FloatField()
     
@@ -169,7 +173,8 @@ class bearPeripheralTemp(models.Model):
         return self.BearID
     
 class bearCapSequence(models.Model):
-    BearID = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
+    BearID = models.IntegerField()
     datetimeUTC = models.DateTimeField()
     Event = models.CharField(max_length=100)
     Rectal_temp = models.FloatField()
