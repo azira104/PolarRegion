@@ -151,7 +151,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 100px;
 }
 
 /*--------------------------------------------------------------
@@ -1223,6 +1223,7 @@ section {
 /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
+
 .contact .info {
   width: 100%;
   background: #fff;
@@ -1355,6 +1356,24 @@ section {
     transform: rotate(360deg);
   }
 }
+.map-container {
+  position: relative;
+}
+
+.form-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+.small-form .form-control {
+  font-size: 14px;
+}
+
 
 /*--------------------------------------------------------------
   # Breadcrumbs
@@ -1578,22 +1597,45 @@ section {
   color: #fff;
 }
 /* searchbar */
-@import
-url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+* {
+  font-family: Roboto, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.flexbox {
+  background: linear-gradient(155deg, #55c7ed, #2bb3e0, #3bc1ed);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .search {
   margin: 20px;
 }
 
-.search > h3 {
+.search > h4 {
   font-weight: normal;
+  color: white;
 }
 
-.search > h1,
-.search > h3 {
+.search > h2,
+.search > h4 {
   color: white;
   margin-bottom: 15px;
   text-shadow: 0 1px #0091c2;
-  font-size: small;
+}
+.search >h2{
+  font-size: 20px;
 }
 
 .search > div {
@@ -1617,8 +1659,8 @@ url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
   color: white;
   font-size: 16px;
   background: transparent;
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   padding: 10px;
   border: solid 3px white;
   outline: none;
@@ -1774,6 +1816,60 @@ url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
   background: 0 0;
   transition: all 0s ease;
 }
+/* contact */
 
+#fh5co-main.h1, h2, h3,h4, h5, h6{
+  color: #000;
+font-family: "Montserrat", Arial, sans-serif;
+font-weight: 700;
+margin: 0 0 30px 0;
+}
+#fh5co-main {
 
+-webkit-transition: 0.5s;
+-o-transition: 0.5s;
+transition: 0.5s;
+}
+#fh5co-main .fh5co-narrow-content {
+position: relative;
+width: 80%;
+margin: 0 auto;
+padding: 45px 0px;
+}
+#fh5co-main.form-control{
+   -webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+box-shadow: none;
+background: transparent;
+border: 2px solid rgba(0, 0, 0, 0.1) !important;
+height: 54px !important;
+font-size: 18px;
+font-weight: 300;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+-ms-border-radius: 0px;
+border-radius: 0px !important;
+}
+#message {
+height: 130px !important;
+}
+#fh5co-main.btn.btn-md {
+padding: 10px 25px !important;
+}
+#fh5co-main.btn-primary {
+background: dac#dacd12 !important;
+color: #fff !important;
+border: 2px solid #dacd12 !important;
+border-radius: 0px !important;
+}
+/* antarctica body */
+#hero2 {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/bg2.jpg") top center;
+  background-size: cover;
+  background-size: cover;
+  position: relative;
+}
 

@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include ('mainpr.urls')),
     path('', include ('pr_aa.urls')),
+    path('', include ('pr_antartic.urls')),
 ]
