@@ -10,4 +10,4 @@ class sulfur(models.Model):
     wdc = models.FloatField()    
 
     def __str__(self):
-        return self.name
+        return self.year
