@@ -29,21 +29,4 @@ class Migration(migrations.Migration):
                 ('ek', models.FloatField()),
             ],
         ),
-        migrations.CreateModel(
-            name='microbialSymbionts',
-            fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False)),
-                ('plant', models.CharField(max_length=255)),
-                ('response', models.CharField(max_length=255)),
-                ('response_unit', models.CharField(max_length=10)),
-                ('mean', models.FloatField()),
-                ('n', models.IntegerField()),
-                ('dispersion_value', models.FloatField()),
-                ('dispersion_measure', models.CharField(max_length=10)),
-                ('cold_condition', models.CharField(max_length=50)),
-                ('temperature', models.IntegerField()),
-                ('infection_status', models.CharField(max_length=10)),
-                ('microorganism', models.CharField(max_length=255)),
-            ],
-        ),
     ]

@@ -81,9 +81,9 @@ class chinstrapPenguin(models.Model):
 class giantPetrelBird(models.Model):
     id = models.AutoField(primary_key=True)
     season = models.CharField(max_length=20)
-    date_of_nest_count = models.DateField()
+    date_of_nest_count = models.CharField(max_length=100)
     total_number_of_nests = models.IntegerField()
-    date_chick_count = models.DateField()
+    date_chick_count = models.CharField(max_length=100)
     total_number_of_chicks = models.IntegerField()
     comments = models.TextField()
     
@@ -123,6 +123,7 @@ class krillbase(models.Model):
         return self.station
 
 class bearBlood(models.Model):
+    id = models.AutoField(primary_key=True)
     BearID = models.IntegerField()
     datetimeUTC = models.DateTimeField()
     latitude = models.FloatField()
@@ -146,6 +147,7 @@ class bearBlood(models.Model):
         return self.BearID
     
 class bearAbdominalTemp(models.Model):
+    id = models.AutoField(primary_key=True)
     BearID = models.IntegerField()
     datetimeUTC = models.DateTimeField()
     bodyTemp_abdominal = models.FloatField()
@@ -153,23 +155,8 @@ class bearAbdominalTemp(models.Model):
     def __str__(self):
         return self.BearID
     
-class bearActivity(models.Model):
-    BearID = models.IntegerField()
-    datetimeUTC = models.DateTimeField()
-    Activity_count = models.IntegerField()
-    
-    def __str__(self):
-        return self.BearID
-    
-class bearPeripheralTemp(models.Model):
-    BearID = models.IntegerField()
-    datetimeUTC = models.DateTimeField()
-    bodyTemp_peripheral = models.FloatField()
-    
-    def __str__(self):
-        return self.BearID
-    
 class bearCapSequence(models.Model):
+    id = models.AutoField(primary_key=True)
     BearID = models.IntegerField()
     datetimeUTC = models.DateTimeField()
     Event = models.CharField(max_length=100)

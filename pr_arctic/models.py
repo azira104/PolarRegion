@@ -43,6 +43,8 @@ class alaskaStreamgages(models.Model):
     
 class simpsonLagoon(models.Model):
     id = models.AutoField(primary_key=True)
+    sample_ID = models.CharField(max_length=10)
+    type = models.CharField(max_length=100)
     volume = models.FloatField()
     mid_sampling = models.DateTimeField()
     season = models.CharField(max_length=100)
