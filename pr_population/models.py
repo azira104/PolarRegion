@@ -18,7 +18,6 @@ class penguinPopulation(models.Model):
     accuracy = models.IntegerField()
     count_type = models.CharField(max_length=10)
     vantage = models.CharField(max_length=10)
-    reference = models.TextField()
 
     def __str__(self):
         return self.common_name
@@ -38,6 +37,9 @@ class penguinSize(models.Model):
     
 class penguinIter(models.Model):
     id = models.AutoField(primary_key=True)
+    species = models.CharField(max_length=100)
+    region = models.CharField(max_length=100)
+    island = models.CharField(max_length=100)
     individual_ID = models.CharField(max_length=10)
     clutch_completion = models.CharField(max_length=10)
     date_egg = models.DateField()

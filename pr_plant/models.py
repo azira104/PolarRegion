@@ -15,7 +15,8 @@ class microbialSymbionts(models.Model):
     temperature = models.IntegerField()
     infection_status = models.CharField(max_length=10)
     microorganism = models.CharField(max_length=255)
-
+    comment = models.TextField()
+    
     def __str__(self):
         return self.plant
     

@@ -32,62 +32,6 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='bearAbdominalTemp',
-            fields=[
-                ('BearID', models.IntegerField(primary_key=True, serialize=False)),
-                ('datetimeUTC', models.DateTimeField()),
-                ('bodyTemp_abdominal', models.FloatField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='bearActivity',
-            fields=[
-                ('BearID', models.IntegerField(primary_key=True, serialize=False)),
-                ('datetimeUTC', models.DateTimeField()),
-                ('Activity_count', models.IntegerField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='bearBlood',
-            fields=[
-                ('BearID', models.IntegerField(primary_key=True, serialize=False)),
-                ('datetimeUTC', models.DateTimeField()),
-                ('latitude', models.FloatField()),
-                ('longitude', models.FloatField()),
-                ('ambient_temp', models.FloatField()),
-                ('duration', models.FloatField()),
-                ('sex', models.CharField(max_length=10)),
-                ('mass', models.FloatField()),
-                ('measuredTelazol_dose', models.FloatField()),
-                ('ALT', models.FloatField()),
-                ('Glucose', models.FloatField()),
-                ('Sodium', models.FloatField()),
-                ('Potassium', models.FloatField()),
-                ('WBC_count', models.FloatField()),
-                ('Lymphocyte', models.FloatField()),
-                ('Neutrophil', models.FloatField()),
-                ('Cortisol', models.FloatField()),
-                ('Glutamic_acid', models.FloatField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='bearCapSequence',
-            fields=[
-                ('BearID', models.IntegerField(primary_key=True, serialize=False)),
-                ('datetimeUTC', models.DateTimeField()),
-                ('Event', models.CharField(max_length=100)),
-                ('Rectal_temp', models.FloatField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='bearPeripheralTemp',
-            fields=[
-                ('BearID', models.IntegerField(primary_key=True, serialize=False)),
-                ('datetimeUTC', models.DateTimeField()),
-                ('bodyTemp_peripheral', models.FloatField()),
-            ],
-        ),
-        migrations.CreateModel(
             name='chinstrapPenguin',
             fields=[
                 ('id', models.AutoField(primary_key=True, serialize=False)),
