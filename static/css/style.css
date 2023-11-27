@@ -124,7 +124,7 @@ h6 {
   position: relative;
   z-index: 997;
   padding: 15px 0;
-  background-color: #151515;
+  background-color: #010102;
 }
 
 #header.header-scrolled,
@@ -151,7 +151,12 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 150px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  left: 50px;
+  position: absolute; 
 }
 
 /*--------------------------------------------------------------
@@ -405,30 +410,27 @@ h6 {
 /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
-#hero {
-  width: 100%;
-  height: 100vh;
-  background: url("../images/bg.jpeg") top center;
-  background-size: cover;
-  background-size: cover;
-  position: relative;
-}
+  #hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Hide any overflowing content within the container */
+  }
+  
+  #bgVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+ #hero .container {
+    position: relative; /* Ensure the container is positioned relative to the section */
+    z-index: 1; /* Set a higher z-index to ensure the content is above the video */
+  }
 
-#hero:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#hero .container {
-  position: relative;
-  padding-top: 74px;
-  text-align: center;
-}
 
 #hero h1 {
   margin: 0;
@@ -646,6 +648,7 @@ section {
   font-size: 20px;
   font-weight: 700;
   margin: 5px 0 10px 60px;
+  text-align: center;
 }
 
 .features .icon-box i {
@@ -835,14 +838,15 @@ section {
   position: absolute;
   top: 0;
   left: 0;
+  /* transform: translate(-50%,-50%); */
   right: 0;
   bottom: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
@@ -850,6 +854,8 @@ section {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
+  text-align: center;
+  
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
@@ -859,6 +865,7 @@ section {
   padding: 0;
   margin: 0;
   font-style: italic;
+  text-align: center;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -1180,10 +1187,10 @@ section {
 /*--------------------------------------------------------------
   # Team
   --------------------------------------------------------------*/
-.team {
-  background: #fff;
-  padding: 60px 0;
-}
+  
+ 
+   
+  
 
 .team .member {
   margin-bottom: 20px;
@@ -1266,6 +1273,7 @@ section {
 /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
+
 .contact .info {
   width: 100%;
   background: #fff;
@@ -1398,6 +1406,32 @@ section {
     transform: rotate(360deg);
   }
 }
+.map-container {
+  position: relative;
+}
+
+.form-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px; /* Adjust this value as needed */
+}
+.form-overlay textarea {
+  width: 100%; /* Make the textarea width 100% of its container */
+  max-width: 100%; /* Ensure the textarea does not exceed the width of its container */
+  height: 100px; /* Set the desired height for the textarea */
+  resize: vertical; /* Allow vertical resizing */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.small-form .form-control {
+  font-size: 14px;
+}
+
 
 /*--------------------------------------------------------------
   # Breadcrumbs
