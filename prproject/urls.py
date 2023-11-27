@@ -31,4 +31,5 @@ urlpatterns = [
     path('', include ('pr_population.urls')),
     path('', include ('pr_disease.urls')),
     path('', include ('pr_arctic.urls')),
+    path('', include ('pr_antartic.urls')),
 ]
