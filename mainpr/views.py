@@ -16,3 +16,5 @@ def inner_page(request):
 
 def portfolio_details(request):
     return render(request, 'portfolio-details.html')
+
+
