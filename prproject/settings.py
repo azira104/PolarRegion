@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'pr_population.apps.PrPopulationConfig',
     'pr_disease.apps.PrDiseaseConfig',
     'pr_arctic.apps.PrArcticConfig',
+    'pr_antartic.apps.PrAntarticConfig',
 ]
 
 MIDDLEWARE = [
