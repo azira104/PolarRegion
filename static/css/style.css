@@ -1371,7 +1371,14 @@ section {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 10px;
-  width: 100%;
+  max-width: 600px; /* Adjust this value as needed */
+}
+.form-overlay textarea {
+  width: 100%; /* Make the textarea width 100% of its container */
+  max-width: 100%; /* Ensure the textarea does not exceed the width of its container */
+  height: 100px; /* Set the desired height for the textarea */
+  resize: vertical; /* Allow vertical resizing */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 .small-form .form-control {
   font-size: 14px;
