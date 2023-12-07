@@ -8,4 +8,5 @@ app_name = 'pr_aa'
 
 urlpatterns = [
     path('seaice', views.seaice, name='seaice'),
+    path('sulfurDioxide', views.sulfurDioxide, name='sulfurDioxide')
 ]
