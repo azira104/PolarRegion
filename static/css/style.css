@@ -1884,18 +1884,7 @@ h6 {
   height: 100vh;
   background: url("../images/bg2.jpg") center no-repeat;
   background-size: cover;
-  position: relative;
+  /* position: relative; */
   z-index: 1;
 }
-#sulfur_table {
-  position: relative;
-  background-color: #eee;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  margin: auto;
-}
-
-
-
 
