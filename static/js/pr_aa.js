@@ -1,5 +1,8 @@
 $(document).ready(function () {
-
+  $("#showTableBtn").on("click", function () {
+    $("#dataDescription").hide(); // Hide data description
+    $("#hero2").fadeIn(); // Show the table
+  });
   $('#sulfur_table').DataTable( {
     deferRender: true,
     scrollCollapse: true,
