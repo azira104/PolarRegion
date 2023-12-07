@@ -156,7 +156,7 @@ h6 {
   bottom: 0px;
   margin: auto;
   left: 50px;
-  position: absolute; 
+  position: absolute;
 }
 
 /*--------------------------------------------------------------
@@ -230,7 +230,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #ffc451;
 }
 
@@ -267,11 +267,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   background-color: #ffc451;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -283,7 +283,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -295,7 +295,7 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -362,7 +362,7 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #151515;
   background-color: #ffc451;
 }
@@ -399,38 +399,37 @@ h6 {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
   background-color: #ffc451;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
 /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
-  #hero {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden; /* Hide any overflowing content within the container */
-  }
-  
-  #bgVideo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
- #hero .container {
-    position: relative; /* Ensure the container is positioned relative to the section */
-    z-index: 1; /* Set a higher z-index to ensure the content is above the video */
-  }
+#hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* Hide any overflowing content within the container */
+}
 
+#bgVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#hero .container {
+  position: relative; /* Ensure the container is positioned relative to the section */
+  z-index: 1; /* Set a higher z-index to ensure the content is above the video */
+}
 
 #hero h1 {
   margin: 0;
@@ -716,7 +715,8 @@ section {
   # Cta
   --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -838,7 +838,6 @@ section {
   color: #fff;
   font-weight: 600;
   text-align: center;
-  
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
@@ -896,7 +895,10 @@ section {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -904,7 +906,10 @@ section {
   border: 1px solid #ffc451;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #ffc451;
 }
 
@@ -927,7 +932,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1139,10 +1144,6 @@ section {
 /*--------------------------------------------------------------
   # Team
   --------------------------------------------------------------*/
-  
- 
-   
-  
 
 .team .member {
   margin-bottom: 20px;
@@ -1283,7 +1284,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1336,7 +1337,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #ffc451;
   border: 0;
   padding: 10px 24px;
@@ -1345,7 +1346,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #ffcd6b;
 }
 
@@ -1385,7 +1386,6 @@ section {
   font-size: 14px;
 }
 
-
 /*--------------------------------------------------------------
   # Breadcrumbs
   --------------------------------------------------------------*/
@@ -1409,11 +1409,11 @@ section {
   margin: 0;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #2f2f2f;
@@ -1570,13 +1570,13 @@ section {
   border-radius: 4px;
 }
 
-#footer .footer-top .footer-newsletter form input[type=email] {
+#footer .footer-top .footer-newsletter form input[type="email"] {
   border: 0;
   padding: 4px;
   width: calc(100% - 110px);
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit] {
+#footer .footer-top .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
   right: -2px;
@@ -1591,7 +1591,7 @@ section {
   border-radius: 0 4px 4px 0;
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit]:hover {
+#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
   background: #ffcd6b;
 }
 
@@ -1599,7 +1599,6 @@ section {
   text-align: center;
   padding-top: 30px;
 }
-
 
 #footer .credits {
   padding-top: 10px;
@@ -1616,7 +1615,8 @@ section {
   margin: 0;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -1645,7 +1645,7 @@ html, body {
   margin-bottom: 15px;
   text-shadow: 0 1px #0091c2;
 }
-.search >h2{
+.search > h2 {
   font-size: 20px;
 }
 
@@ -1693,7 +1693,6 @@ html, body {
 .search > div > input:not(:placeholder-shown) {
   width: 250px;
 }
-
 
 /* option button*/
 
@@ -1798,7 +1797,8 @@ html, body {
   text-decoration: none;
   position: relative;
 }
-.underline-btn:before, .underline-btn:after {
+.underline-btn:before,
+.underline-btn:after {
   content: "";
   display: block;
   position: absolute;
@@ -1829,57 +1829,73 @@ html, body {
 }
 /* contact */
 
-#fh5co-main.h1, h2, h3,h4, h5, h6{
+#fh5co-main.h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #000;
-font-family: "Montserrat", Arial, sans-serif;
-font-weight: 700;
-margin: 0 0 30px 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  margin: 0 0 30px 0;
 }
 #fh5co-main {
-
--webkit-transition: 0.5s;
--o-transition: 0.5s;
-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 #fh5co-main .fh5co-narrow-content {
-position: relative;
-width: 80%;
-margin: 0 auto;
-padding: 45px 0px;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 45px 0px;
 }
-#fh5co-main.form-control{
-   -webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-box-shadow: none;
-background: transparent;
-border: 2px solid rgba(0, 0, 0, 0.1) !important;
-height: 54px !important;
-font-size: 18px;
-font-weight: 300;
--webkit-border-radius: 0px;
--moz-border-radius: 0px;
--ms-border-radius: 0px;
-border-radius: 0px !important;
+#fh5co-main.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1) !important;
+  height: 54px !important;
+  font-size: 18px;
+  font-weight: 300;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px !important;
 }
 #message {
-height: 130px !important;
+  height: 130px !important;
 }
 #fh5co-main.btn.btn-md {
-padding: 10px 25px !important;
+  padding: 10px 25px !important;
 }
 #fh5co-main.btn-primary {
-background: dac#dacd12 !important;
-color: #fff !important;
-border: 2px solid #dacd12 !important;
-border-radius: 0px !important;
+  background: dac#dacd12 !important;
+  color: #fff !important;
+  border: 2px solid #dacd12 !important;
+  border-radius: 0px !important;
 }
 /* antarctica body */
 #hero2 {
   width: 100%;
   height: 100vh;
-  background: url("../images/bg2.jpg") top center;
-  background-size: cover;
+  background: url("../images/bg2.jpg") center no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 1;
 }
+#sulfur_table {
+  position: relative;
+  background-color: #eee;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+
+
+
