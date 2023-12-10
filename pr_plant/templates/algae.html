@@ -205,23 +205,41 @@
       <section id="hero2" class="d-flex align-items-center justify-content-center">
 
         <!-- data tables -->
-        <table id="sulfur_table" class="table table-bordered table-hover">
+        <table id="algae_table" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Year</th>
-              <th>Sulfur detected in ng/g from NEEM (North Greenland Eemian Ice Drilling)</th>
-              <th>Sulfur detected in ng/g from WDC (West Antarctic Ice Sheet (WAIS) Divide ice core)</th>
+              <th>Type</th>
+              <th>f</th>
+              <th>fm.</th>
+              <th>par</th>
+              <th>y</th>
+              <th>etr</th>
+              <th>rep</th>
+              <th>treat</th>
+              <th>npq</th>
+              <th>etrmax</th>
+              <th>alpha</th>
+              <th>ek</th>
             </tr>
           </thead>
           {% csrf_token %}
           <tbody>
-            {% for item in sulfur%}
+            {% for item in algae%}
             <tr>
               <td>{{ item.id }}</td>
-              <td>{{ item.year }}</td>
-              <td>{{ item.neem }}</td>
-              <td>{{ item.wdc }}</td>
+              <td>{{ item.type }}</td>
+              <td>{{ item.f }}</td>
+              <td>{{ item.fm }}</td>
+              <td>{{ item.par }}</td>
+              <td>{{ item.y }}</td>
+              <td>{{ item.etr }}</td>
+              <td>{{ item.rep }}</td>
+              <td>{{ item.treat }}</td>
+              <td>{{ item.npq }}</td>
+              <td>{{ item.etrmax }}</td>
+              <td>{{ item.alpha }}</td>
+              <td>{{ item.ek }}</td>
             </tr>
             {% endfor %}
           </tbody>
@@ -313,7 +331,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Template Main Js File -->
-  <script src="{% static 'js/pr_aa.js' %}"></script>
+  <script src="{% static 'js/pr_plant.js' %}"></script>
 </body>
 
 </html>

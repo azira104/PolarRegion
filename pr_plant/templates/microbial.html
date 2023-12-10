@@ -205,23 +205,41 @@
       <section id="hero2" class="d-flex align-items-center justify-content-center">
 
         <!-- data tables -->
-        <table id="sulfur_table" class="table table-bordered table-hover">
+        <table id="microbial_table" class="table table-bordered table-hover" style="width: min-content;, position: fixed;">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Year</th>
-              <th>Sulfur detected in ng/g from NEEM (North Greenland Eemian Ice Drilling)</th>
-              <th>Sulfur detected in ng/g from WDC (West Antarctic Ice Sheet (WAIS) Divide ice core)</th>
+              <th>Plant</th>
+              <th>Response</th>
+              <th>Response Unit</th>
+              <th>Mean</th>
+              <th>n</th>
+              <th>Dispersion value</th>
+              <th>Dispersion measure</th>
+              <th>Cold condition</th>
+              <th>Temperature</th>
+              <th>Infection status</th>
+              <th>Microorganism</th>
+              <th>Comment</th>
             </tr>
           </thead>
           {% csrf_token %}
           <tbody>
-            {% for item in sulfur%}
+            {% for item in microbial%}
             <tr>
               <td>{{ item.id }}</td>
-              <td>{{ item.year }}</td>
-              <td>{{ item.neem }}</td>
-              <td>{{ item.wdc }}</td>
+              <td>{{ item.plant }}</td>
+              <td>{{ item.response }}</td>
+              <td>{{ item.response_unit }}</td>
+              <td>{{ item.mean }}</td>
+              <td>{{ item.n }}</td>
+              <td>{{ item.dispersion_value }}</td>
+              <td>{{ item.dispersion_measure }}</td>
+              <td>{{ item.cold_condition }}</td>
+              <td>{{ item.temperature }}</td>
+              <td>{{ item.infection_status }}</td>
+              <td>{{ item.microorganism }}</td>
+              <td>{{ item.comment }}</td>
             </tr>
             {% endfor %}
           </tbody>
@@ -313,7 +331,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Template Main Js File -->
-  <script src="{% static 'js/pr_aa.js' %}"></script>
+  <script src="{% static 'js/pr_plant.js' %}"></script>
 </body>
 
 </html>
