@@ -72,7 +72,7 @@
 
   <script
     src="https://cdn.datatables.net/v/bs5/dt-1.13.8/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.11.0/r-2.5.0/sp-2.2.0/datatables.min.js">
-  </script>
+    </script>
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
@@ -199,13 +199,14 @@
   <!-- End Header -->
 
   <!-- hero -->
-  <div class="container1">
+  <!-- <div class="container1">
     <h2 class="text-center">Sulfur Data from NEEM and WDC Ice Cores</h2>
     <div class="content">
-      <section id="hero2" class="d-flex align-items-center justify-content-center">
+      <section id="hero2" class="d-flex align-items-center justify-content-center"> -->
 
-        <!-- data tables -->
-        <table id="microbial_table" class="table table-bordered table-hover" style="width: min-content;, position: fixed;">
+  <!-- data tables -->
+  <!-- <table id="microbial_table" class="table table-bordered table-hover"
+          style="width: min-content; position: fixed;">
           <thead>
             <tr>
               <th>ID</th>
@@ -246,7 +247,61 @@
         </table>
       </section>
     </div>
-  </div>
+  </div> -->
+
+ <section id="box">
+   <div class="card" >
+    <h2 class="text-center">Plant biology variables under cold stress from published experiments (1975-2019) that include microbial symbionts as an experimental factor</h2>
+   </div> 
+
+    <div class="card-header">
+    </div>
+
+      <div class="card-content">
+        <table id="microbial_table" class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Plant</th>
+              <th>Response</th>
+              <th>Response Unit</th>
+              <th>Mean</th>
+              <th>n</th>
+              <th>Dispersion value</th>
+              <th>Dispersion measure</th>
+              <th>Cold condition</th>
+              <th>Temperature</th>
+              <th>Infection status</th>
+              <th>Microorganism</th>
+              <th>Comment</th>
+            </tr>
+          </thead>
+          {% csrf_token %}
+          <tbody>
+            {% for item in microbial%}
+            <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.plant }}</td>
+              <td>{{ item.response }}</td>
+              <td>{{ item.response_unit }}</td>
+              <td>{{ item.mean }}</td>
+              <td>{{ item.n }}</td>
+              <td>{{ item.dispersion_value }}</td>
+              <td>{{ item.dispersion_measure }}</td>
+              <td>{{ item.cold_condition }}</td>
+              <td>{{ item.temperature }}</td>
+              <td>{{ item.infection_status }}</td>
+              <td>{{ item.microorganism }}</td>
+              <td>{{ item.comment }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    
+</section>
+
+
 
 
   <!-- Footer -->
