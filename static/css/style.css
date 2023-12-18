@@ -2013,7 +2013,7 @@ button.learn-more:hover .button-text {
 
 div.content{
   color: white;
-} */
+} 
 
 #box {
   background-image: url('../images/bg2.jpg');
@@ -2022,22 +2022,33 @@ div.content{
 
 #box .card {
   width: auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: hidden;
+  background-color: transparent;
+}
+
+div.card h2 {
+  text-align: center;
+  color: whitesmoke;
+  
 }
 
 /* Header styling */
 #box .card-header {
-  padding: 10px;
-  background-color: #dadcdd;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 30px;
+  background-color: whitesmoke;
+}
+
+#box .card-header p {
+  color: black;
 }
 
 /* Content styling */
 #box .card-content {
-  padding: 20px;
+  padding: 50px;
+  background-color: whitesmoke;
+  margin: 20px;
 }
 
 #microbial_table_info .dataTables_info {

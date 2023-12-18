@@ -91,44 +91,46 @@
   <header id="header" class="fixed-top bg-dark">
     <div class="container d-flex align-items-center justify-content-lg-between">
       <h1 class="logo me-auto me-lg-0">
-        <a href="index.html">
+        <a href="{% url 'mainpr:index'%}">
           <img src="{% static 'images/logo/polar.png' %}" alt="Home" class="img-fluid" />
         </a>
       </h1>
 
+      <!-- DATASETS -->
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li class="dropdown active">
-            <a href="#portfolio"><span>Datasets</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown">
+            <a href="#portfolio active"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown">
                 <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="{% url 'pr_antartic:antartic'%}">Mass</a></li>
-                  <li><a href="#">Sea Ice Extant</a></li>
-                  <li><a href="#">Temperature</a></li>
-                  <li><a href="#">Hotpoints(NASA)</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic'%}">Antarctica Mass</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extant</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
+                  <li><a href="#">Antarctic Hotpoints(NASA)</a></li>
                   <li><a href="#">Ice Radar</a></li>
+                  <li><a href="#">Snow Accumulation</a></li>
                 </ul>
+              </li>
               <li class="dropdown">
                 <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Sea Ice Graph</a></li>
+                  <li><a href="{% url 'pr_aa:aa1'%}">Sea Ice Graph</a></li>
                   <li><a href="{% url 'pr_aa:sulfurDioxide'%}">Sulphur Detection from Melting Ice Cores</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Comparison Northern City Climate</a></li>
-                  <li><a href="#">Global Warming Denmark</a></li>
-                  <li><a href="#">Sea Ice Extant</a></li>
-                  <li><a href="#">Sea Ice Masking Image</a></li>
-                  <li><a href="#">Streamgages in Alaska</a></li>
-                  <li><a href="#">Radium in Surface and Ground Water</a></li>
+                  <li><a href="#">Northern Cities Climate</a></li>
+                  <li><a href="#">Sea Ice Extent</a></li>
+                  <li><a href="#">Sea Ice Image Masking </a></li>
+                  <li><a href="#">VSGS Alaska Streamgages</a></li>
+                  <li><a href="#">Simpson Lagoon</a></li>
                   <li><a href="#">Arctic Sea Routes</a></li>
                 </ul>
               </li>
@@ -138,13 +140,21 @@
                   <li class="dropdown">
                     <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">Plankton</a></li>
+                      <li><a href="#">Plankton_Tara-Ocean</a></li>
                       <li><a href="#">Pytoplankton</a></li>
+                      <li><a href="#">Ice Krill</a></li>
+                      <li><a href="#">Bacteria</a></li>
+                      <li class="dropdown">
+                        <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                          <li><a href="#">14C and 13C Data</a></li>
+                          <li><a href="#">Nucleotide Reads</a></li>
+                          <li><a href="#">Edaphic Factors</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#">Genomes</a></li>
-                  <li><a href="#">Microbiota</a></li>
-                  <li><a href="#">Soil Sample</a></li>
+
                 </ul>
               </li>
               <li class="dropdown">
@@ -152,37 +162,70 @@
                 <ul>
                   <li><a href="#">Coral</a></li>
                   <li><a href="#">Polar Bear</a></li>
-                  <li><a href="#">Beluga Whale</a></li>
-                  <li><a href="#">Bird</a></li>
+                  <li class="dropdown">
+                    <a href="#"><span>Polar Bear</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Bear Blood</a></li>
+                      <li><a href="#">Bear Capture Sequence</a></li>
+                      <li><a href="#">Bear Abdominal Temperature</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Krill Base</a></li>
+                  <li><a href="#">Giant Petrel Bird</a></li>
                   <li><a href="#">Penguin</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Ecosystem</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Aquatic</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="#">Marine</a></li>
-                      <li><a href="#">Freshwater</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Terrestrial</a></li>
+                  <li><a href="{% url 'pr_ecosystem:freshwater'%}">Freshwater</a></li>
+                  <li><a href="{% url 'pr_ecosystem:marine'%}">Marine</a></li>
+                  <li><a href="{% url 'pr_ecosystem:terrestrial'%}">Terrestrial</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#"><span>Plant</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% url 'pr_plant:microbial'%}">Microbial Symbionts</a></li>
+                  <li><a href="{% url 'pr_plant:algae'%}">Glacier Algae</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Marine Fungi</a></li>
-                  <li><a href="#">Palmer Penguin</a></li>
+                  <li class="dropdown">
+                    <a href="{% url 'pr_population:penguinpopu'%}"><span>Penguin Population</span>
+                      <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Adelie</a></li>
+                      <li><a href="#">Chinstrap</a></li>
+                      <li><a href="#">Gentoo</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="{% url 'pr_population:palmer'%}"><span>Palmer Penguin</span> <i
+                        class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Iter</a></li>
+                      <li><a href="#">Size</a></li>
 
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'pr_population:mfungi'%}">Marine Fungi</a></li>
                 </ul>
               </li>
+
               <li class="dropdown">
                 <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Influenza A</a></li>
-                  <li><a href="#">Cryptosporidium Oocyst and Giardia Cysts</a></li>
+                  <li class="dropdown">
+                    <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">bELISA</a></li>
+                      <li><a href="#">HI</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Crypto & Giardia</a></li>
                 </ul>
               </li>
             </ul>
@@ -198,56 +241,68 @@
   </header>
   <!-- End Header -->
 
-  <!-- hero -->
-  <div class="container1">
-    <h2 class="text-center">Sulfur Data from NEEM and WDC Ice Cores</h2>
-    <div class="content">
-      <section id="hero2" class="d-flex align-items-center justify-content-center">
-
-        <!-- data tables -->
-        <table id="algae_table" class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Type</th>
-              <th>f</th>
-              <th>fm.</th>
-              <th>par</th>
-              <th>y</th>
-              <th>etr</th>
-              <th>rep</th>
-              <th>treat</th>
-              <th>npq</th>
-              <th>etrmax</th>
-              <th>alpha</th>
-              <th>ek</th>
-            </tr>
-          </thead>
-          {% csrf_token %}
-          <tbody>
-            {% for item in algae%}
-            <tr>
-              <td>{{ item.id }}</td>
-              <td>{{ item.type }}</td>
-              <td>{{ item.f }}</td>
-              <td>{{ item.fm }}</td>
-              <td>{{ item.par }}</td>
-              <td>{{ item.y }}</td>
-              <td>{{ item.etr }}</td>
-              <td>{{ item.rep }}</td>
-              <td>{{ item.treat }}</td>
-              <td>{{ item.npq }}</td>
-              <td>{{ item.etrmax }}</td>
-              <td>{{ item.alpha }}</td>
-              <td>{{ item.ek }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </section>
+  <!-- Content -->
+  <section id="box">
+    <div class="card">
+      <h2>Glacier algal abundance, photophysiology, pigmentation, bio-optical properties growth and
+        impacts to albedo in the Greenland Ice Sheet Dark Zone, July-August 2016</h2>
     </div>
-  </div>
 
+    <div class="card-header">
+      <p>The abundance, photophysiology, pigmentation, bio-optical properties, cellular energy balance and instantaneous
+        radiative forcing of glacier algal assemblages from the surface of the Greenland Ice Sheet (GrIS) are quantified
+        throughout the 2016 ablation season. The effects of assemblages on ice surface albedo are further derived using
+        a newly developed model of glacier algal blooms for the GrIS, radiative transfer modelling using BioSNICAR-GO,
+        and comparisons to MODIS broadband albedo observations over the same season. Data represent a composite of
+        in-situ observations, in-situ incubations studies, laboratory analyses, modelling and remote sensing. All in
+        -situ work was performed at site S6 of the K-Transect in the southwestern GrIS ablation zone as part of the
+        Black and Bloom project. Funding was provided by the NERC 'Black and Bloom' grant NE/M021025/1 and the Marie
+        Sklodowska-Curie grant agreement No 675546.</p>
+    </div>
+
+    <div class="card-content">
+      <table id="algae_table" class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>f</th>
+            <th>fm.</th>
+            <th>par</th>
+            <th>y</th>
+            <th>etr</th>
+            <th>rep</th>
+            <th>treat</th>
+            <th>npq</th>
+            <th>etrmax</th>
+            <th>alpha</th>
+            <th>ek</th>
+          </tr>
+        </thead>
+        {% csrf_token %}
+        <tbody>
+          {% for item in algae%}
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.type }}</td>
+            <td>{{ item.f }}</td>
+            <td>{{ item.fm }}</td>
+            <td>{{ item.par }}</td>
+            <td>{{ item.y }}</td>
+            <td>{{ item.etr }}</td>
+            <td>{{ item.rep }}</td>
+            <td>{{ item.treat }}</td>
+            <td>{{ item.npq }}</td>
+            <td>{{ item.etrmax }}</td>
+            <td>{{ item.alpha }}</td>
+            <td>{{ item.ek }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- End content -->
 
   <!-- Footer -->
   <footer id="footer">
