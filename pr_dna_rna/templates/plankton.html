@@ -99,9 +99,12 @@
                 <ul>
                     <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
+
                     <li class="dropdown">
-                        <a href="#portfolio active"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
+                        <a href="{% url 'mainpr:index' %}" onclick="scrollToPortfolio()">
+                            <span>Dataset</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
                         <ul>
                             <li class="dropdown">
                                 <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
@@ -138,10 +141,10 @@
                                     <li class="dropdown">
                                         <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
                                         <ul>
-                                            <li><a href="#">Plankton_Tara-Ocean</a></li>
-                                            <li><a href="#">Pytoplankton</a></li>
-                                            <li><a href="#">Ice Krill</a></li>
-                                            <li><a href="#">Bacteria</a></li>
+                                            <li><a href="{% url 'pr_dna_rna:plankton'%}">Plankton_Tara-Ocean</a></li>
+                                            <li><a href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a></li>
+                                            <li><a href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a></li>
+                                            <li><a href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a></li>
                                             <li class="dropdown">
                                                 <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
                                                 <ul>
@@ -246,39 +249,43 @@
         <div class="container" data-aos="fade-up">
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                 <div class="floating-card">
-                    <h2>Arctic Species Trend Index (ASTI) : Terrestrial</h2>
-                    <p>The Circumpolar Biodiversity Monitoring Program (CBMP) is a global effort involving scientists,
-                        governments, Indigenous groups, and conservation organizations. It focuses on keeping track of
-                        Arctic plants and animals to help with conservation. They use various measures, like counting
-                        species and studying habitats, to understand how the Arctic environment is changing.
+                    <h2>Tara-oceans samples barcoding and shotgun sequencing
 
-                        One important tool they use is the Arctic Species Trend Index (ASTI), which monitors the trends
-                        of over 300 Arctic animals. This helps us understand the overall health of the Arctic ecosystem.
-                        The goal is to develop strategies to protect the Arctic environment as it faces significant
-                        changes.
+                    </h2>
+                    <p>This project will use samples collected during the Tara-Oceans scientific expedition from 2009 to
+                        2012. By March 2012, the Tara schooner, equipped with advanced sampling systems covering a broad
+                        range of organism sizes from viruses to animals, gathered standardized genetic (total DNA/RNA),
+                        morphological, and physico-chemical (contextual) samples from 153 sites across the world's
+                        oceans. These locations were carefully chosen with input from real-time remote sensing and
+                        in-situ hydrographic criteria. In total, about 50,000 biological samples and 13,000 contextual
+                        measures from three depths will be analyzed.
 
-                        The CBMP covers the entire Arctic region and aims to provide information that can guide policies
-                        to protect this unique and changing environment.</p>
+                        The metagenomics aspect of the project involves analyzing size-fractionated plankton samples
+                        through barcoding and shotgun sequencing. Additionally, isolated single-cell amplified protists
+                        and single-organisms isolated metazoans will be sequenced as reference genomes.
+                    </p>
 
                     <div class="flex-container">
                         <div class="data">
                             <h3>The dataset collected from</h3>
-                            <img src="{% static 'images/logo/gbif.svg' %}" alt="GBIF Logo">
+                            <img src="{% static 'images/ENA.png' %}" alt="ENA Logo"
+                                style="max-height: 120px; max-width: 250px;">
                         </div>
                         <div class="data2">
                             <h3>Citation</h3>
-                            <p style="font-style: italic;">Barry T, Helgason H (2019). Arctic Species Trend Index (ASTI)
-                                : Freshwater. Version 1.3.
-                                Conservation of Arctic Flora and Fauna. Occurrence dataset
-                                <a href="https://doi.org/10.15468/dtfeld">https://doi.org/10.15468/dtfeld</a> accessed
-                                via GBIF.org on 2023-12-05.</p>
+                            <p style="font-style: italic;">Joli, N., Concia, L., Babin , M. and Bowler , C. (2023).
+                                Hypometabolism to survive the long polar night in the diatom Fragilariopsis cylindrus.
+                                [online] NCBI. Available at:
+                                <a
+                                    href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218215.">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218215.</a>
+                                [Accessed 10 Dec. 2023].</p>
                         </div>
-
                     </div>
 
 
 
-                    <button class="learn-more" onclick="openUrl('https://www.gbif.org/dataset/3e7837d0-4318-4dea-8800-f2b208b25148')">
+                    <button class="learn-more"
+                        onclick="openUrl('https://www.ebi.ac.uk/ena/browser/view/PRJEB402')">
                         <span class="circle" aria-hidden="true">
                             <span class="icon arrow"></span>
                         </span>
@@ -381,5 +388,17 @@
         }
     </script>
 </body>
+
+<!-- scroll -->
+<script>
+    function scrollToPortfolio() {
+        var element = document.getElementById('portfolio');
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
+</script>
 
 </html>
