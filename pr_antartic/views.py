@@ -10,3 +10,9 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 def antartic(request):
     return render(request, 'antartic.html')
+
+def antartic1(request):
+    return render(request, 'antartic1.html')
+
+def antartic2(request):
+    return render(request, 'antartic2.html')

@@ -6,4 +6,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 app_name = 'pr_ecosystem'
 
-urlpatterns = []
+urlpatterns = [
+    path('freshwater/', views.freshwater, name='freshwater'),
+    path('marine/', views.marine, name='marine'),
+    path('terrestrial/', views.terrestrial, name='terrestrial'),
+]
