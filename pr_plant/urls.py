@@ -6,4 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 app_name = 'pr_plant'
 
-urlpatterns = []
+urlpatterns = [
+    path('microbial', views.microbial, name='microbial'),
+    path('algae', views.algae, name='algae')
+]
