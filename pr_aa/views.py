@@ -11,3 +11,8 @@ from django.contrib.auth.decorators import login_required
 def seaice(request):
     return render(request, 'seaice.html')
 
+def aa1(request):
+    return render(request, 'aa1.html')
+
+
+
