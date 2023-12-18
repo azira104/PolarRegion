@@ -156,7 +156,7 @@ h6 {
   bottom: 0px;
   margin: auto;
   left: 50px;
-  position: absolute; 
+  position: absolute;
 }
 
 /*--------------------------------------------------------------
@@ -230,7 +230,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #ffc451;
 }
 
@@ -267,11 +267,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   background-color: #ffc451;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -283,7 +283,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -295,7 +295,7 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -362,7 +362,7 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #151515;
   background-color: #ffc451;
 }
@@ -399,38 +399,37 @@ h6 {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
   background-color: #ffc451;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
 /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
-  #hero {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden; /* Hide any overflowing content within the container */
-  }
-  
-  #bgVideo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
- #hero .container {
-    position: relative; /* Ensure the container is positioned relative to the section */
-    z-index: 1; /* Set a higher z-index to ensure the content is above the video */
-  }
+#hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* Hide any overflowing content within the container */
+}
 
+#bgVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#hero .container {
+  position: relative; /* Ensure the container is positioned relative to the section */
+  z-index: 1; /* Set a higher z-index to ensure the content is above the video */
+}
 
 #hero h1 {
   margin: 0;
@@ -848,7 +847,6 @@ section {
   color: #fff;
   font-weight: 600;
   text-align: center;
-  
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
@@ -906,7 +904,10 @@ section {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -914,7 +915,10 @@ section {
   border: 1px solid #ffc451;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #ffc451;
 }
 
@@ -937,7 +941,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1282,11 +1286,11 @@ section {
   margin: 0;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #2f2f2f;
@@ -1984,4 +1988,58 @@ button.learn-more:hover .button-text {
 
 .our_team .team_member .member_img:hover .social_media {
   transform: scale(1);
+}
+
+.container1::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  backdrop-filter: blur(10px); 
+  opacity: 0.8; 
+  z-index: -1; 
+}
+
+.container1 h2 {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  text-align: center;
+  margin: auto;
+  z-index: 1; 
+}
+
+div.content{
+  color: white;
+} */
+
+#box {
+  background-image: url('../images/bg2.jpg');
+  background-size: cover;
+}
+
+#box .card {
+  width: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+#box .card-header {
+  padding: 10px;
+  background-color: #dadcdd;
+}
+
+/* Content styling */
+#box .card-content {
+  padding: 20px;
+}
+
+#microbial_table_info .dataTables_info {
+  color: #ffee00;
 }

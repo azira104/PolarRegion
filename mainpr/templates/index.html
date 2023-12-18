@@ -116,8 +116,8 @@
               <li class="dropdown">
                 <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="{% url 'pr_aa:aa1'%}">Sea Ice Graph</a></li>
-                  <li><a href="#">Sulphur Detection from Melting Ice Cores</a></li>
+                  <li><a href="#">Sea Ice Graph</a></li>
+                  <li><a href="{% url 'pr_aa:sulfurDioxide'%}">Sulphur Detection from Melting Ice Cores</a></li>
                 </ul>
               </li>
               <li class="dropdown">
@@ -362,7 +362,6 @@
     <!-- End Clients Section -->
 
 
-
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
@@ -417,7 +416,7 @@
                 <h4>Arctic & Antarctica</h4>
                 <p>Sulphur Detection from Melting Ice cores</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_aa:sulfurDioxide' %}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -728,7 +727,7 @@
               <div class="portfolio-info">
                 <h4>DNA 1</h4>
                 <p>Organism</p>
-                <p><a class="underline-btn" href="#">Plankton</a><br /></p>
+                <p><a class="underline-btn" href="#">Microbial Symbionts</a><br /></p>
                 <p>
                   <a class="underline-btn" href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a><br />
                 </p>
@@ -913,7 +912,7 @@
                 <h4>Plant 1</h4>
                 <p>Glacier Algae (Greenland)</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_plant:algae'%}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -929,7 +928,7 @@
                 <h4>Plant 2</h4>
                 <p>Microbial Symbiants</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_plant:microbial'%}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">

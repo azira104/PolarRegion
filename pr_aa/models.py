@@ -8,6 +8,3 @@ class sulfur(models.Model):
     year = models.FloatField()
     neem = models.FloatField()
     wdc = models.FloatField()    
-
-    def __str__(self):
-        return self.year
