@@ -16,8 +16,8 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- Favicons -->
-  <link href="{% static 'images/favicon.png' %}" rel="icon">
-  <link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
   <!-- Google Fonts -->
   <link
@@ -31,6 +31,10 @@
   <!-- Contact -->
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+  <!--search-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
 
   <!-- Vendor CSS Files -->
@@ -93,39 +97,37 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li class="dropdown">
-            <a href="#portfolio"><span>Datasets</span> <i class="bi bi-chevron-down"></i></a>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#portfolio"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown">
                 <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="{% url 'pr_antartic:antartic'%}">Mass</a></li>
-                  <li><a href="#">Sea Ice Extant</a></li>
-                  <li><a href="#">Temperature</a></li>
-                  <li><a href="#">Hotpoints(NASA)</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic'%}">Antarctica Mass</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extant</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
+                  <li><a href="#">Antarctic Hotpoints(NASA)</a></li>
                   <li><a href="#">Ice Radar</a></li>
+                  <li><a href="#">Snow Accumulation</a></li>
                 </ul>
+              </li>
               <li class="dropdown">
                 <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Sea Ice Graph</a></li>
+                  <li><a href="{% url 'pr_aa:aa1'%}">Sea Ice Graph</a></li>
                   <li><a href="#">Sulphur Detection from Melting Ice Cores</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Comparison Northern City Climate</a></li>
-                  <li><a href="#">Global Warming Denmark</a></li>
-                  <li><a href="#">Sea Ice Extant</a></li>
-                  <li><a href="#">Sea Ice Masking Image</a></li>
-                  <li><a href="#">Streamgages in Alaska</a></li>
-                  <li><a href="#">Radium in Surface and Ground Water</a></li>
+                  <li><a href="#">Northern Cities Climate</a></li>
+                  <li><a href="#">Sea Ice Extent</a></li>
+                  <li><a href="#">Sea Ice Image Masking </a></li>
+                  <li><a href="#">VSGS Alaska Streamgages</a></li>
+                  <li><a href="#">Simpson Lagoon</a></li>
                   <li><a href="#">Arctic Sea Routes</a></li>
                 </ul>
               </li>
@@ -135,13 +137,21 @@
                   <li class="dropdown">
                     <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">Plankton</a></li>
-                      <li><a href="#">Pytoplankton</a></li>
+                      <li><a href="{% url 'pr_dna_rna:plankton'%}">Plankton_Tara-Ocean</a></li>
+                      <li><a href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a></li>
+                      <li><a href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a></li>
+                      <li><a href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a></li>
+                      <li class="dropdown">
+                        <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                          <li><a href="#">14C and 13C Data</a></li>
+                          <li><a href="#">Nucleotide Reads</a></li>
+                          <li><a href="#">Edaphic Factors</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#">Genomes</a></li>
-                  <li><a href="#">Microbiota</a></li>
-                  <li><a href="#">Soil Sample</a></li>
+
                 </ul>
               </li>
               <li class="dropdown">
@@ -149,46 +159,75 @@
                 <ul>
                   <li><a href="#">Coral</a></li>
                   <li><a href="#">Polar Bear</a></li>
-                  <li><a href="#">Beluga Whale</a></li>
-                  <li><a href="#">Bird</a></li>
+                  <li class="dropdown">
+                    <a href="#"><span>Polar Bear</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Bear Blood</a></li>
+                      <li><a href="#">Bear Capture Sequence</a></li>
+                      <li><a href="#">Bear Abdominal Temperature</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Krill Base</a></li>
+                  <li><a href="#">Giant Petrel Bird</a></li>
                   <li><a href="#">Penguin</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Ecosystem</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Aquatic</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="#">Marine</a></li>
-                      <li><a href="#">Freshwater</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Terrestrial</a></li>
+                  <li><a href="{% url 'pr_ecosystem:freshwater'%}">Freshwater</a></li>
+                  <li><a href="{% url 'pr_ecosystem:marine'%}">Marine</a></li>
+                  <li><a href="{% url 'pr_ecosystem:terrestrial'%}">Terrestrial</a></li>
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
+                <a href="#"><span>Plant</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Marine Fungi</a></li>
-                  <li><a href="#">Palmer Penguin</a></li>
-
+                  <li><a href="#">Microbial Symbionts</a></li>
+                  <li><a href="#">Glacier Algae</a></li>
                 </ul>
               </li>
+              <li class="dropdown">
+                <a href=""><span>Population</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li class="dropdown">
+                    <a href="{% url 'pr_population:penguinpopu'%}"><span>Penguin Population</span> <i
+                        class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Adelie</a></li>
+                      <li><a href="#">Chinstrap</a></li>
+                      <li><a href="#">Gentoo</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="{% url 'pr_population:palmer'%}"><span>Palmer Penguin</span> <i
+                        class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Iter</a></li>
+                      <li><a href="#">Size</a></li>
+
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'pr_population:mfungi'%}">Marine Fungi</a></li>
+                </ul>
+              </li>
+
               <li class="dropdown">
                 <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Influenza A</a></li>
-                  <li><a href="#">Cryptosporidium Oocyst and Giardia Cysts</a></li>
-
+                  <li class="dropdown">
+                    <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">bELISA</a></li>
+                      <li><a href="#">HI</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Crypto & Giardia</a></li>
                 </ul>
               </li>
-
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-
-          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -209,43 +248,11 @@
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-6 col-lg-8">
-          <h1>Collection of Data of Polar Region<span>.</span></h1>
+          <h1>Collection of Data in Polar Regions<span>.</span></h1>
           <h2>
-            This data includes climate, glaciological, oceanographic,
-            ecological, geological, satellite imagery, and more
+            This dataset encompasses information on climate, glaciological, oceanographic, ecological, geological data,
+            satellite imagery, and more.
           </h2>
-        </div>
-      </div>
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-store-line"></i>
-            <h3><a href="">Lorem Ipsum</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line"></i>
-            <h3><a href="">Dolor Sitema</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="">Sedare Perspiciatis</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line"></i>
-            <h3><a href="">Magni Dolores</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line"></i>
-            <h3><a href="">Nemos Enimade</a></h3>
-          </div>
         </div>
       </div>
       <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
@@ -255,7 +262,9 @@
               <h2>Search Dataset</h2>
               <h4>Click on the search icon, then type your keyword.</h4>
               <div>
-                <input type="text" placeholder="Search . . ." required />
+                <input id="search-input" type="text" placeholder="Search . . ." onkeydown="handleSearch(event)"
+                  required />
+
               </div>
             </div>
           </div>
@@ -272,12 +281,11 @@
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
 
-            <img src="{% static 'images/us.jpg'%}" class="img-fluid" alt="" />
+            <img src="{% static 'images/us.jpg'%}" class="img-fluid" style="max-height: 500px; " alt="" />
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
             <h3>
-              Voluptatem dignissimos provident quasi corporis voluptates sit
-              assumenda.
+              About the Website
             </h3>
             <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -340,6 +348,12 @@
             <div class="swiper-slide">
               <img src="{% static 'images/logo8.png' %}" class="img-fluid" alt="" />
             </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/ENA.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo/geo.gif' %}" class="img-fluid" alt="" />
+            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -347,230 +361,51 @@
     </section>
     <!-- End Clients Section -->
 
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="image col-lg-6" style="background-image: url('../static/images/features.jpg')" data-aos="fade-right"></div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-receipt"></i>
-              <h4>Est labore ad</h4>
-              <p>
-                Consequuntur sunt aut quasi enim aliquam quae harum pariatur
-                laboris nisi ut aliquip
-              </p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-cube-alt"></i>
-              <h4>Harum esse qui</h4>
-              <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt
-              </p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-images"></i>
-              <h4>Aut occaecati</h4>
-              <p>
-                Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut
-                maiores omnis facere
-              </p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-shield"></i>
-              <h4>Beatae veritatis</h4>
-              <p>
-                Expedita veritatis consequuntur nihil tempore laudantium vitae
-                denat pacta
-              </p>
-            </div>
-          </div>
-        </div>        
 
-      </div>
-    </section>
-    <!-- End Features Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Check our Services</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-            data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspiciatis</a></h4>
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
-            data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4><a href="">Dele cardo</a></h4>
-              <p>
-                Quis consequatur saepe eligendi voluptatem consequatur dolor
-                consequuntur
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-arch"></i></div>
-              <h4><a href="">Divera don</a></h4>
-              <p>
-                Modi nostrum vel laborum. Porro fugit error sit minus sapiente
-                sit aspernatur
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Services Section -->
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-        <div class="text-center">
-          <h3>Call To Action</h3>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-          <a class="cta-btn" href="#">Call To Action</a>
-        </div>
-      </div>
-    </section>
-    <!-- End Cta Section -->
-
-    <section>
-      <div class="container">
-        <div class="box">
-          <form action="http://www.example.com/profile.php">
-            <p>What device do you listen to music on?</p>
-            <select name="devices">
-             <option value="ipod">iPod</option>
-             <option value="radio">Radio</option>
-             <option value="computer">Computer</option>
-            </select>
-          </form>
-        </div>
-
-        <div>
-          <form action="http://www.example.com/profile.php">
-            <p>What device do you listen to music on?</p>
-            <select name="devices">
-             <option value="ipod">iPod</option>
-             <option value="radio">Radio</option>
-             <option value="computer">Computer</option>
-            </select>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li id="menu-products">
-            <a href="#">Products</a>
-            <ul id="dropdown-products">
-              <li><a href="#">Product 1</a></li>
-              <li><a href="#">Product 2</a></li>
-              <li><a href="#">Product 3</a></li>
-            </ul>
-          </li>
-          <li><a href="#">About Us</a></li>
-        </ul>
-      </nav>      
-    </section>
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>DATA BROWSER</h2>
-          <p>Check our DATASET</p>
+          <h2>Dataset</h2>
+          <p>Check our Dataset</p>
+        </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-20 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter= ".filter-card">DNA/RNA</li>
-              <li data-filter= ".filter-web">ANIMAL</li>
-              <li data-filter= ".filter-app">PLANT</li>
-              <li data-filter= ".filter-card">ECOSYSTEM</li>
-              <li data-filter= ".filter-web">POPULATION</li>
-              <li data-filter= ".filter-app">DISEASE</li>
-              <li data-filter= ".filter-card">ARCTIC</li>
-              <li data-filter= ".filter-web">ANTARTICA</li>
-              <li data-filter= ".filter-app">ARCTIC & ANTARTICA</li>
-              <!-- <li data-filter=".filter-app">POPULATION</li>
-              <li data-filter=".filter-card">DISEASE</li>
-              <li data-filter=".filter-web">Web</li> -->
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-aa">Arctic & Antarctica</li>
+              <li data-filter=".filter-anta">Antarctica</li>
+              <li data-filter=".filter-tic">Arctic</li>
+              <li data-filter=".filter-dna">DNA</li>
+              <li data-filter=".filter-animal">Animal</li>
+              <li data-filter=".filter-p">Plant</li>
+              <li data-filter=".filter-eco">Ecosystem</li>
+              <li data-filter=".filter-popu">Population</li>
+              <li data-filter=".filter-disease">Disease</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <!-- arctic and antartic -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-aa">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/ice.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Organism</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="{% static 'images/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                <!-- </div> -->
+                <h4>Arctic and Antarctica 1</h4>
+                <p>Sea Ice Graph</p>
+                <!-- <div class="portfolio-links"> -->
+                <p>
+                  <a class="{% url 'pr_aa:aa1'%}" href="#">View the dataset</a>
+                  <br />
+                </p>
+
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sea Ice Graph</p>
               </div>
             </div>
           </div>
@@ -585,6 +420,9 @@
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
               </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sulphur Detection From Melting Ice Cores</p>
+              </div>
             </div>
           </div>
 
@@ -595,10 +433,13 @@
               <img src="{% static 'images/portfolio/mass.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Antarctica 1</h4>
-                <p>Mass</p>
+                <p>Antarctic Mass</p>
                 <p>
                   <a class="underline-btn" href="{% url 'pr_antartic:antartic' %}">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Antarctic Mass</p>
               </div>
             </div>
           </div>
@@ -610,8 +451,11 @@
                 <h4>Antarctica 2</h4>
                 <p>Sea Ice Extent</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_antartic:antartic1'%}">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sea Ice Extent</p>
               </div>
             </div>
           </div>
@@ -621,10 +465,13 @@
               <img src="{% static 'images/portfolio/termo.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Antarctica 3</h4>
-                <p>Temperature</p>
+                <p>Antarctic Temperature</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_antartic:antartic2'%}">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Antartctic Temperature</p>
               </div>
             </div>
           </div>
@@ -634,10 +481,13 @@
               <img src="{% static 'images/portfolio/hotpoint.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Antarctica 4</h4>
-                <p>Hotpoint(NASA)</p>
+                <p>Antarctic Hotpoint(NASA)</p>
                 <p>
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Antarctic Hotpoints (NASA)</p>
               </div>
             </div>
           </div>
@@ -652,6 +502,25 @@
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
               </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Ice Radar</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-anta">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/snow.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Antarctica 6</h4>
+                <p>Snow Accumulation</p>
+                <p>
+                  <a class="underline-btn" href="#">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Snow Accumulation</p>
+              </div>
             </div>
           </div>
 
@@ -661,37 +530,32 @@
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/climate.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Arctic</h4>
-                <p>Comparison Northen City Climate</p>
+                <h4>Arctic 1</h4>
+                <p>Northen Cities Climate</p>
                 <p>
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Northen Cities Climate</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-tic">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/global.jpeg' %}" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Arctic 2</h4>
-                <p>Global Warming Denmark</p>
-                <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
+
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-tic">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/e.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Arctic 3</h4>
+                <h4>Arctic 2</h4>
                 <p>Sea Ice Extent</p>
                 <p>
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sea Ice Extent</p>
               </div>
             </div>
           </div>
@@ -699,11 +563,14 @@
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/alaska.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Arctic 4</h4>
-                <p>Streamgage in Alaska</p>
+                <h4>Arctic 3</h4>
+                <p>VSGS Alaska Streamgage </p>
                 <p>
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>VSGS Alaska Streamgage</p>
               </div>
             </div>
           </div>
@@ -712,11 +579,14 @@
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/masking.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Arctic 5</h4>
+                <h4>Arctic 4</h4>
                 <p>Sea Ice Image Masking</p>
                 <p>
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sea Ice Image Masking</p>
               </div>
             </div>
           </div>
@@ -725,11 +595,14 @@
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/water.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Arctic 6</h4>
-                <p>Radium in Surface and Ground Water</p>
+                <h4>Arctic 5</h4>
+                <p>Simpson Lagoon</p>
                 <p>
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Simpson Lagoon</p>
               </div>
             </div>
           </div>
@@ -738,11 +611,14 @@
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/sea.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Arctic 7</h4>
+                <h4>Arctic 6</h4>
                 <p>Arctic Sea Routes</p>
                 <p>
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Arctic Sea Routes</p>
               </div>
             </div>
           </div>
@@ -758,30 +634,41 @@
                   <a class="underline-btn" href="#">View the Dataset</a><br />
                 </p>
               </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Coral</p>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-animal">
             <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/polar.jpeg' %}" class="img-fluid" alt="" />
+              <img src="{% static 'images/portfolio/bird.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Animal 2</h4>
-                <p>Polar Bear</p>
+                <p>Giant Petrel Bird</p>
+                <p>
+                  <a class="underline-btn" href="#">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Giant Petrel Bird</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-animal">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/krill.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Animal 3</h4>
+                <p>Krill Base</p>
                 <p>
                   <a class="underline-btn" href="#">View the Dataset</a><br />
                 </p>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-animal">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/beluga.jpeg' %}" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Animal 3</h4>
-                <p>Beluga Whale</p>
-                <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
-                </p>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Krill Base</p>
               </div>
             </div>
           </div>
@@ -802,27 +689,37 @@
                 <p>
                   <a class="underline-btn" href="#">Adelie Penguin</a><br />
                 </p>
-
-                <!-- <a href="{% static 'images/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                <!-- </div> -->
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Penguin</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-animal">
             <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/bird.jpeg' %}" class="img-fluid" alt="" />
+              <img src="{% static 'images/portfolio/polar-bear.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Animal 5</h4>
-                <p>Bird</p>
+                <p>Polar Bear</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="#">Bear Blood</a><br />
                 </p>
+                <p>
+                  <a class="underline-btn" href="#">Bear Capture Sequence</a><br />
+                </p>
+                <p>
+                  <a class="underline-btn" href="#">Bear Abdominal Temperature</a><br />
+                </p>
+
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Polar Bear</p>
               </div>
             </div>
           </div>
+
+
 
           <!-- DNA -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-dna">
@@ -833,8 +730,13 @@
                 <p>Organism</p>
                 <p><a class="underline-btn" href="#">Plankton</a><br /></p>
                 <p>
-                  <a class="underline-btn" href="#">Pytoplankton</a><br />
+                  <a class="underline-btn" href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a><br />
                 </p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a><br /></p>
+                <p><a class="underline-btn" href="#">Bacteria</a><br /></p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Organism</p>
               </div>
             </div>
           </div>
@@ -844,37 +746,18 @@
               <img src="{% static 'images/portfolio/genome.png' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>DNA 2</h4>
-                <p>Genomes</p>
-                <p><a class="underline-btn" href="#">Bacteria</a><br /></p>
+                <p>Fungi</p>
+                <p><a class="underline-btn" href="#">14C and 13C Data</a><br /></p>
+                <p><a class="underline-btn" href="#">Nucleotide Reads</a><br /></p>
+                <p><a class="underline-btn" href="#">Edaphic Factors</a><br /></p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Fungi</p>
               </div>
             </div>
+
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-dna">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/micro.jpg' %}" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>DNA 3</h4>
-                <p>Microbiota</p>
-                <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-dna">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/soil.jpeg' %}" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>DNA 4</h4>
-                <p>Soil Sample</p>
-                <p>
-                  <a class="underline-btn" href="#">Arctic and Antarctica</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
 
           <!-- DISEASE -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-disease">
@@ -882,10 +765,17 @@
               <img src="{% static 'images/portfolio/A.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Disease 1</h4>
-                <p>Influenza A</p>
+                <p>Influenza </p>
                 <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
+                  <a class="underline-btn" href="#">bELISA (Blocking Enzyme-Linked Immunosorbent assay)</a><br />
                 </p>
+                <p>
+                  <a class="underline-btn" href="#">HI (Hemagglutination Inhibition)</a><br />
+                </p>
+              </div>
+
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Influenza</p>
               </div>
             </div>
           </div>
@@ -900,7 +790,11 @@
                   <a class="underline-btn" href="#">View the Dataset</a><br />
                 </p>
               </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Cryptosporidium Oocyst and Giardia Cysts</p>
+              </div>
             </div>
+
           </div>
 
           <!-- POPULATION -->
@@ -909,15 +803,25 @@
               <img src="{% static 'images/portfolio/pp.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Population1</h4>
-                <p>Penguin</p>
-                <div class="portfolio-links">
-                  <a href="{% static 'images/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
+                <p>Population of Penguin</p>
+                <p>
+                  <a class="underline-btn" href="#">Adelie Penguin</a><br />
+                </p>>
+                <p>
+                  <a class="underline-btn" href="#">Chinstrap Penguin</a><br />
+                </p>>
+                <p>
+                  <a class="underline-btn" href="#">Gentoo Penguin</a><br />
+                </p>>
+
+              </div>
+
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Population of Penguin</p>
               </div>
             </div>
           </div>
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-popu">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/marine.jpg' %}" class="img-fluid" alt="" />
@@ -928,8 +832,13 @@
                   <a class="underline-btn" href="#">View the Dataset</a><br />
                 </p>>
               </div>
+
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Marine Fungi</p>
+              </div>
             </div>
           </div>
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-popu">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/palmer.jpg' %}" class="img-fluid" alt="" />
@@ -937,10 +846,17 @@
                 <h4>Population 3</h4>
                 <p>Palmer Penguin</p>
                 <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
+                  <a class="underline-btn" href="#">Iter</a><br />
+                </p>
+                <p>
+                  <a class="underline-btn" href="#">Size</a><br />
                 </p>
               </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Palmer Penguin</p>
+              </div>
             </div>
+
           </div>
           <!-- ECOSYSTEM -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-eco">
@@ -948,10 +864,13 @@
               <img src="{% static 'images/portfolio/water.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Ecosystem 1</h4>
-                <p>Aquatic</p>
+                <p>Freshwater</p>
                 <p>
                   <a class="underline-btn" href="#">View the Dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Freshwater</p>
               </div>
             </div>
           </div>
@@ -964,6 +883,25 @@
                 <p>
                   <a class="underline-btn" href="#">View the Dataset</a><br />
                 </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Terrestial</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-eco">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/water1.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Ecosystem 3</h4>
+                <p>Marine</p>
+                <p>
+                  <a class="underline-btn" href="#">View the Dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Marine</p>
               </div>
             </div>
           </div>
@@ -978,6 +916,9 @@
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
               </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Glacier Algae (Greenland)</p>
+              </div>
             </div>
           </div>
 
@@ -986,163 +927,26 @@
               <img src="{% static 'images/portfolio/cold.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Plant 2</h4>
-                <p>Plant Biology Under Cold Stress</p>
+                <p>Microbial Symbiants</p>
                 <p>
                   <a class="underline-btn" href="#">View the dataset</a><br />
                 </p>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/portfolio-5.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="{% static 'images/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Microbial Symbiants</p>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/portfolio-6.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="{% static 'images/portfolio/portfolio-6.jpg' %}" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="{% static 'images/portfolio/portfolio-7.jpg' %}" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/portfolio-8.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="{% static 'images/portfolio/portfolio-8.jpg' %}" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="{% static 'images/portfolio/portfolio-9.jpg' %}" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
+          <!-- END SECTION FOR PHOTO CARD -->
         </div>
       </div>
     </section>
     <!-- End Portfolio Section -->
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-        <div class="row no-gutters">
-          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"
-            data-aos="fade-right" data-aos-delay="100"></div>
-          <div class="col-xl-7 ps-4 ps-lg-5 pe-4 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left"
-            data-aos-delay="100">
-            <div class="content d-flex flex-column justify-content-center">
-              <h3>Voluptatem dignissimos provident quasi</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Duis aute irure dolor in reprehenderit
-              </p>
-              <div class="row">
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2"
-                      class="purecounter"></span>
-                    <p>
-                      <strong>Happy Clients</strong> consequuntur voluptas
-                      nostrum aliquid ipsam architecto ut.
-                    </p>
-                  </div>
-                </div>
 
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2"
-                      class="purecounter"></span>
-                    <p>
-                      <strong>Projects</strong> adipisci atque cum quia
-                      aspernatur totam laudantium et quia dere tan
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-clock"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="4"
-                      class="purecounter"></span>
-                    <p>
-                      <strong>Years of experience</strong> aut commodi quaerat
-                      modi aliquam nam ducimus aut voluptate non vel
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-award"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4"
-                      class="purecounter"></span>
-                    <p>
-                      <strong>Awards</strong> rerum asperiores dolor alias quo
-                      reprehenderit eum et nemo pad der
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End .content-->
-          </div>
-        </div>
-      </div>
+    </div>
+    </div>
+    </div>
     </section>
     <!-- End Counts Section -->
 
@@ -1242,6 +1046,10 @@
     <!-- End Testimonials Section -->
 
     <!-- ======= Team Section ======= -->
+    <!--     
+    End Team Section -->
+
+    <!-- New team profile -->
     <section id="team" class="team">
       <div class="container" data-aos="fade-up">
 
@@ -1249,215 +1057,281 @@
           <h2>Team</h2>
           <p>Check our Team</p>
         </div>
+        <div class="teamwrapper">
 
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img"> 
-                <img src="{% static 'images/team/team-1.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+          <div class="our_team">
+            <div class="team_member">
+              <div class="member_img">
+                <img src="{% static 'images/team/dr.akmal.jpg' %}" alt="our_team">
+                <div class="social_media">
+                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
                 </div>
               </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
+              <h3>DR. MUHAMMAD AKMAL BIN REMLI</h3>
+              <span>Project Leader</span>
+              <p>Institute for Artificial Intelligence and Big Data,Universiti Malaysia Kelantan</p>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="{% static 'images/team/team-2.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+            <div class="team_member">
+              <div class="member_img">
+                <img src="{% static 'images/team/Dr.Marieanne.jpg' %}" alt="our_team">
+                <div class="social_media">
+                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
                 </div>
               </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
+              <h3>TS. DR. MARIEANNE CHRISTIE LEONG</h3>
+              <span>Technical Validation on High-Performance Computing (HPC) of in Silico experiments</span>
+              <p>Institute for Artificial Intelligence and Big Data,Universiti Malaysia Kelantan
+              </p>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="{% static 'images/team/team-3.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+            <div class="team_member">
+              <div class="member_img">
+                <img src="{% static 'images/team/dr.alfonso.jpg' %}" alt="our_team">
+                <div class="social_media">
+                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
                 </div>
               </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
+              <h3>ASSOCIATE PROFESSOR DR. ALFONSO GONZÁLEZ BRIONES</h3>
+              <span>Artificial Intelligence Techniques Validation in Generative Modelling</span>
+              <p>Faculty of Science,Universidad de Salamanca,Spain
+              </p>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="{% static 'images/team/team-4.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+            <div class="team_member">
+              <div class="member_img">
+                <img src="{% static 'images/team/Prof Saberi.jpg' %}" alt="our_team">
+                <div class="social_media">
+                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
                 </div>
               </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+              <h3>Professor Dr. Mohd Saberi Mohamad</h3>
+              <span>Bioinformatic Techniques Development on Biomarker Discovery</span>
+              <p>College of Medicine and Health Sciences,United Arab Emirates University, United Arab Emirates
+              </p>
+            </div>
+            <div class="team_member">
+              <div class="member_img">
+                <img src="{% static 'images/team/Prof.Ismail.jpg' %}" alt="our_team">
+                <div class="social_media">
+                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                </div>
               </div>
+              <h3>Associate Prof.Ts.Dr.Ismail Bin Ahmedy</h3>
+              <span>Optimization in Generative Modelling in Meta</span>
+              <p>Faculty of Computer Science and Information Technology, Universiti Malaya
+              </p>
+            </div>
+            <div class="team_member">
+              <div class="member_img">
+                <img src="{% static 'images/team/Dr Chin.jpg' %}" alt="our_team">
+                <div class="social_media">
+                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                </div>
+              </div>
+              <h3>DR CHIN SIOK-FONG</h3>
+              <span>Clinical Data Metagenomics and Biomarkers Validation</span>
+              <p>UKM Medical Molecular Biology Institute (UMBI), UKM Medical Centre
+              </p>
+            </div>
+            <div class="team_member">
+              <div class="member_img">
+                <img src="{% static 'images/team/drsarahani.png' %}" alt="our_team">
+                <div class="social_media">
+                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                </div>
+              </div>
+              <h3>DR SARAHANI BINTI HARUN</h3>
+              <span>Ecological Data Metagenomic Validation</span>
+              <p>Institute of Systems Biology (INBIOSIS),UKM Bangi
+              </p>
+            </div>
+            
+            <div class="team_member">
+              <div class="member_img">
+                <img src="https://i.pinimg.com/564x/f0/ad/59/f0ad595e6a8fdf87f92fdc4605f9602a.jpg" alt="our_team">
+                <div class="social_media">
+                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                </div>
+              </div>
+              <h3>NUR HAZNIRAH BINTI HAZMAN</h3>
+              <span>Intern Student</span>
+              <p>Bachelor Of Computer Science (Bioinformatic) with Honours<br>
+                Faculty of Computing, Universiti Teknologi Malaysia
+              </p>
+            </div>
+
+            <div class="team_member">
+              <div class="member_img">
+                <img src="https://i.pinimg.com/564x/f0/ad/59/f0ad595e6a8fdf87f92fdc4605f9602a.jpg" alt="our_team">
+                <div class="social_media">
+                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                </div>
+              </div>
+              <h3>ROHAIZAAZIRA BINTI MOHD ZAWAWI</h3>
+              <span>Intern Student</span>
+              <p>Bachelor Of Computer Science (Bioinformatic) with Honours<br>
+                Faculty of Computing, Universiti Teknologi Malaysia
+              </p>
             </div>
           </div>
-
         </div>
+
+
+
 
       </div>
     </section>
-    <!--     
-    End Team Section -->
 
-    <!-- New team profile -->
-    
-
-<!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h2>Contact Us</h2>
-      <p>Get in touch with us</p>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="map-container position-relative" style="height: 300px;">
-          <iframe style="border: 0; width: 100%; height: 100%;"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.996870414427!2d102.283134!3d6.1643303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaea54001bd690427%3A0xa5cc68e433b8c3bb!2sInstitut%20Kepintaran%20Buatan%20dan%20Data%20Raya%20(AIBIG)!5e0!3m2!1sen!2smy!4v1698819880045!5m2!1sen!2smy"
-            frameborder="0" allowfullscreen></iframe>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Get in touch with us</p>
         </div>
-      </div>
 
-      <div class="col-lg-6">
-        <div class="form-overlay position-absolute top-0 end-0 p-5 rounded"
-          style="border: 1px solid #ddd; background-color: #fff; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); height: 300px;">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form" style="height: 100%;">
-            <div class="text-center mb-4">
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- Map container -->
+            <div class="map-container position-relative" style="height: 300px;">
+              <iframe style="border: 0; width: 100%; height: 100%;"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.996870414427!2d102.283134!3d6.1643303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaea54001bd690427%3A0xa5cc68e433b8c3bb!2sInstitut%20Kepintaran%20Buatan%20dan%20Data%20Raya%20(AIBIG)!5e0!3m2!1sen!2smy!4v1698819880045!5m2!1sen!2smy"
+                frameborder="0" allowfullscreen title="Google Map"></iframe>
             </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label for="name" class="form-label">Your Name</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+          </div>
+
+          <div class="col-lg-6">
+            <!-- Contact Form -->
+            <div class="form-overlay position-absolute top-0 end-0 p-5 rounded">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="text-center mb-4">
+                  <h3 class="fw-bold">Contact Us</h3>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label for="email" class="form-label">Your Email</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com"
-                    required>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <!-- Your Name -->
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Your Name</label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <!-- Your Email -->
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Your Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com"
+                        required>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label">Your Phone</label>
-              <input type="tel" class="form-control" id="phone" name="phone" placeholder="(+1) 123-456-7890">
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Your Message</label>
-              <textarea name="message" id="message" class="form-control" placeholder="Write your message here"
-                required></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary btn-md">Send Message</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-<!-- End #main -->
 
-<!-- ======= Footer ======= -->
-<footer id="footer">
-  <div class="footer-top">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-lg-4">
-          <div class="footer-logo" style="width: 200px;">
-            <img src="/static/images/logo/umk.png" style="width: 150px;">
-            <img src="/static/images/logo/aibig.png" style="width: 150px;">
-            <img src="/static/images/logo/polar1.png" style="width: 150px;">
+
+
+                <!-- Your Message -->
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea name="message" id="message" class="form-control" placeholder="Write your message here"
+                    required></textarea>
+                </div>
+
+                <div class="text-center">
+                  <!-- Send Message Button -->
+                  <button type="submit" class="btn btn-primary btn-md">Send Message</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-        <div class="col-sm-12 col-lg-4">
-          <h4>Contact</h4>
-          <div>
-            <i class="fas fa-map-marker-alt" style="font-size: 24px; margin-right: 10px;"></i>
-            <span>Institute For Artificial Intelligence & Big Data,</span>
-            <br>
-            <span>Universiti Malaysia Kelantan, City Campus, Pengkalan Chepa,</span>
-            <br>
-            <span>16100 Kota Bharu, Kelantan</span>
+      </div>
+    </section>
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-lg-4">
+            <div class="footer-logo" style="width: 200px;">
+              <img src="/static/images/logo/umk.png" style="width: 150px;">
+              <img src="/static/images/logo/aibig.png" style="width: 150px;">
+              <img src="/static/images/logo/ypasm.png" style="width: 150px;">
+            </div>
           </div>
-          <div style="margin-top: 10px;">
-            <i class="fas fa-phone" style="font-size: 24px; margin-right: 10px;"></i>
-            <span>(+609) 771 7177</span>
+          <div class="col-sm-12 col-lg-4">
+            <h4>Contact</h4>
+            <div>
+              <i class="fas fa-map-marker-alt" style="font-size: 24px; margin-right: 10px;"></i>
+              <span>Institute For Artificial Intelligence & Big Data,</span>
+              <br>
+              <span>Universiti Malaysia Kelantan, City Campus, Pengkalan Chepa,</span>
+              <br>
+              <span>16100 Kota Bharu, Kelantan</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <i class="fas fa-phone" style="font-size: 24px; margin-right: 10px;"></i>
+              <span>(+609) 771 7177</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <i class="fas fa-envelope" style="font-size: 24px; margin-right: 10px;"></i>
+              <span>aibig@umk.edu.my</span>
+            </div>
           </div>
-          <div style="margin-top: 10px;">
-            <i class="fas fa-envelope" style="font-size: 24px; margin-right: 10px;"></i>
-            <span>aibig@umk.edu.my</span>
+          <div class="col-sm-12 col-lg-4" style="margin-top: 10px;">
+            <h4>Follow Us</h4>
+            <!-- Replace these URLs with your actual social media profile URLs -->
+            <a href="https://www.instagram.com/aibigumk/?hl=en" target="_blank" style="margin-right: 10px;"><i class="fab fa-instagram"
+                style="font-size: 24px;"></i></a>
+            <a href="https://www.facebook.com/umk.aibig/" target="_blank" style="margin-right: 10px;"><i class="fab fa-facebook"
+                style="font-size: 24px;"></i></a>
+            <a href="https://www.linkedin.com/company/aibig-umk" target="_blank"><i class="fab fa-linkedin-in"
+                style="font-size: 24px;"></i></a>
           </div>
         </div>
-        <div class="col-sm-12 col-lg-4" style="margin-top: 10px;">
-          <h4>Follow Us</h4>
-          <!-- Replace these URLs with your actual social media profile URLs -->
-          <a href="https://www.instagram.com/" target="_blank" style="margin-right: 10px;"><i class="fab fa-instagram"
-              style="font-size: 24px;"></i></a>
-          <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;"><i class="fab fa-facebook"
-              style="font-size: 24px;"></i></a>
-          <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube" style="font-size: 24px;"></i></a>
+
+
+      </div>
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>AIBIG</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+          <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
         </div>
       </div>
+  </footer>
+  <!-- End Footer -->
 
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-    </div>
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>AIBIG</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-      </div>
-    </div>
-</footer>
-<!-- End Footer -->
-
-<div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-    class="bi bi-arrow-up-short"></i></a>
-
-<!-- Vendor JS Files -->
-<!-- <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <!-- Vendor JS Files -->
+  <!-- <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -1465,38 +1339,74 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
-<!-- JS FILE CDN -->
-<script src="{% static 'js/purecounter_vanilla.js' %}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-  integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
-  integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
-  integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
-  integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
-  integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
-  integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function () {
-    $('.btn').click(function () {
-      $(this).toggleClass('active');
-      $('.box').toggleClass('open');
-      $('.team-members .profile').not($(this).closest('.profile')).toggleClass('shifted');
+  <!-- JS FILE CDN -->
+  <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
+    integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+    integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
+    integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
+    integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.btn').click(function () {
+        $(this).toggleClass('active');
+        $('.box').toggleClass('open');
+        $('.team-members .profile').not($(this).closest('.profile')).toggleClass('shifted');
+      });
     });
-  });
-</script>>
-<!-- Template Main JS File -->
-<script src="{% static 'js/main.js' %}"></script>
+  </script>>
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <!--searching-->
+  <script>
+    function handleSearch(event) {
+      if (event.key === 'Enter') {
+        searchDataset();
+      }
+    }
+
+    function searchDataset() {
+      var searchKeyword = document.getElementById('search-input').value.toLowerCase();
+      var portfolioItems = document.querySelectorAll('.portfolio-item');
+      var firstVisibleItem = null;
+
+      portfolioItems.forEach(function (item) {
+        var itemText = item.textContent.toLowerCase();
+        if (itemText.includes(searchKeyword)) {
+          item.style.display = 'block';
+          if (!firstVisibleItem) {
+            firstVisibleItem = item;
+          }
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      if (firstVisibleItem) {
+        // Scroll to the first visible item
+        firstVisibleItem.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+  </script>
+
+
 
 </body>
 
