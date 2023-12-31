@@ -8,8 +8,6 @@ app_name = 'pr_animal'
 
 urlpatterns = [
     path('coral', views.coral, name='coral'),
-]
-
-urlpatterns= [
+    path('krillBase', views.krillBase, name='krillBase'),
     path('gentooPenguin', views.gentooPenguin, name='signyGentooPenguin')
 ]
