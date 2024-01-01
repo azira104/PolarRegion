@@ -36,8 +36,12 @@ def ani_bird(request):
 
 def ani_bearBlood(request):
     bearBlood_data = bearBlood.objects.all()
-    return render(request, 'blood.html', {'bird': bearBlood_data})
+    return render(request, 'blood.html', {'blood': bearBlood_data})
 
-def ani_bearBlood(request):
-    bearBlood_data = bearBlood.objects.all()
-    return render(request, 'blood.html', {'bird': bearBlood_data})
+def ani_bearAbdTemp(request):
+    bearAbdTemp_data = bearAbdominalTemp.objects.all()
+    return render(request, 'abdTemp.html', {'abdTemp': bearAbdTemp_data})
+
+def ani_bearCapSeq(request):
+    bearCapSeq_data = bearCapSequence.objects.all()
+    return render(request, 'capSeq.html', {'capSeq': bearCapSeq_data})
