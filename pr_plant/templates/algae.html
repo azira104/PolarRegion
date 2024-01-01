@@ -108,10 +108,10 @@
               <li class="dropdown">
                 <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="{% url 'pr_antartic:antartic'%}">Antarctica Mass</a></li>
-                  <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extant</a></li>
+                  <li><a href="{% url 'pr_antartic:antarticmass'%}">Antarctica Mass</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extent</a></li>
                   <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
-                  <li><a href="#">Antarctic Hotpoints(NASA)</a></li>
+                  <li><a href="{% url 'pr_antartic:hotpoints'%}">Antarctic Hotpoints(NASA)</a></li>
                   <li><a href="#">Ice Radar</a></li>
                   <li><a href="#">Snow Accumulation</a></li>
                 </ul>
@@ -126,30 +126,30 @@
               <li class="dropdown">
                 <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Northern Cities Climate</a></li>
-                  <li><a href="#">Sea Ice Extent</a></li>
+                  <li><a href="{% url 'pr_arctic:climate'%}">Northern Cities Climate</a></li>
+                  <li><a href="{% url 'pr_arctic:iceExtent'%}">Sea Ice Extent</a></li>
                   <li><a href="#">Sea Ice Image Masking </a></li>
-                  <li><a href="#">VSGS Alaska Streamgages</a></li>
-                  <li><a href="#">Simpson Lagoon</a></li>
+                  <li><a href="{% url 'pr_arctic:streamgages'%}">VSGS Alaska Streamgages</a></li>
+                  <li><a href="{% url 'pr_arctic:simpsonLagoon'%}">Simpson Lagoon</a></li>
                   <li><a href="#">Arctic Sea Routes</a></li>
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#"><span>DNA</span> <i class="bi bi-chevron-right"></i></a>
+                <a href="#"><span>DNA/RNA</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li class="dropdown">
                     <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">Plankton_Tara-Ocean</a></li>
-                      <li><a href="#">Pytoplankton</a></li>
-                      <li><a href="#">Ice Krill</a></li>
-                      <li><a href="#">Bacteria</a></li>
+                      <li><a href="{% url 'pr_dna_rna:plankton'%}">Plankton_Tara-Ocean</a></li>
+                      <li><a href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a></li>
+                      <li><a href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a></li>
+                      <li><a href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a></li>
                       <li class="dropdown">
                         <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
                         <ul>
-                          <li><a href="#">14C and 13C Data</a></li>
-                          <li><a href="#">Nucleotide Reads</a></li>
-                          <li><a href="#">Edaphic Factors</a></li>
+                          <li><a href="{% url 'pr_dna_rna:Cdata'%}">14C and 13C Data</a></li>
+                          <li><a href="{% url 'pr_dna_rna:nucleotide'%}">Nucleotide Reads</a></li>
+                          <li><a href="{% url 'pr_dna_rna:edaphic'%}">Edaphic Factors</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -160,19 +160,23 @@
               <li class="dropdown">
                 <a href="#"><span>Animal</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Coral</a></li>
-                  <li><a href="#">Polar Bear</a></li>
+                  <li><a href="{% url 'pr_animal:coral'%}">Coral</a></li>
                   <li class="dropdown">
                     <a href="#"><span>Polar Bear</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">Bear Blood</a></li>
-                      <li><a href="#">Bear Capture Sequence</a></li>
-                      <li><a href="#">Bear Abdominal Temperature</a></li>
+                      <li><a href="{% url 'pr_animal:blood'%}">Bear Blood</a></li>
+                      <li><a href="{% url 'pr_animal:capSeq'%}">Bear Capture Sequence</a></li>
+                      <li><a href="{% url 'pr_animal:abdTemp'%}">Bear Abdominal Temperature</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">Krill Base</a></li>
-                  <li><a href="#">Giant Petrel Bird</a></li>
-                  <li><a href="#">Penguin</a></li>
+                  <a href="#"><span>Penguin</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_animal:gentoo'%}">Gentoo</a></li>
+                      <li><a href="{% url 'pr_animal:adelie'%}">Adelie</a></li>
+                      <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
+                    </ul>
+                  <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li>
+                  <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
                 </ul>
               </li>
               <li class="dropdown">
@@ -194,20 +198,20 @@
                 <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li class="dropdown">
-                    <a href="{% url 'pr_population:penguinpopu'%}"><span>Penguin Population</span>
+                    <a href="#"><span>Penguin Population</span>
                       <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">Adelie</a></li>
-                      <li><a href="#">Chinstrap</a></li>
-                      <li><a href="#">Gentoo</a></li>
+                      <li><a href="{% url 'pr_population:popuAdelie'%}">Adelie</a></li>
+                      <li><a href="{% url 'pr_population:popuChinstrap'%}">Chinstrap</a></li>
+                      <li><a href="{% url 'pr_population:popuGentoo'%}">Gentoo</a></li>
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="{% url 'pr_population:palmer'%}"><span>Palmer Penguin</span> <i
+                    <a href="#"><span>Palmer Penguin</span> <i
                         class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">Iter</a></li>
-                      <li><a href="#">Size</a></li>
+                      <li><a href="{% url 'pr_population:palmerIter'%}">Iter</a></li>
+                      <li><a href="{% url 'pr_population:palmerSize'%}">Size</a></li>
 
                     </ul>
                   </li>
@@ -221,11 +225,11 @@
                   <li class="dropdown">
                     <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">bELISA</a></li>
-                      <li><a href="#">HI</a></li>
+                      <li><a href="{% url 'pr_disease:bELISA'%}">bELISA</a></li>
+                      <li><a href="{% url 'pr_disease:hi'%}">HI</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">Crypto & Giardia</a></li>
+                  <li><a href="{% url 'pr_disease:crypto_giardia'%}">Crypto & Giardia</a></li>
                 </ul>
               </li>
             </ul>
@@ -273,7 +277,7 @@
             <th>etr</th>
             <th>rep</th>
             <th>treat</th>
-            <th>npq</th>
+            <th >npq</th>
             <th>etrmax</th>
             <th>alpha</th>
             <th>ek</th>
