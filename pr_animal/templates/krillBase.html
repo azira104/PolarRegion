@@ -302,19 +302,32 @@
           {% for item in krillBase%}
           <tr>
             <td>{{ item.id }}</td>
-            <td>{{ item.species }}</td>
+            <td>{{ item.station }}</td>
+            <td>{{ item.record_type }}</td>
+            <td>{{ item.number_of_stations }}</td>
+            <td>{{ item.number_of_nets }}</td>
+            <td>{{ item.latitude }}</td>
+            <td>{{ item.longitude }}</td>
             <td>{{ item.season }}</td>
-            <td>{{ item.date_pair_count }}</td>
-            <td>{{ item.total_number_pairs_with_eggs }}</td>
-            <td>{{ item.total_number_of_pairs_without_eggs }}</td>
-            <td>{{ item.total_number_of_pairs }}</td>
-            <td>{{ item.date_chick_count }}</td>
-            <td>{{ item.total_number_of_chicks }}</td>
-            <td>{{ item.total_number_of_eggs }}</td>
-            <td>{{ item.total_number_of_nests_without_eggs }}</td>
-            <td>{{ item.date_fledgling_count }}</td>
-            <td>{{ item.total_number_of_fledglings }}</td>
-            <td>{{ item.comments }}</td>
+            <td>{{ item.days_from_1st_oct }}</td>
+            <td>{{ item.date }}</td>
+            <td>{{ item.date_accuracy }}</td>
+            <td>{{ item.net_time }}</td>
+            <td>{{ item.gmt_or_local }}</td>
+            <td>{{ item.day_night }}</td>
+            <td>{{ item.day_night_method }}</td>
+            <td>{{ item.net_type }}</td>
+            <td>{{ item.mouth_area_of_net_m2 }}</td>
+            <td>{{ item.top_sampling_depth_m }}</td>
+            <td>{{ item.bottom_sampling_depth_m }}</td>
+            <td>{{ item.volume_filtered_m3 }}</td>
+            <td>{{ item.n_or_s_polar_front }}</td>
+            <td>{{ item.water_dep_mean_within_10km }}</td>
+            <td>{{ item.water_depth_range_within_10km }}</td>
+            <td>{{ item.climatological_temperature }}</td>
+            <td>{{ item.number_of_krill_under_1m2 }}</td>
+            <td>{{ item.standardised_krill_under_1m2 }}</td>
+            <td>{{ item.number_of_salps_under_1m2 }}</td>
           </tr>
           {% endfor %}
         </tbody>
