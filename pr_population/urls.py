@@ -7,7 +7,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 app_name = 'pr_population'
 
 urlpatterns = [
-    path('penguinpopu/', views.penguinpopu, name='penguinpopu'),
-    path('palmer/', views.palmer, name='palmer'),
-    path('mfungi/', views.mfungi, name='mfungi'),
+    path('penguinpopu', views.penguinpopu, name='penguinpopu'),
+    path('palmerIter', views.palmerIter, name='palmerIter'),
+    path('palmerSize', views.palmerSize, name='palmerSize'),
+    path('mfungi', views.mfungi, name='mfungi')
 ]
