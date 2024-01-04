@@ -6,4 +6,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 app_name = 'pr_arctic'
 
-urlpatterns = []
+urlpatterns = [
+    path('climate', views.climate, name='climate'),
+    path('iceExtent', views.iceExtent, name='iceExtent'),
+    path('climate', views.climate, name='climate'),
+    path('climate', views.climate, name='climate'),
+]

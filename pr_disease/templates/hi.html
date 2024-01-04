@@ -260,45 +260,53 @@
       </div>
 
       <div class="card-content">
-        <table id="palmerIter_table" class="table table-bordered table-hover">
+        <table id="hi_table" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Species</th>
-              <th>Region</th>
-              <th>Island</th>
-              <th>Individual ID</th>
-              <th>Clutch completion</th>
-              <th>Date egg</th>
-              <th>Culmen length (mm)</th>
-              <th>Culmen depth (mm)</th>
-              <th>Flipper length (mm)</th>
-              <th>Body mass (g)</th>
-              <th>Sex</th>
-              <th>Delta 15 N</th>
-              <th>Delta 13 C</th>
-              <th>Comments</th>
+              <th>Lab ID</th>
+              <th>Host species</th>
+              <th>H1N2</th>
+              <th>H2N2</th>
+              <th>H3N2</th>
+              <th>H4N2</th>
+              <th>H5H2</th>
+              <th>H6N2</th>
+              <th>H7N3</th>
+              <th>H8N4</th>
+              <th>H9N2</th>
+              <th>H10N2</th>
+              <th>H11N2</th>
+              <th>H12N2</th>
+              <th>H13N6</th>
+              <th>H14N2</th>
+              <th>H16N3</th>
+              <th>Result</th>
             </tr>
           </thead>
           {% csrf_token %}
           <tbody>
-            {% for item in palmerIter%}
+            {% for item in hi%}
             <tr>
               <td>{{ item.id }}</td>
-              <td>{{ item.species }}</td>
-              <td>{{ item.region }}</td>
-              <td>{{ item.island }}</td>
-              <td>{{ item.individual_ID }}</td>
-              <td>{{ item.clutch_completion }}</td>
-              <td>{{ item.date_egg }}</td>
-              <td>{{ item.culmen_length_mm }}</td>
-              <td>{{ item.culmen_depth_mm }}</td>
-              <td>{{ item.flipper_length_mm }}</td>
-              <td>{{ item.body_mass_g }}</td>
-              <td>{{ item.sex }}</td>
-              <td>{{ item.delta_15_N }}</td>
-              <td>{{ item.delta_13_C }}</td>
-              <td>{{ item.comments }}</td>
+              <td>{{ item.lab_ID }}</td>
+              <td>{{ item.host_species }}</td>
+              <td>{{ item.H1N2 }}</td>
+              <td>{{ item.H2N2 }}</td>
+              <td>{{ item.H3N2 }}</td>
+              <td>{{ item.H4N2 }}</td>
+              <td>{{ item.H5N2 }}</td>
+              <td>{{ item.H6N2 }}</td>
+              <td>{{ item.H7N3 }}</td>
+              <td>{{ item.H8N4 }}</td>
+              <td>{{ item.H9N2 }}</td>
+              <td>{{ item.H10N2 }}</td>
+              <td>{{ item.H11N2 }}</td>
+              <td>{{ item.H12N2 }}</td>
+              <td>{{ item.H13N6 }}</td>
+              <td>{{ item.H14N2 }}</td>
+              <td>{{ item.H16N3 }}</td>
+              <td>{{ item.HI_result }}</td>
             </tr>
             {% endfor %}
           </tbody>

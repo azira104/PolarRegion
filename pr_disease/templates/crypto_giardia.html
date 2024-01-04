@@ -260,45 +260,39 @@
       </div>
 
       <div class="card-content">
-        <table id="palmerIter_table" class="table table-bordered table-hover">
+        <table id="crypto_giardia_table" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>ID</th>
+              <th>Field ID</th>
+              <th>Lab ID</th>
               <th>Species</th>
-              <th>Region</th>
-              <th>Island</th>
-              <th>Individual ID</th>
-              <th>Clutch completion</th>
-              <th>Date egg</th>
-              <th>Culmen length (mm)</th>
-              <th>Culmen depth (mm)</th>
-              <th>Flipper length (mm)</th>
-              <th>Body mass (g)</th>
+              <th>Common name</th>
+              <th>Date</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Age class</th>
               <th>Sex</th>
-              <th>Delta 15 N</th>
-              <th>Delta 13 C</th>
-              <th>Comments</th>
+              <th>Crytosporidium</th>
+              <th>Giardia</th>
             </tr>
           </thead>
           {% csrf_token %}
           <tbody>
-            {% for item in palmerIter%}
+            {% for item in crypto_giardia%}
             <tr>
               <td>{{ item.id }}</td>
+              <td>{{ item.field_ID }}</td>
+              <td>{{ item.lab_ID }}</td>
               <td>{{ item.species }}</td>
-              <td>{{ item.region }}</td>
-              <td>{{ item.island }}</td>
-              <td>{{ item.individual_ID }}</td>
-              <td>{{ item.clutch_completion }}</td>
-              <td>{{ item.date_egg }}</td>
-              <td>{{ item.culmen_length_mm }}</td>
-              <td>{{ item.culmen_depth_mm }}</td>
-              <td>{{ item.flipper_length_mm }}</td>
-              <td>{{ item.body_mass_g }}</td>
+              <td>{{ item.common_name }}</td>
+              <td>{{ item.date }}</td>
+              <td>{{ item.latitude }}</td>
+              <td>{{ item.longitude }}</td>
+              <td>{{ item.age_class }}</td>
               <td>{{ item.sex }}</td>
-              <td>{{ item.delta_15_N }}</td>
-              <td>{{ item.delta_13_C }}</td>
-              <td>{{ item.comments }}</td>
+              <td>{{ item.cryptosporidium }}</td>
+              <td>{{ item.giardia }}</td>
             </tr>
             {% endfor %}
           </tbody>
