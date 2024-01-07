@@ -8,7 +8,7 @@ app_name = 'pr_arctic'
 
 urlpatterns = [
     path('climate', views.climate, name='climate'),
-    path('iceExtent', views.iceExtent, name='iceExtent'),
-    path('climate', views.climate, name='climate'),
-    path('climate', views.climate, name='climate'),
+    path('iceextent', views.iceextent, name='iceextent'),
+    path('simpsonlagoon', views.simpsonlagoon, name='simpsonlagoon'),
+    path('streamgages', views.streamgages, name='streamgages')
 ]
