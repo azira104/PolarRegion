@@ -92,7 +92,7 @@
         </a>
       </h1>
 
-      <!-- DATASETS -->
+      <!-- DATASETS NAVIGATION BAR -->
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
@@ -123,10 +123,10 @@
                 <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="{% url 'pr_arctic:climate'%}">Northern Cities Climate</a></li>
-                  <li><a href="{% url 'pr_arctic:iceExtent'%}">Sea Ice Extent</a></li>
+                  <li><a href="{% url 'pr_arctic:iceextent'%}">Sea Ice Extent</a></li>
                   <li><a href="#">Sea Ice Image Masking </a></li>
                   <li><a href="{% url 'pr_arctic:streamgages'%}">VSGS Alaska Streamgages</a></li>
-                  <li><a href="{% url 'pr_arctic:simpsonLagoon'%}">Simpson Lagoon</a></li>
+                  <li><a href="{% url 'pr_arctic:simpsonlagoon'%}">Simpson Lagoon</a></li>
                   <li><a href="#">Arctic Sea Routes</a></li>
                 </ul>
               </li>
@@ -165,12 +165,14 @@
                       <li><a href="{% url 'pr_animal:abdTemp'%}">Bear Abdominal Temperature</a></li>
                     </ul>
                   </li>
-                  <a href="#"><span>Penguin</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="{% url 'pr_animal:gentoo'%}">Gentoo</a></li>
-                    <li><a href="{% url 'pr_animal:adelie'%}">Adelie</a></li>
-                    <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
-                  </ul>
+                  <li class="dropdown">
+                    <a href="#"><span>Penguin</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_animal:gentoo'%}">Gentoo</a></li>
+                      <li><a href="{% url 'pr_animal:adelie'%}">Adelie</a></li>
+                      <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
+                    </ul>
+                  </li>
                   <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li>
                   <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
                 </ul>
@@ -193,22 +195,17 @@
               <li class="dropdown">
                 <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li class="dropdown">
-                    <a href="{% url 'pr_population:penguinpopu'%}"><span>Penguin Population</span>
-                      <!-- <i class="bi bi-chevron-right"></i></a> -->
-                  </li>
+                  <li><a href="{% url 'pr_population:penguinpopu'%}">Penguin Population</a></li>
                   <li class="dropdown">
                     <a href="#"><span>Palmer Penguin</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
                       <li><a href="{% url 'pr_population:palmerIter'%}">Iter</a></li>
                       <li><a href="{% url 'pr_population:palmerSize'%}">Size</a></li>
-
                     </ul>
                   </li>
                   <li><a href="{% url 'pr_population:mfungi'%}">Marine Fungi</a></li>
                 </ul>
               </li>
-
               <li class="dropdown">
                 <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
