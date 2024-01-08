@@ -16,3 +16,6 @@ def seaice(request):
 def sulfurDioxide(request):
     sulfur_data = sulfur.objects.all()
     return render(request, 'sulfurDioxide.html', {'sulfur': sulfur_data})
+
+def aa1(request):
+    return render(request, 'aa1.html')
