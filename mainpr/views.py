@@ -26,6 +26,10 @@ def profsaberi(request):
     return render(request, 'profsaberi.html')
 def drsarahani(request):
     return render(request, 'drsarahani.html')
+def haznirah(request):
+    return render(request, 'haznirah.html')
+def azira(request):
+    return render(request, 'azira.html')
 
 def inner_page(request):
     return render(request, 'inner-page.html')
