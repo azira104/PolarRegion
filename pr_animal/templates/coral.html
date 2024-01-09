@@ -177,7 +177,7 @@
                       <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
                     </ul>
                   </li>
-                  <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li>
+                  {% comment %} <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li> {% endcomment %}
                   <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
                 </ul>
               </li>
@@ -377,7 +377,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Template Main Js File -->
-  <script src="{% static 'js/pr_plant.js' %}"></script>
+  <script src="{% static 'js/pr_animal.js' %}"></script>
 </body>
 
 </html>
