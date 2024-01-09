@@ -11,4 +11,7 @@ urlpatterns = [
     path('iceKrill/', views.iceKrill, name='iceKrill'),
     path('phytoplankton/', views.phytoplankton, name='phytoplankton'),
     path('plankton/', views.plankton, name='plankton'),
+    path('Cdata', views.Cdata, name='Cdata'),
+    path('edaphic', views.edaphic, name='edaphic'),
+    path('nucleotide', views.nucleotide, name='nucleotide')
 ]
