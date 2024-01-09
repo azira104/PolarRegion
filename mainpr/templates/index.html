@@ -87,8 +87,11 @@
   <header id="header" class="fixed-top bg-dark">
     <div class="container d-flex align-items-center justify-content-lg-between">
       <h1 class="logo me-auto me-lg-0">
-        <a href="{% url 'mainpr:index'%}">
-          <img src="{% static 'images/logo/polar.png' %}" alt="Home" class="img-fluid" />
+        {% comment %} <a href="{% url 'mainpr:index'%}">
+          <img src="{% static 'images/logo/polar.png' %}" alt="Home" class="img-fluid" /> {% endcomment %}
+        <a href="index.html">
+          <img src="{% static 'images/logo/polar.png' %}" alt="Logo 1" class="img-fluid logo-img" />
+          <img src="{% static 'images/logo/logoypasm.png' %}" alt="Logo 2" class="img-fluid logo-img" />
         </a>
       </h1>
 
@@ -1053,33 +1056,36 @@
 
           <div class="our_team">
             <div class="team_member">
-              <div class="member_img">
-                <img src="{% static 'images/team/dr.akmal.jpg' %}" alt="our_team">
-                <div class="social_media">
-                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
-                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
-                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+              <a href="{% url 'mainpr:drakmal'%}">
+                <div class="member_img">
+
+                  <img src="{% static 'images/team/dr.akmal.jpg' %}" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
                 </div>
-              </div>
-              <h3>DR. MUHAMMAD AKMAL BIN REMLI</h3>
-              <span>Project Leader</span>
-              <p>Institute for Artificial Intelligence and Big Data,Universiti Malaysia Kelantan</p>
+                <h3>DR. MUHAMMAD AKMAL BIN REMLI</h3>
+
+              </a>
             </div>
             <div class="team_member">
-              <div class="member_img">
-                <img src="{% static 'images/team/Dr.Marieanne.jpg' %}" alt="our_team">
-                <div class="social_media">
-                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
-                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
-                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+              <a href="{% url 'mainpr:drmae'%}">
+                <div class="member_img">
+                  <img src="{% static 'images/team/Dr.Marieanne.jpg' %}" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
                 </div>
-              </div>
-              <h3>TS. DR. MARIEANNE CHRISTIE LEONG</h3>
-              <span>Technical Validation on High-Performance Computing (HPC) of in Silico experiments</span>
-              <p>Institute for Artificial Intelligence and Big Data,Universiti Malaysia Kelantan
-              </p>
+                <h3>TS. DR. MARIEANNE CHRISTIE LEONG</h3>
+
+              </a>
             </div>
             <div class="team_member">
+              <a href="{% url 'mainpr:dralfonso'%}">
               <div class="member_img">
                 <img src="{% static 'images/team/dr.alfonso.jpg' %}" alt="our_team">
                 <div class="social_media">
@@ -1089,11 +1095,10 @@
                 </div>
               </div>
               <h3>ASSOCIATE PROFESSOR DR. ALFONSO GONZÁLEZ BRIONES</h3>
-              <span>Artificial Intelligence Techniques Validation in Generative Modelling</span>
-              <p>Faculty of Science,Universidad de Salamanca,Spain
-              </p>
+              </a>
             </div>
             <div class="team_member">
+              <a href="{% url 'mainpr:profsaberi'%}">
               <div class="member_img">
                 <img src="{% static 'images/team/Prof Saberi.jpg' %}" alt="our_team">
                 <div class="social_media">
@@ -1103,11 +1108,10 @@
                 </div>
               </div>
               <h3>Professor Dr. Mohd Saberi Mohamad</h3>
-              <span>Bioinformatic Techniques Development on Biomarker Discovery</span>
-              <p>College of Medicine and Health Sciences,United Arab Emirates University, United Arab Emirates
-              </p>
+              </a>
             </div>
             <div class="team_member">
+              <a href="{% url 'mainpr:drismail'%}">
               <div class="member_img">
                 <img src="{% static 'images/team/Prof.Ismail.jpg' %}" alt="our_team">
                 <div class="social_media">
@@ -1117,11 +1121,10 @@
                 </div>
               </div>
               <h3>Associate Prof.Ts.Dr.Ismail Bin Ahmedy</h3>
-              <span>Optimization in Generative Modelling in Meta</span>
-              <p>Faculty of Computer Science and Information Technology, Universiti Malaya
-              </p>
+              </a>
             </div>
             <div class="team_member">
+              <a href="{% url 'mainpr:drchin'%}">
               <div class="member_img">
                 <img src="{% static 'images/team/Dr Chin.jpg' %}" alt="our_team">
                 <div class="social_media">
@@ -1131,11 +1134,10 @@
                 </div>
               </div>
               <h3>DR CHIN SIOK-FONG</h3>
-              <span>Clinical Data Metagenomics and Biomarkers Validation</span>
-              <p>UKM Medical Molecular Biology Institute (UMBI), UKM Medical Centre
-              </p>
+              </a>
             </div>
             <div class="team_member">
+              <a href="{% url 'mainpr:drsarahani'%}">
               <div class="member_img">
                 <img src="{% static 'images/team/drsarahani.png' %}" alt="our_team">
                 <div class="social_media">
@@ -1145,14 +1147,13 @@
                 </div>
               </div>
               <h3>DR SARAHANI BINTI HARUN</h3>
-              <span>Ecological Data Metagenomic Validation</span>
-              <p>Institute of Systems Biology (INBIOSIS),UKM Bangi
-              </p>
+              </a>
             </div>
 
             <div class="team_member">
+              <a href="{% url 'mainpr:haznirah'%}">
               <div class="member_img">
-                <img src="https://i.pinimg.com/564x/f0/ad/59/f0ad595e6a8fdf87f92fdc4605f9602a.jpg" alt="our_team">
+                <img src="{% static 'images/team/haznirah.jpg' %}" alt="our_team">
                 <div class="social_media">
                   <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
                   <div class="twitter item"><i class="fab fa-twitter"></i></div>
@@ -1160,15 +1161,13 @@
                 </div>
               </div>
               <h3>NUR HAZNIRAH BINTI HAZMAN</h3>
-              <span>Intern Student</span>
-              <p>Bachelor Of Computer Science (Bioinformatic) with Honours<br>
-                Faculty of Computing, Universiti Teknologi Malaysia
-              </p>
+              </a>
             </div>
 
             <div class="team_member">
+              <a href="{% url 'mainpr:azira'%}">
               <div class="member_img">
-                <img src="https://i.pinimg.com/564x/f0/ad/59/f0ad595e6a8fdf87f92fdc4605f9602a.jpg" alt="our_team">
+                <img src="{% static 'images/team/rohaiza.png' %}" alt="our_team">
                 <div class="social_media">
                   <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
                   <div class="twitter item"><i class="fab fa-twitter"></i></div>
@@ -1176,10 +1175,7 @@
                 </div>
               </div>
               <h3>ROHAIZAAZIRA BINTI MOHD ZAWAWI</h3>
-              <span>Intern Student</span>
-              <p>Bachelor Of Computer Science (Bioinformatic) with Honours<br>
-                Faculty of Computing, Universiti Teknologi Malaysia
-              </p>
+              </a>
             </div>
           </div>
         </div>
