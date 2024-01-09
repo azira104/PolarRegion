@@ -177,7 +177,7 @@
                       <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
                     </ul>
                   </li>
-                  <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li>
+                  {% comment %} <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li> {% endcomment %}
                   <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
                 </ul>
               </li>
@@ -259,7 +259,7 @@
       <table id="bearblood_table" class="table table-bordered table-hover">
         <thead>
           <tr>
-            <th>ID</th>
+      
             <th>Bear ID</th>
             <th>Date and time UTC</th>
             <th>Latitude</th>
@@ -282,9 +282,9 @@
         </thead>
         {% csrf_token %}
         <tbody>
-          {% for item in bearblood%}
+          {% for item in blood%}
           <tr>
-            <td>{{ item.id }}</td>
+  
             <td>{{ item.BearID }}</td>
             <td>{{ item.datetimeUTC }}</td>
             <td>{{ item.latitude }}</td>

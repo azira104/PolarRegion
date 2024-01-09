@@ -177,7 +177,7 @@
                       <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
                     </ul>
                   </li>
-                  <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li>
+                  {% comment %} <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li> {% endcomment %}
                   <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
                 </ul>
               </li>
@@ -268,7 +268,7 @@
         </thead>
         {% csrf_token %}
         <tbody>
-          {% for item in bearCapSeq%}
+          {% for item in capSeq%}
           <tr>
             <td>{{ item.id }}</td>
             <td>{{ item.BearID }}</td>
