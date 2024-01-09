@@ -10,6 +10,9 @@
   <link rel="icon" type="image/x-icon" href="{% static 'images/logo/12.png' %}" />
   <meta content="" name="description" />
   <meta content="" name="keywords" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Swipe -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -24,26 +27,21 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet" />
 
+  <!--View Table button-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <!-- footer icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
   <!-- Hover -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
 
-  <!-- Vendor CSS Files -->
-  <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
-
   <!-- CDN CSS FILE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -66,8 +64,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.css"
     integrity="sha512-HajDJcB2lLZX5Ap4mVymNO6VLqj7mXIOEwEhugvcIPPdNLhTzY/fF2MhhATfWkS7NsOR/Bd4R1ztgNOy/9ID4A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!--Container Link WEBSITE-->
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+  <!-- Template Data Table -->
+  <link
+    href="https://cdn.datatables.net/v/bs5/dt-1.13.8/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.11.0/r-2.5.0/sp-2.2.0/datatables.min.css"
+    rel="stylesheet">
+
+  <script
+    src="https://cdn.datatables.net/v/bs5/dt-1.13.8/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.11.0/r-2.5.0/sp-2.2.0/datatables.min.js">
+  </script>
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
@@ -80,7 +85,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
 
 <body>
   <!-- ======= Header ======= -->
@@ -173,7 +177,7 @@
                       <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
                     </ul>
                   </li>
-                  <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li>
+                  {% comment %} <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li> {% endcomment %}
                   <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
                 </ul>
               </li>
@@ -232,46 +236,52 @@
   </header>
   <!-- End Header -->
 
-  <!-- hero -->
-  <section id="hero2">
-    <div class="container" data-aos="fade-up">
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="floating-card">
-          <h2>Charctic Interactive Sea Ice Graph
-          </h2>
-          <p>This dataset includes graphs depicting the extent of sea ice in both the Arctic and Antarctica. These
-            graphs show how much sea ice there is in these polar regions over time. Researchers or scientists likely use
-            this information to understand changes in the amount of sea ice and to study trends in the Arctic and
-            Antarctic environments.</p>
+  <!-- Content -->
+  <section id="box">
+    <div class="card">
+      <h2>Plant biology variables under cold stress from published experiments (1975-2019) that include microbial
+        symbionts as an experimental factor</h2>
+    </div>
 
-          <div class="flex-container">
-            <div class="data">
-              <h3>The dataset collected from</h3>
-              <img src="{% static 'images/logo8.png' %}" alt="GBIF Logo" style="max-height: 120px;">
-            </div>
-            <div class="data2">
-              <h3>Citation</h3>
-              <p style="font-style: italic;">NSIDC (2019). Charctic Interactive Sea Ice Graph | Arctic Sea Ice News and
-                Analysis. [online] Nsidc.org. Available at:
-                <a href="https://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/">https://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/</a> </p>
-            </div>
+    <div class="card-header">
+      <p>
+        The data compiles different aspects of plant biology (e.g., anatomy, physiology, fitness and gene-expression)
+        reported in scientific articles that experimentally explored the role of plant microbial symbionts in plant
+        tolerance to chilling (0-15 degrees Celsius) and freezing (under 0 degrees Celsius) conditions. Each variable
+        included in the dataset is composed of at least four values, representing the mean of the measured variable with
+        or without a given microbial symbiont and under control or cold conditions in a factorial design. The data were
+        generated for a meta-analysis, and so the level of replication and standard deviation or standard error, plus
+        other relevant information such as plant and microbial species, and source, are also included. Funding was
+        provided by Posdoctoral-FONDECYT 3180441, FONDECYT 11140607 and the NERC-CONICYT awards (NE/P003079/1 -
+        PII20150126).
+      </p>
+    </div>
 
-          </div>
-
-
-
-          <button class="learn-more"
-            onclick="openUrl('https://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/')">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Find out more</span>
-          </button>
-
-        </div>
-      </div>
+    <div class="card-content">
+      <table id="bearAbdTemp_table" class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Bear ID</th>
+            <th>Date and time UTC</th>
+            <th>Body temperature abdominal</th>
+          </tr>
+        </thead>
+        {% csrf_token %}
+        <tbody>
+          {% for item in abdTemp%}
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.BearID }}</td>
+            <td>{{ item.datetimeUTC }}</td>
+            <td>{{ item.bodyTemp_abdominal }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </section>
+  <!-- End content -->
 
   <!-- Footer -->
   <footer id="footer">
@@ -282,7 +292,7 @@
             <div class="footer-logo" style="width: 200px;">
               <img src="/static/images/logo/umk.png" style="width: 150px;">
               <img src="/static/images/logo/aibig.png" style="width: 150px;">
-              <img src="/static/images/logo/ypasm.png" style="width: 150px;">
+              <img src="/static/images/logo/polar1.png" style="width: 150px;">
             </div>
           </div>
           <div class="col-sm-12 col-lg-4">
@@ -333,10 +343,7 @@
   </footer>
   <!-- end -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
+  <!-- CDN JS FILE -->
   <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
     integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
@@ -356,13 +363,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
     integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="{% static 'js/main.js' %}"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script>
-    function openUrl(url) {
-      window.open(url, '_blank');
-    }
-  </script>
+
+  <!-- Template Main Js File -->
+  <script src="{% static 'js/pr_plant.js' %}"></script>
 </body>
 
 </html>

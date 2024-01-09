@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#showTableBtn").on("click", function () {
       $("#dataDescription").hide(); // Hide data description
-      $("#hero2").fadeIn(); // Show the table
+      $("#card-content").fadeIn(); // Show the table
     });
     $('#microbial_table').DataTable( {
       deferRender: true,
