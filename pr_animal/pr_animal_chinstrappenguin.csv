@@ -1,0 +1,467 @@
+SPECIES,COLONY,SEASON,DATE_PAIR_COUNT,TOTAL_NUMBER_PAIRS_WITH_EGGS,TOTAL_NUMBER_OF_PAIRS_WITHOUT_EGGS,TOTAL_NUMBER_OF_PAIRS,DATE_CHICK_COUNT,TOTAL_NUMBER_OF_CHICKS,TOTAL_NUMBER_OF_EGGS,TOTAL_NUMBER_OF_NESTS_WITHOUT_EGGS,DATE_FLEDGLING_COUNT,TOTAL_NUMBER_OF_FLEDGLINGS,COMMENTS
+Chinstrap penguin,C15,1978-1979,NA,NA,NA,NA,NA,NA,NA,NA,12/2/1979,5,Only fledling data
+Chinstrap penguin,C16,1978-1979,NA,NA,NA,NA,NA,NA,NA,NA,12/2/1979,155,Only fledling data
+Chinstrap penguin,C17,1978-1979,NA,NA,NA,NA,NA,NA,NA,NA,12/2/1979,18,Only fledling data
+Chinstrap penguin,C18,1978-1979,NA,NA,NA,NA,NA,NA,NA,NA,12/2/1979,23,Only fledling data
+Chinstrap penguin,C79,1978-1979,14/12/1978,NA,NA,185,NA,NA,NA,NA,16/2/1979,198,Only data on total no pairs and fledgling counts
+Chinstrap penguin,C80,1978-1979,14/12/1978,NA,NA,853,NA,NA,NA,NA,16/2/1979,1186,Only data on total no pairs and fledgling counts
+Chinstrap penguin,C81,1978-1979,14/12/1978,NA,NA,168,NA,NA,NA,NA,16/2/1979,154,Only data on total no pairs and fledgling counts
+Chinstrap penguin,C46,1978-1979,15/12/1978,NA,NA,19,NA,NA,NA,NA,NA,NA,Only data on total no pairs and fledgling counts
+Chinstrap penguin,C47,1978-1979,15/12/1978,NA,NA,566,NA,NA,NA,NA,NA,NA,Only data on total no pairs and fledgling counts
+Chinstrap penguin,Outer Island,1979-1980,6/12/1979,NA,NA,24,NA,NA,NA,NA,NA,NA,Only data on total no pairs and fledgling counts
+Chinstrap penguin,C15,1979-1980,8/12/1979,59,8,67,23/1/1980,71,6,NA,5/3/1980,29,76 chicks and 16 eggs on 9th Jan 1980
+Chinstrap penguin,C16,1979-1980,8/12/1979,NA,NA,151,23/1/1980,153,16,NA,5/3/1980,36,189 chicks and 45 eggs on 9th jan 1980
+Chinstrap penguin,C17,1979-1980,8/12/1979,NA,NA,24,23/1/1980,24,4,NA,5/3/1980,5,24 chicks and 11 eggs on 9th January 1980
+Chinstrap penguin,C18,1979-1980,8/12/1979,NA,NA,27,23/1/1980,16,4,NA,5/3/1980,7,21 chicks and 10 eggs on 9th January 1980
+Chinstrap penguin,C46,1979-1980,8/12/1979,NA,NA,31,21/1/1980,29,4,NA,5/3/1980,10,NA
+Chinstrap penguin,C47,1979-1980,8/12/1979,NA,NA,596,21/1/1980,677,38,NA,5/3/1980,134,743 chicks and 191 eggs on 9th January 1980
+Chinstrap penguin,C79,1979-1980,8/12/1979,NA,NA,1001,21/1/1980,187,5,NA,5/3/1980,197,NA
+Chinstrap penguin,C80,1979-1980,8/12/1979,NA,NA,169,21/1/1980,1167,101,NA,5/3/1980,40,NA
+Chinstrap penguin,C81,1979-1980,8/12/1979,NA,NA,163,21/1/1980,192,8,NA,5/3/1980,47,NA
+Chinstrap penguin,C46,1980-1981,18/12/1980,29,5,34,24/1/1981,18,6,NA,11/3/1981,8,NA
+Chinstrap penguin,C47,1980-1981,18/12/1980,490,45,535,24/1/1981,230,56,NA,11/3/1981,21,NA
+Chinstrap penguin,C79,1980-1981,18/12/1980,153,8,161,NA,NA,NA,NA,11/3/1981,6,No egg/chick counts
+Chinstrap penguin,C80,1980-1981,18/12/1980,654,20,674,NA,NA,NA,NA,11/3/1981,24,No egg/chick counts
+Chinstrap penguin,C81,1980-1981,18/12/1980,146,6,152,24/1/1981,70,16,NA,11/3/1981,10,NA
+Chinstrap penguin,C15,1980-1981,29/12/1980,48,4,52,2/2/1981,14,10,NA,11/3/1981,0,NA
+Chinstrap penguin,C16,1980-1981,29/12/1980,115,10,125,2/2/1981,44,10,NA,11/3/1981,17,NA
+Chinstrap penguin,C17,1980-1981,29/12/1980,24,2,26,2/2/1981,5,3,NA,11/3/1981,3,NA
+Chinstrap penguin,C18,1980-1981,29/12/1980,16,5,21,2/2/1981,2,1,NA,11/3/1981,2,NA
+Chinstrap penguin,Outer Island,1980-1981,29/12/1980,25,4,29,24/1/1981,13,3,NA,11/3/1981,4,NA
+Chinstrap penguin,Outer Island,1981-1982,21/12/1981,36,1,37,2/2/1982,45,0,NA,NA,NA,No fledgling data
+Chinstrap penguin,C79,1981-1982,23/12/1981,164,10,174,23/1/1982,275,25,NA,3/3/1982,163,NA
+Chinstrap penguin,C80,1981-1982,23/12/1981,909,51,960,23/1/1982,1093,108,NA,3/3/1982,640,NA
+Chinstrap penguin,C46,1981-1982,24/12/1981,55,2,57,27/1/1982,57,5,NA,3/3/1982,38,NA
+Chinstrap penguin,C47,1981-1982,24/12/1981,553,28,581,27/1/1982,667,40,NA,4/3/1982,492,NA
+Chinstrap penguin,C81,1981-1982,24/12/1981,181,15,196,23/1/1982,238,22,NA,3/3/1982,157,NA
+Chinstrap penguin,C15,1981-1982,25/12/1981,7,4,11,28/1/1982,4,2,NA,6/3/1982,4,NA
+Chinstrap penguin,C16,1981-1982,25/12/1981,189,10,199,28/1/1982,224,18,NA,6/3/1982,83,Fledglings from C16+C17
+Chinstrap penguin,C17,1981-1982,25/12/1981,6,3,9,28/1/1982,7,0,NA,NA,NA,For fledglings see data for C16
+Chinstrap penguin,C18,1981-1982,25/12/1981,24,2,26,28/1/1982,21,0,NA,6/3/1982,10,NA
+Chinstrap penguin,C15,1982-1983,4/12/1982,NA,NA,70,15/1/1983,92,20,NA,NA,NA,No fledgling data
+Chinstrap penguin,C16,1982-1983,4/12/1982,NA,NA,193,15/1/1983,274,40,NA,NA,NA,No fledgling data
+Chinstrap penguin,C17,1982-1983,4/12/1982,NA,NA,8,15/1/1983,12,0,NA,NA,NA,No fledgling data
+Chinstrap penguin,C18,1982-1983,NA,NA,NA,NA,15/1/1983,29,11,NA,NA,NA,No pair/fledgling data
+Chinstrap penguin,C18a,1982-1983,NA,NA,NA,NA,15/1/1983,5,1,NA,NA,NA,No pair/fledgling data
+Chinstrap penguin,C46,1982-1983,4/12/1982,NA,NA,36,15/1/1983,42,1,NA,NA,NA,No fledgling data
+Chinstrap penguin,C47,1982-1983,4/12/1982,NA,NA,698,15/1/1983,934,136,NA,NA,NA,No fledgling data
+Chinstrap penguin,C79,1982-1983,4/12/1982,NA,NA,169,15/1/1983,199,51,NA,NA,NA,No fledgling data
+Chinstrap penguin,C80,1982-1983,4/12/1982,NA,NA,917,15/1/1983,1099,414,NA,NA,NA,No fledgling data
+Chinstrap penguin,C81,1982-1983,4/12/1982,NA,NA,168,15/1/1983,181,37,NA,NA,NA,No fledgling data
+Chinstrap penguin,Outer Island,1982-1983,4/12/1982,NA,NA,44,15/1/1983,56,1,NA,NA,NA,No fledgling data
+Chinstrap penguin,C15,1983-1984,NA,NA,NA,NA,22/1/1984,90,4,NA,24/2/1984,72,No pair data
+Chinstrap penguin,C16,1983-1984,NA,NA,NA,NA,22/1/1984,179,15,NA,24/2/1984,189,No pair data. Fledglings from C16+C17
+Chinstrap penguin,C17,1983-1984,NA,NA,NA,NA,22/1/1984,28,1,NA,NA,NA,No pair data. For fledglings see data for C16
+Chinstrap penguin,C18,1983-1984,NA,NA,NA,NA,22/1/1984,25,1,NA,24/2/1984,20,No pair data
+Chinstrap penguin,C46,1983-1984,8/12/1983,NA,NA,33,23/1/1984,66,7,NA,6/3/1984,14,NA
+Chinstrap penguin,C47,1983-1984,8/12/1983,NA,NA,654,23/1/1984,589,23,NA,6/3/1984,106,NA
+Chinstrap penguin,C79,1983-1984,8/12/1983,NA,NA,205,23/1/1984,173,15,NA,6/3/1984,46,NA
+Chinstrap penguin,C80,1983-1984,8/12/1983,NA,NA,780,23/1/1984,947,60,NA,6/3/1984,174,NA
+Chinstrap penguin,C81,1983-1984,8/12/1983,NA,NA,171,23/1/1984,208,15,NA,6/3/1984,53,NA
+Chinstrap penguin,Outer Island,1983-1984,9/12/1983,NA,NA,40,24/1/1984,58,0,NA,10/3/1984,NA,All chicks had fledged by 10th Mar 1984
+Chinstrap penguin,C46,1984-1985,11/12/1984,69,4,73,18/1/1985,86,3,NA,21/2/1985,81,NA
+Chinstrap penguin,C47,1984-1985,11/12/1984,483,14,497,18/1/1985,665,32,NA,21/2/1985,615,NA
+Chinstrap penguin,C79,1984-1985,11/12/1984,139,11,150,18/1/1985,159,49,NA,21/2/1985,155,NA
+Chinstrap penguin,C80,1984-1985,11/12/1984,708,19,727,18/1/1985,966,73,NA,21/2/1985,835,NA
+Chinstrap penguin,C81,1984-1985,11/12/1984,161,5,166,18/1/1985,196,24,NA,21/2/1985,175,NA
+Chinstrap penguin,C15,1984-1985,12/12/1984,59,2,61,19/1/1985,84,0,NA,25/2/1985,72,NA
+Chinstrap penguin,C16,1984-1985,12/12/1984,135,3,138,19/1/1985,164,18,NA,25/2/1985,178,Fledgling data for C16+C17+18a
+Chinstrap penguin,C17,1984-1985,12/12/1984,40,4,44,19/1/1985,46,4,NA,NA,NA,For fledgling data see C16
+Chinstrap penguin,C18,1984-1985,12/12/1984,28,1,29,19/1/1985,37,2,NA,25/2/1985,25,NA
+Chinstrap penguin,C18a,1984-1985,12/12/1984,4,2,6,19/1/1985,5,0,NA,NA,NA,For fledgling data see C16
+Chinstrap penguin,Outer Island,1984-1985,12/12/1984,37,1,38,19/1/1985,59,6,NA,21/2/1985,42,NA
+Chinstrap penguin,C46,1985-1986,16/12/1985,84,9,93,13/1/1986,109,9,NA,16/2/1986,101,NA
+Chinstrap penguin,C47,1985-1986,16/12/1985,533,15,548,13/1/1986,730,48,NA,16/2/1986,601,NA
+Chinstrap penguin,C79,1985-1986,16/12/1985,188,7,195,13/1/1986,305,21,NA,16/2/1986,260,NA
+Chinstrap penguin,C80,1985-1986,16/12/1985,804,19,823,13/1/1986,1194,65,NA,16/2/1986,982,NA
+Chinstrap penguin,C81,1985-1986,16/12/1985,184,14,198,13/1/1986,293,18,NA,16/2/1986,246,NA
+Chinstrap penguin,C15,1985-1986,19/12/1985,73,2,75,20/1/1986,107,3,NA,17/2/1986,108,NA
+Chinstrap penguin,C16,1985-1986,19/12/1985,155,3,158,20/1/1986,205,12,NA,17/2/1986,245,NA
+Chinstrap penguin,C17,1985-1986,19/12/1985,38,2,40,20/1/1986,54,4,NA,17/2/1986,40,NA
+Chinstrap penguin,C18,1985-1986,19/12/1985,32,0,32,20/1/1986,43,1,NA,17/2/1986,40,NA
+Chinstrap penguin,C18a,1985-1986,19/12/1985,11,0,11,20/1/1986,10,0,NA,17/2/1986,8,NA
+Chinstrap penguin,Outer Island,1985-1986,25/12/1985,43,3,46,16/2/1986,73,9,NA,16/2/1986,69,NA
+Chinstrap penguin,C46,1986-1987,10/12/1986,89,9,98,19/1/1987,94,6,NA,20/2/1987,83,NA
+Chinstrap penguin,C47,1986-1987,10/12/1986,523,28,551,19/1/1987,604,69,NA,20/2/1987,480,NA
+Chinstrap penguin,C79,1986-1987,10/12/1986,171,10,181,19/1/1987,225,26,NA,20/2/1987,189,NA
+Chinstrap penguin,C80,1986-1987,10/12/1986,784,43,827,19/1/1987,1089,86,NA,20/2/1987,935,NA
+Chinstrap penguin,C81,1986-1987,10/12/1986,181,10,191,19/1/1987,241,17,NA,20/2/1987,178,NA
+Chinstrap penguin,C15,1986-1987,16/12/1986,72,4,76,20/1/1987,86,4,NA,25/2/1987,70,NA
+Chinstrap penguin,C16,1986-1987,16/12/1986,139,3,142,20/1/1987,186,5,NA,25/2/1987,181,Fledgling data for C16+18a
+Chinstrap penguin,C17,1986-1987,16/12/1986,47,4,51,20/1/1987,52,3,NA,25/2/1987,41,NA
+Chinstrap penguin,C18,1986-1987,16/12/1986,41,2,43,20/1/1987,41,6,NA,25/2/1987,28,NA
+Chinstrap penguin,C18a,1986-1987,16/12/1986,7,0,7,20/1/1987,12,0,NA,NA,NA,For fledgling data see C16
+Chinstrap penguin,Outer Island,1986-1987,23/12/1986,49,2,51,24/1/1987,67,6,NA,21/2/1987,54,NA
+Chinstrap penguin,C46,1987-1988,6/12/1987,NA,NA,106,22/1/1988,105,6,NA,20/2/1988,91,NA
+Chinstrap penguin,C47,1987-1988,6/12/1987,NA,NA,430,22/1/1988,563,60,NA,20/2/1988,514,NA
+Chinstrap penguin,C79,1987-1988,6/12/1987,NA,NA,140,13/1/1988,140,51,NA,20/2/1988,134,NA
+Chinstrap penguin,C80,1987-1988,6/12/1987,NA,NA,640,13/1/1988,813,287,NA,20/2/1988,849,NA
+Chinstrap penguin,C81,1987-1988,6/12/1987,NA,NA,154,13/1/1988,192,64,NA,20/2/1988,199,NA
+Chinstrap penguin,C15,1987-1988,7/12/1987,NA,NA,67,11/1/1988,80,19,NA,21/2/1988,79,NA
+Chinstrap penguin,C16,1987-1988,7/12/1987,NA,NA,150,11/1/1988,175,46,NA,21/2/1988,172,NA
+Chinstrap penguin,C17,1987-1988,7/12/1987,NA,NA,47,11/1/1988,41,17,NA,21/2/1988,38,NA
+Chinstrap penguin,C18,1987-1988,7/12/1987,NA,NA,33,11/1/1988,15,12,NA,21/2/1988,12,NA
+Chinstrap penguin,C18a,1987-1988,7/12/1987,NA,NA,9,11/1/1988,6,5,NA,21/2/1988,7,NA
+Chinstrap penguin,Outer Island,1987-1988,NA,NA,NA,NA,12/1/1988,62,14,NA,25/2/1988,55,No pair data
+Chinstrap penguin,C15,1987-1988,NA,NA,NA,NA,12/1/1989,77,25,NA,13/2/1989,86,No pair data
+Chinstrap penguin,C16,1988-1989,6/12/1988,114,42,156,12/1/1989,150,57,NA,13/2/1989,162,NA
+Chinstrap penguin,C17,1988-1989,6/12/1988,38,16,54,12/1/1989,37,15,NA,13/2/1989,35,NA
+Chinstrap penguin,C18,1988-1989,6/12/1988,22,12,34,12/1/1989,20,12,NA,13/2/1989,23,NA
+Chinstrap penguin,C18a,1988-1989,6/12/1988,7,2,9,12/1/1989,5,1,NA,13/2/1989,5,NA
+Chinstrap penguin,C46,1988-1989,7/12/1988,80,38,118,13/1/1989,103,33,NA,13/2/1989,88,NA
+Chinstrap penguin,C47,1988-1989,7/12/1988,406,135,541,13/1/1989,576,183,NA,13/2/1989,598,NA
+Chinstrap penguin,Outer Island,1988-1989,7/12/1988,48,18,66,15/1/1989,70,19,NA,13/2/1989,68,NA
+Chinstrap penguin,C79,1988-1989,9/12/1988,137,19,156,13/1/1989,183,47,NA,13/2/1989,168,NA
+Chinstrap penguin,C80,1988-1989,9/12/1988,683,125,808,13/1/1989,845,296,NA,13/2/1989,886,NA
+Chinstrap penguin,C81,1988-1989,9/12/1988,157,33,190,13/1/1989,225,49,NA,13/2/1989,217,NA
+Chinstrap penguin,C46,1989-1990,5/12/1989,118,24,142,10/1/1990,164,18,NA,14/2/1990,39,NA
+Chinstrap penguin,C47,1989-1990,5/12/1989,545,31,576,10/1/1990,695,88,NA,14/2/1990,108,NA
+Chinstrap penguin,C79,1989-1990,5/12/1989,167,13,180,10/1/1990,263,26,NA,14/2/1990,49,NA
+Chinstrap penguin,C80,1989-1990,5/12/1989,800,55,855,10/1/1990,1233,128,NA,14/2/1990,224,NA
+Chinstrap penguin,C81,1989-1990,5/12/1989,200,22,222,10/1/1990,305,43,NA,14/2/1990,47,NA
+Chinstrap penguin,Outer Island,1989-1990,5/12/1989,59,12,71,10/1/1990,80,9,NA,19/2/1990,18,NA
+Chinstrap penguin,C15,1989-1990,7/12/1989,82,1,83,11/1/1990,117,14,NA,14/2/1990,38,NA
+Chinstrap penguin,C16,1989-1990,7/12/1989,162,6,168,11/1/1990,186,19,NA,14/2/1990,62,NA
+Chinstrap penguin,C17,1989-1990,7/12/1989,58,4,62,11/1/1990,69,4,NA,14/2/1990,24,NA
+Chinstrap penguin,C18,1989-1990,7/12/1989,33,5,38,11/1/1990,37,2,NA,14/2/1990,13,NA
+Chinstrap penguin,C18a,1989-1990,7/12/1989,6,2,8,11/1/1990,7,0,NA,14/2/1990,4,NA
+Chinstrap penguin,C46,1990-1991,5/12/1990,63,51,114,9/1/1991,80,57,NA,18/2/1991,88,NA
+Chinstrap penguin,C47,1990-1991,5/12/1990,291,102,393,9/1/1991,291,240,NA,18/2/1991,329,NA
+Chinstrap penguin,C79,1990-1991,5/12/1990,86,49,135,9/1/1991,103,81,NA,18/2/1991,143,NA
+Chinstrap penguin,C80,1990-1991,5/12/1990,410,247,657,9/1/1991,465,584,NA,18/2/1991,593,NA
+Chinstrap penguin,C81,1990-1991,5/12/1990,112,47,159,9/1/1991,133,108,NA,18/2/1991,153,NA
+Chinstrap penguin,Outer Island,1990-1991,5/12/1990,31,26,57,11/1/1990,43,36,NA,19/2/1991,43,NA
+Chinstrap penguin,C15,1990-1991,6/12/1990,46,15,61,12/1/1991,70,28,NA,18/2/1991,71,NA
+Chinstrap penguin,C16,1990-1991,6/12/1990,78,29,107,12/1/1991,112,44,NA,18/2/1991,119,NA
+Chinstrap penguin,C17,1990-1991,6/12/1990,25,17,42,12/1/1991,29,13,NA,18/2/1991,29,NA
+Chinstrap penguin,C18,1990-1991,6/12/1990,22,7,29,12/1/1991,16,5,NA,18/2/1991,13,NA
+Chinstrap penguin,C18a,1990-1991,6/12/1990,4,3,7,12/1/1991,3,1,NA,18/2/1991,2,NA
+Chinstrap penguin,C46,1991-1992,5/12/1991,102,30,132,11/1/1992,111,26,NA,17/2/1992,94,NA
+Chinstrap penguin,C47,1991-1992,5/12/1991,397,107,504,11/1/1992,504,117,NA,17/2/1992,446,NA
+Chinstrap penguin,C79,1991-1992,5/12/1991,122,33,155,11/1/1992,179,46,NA,17/2/1992,146,NA
+Chinstrap penguin,C80,1991-1992,5/12/1991,617,180,797,11/1/1992,930,220,NA,17/2/1992,784,NA
+Chinstrap penguin,C81,1991-1992,5/12/1991,151,46,197,11/1/1992,217,76,NA,17/2/1992,211,NA
+Chinstrap penguin,Outer Island,1991-1992,5/12/1991,46,22,68,11/1/1992,55,14,NA,17/2/1992,49,NA
+Chinstrap penguin,C15,1991-1992,6/12/1991,61,9,70,12/1/1992,86,13,NA,17/2/1992,92,NA
+Chinstrap penguin,C16,1991-1992,6/12/1991,122,36,158,12/1/1992,166,30,NA,17/2/1992,151,NA
+Chinstrap penguin,C17,1991-1992,6/12/1991,42,12,54,12/1/1992,50,6,NA,17/2/1992,40,NA
+Chinstrap penguin,C18,1991-1992,6/12/1991,25,10,35,12/1/1992,25,3,NA,17/2/1992,16,NA
+Chinstrap penguin,C18a,1991-1992,6/12/1991,6,5,11,12/1/1992,5,0,NA,17/2/1992,5,NA
+Chinstrap penguin,C46,1992-1993,6/12/1992,116,5,121,10/1/1993,167,14,NA,13/2/1993,155,NA
+Chinstrap penguin,C47,1992-1993,6/12/1992,407,52,459,10/1/1993,500,67,NA,13/2/1993,419,NA
+Chinstrap penguin,C79,1992-1993,6/12/1992,155,22,177,10/1/1993,250,29,NA,13/2/1993,233,NA
+Chinstrap penguin,C80,1992-1993,6/12/1992,782,42,824,10/1/1993,1174,146,NA,13/2/1993,901,NA
+Chinstrap penguin,C81,1992-1993,6/12/1992,176,18,194,10/1/1993,263,20,NA,13/2/1993,269,NA
+Chinstrap penguin,Outer Island,1992-1993,6/12/1992,56,6,62,9/1/1993,63,14,NA,15/2/1993,53,NA
+Chinstrap penguin,C15,1992-1993,7/12/1992,73,2,75,9/1/1993,102,15,NA,14/2/1993,81,NA
+Chinstrap penguin,C16,1992-1993,7/12/1992,130,13,143,9/1/1993,152,18,NA,14/2/1993,165,Fledgling data for C16+C17
+Chinstrap penguin,C17,1992-1993,7/12/1992,51,3,54,9/1/1993,57,8,NA,NA,NA,For fledgling data see C16
+Chinstrap penguin,C18,1992-1993,7/12/1992,22,3,25,9/1/1993,19,3,NA,14/2/1993,13,NA
+Chinstrap penguin,C18a,1992-1993,7/12/1992,9,2,11,9/1/1993,10,0,NA,14/2/1993,3,NA
+Chinstrap penguin,Outer Island,1993-1994,4/12/1993,51,16,67,8/1/1994,43,25,NA,26/2/1994,6,NA
+Chinstrap penguin,C15,1993-1994,5/12/1993,82,11,93,11/1/1994,104,8,NA,3/3/1994,37,NA
+Chinstrap penguin,C16,1993-1994,5/12/1993,143,10,153,11/1/1994,146,23,NA,3/3/1994,34,NA
+Chinstrap penguin,C17,1993-1994,5/12/1993,46,12,58,11/1/1994,46,4,NA,3/3/1994,6,NA
+Chinstrap penguin,C18,1993-1994,5/12/1993,24,8,32,11/1/1994,18,4,NA,3/3/1994,6,NA
+Chinstrap penguin,C18a,1993-1994,5/12/1993,5,2,7,11/1/1994,7,1,NA,3/3/1994,8,NA
+Chinstrap penguin,C46,1993-1994,5/12/1993,124,34,158,9/1/1994,166,32,NA,27/2/1994,87,NA
+Chinstrap penguin,C47,1993-1994,5/12/1993,375,161,536,9/1/1994,482,117,NA,27/2/1994,197,NA
+Chinstrap penguin,C79,1993-1994,5/12/1993,141,31,172,9/1/1994,221,69,NA,27/2/1994,88,NA
+Chinstrap penguin,C80,1993-1994,5/12/1993,650,143,793,9/1/1994,956,251,NA,27/2/1994,340,NA
+Chinstrap penguin,C81,1993-1994,5/12/1993,177,31,208,9/1/1994,258,83,NA,27/2/1994,95,NA
+Chinstrap penguin,Outer Island,1994-1995,3/12/1994,34,7,41,8/1/1995,61,11,NA,21/2/1995,30,NA
+Chinstrap penguin,C46,1994-1995,4/12/1994,87,26,113,8/1/1995,116,24,NA,20/2/1995,80,NA
+Chinstrap penguin,C47,1994-1995,4/12/1994,282,79,361,8/1/1995,258,72,NA,20/2/1995,208,NA
+Chinstrap penguin,C79,1994-1995,4/12/1994,111,29,140,8/1/1995,174,56,NA,20/2/1995,137,NA
+Chinstrap penguin,C80,1994-1995,4/12/1994,477,121,598,8/1/1995,667,217,NA,20/2/1995,577,NA
+Chinstrap penguin,C81,1994-1995,4/12/1994,116,36,152,8/1/1995,198,38,NA,20/2/1995,122,NA
+Chinstrap penguin,C15,1994-1995,6/12/1994,54,8,62,11/1/1995,83,12,NA,22/2/1995,84,NA
+Chinstrap penguin,C16,1994-1995,6/12/1994,100,14,114,11/1/1995,87,11,NA,22/2/1995,92,Flegling data for C16+C17+C18a
+Chinstrap penguin,C17,1994-1995,6/12/1994,39,11,50,11/1/1995,28,9,NA,NA,NA,For fledgling data see C16
+Chinstrap penguin,C18,1994-1995,6/12/1994,15,2,17,11/1/1995,10,2,NA,22/2/1995,2,NA
+Chinstrap penguin,C18a,1994-1995,6/12/1994,5,2,7,11/1/1995,3,1,NA,NA,NA,For fledgling data see C16
+Chinstrap penguin,Outer Island,1995-1996,3/12/1995,NA,NA,46,6/1/1996,22,36,NA,7/2/1996,25,Pairs with/without eggs not distinguished
+Chinstrap penguin,C15,1995-1996,6/12/1995,NA,NA,63,4/1/1996,24,89,NA,14/2/1996,98,Pairs with/without eggs not distinguished
+Chinstrap penguin,C16,1995-1996,6/12/1995,NA,NA,98,4/1/1996,32,78,NA,14/2/1996,70,Pairs with/without eggs not distinguished
+Chinstrap penguin,C17,1995-1996,6/12/1995,NA,NA,43,4/1/1996,14,33,NA,14/2/1996,27,Pairs with/without eggs not distinguished
+Chinstrap penguin,C18,1995-1996,6/12/1995,NA,NA,21,4/1/1996,4,11,NA,14/2/1996,4,Pairs with/without eggs not distinguished
+Chinstrap penguin,C18a,1995-1996,6/12/1995,NA,NA,5,4/1/1996,0,5,NA,14/2/1996,0,Pairs with/without eggs not distinguished
+Chinstrap penguin,C46,1995-1996,7/12/1995,NA,NA,120,5/1/1996,47,107,NA,11/2/1996,93,Pairs with/without eggs not distinguished
+Chinstrap penguin,C47,1995-1996,7/12/1995,NA,NA,360,5/1/1996,102,309,NA,11/2/1996,278,Pairs with/without eggs not distinguished
+Chinstrap penguin,C79,1995-1996,7/12/1995,NA,NA,165,5/1/1996,53,199,NA,11/2/1996,162,Pairs with/without eggs not distinguished
+Chinstrap penguin,C80,1995-1996,7/12/1995,NA,NA,644,5/1/1996,223,723,NA,11/2/1996,590,Pairs with/without eggs not distinguished
+Chinstrap penguin,C15,1996-1997,5/12/1996,70,4,74,19/1/1997,99,4,NA,11/2/1997,98,NA
+Chinstrap penguin,C16,1996-1997,5/12/1996,87,10,97,19/1/1997,85,3,NA,11/2/1997,69,NA
+Chinstrap penguin,C17,1996-1997,5/12/1996,28,9,37,19/1/1997,22,1,NA,11/2/1997,20,NA
+Chinstrap penguin,C18,1996-1997,5/12/1996,14,2,16,19/1/1997,5,3,NA,11/2/1997,2,NA
+Chinstrap penguin,C18a,1996-1997,5/12/1996,4,2,6,19/1/1997,0,0,NA,11/2/1997,0,NA
+Chinstrap penguin,C46,1996-1997,5/12/1996,107,12,119,19/1/1997,118,5,NA,8/2/1997,112,NA
+Chinstrap penguin,C47,1996-1997,5/12/1996,255,30,285,19/1/1997,273,26,NA,8/2/1997,238,NA
+Chinstrap penguin,C79,1996-1997,5/12/1996,158,9,167,19/1/1997,208,15,NA,8/2/1997,188,NA
+Chinstrap penguin,C80,1996-1997,5/12/1996,618,39,657,19/1/1997,819,51,NA,8/2/1997,768,NA
+Chinstrap penguin,C81,1996-1997,5/12/1996,177,13,190,19/1/1997,228,18,NA,8/2/1997,196,NA
+Chinstrap penguin,Outer Island,1996-1997,5/12/1996,39,7,46,19/1/1997,18,2,NA,14/2/1997,18,NA
+Chinstrap penguin,Outer Island,1997-1998,NA,NA,NA,NA,24/1/1998,16,6,NA,5/3/1998,14,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C15,1997-1998,NA,NA,NA,NA,25/1/1998,46,9,NA,6/3/1998,43,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C16,1997-1998,NA,NA,NA,NA,25/1/1998,51,4,NA,6/3/1998,45,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C17,1997-1998,NA,NA,NA,NA,25/1/1998,15,3,NA,NA,NA,Sea ice prevented base opening until January and therefore no pairs data; No fledgling dat
+Chinstrap penguin,C18,1997-1998,NA,NA,NA,NA,25/1/1998,8,2,NA,6/3/1998,1,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C18a,1997-1998,NA,NA,NA,NA,25/1/1998,0,0,NA,6/3/1998,0,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C46,1997-1998,NA,NA,NA,NA,25/1/1998,40,4,NA,5/3/1998,34,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C47,1997-1998,NA,NA,NA,NA,25/1/1998,93,15,NA,5/3/1998,63,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C79,1997-1998,NA,NA,NA,NA,25/1/1998,63,18,NA,5/3/1998,43,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C80,1997-1998,NA,NA,NA,NA,25/1/1998,339,86,NA,5/3/1998,260,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C81,1997-1998,NA,NA,NA,NA,25/1/1998,78,20,NA,5/3/1998,59,Sea ice prevented base opening until January and therefore no pairs data
+Chinstrap penguin,C46,1998-1999,6/12/1998,106,16,122,19/1/1999,132,5,NA,17/2/1999,114,NA
+Chinstrap penguin,C47,1998-1999,6/12/1998,258,35,293,19/1/1999,312,26,NA,17/2/1999,266,NA
+Chinstrap penguin,C80,1998-1999,6/12/1998,690,68,758,19/1/1999,972,87,NA,17/2/1999,852,NA
+Chinstrap penguin,C15,1998-1999,7/12/1998,71,6,77,19/1/1999,122,14,NA,20/2/1999,116,NA
+Chinstrap penguin,C16,1998-1999,7/12/1998,82,8,90,19/1/1999,85,4,NA,20/2/1999,92,Fledgling data for C16+C17
+Chinstrap penguin,C17,1998-1999,7/12/1998,20,10,30,19/1/1999,18,0,NA,NA,NA,See fledgling data for C16
+Chinstrap penguin,C18,1998-1999,7/12/1998,13,3,16,19/1/1999,11,4,NA,20/2/1999,0,NA
+Chinstrap penguin,C18a,1998-1999,7/12/1998,1,1,2,19/1/1999,0,0,NA,20/2/1999,7,NA
+Chinstrap penguin,C79,1998-1999,8/12/1998,161,28,189,19/1/1999,234,25,NA,17/2/1999,209,NA
+Chinstrap penguin,C81,1998-1999,8/12/1998,193,19,212,19/1/1999,268,26,NA,17/2/1999,247,NA
+Chinstrap penguin,Outer Island,1998-1999,11/12/1998,43,4,47,21/1/1999,50,3,NA,19/2/1999,41,NA
+Chinstrap penguin,C15,1999-2000,6/12/1999,46,17,63,15/1/2000,78,8,NA,15/2/2000,61,NA
+Chinstrap penguin,C16,1999-2000,6/12/1999,58,13,71,15/1/2000,30,6,NA,15/2/2000,39,Fledgling data for C16+C17
+Chinstrap penguin,C17,1999-2000,6/12/1999,17,6,23,15/1/2000,10,3,NA,NA,NA,See fledgling data for C16
+Chinstrap penguin,C18,1999-2000,6/12/1999,9,4,13,15/1/2000,2,0,NA,15/2/2000,1,NA
+Chinstrap penguin,C18a,1999-2000,6/12/1999,0,0,0,15/1/2000,0,0,NA,15/2/2000,0,NA
+Chinstrap penguin,C46,1999-2000,6/12/1999,82,29,111,15/1/2000,100,10,NA,15/2/2000,72,NA
+Chinstrap penguin,C47,1999-2000,6/12/1999,188,77,265,15/1/2000,147,21,NA,15/2/2000,103,NA
+Chinstrap penguin,C79,1999-2000,6/12/1999,123,27,150,15/1/2000,143,21,NA,15/2/2000,107,NA
+Chinstrap penguin,C80,1999-2000,6/12/1999,444,104,548,15/1/2000,685,77,NA,15/2/2000,106,NA
+Chinstrap penguin,C81,1999-2000,6/12/1999,116,43,159,15/1/2000,140,29,NA,15/2/2000,542,NA
+Chinstrap penguin,Outer Island,1999-2000,7/12/1999,21,16,37,14/1/2000,10,3,NA,14/2/2000,6,NA
+Chinstrap penguin,C15,2000-2001,11/12/2000,74,NA,77,16/1/2001,95,8,NA,15/2/2001,80,No pairs w/o egg data
+Chinstrap penguin,C16,2000-2001,11/12/2000,82,NA,90,16/1/2001,94,2,NA,15/2/2001,96,No pairs w/o egg data; Fledgling data for C16+C17
+Chinstrap penguin,C17,2000-2001,11/12/2000,18,NA,21,16/1/2001,9,0,NA,NA,NA,No pairs w/o egg data; See fledgling data for C16
+Chinstrap penguin,C18,2000-2001,11/12/2000,9,NA,10,16/1/2001,5,1,NA,15/2/2001,0,No pairs w/o egg data
+Chinstrap penguin,C18a,2000-2001,11/12/2000,0,NA,0,16/1/2001,0,0,NA,15/2/2001,0,No pairs w/o egg data
+Chinstrap penguin,C46,2000-2001,11/12/2000,107,NA,118,16/1/2001,104,13,NA,16/2/2001,103,No pairs w/o egg data
+Chinstrap penguin,C47,2000-2001,11/12/2000,209,NA,224,16/1/2001,226,22,NA,16/2/2001,190,No pairs w/o egg data
+Chinstrap penguin,C79,2000-2001,11/12/2000,147,NA,154,16/1/2001,189,17,NA,16/2/2001,157,No pairs w/o egg data
+Chinstrap penguin,C80,2000-2001,11/12/2000,684,NA,725,16/1/2001,837,79,NA,16/2/2001,755,No pairs w/o egg data
+Chinstrap penguin,C81,2000-2001,11/12/2000,151,NA,160,16/1/2001,166,13,NA,16/2/2001,147,No pairs w/o egg data
+Chinstrap penguin,Outer Island,2000-2001,NA,NA,NA,NA,17/1/2001,22,2,NA,15/2/2001,23,No pairs data
+Chinstrap penguin,C46,2001-2002,9/12/2001,124,9,133,17/1/2002,151,9,10,16/2/2002,134,NA
+Chinstrap penguin,C47,2001-2002,9/12/2001,205,18,223,17/1/2002,182,21,22,16/2/2002,157,NA
+Chinstrap penguin,C79,2001-2002,9/12/2001,175,10,185,17/1/2002,239,18,10,16/2/2002,224,NA
+Chinstrap penguin,C80,2001-2002,9/12/2001,819,20,839,17/1/2002,1006,87,42,16/2/2002,854,NA
+Chinstrap penguin,C81,2001-2002,9/12/2001,160,7,167,17/1/2002,199,11,7,16/2/2002,190,NA
+Chinstrap penguin,Outer Island,2001-2002,9/12/2001,27,13,40,27/1/2002,8,6,18,17/2/2002,7,NA
+Chinstrap penguin,C15,2001-2002,10/12/2001,85,1,86,17/1/2002,138,9,8,15/2/2002,102,NA
+Chinstrap penguin,C16,2001-2002,10/12/2001,79,1,80,17/1/2002,101,6,4,15/2/2002,95,Fledgling data for C16+C17
+Chinstrap penguin,C17,2001-2002,10/12/2001,16,1,17,17/1/2002,21,0,3,NA,NA,See fledgling data for C16
+Chinstrap penguin,C18,2001-2002,10/12/2001,9,0,9,17/1/2002,1,3,5,15/2/2002,1,NA
+Chinstrap penguin,C18a,2001-2002,10/12/2001,6,0,6,17/1/2002,4,0,1,15/2/2002,4,NA
+Chinstrap penguin,C46,2002-2003,10/12/2002,110,19,129,16/1/2003,100,11,49,21/2/2003,90,NA
+Chinstrap penguin,C47,2002-2003,10/12/2002,205,20,225,16/1/2003,209,20,49,21/2/2003,184,NA
+Chinstrap penguin,C79,2002-2003,10/12/2002,169,19,188,16/1/2003,230,38,36,21/2/2003,223,NA
+Chinstrap penguin,C80,2002-2003,10/12/2002,780,57,837,16/1/2003,1001,164,102,21/2/2003,892,NA
+Chinstrap penguin,C81,2002-2003,10/12/2002,155,19,174,16/1/2003,211,32,20,21/2/2003,209,NA
+Chinstrap penguin,Outer Island,2002-2003,10/12/2002,33,2,35,12/1/2003,24,9,12,1/3/2003,20,Date for pair count on Outer Island not recorded but assumed to be similar to dates for other colonies
+Chinstrap penguin,C15,2002-2003,11/12/2002,87,6,93,16/1/2003,119,11,17,22/2/2003,94,NA
+Chinstrap penguin,C16,2002-2003,11/12/2002,75,5,80,16/1/2003,83,14,10,22/2/2003,89,Fledgling data for C16+C17
+Chinstrap penguin,C17,2002-2003,11/12/2002,15,1,16,16/1/2003,13,3,4,NA,NA,See fledgling data for C16
+Chinstrap penguin,C18,2002-2003,11/12/2002,4,1,5,16/1/2003,3,1,3,22/2/2003,1,NA
+Chinstrap penguin,C18a,2002-2003,11/12/2002,4,0,4,16/1/2003,5,0,3,22/2/2003,3,NA
+Chinstrap penguin,Outer Island,2003-2004,11/12/2003,35,9,44,16/1/2004,38,5,9,21/2/2004,16,NA
+Chinstrap penguin,C46,2003-2004,12/12/2003,90,30,120,15/1/2004,87,4,43,21/2/2004,56,NA
+Chinstrap penguin,C47,2003-2004,12/12/2003,204,20,224,15/1/2004,218,19,46,21/2/2004,110,NA
+Chinstrap penguin,C79,2003-2004,13/12/2003,196,5,201,16/1/2004,235,22,41,21/2/2004,152,NA
+Chinstrap penguin,C80,2003-2004,13/12/2003,877,20,897,16/1/2004,884,110,93,21/2/2004,684,NA
+Chinstrap penguin,C81,2003-2004,13/12/2003,150,3,153,16/1/2004,194,21,34,21/2/2004,135,NA
+Chinstrap penguin,C15,2003-2004,14/12/2003,86,4,90,15/1/2004,102,9,14,21/2/2004,74,NA
+Chinstrap penguin,C16,2003-2004,14/12/2003,83,9,92,15/1/2004,91,14,9,21/2/2004,69,Fledgling data for C16+C17
+Chinstrap penguin,C17,2003-2004,14/12/2003,13,3,16,15/1/2004,16,7,7,NA,NA,See fledgling data for C16
+Chinstrap penguin,C18,2003-2004,14/12/2003,4,0,4,15/1/2004,1,1,0,21/2/2004,0,NA
+Chinstrap penguin,C18a,2003-2004,14/12/2003,4,2,6,15/1/2004,2,0,0,21/2/2004,0,NA
+Chinstrap penguin,C15,2004-2005,11/12/2004,79,7,86,17/1/2005,89,6,29,19/2/2005,74,NA
+Chinstrap penguin,C16,2004-2005,11/12/2004,79,10,89,17/1/2005,68,15,28,19/2/2005,70,Fledgling data for C16+C17
+Chinstrap penguin,C17,2004-2005,11/12/2004,15,5,20,17/1/2005,9,4,8,NA,NA,See fledgling data for C16
+Chinstrap penguin,C18,2004-2005,11/12/2004,7,1,8,17/1/2005,2,1,3,19/2/2005,1,NA
+Chinstrap penguin,C18a,2004-2005,11/12/2004,4,2,6,17/1/2005,2,0,4,19/2/2005,0,NA
+Chinstrap penguin,C46,2004-2005,11/12/2004,101,13,114,15/1/2005,94,8,57,16/2/2005,63,NA
+Chinstrap penguin,C47,2004-2005,11/12/2004,199,17,216,15/1/2005,210,27,73,16/2/2005,119,NA
+Chinstrap penguin,C79,2004-2005,11/12/2004,193,7,200,15/1/2005,297,27,31,16/2/2005,193,NA
+Chinstrap penguin,C80,2004-2005,11/12/2004,833,32,865,15/1/2005,1159,126,135,16/2/2005,771,NA
+Chinstrap penguin,C81,2004-2005,11/12/2004,175,12,187,15/1/2005,240,23,27,16/2/2005,165,NA
+Chinstrap penguin,C15,2005-2006,19/12/2005,29,35,64,26/1/2006,25,1,31,15/2/2006,26,NA
+Chinstrap penguin,C16,2005-2006,19/12/2005,73,3,76,26/1/2006,99,5,11,15/2/2006,110,Fledgling data for C16+C17
+Chinstrap penguin,C17,2005-2006,19/12/2005,17,1,18,26/1/2006,15,2,3,NA,NA,See fledgling data for C16
+Chinstrap penguin,C18,2005-2006,19/12/2005,5,0,5,26/1/2006,2,1,0,15/2/2006,5,NA
+Chinstrap penguin,C18a,2005-2006,19/12/2005,4,0,4,26/1/2006,6,0,1,15/2/2006,2,NA
+Chinstrap penguin,C46,2005-2006,19/12/2005,68,35,103,21/1/2006,46,0,51,19/2/2006,44,NA
+Chinstrap penguin,C47,2005-2006,19/12/2005,150,36,186,21/1/2006,138,9,48,19/2/2006,132,NA
+Chinstrap penguin,C79,2005-2006,19/12/2005,165,25,190,21/1/2006,155,9,47,19/2/2006,189,NA
+Chinstrap penguin,C80,2005-2006,19/12/2005,743,14,757,21/1/2006,881,51,129,19/2/2006,812,NA
+Chinstrap penguin,C81,2005-2006,19/12/2005,145,14,159,21/1/2006,205,15,28,19/2/2006,131,NA
+Chinstrap penguin,C46,2006-2007,14/12/2006,62,14,76,16/1/2007,55,3,46,20/2/2007,55,NA
+Chinstrap penguin,C47,2006-2007,14/12/2006,134,15,149,16/1/2007,118,12,63,20/2/2007,103,NA
+Chinstrap penguin,C79,2006-2007,14/12/2006,170,9,179,16/1/2007,229,12,20,20/2/2007,223,NA
+Chinstrap penguin,C80,2006-2007,15/12/2006,771,32,803,16/1/2007,731,77,88,20/2/2007,897,NA
+Chinstrap penguin,C81,2006-2007,15/12/2006,156,12,168,16/1/2007,188,15,35,20/2/2007,175,NA
+Chinstrap penguin,C15,2006-2007,17/12/2006,24,28,52,21/1/2007,20,1,34,19/2/2007,20,NA
+Chinstrap penguin,C16,2006-2007,17/12/2006,79,2,81,21/1/2007,112,5,9,19/2/2007,124,Fledgling data for C16 & C17
+Chinstrap penguin,C17,2006-2007,17/12/2006,12,1,13,21/1/2007,15,3,5,NA,NA,For fledgling data see C16
+Chinstrap penguin,C18,2006-2007,17/12/2006,5,0,5,21/1/2007,6,0,0,19/2/2007,6,NA
+Chinstrap penguin,C18a,2006-2007,17/12/2006,0,1,1,21/1/2007,1,0,4,19/2/2007,1,NA
+Chinstrap penguin,C15,2007-2008,16/12/2007,48,5,53,17/1/2008,52,10,7,16/2/2008,47,NA
+Chinstrap penguin,C16,2007-2008,16/12/2007,77,5,82,17/1/2008,14,1,3,16/2/2008,10,NA
+Chinstrap penguin,C17,2007-2008,16/12/2007,10,3,13,17/1/2008,112,8,16,16/2/2008,101,NA
+Chinstrap penguin,C18,2007-2008,16/12/2007,3,0,3,17/1/2008,1,1,2,16/2/2008,2,NA
+Chinstrap penguin,C18a,2007-2008,16/12/2007,5,0,5,17/1/2008,4,0,3,16/2/2008,1,NA
+Chinstrap penguin,C46,2007-2008,17/12/2007,67,26,93,18/1/2008,54,4,48,15/2/2008,46,NA
+Chinstrap penguin,C47,2007-2008,17/12/2007,134,25,159,18/1/2008,150,10,61,15/2/2008,137,NA
+Chinstrap penguin,C79,2007-2008,18/12/2007,150,23,173,18/1/2008,216,12,49,15/2/2008,196,NA
+Chinstrap penguin,C80,2007-2008,18/12/2007,715,46,761,18/1/2008,948,85,144,15/2/2008,870,NA
+Chinstrap penguin,C81,2007-2008,18/12/2007,152,19,171,18/1/2008,177,16,23,15/2/2008,177,NA
+Chinstrap penguin,C46,2008-2009,5/12/2008,70,20,90,7/1/2009,NA,NA,NA,20/2/2009,40,Chicks not counted (C48 South counted in error instead)
+Chinstrap penguin,C47,2008-2009,5/12/2008,146,21,167,7/1/2009,NA,NA,NA,20/2/2009,111,Chicks not counted (C48 North counted in error instead)
+Chinstrap penguin,C79,2008-2009,5/12/2008,143,17,160,7/1/2009,218,51,17,20/2/2009,178,Includes C79A
+Chinstrap penguin,C80,2008-2009,5/12/2008,740,67,807,7/1/2009,996,197,11,20/2/2009,801,NA
+Chinstrap penguin,C81,2008-2009,5/12/2008,149,25,174,7/1/2009,180,37,1,20/2/2009,142,NA
+Chinstrap penguin,C15,2008-2009,7/12/2008,51,2,53,8/1/2009,55,10,6,21/2/2009,55,Also counted on 22-Feb-2009 (54 chicks)
+Chinstrap penguin,C16,2008-2009,7/12/2008,78,8,86,8/1/2009,101,9,9,21/2/2009,76,NA
+Chinstrap penguin,C17,2008-2009,7/12/2008,12,3,15,8/1/2009,6,0,0,21/2/2009,5,NA
+Chinstrap penguin,C18,2008-2009,7/12/2008,5,1,6,8/1/2009,4,2,1,21/2/2009,1,NA
+Chinstrap penguin,C18a,2008-2009,7/12/2008,6,0,6,8/1/2009,0,0,2,21/2/2009,NA,Prob. includes birds from C16 C17 and C18
+Chinstrap penguin,C15,2009-2010,9/12/2009,28,10,38,21/1/2010,27,4,NA,13/2/2010,23,Iced in (see main comment) Only 1 count needed/made as very small no. of chicks
+Chinstrap penguin,C16,2009-2010,9/12/2009,66,15,81,21/1/2010,59,14,NA,13/2/2010,53,NA
+Chinstrap penguin,C17,2009-2010,9/12/2009,5,0,5,21/1/2010,10,2,NA,13/2/2010,10,Increase in number of active nests since pair count probably due to late laying birds Only 1 count needed/made as very small no. of chicks
+Chinstrap penguin,C18,2009-2010,9/12/2009,3,5,8,21/1/2010,0,1,NA,13/2/2010,0,Only 1 count needed/made as very small no. of chicks
+Chinstrap penguin,C18a,2009-2010,9/12/2009,0,1,1,21/1/2010,0,0,NA,13/2/2010,1,Colony is empty Only 1 count needed/made as very small no. of chicks
+Chinstrap penguin,C46,2009-2010,11/12/2009,47,24,71,18/1/2010,30,2,NA,10/2/2010,29,Only 1 count needed/made as very small no. of chicks
+Chinstrap penguin,C47,2009-2010,11/12/2009,54,22,76,18/1/2010,91,13,NA,10/2/2010,77,Only 1 count made as chicks counted in small sub-groups
+Chinstrap penguin,C79,2009-2010,11/12/2009,121,13,134,18/1/2010,129,18,NA,10/2/2010,109,Only 1 count made as chicks counted in small sub-groups Only 1 count;repeated counts of small sub-colonies made
+Chinstrap penguin,C80,2009-2010,11/12/2009,552,66,618,18/1/2010,575,118,NA,10/2/2010,494,Only 1 count made as chicks counted in small sub-groups Only 1 count;repeated counts of small sub-colonies made
+Chinstrap penguin,C81,2009-2010,11/12/2009,116,11,127,18/1/2010,130,8,NA,10/2/2010,108,NA
+Chinstrap penguin,C15,2010-2011,1/12/2010,NA,NA,NA,20/1/2011,56,4,NA,17/2/2011,52,No nest counts made as assistant did not arrive on time
+Chinstrap penguin,C16,2010-2011,1/12/2010,NA,NA,NA,20/1/2011,77,7,NA,17/2/2011,70,No nest counts made as assistant did not arrive on time
+Chinstrap penguin,C17,2010-2011,1/12/2010,NA,NA,NA,20/1/2011,8,0,NA,17/2/2011,5,No nest counts made as assistant did not arrive on time
+Chinstrap penguin,C18,2010-2011,1/12/2010,NA,NA,NA,20/1/2011,1,2,NA,17/2/2011,0,No nest counts made as assistant did not arrive on time; No chicks in colony for fledgling count
+Chinstrap penguin,C18a,2010-2011,1/12/2010,NA,NA,NA,20/1/2011,0,0,NA,17/2/2011,0,No nest counts made as assistant did not arrive on time; No chicks in colony for fledgling count
+Chinstrap penguin,C26,2010-2011,1/12/2010,NA,NA,NA,20/1/2011,487,26,NA,17/2/2011,474,No nest counts made as assistant did not arrive on time
+Chinstrap penguin,C46,2010-2011,1/12/2010,NA,NA,NA,22/1/2011,33,2,NA,18/2/2011,31,No nest counts made as assistant did not arrive on time
+Chinstrap penguin,C47,2010-2011,1/12/2010,NA,NA,NA,22/1/2011,93,14,NA,18/2/2011,75,No nest counts made as assistant did not arrive on time
+Chinstrap penguin,C79,2010-2011,1/12/2010,NA,NA,NA,22/1/2011,178,12,NA,18/2/2011,152,No nest counts made as assistant did not arrive on time
+Chinstrap penguin,C80,2010-2011,1/12/2010,NA,NA,NA,22/1/2011,701,57,NA,18/2/2011,616,No nest counts made as assistant did not arrive on time
+Chinstrap penguin,C81,2010-2011,1/12/2010,NA,NA,NA,22/1/2011,154,4,NA,18/2/2011,106,No nest counts made as assistant did not arrive on time
+Chinstrap penguin,C15,2011-2012,8/12/2011,57,3,60,20/1/2012,69,3,NA,17/2/2012,61,No nest count
+Chinstrap penguin,C16,2011-2012,8/12/2011,86,6,92,20/1/2012,1,0,NA,17/2/2012,43,NA
+Chinstrap penguin,C17,2011-2012,8/12/2011,12,4,16,20/1/2012,6,1,NA,17/2/2012,6,NA
+Chinstrap penguin,C18,2011-2012,8/12/2011,3,0,3,20/1/2012,54,10,NA,17/2/2012,0,NA
+Chinstrap penguin,C18a,2011-2012,8/12/2011,0,0,0,20/1/2012,0,0,NA,NA,NA,NA
+Chinstrap penguin,C26,2011-2012,8/12/2011,398,26,424,20/1/2012,588,32,NA,17/2/2012,548,NA
+Chinstrap penguin,C46,2011-2012,9/12/2011,61,21,82,18/1/2012,12,3,NA,14/2/2012,7,NA
+Chinstrap penguin,C47,2011-2012,9/12/2011,120,26,146,18/1/2012,111,6,NA,14/2/2012,77,NA
+Chinstrap penguin,C79,2011-2012,9/12/2011,127,20,147,18/1/2012,183,19,NA,14/2/2012,167,NA
+Chinstrap penguin,C80,2011-2012,9/12/2011,697,39,736,18/1/2012,765,73,NA,14/2/2012,699,NA
+Chinstrap penguin,C81,2011-2012,9/12/2011,170,12,182,18/1/2012,206,13,NA,14/2/2012,184,NA
+Chinstrap penguin,C69,2011-2012,9/12/2011,123,12,135,NA,NA,NA,NA,12/2/2012,140,NA
+Chinstrap penguin,C15,2012-2013,16/12/2012,36,3,39,24/1/2013,27,7,NA,22/2/2013,22,NA
+Chinstrap penguin,C16,2012-2013,16/12/2012,60,6,66,24/1/2013,2,8,NA,22/2/2013,1,NA
+Chinstrap penguin,C17,2012-2013,16/12/2012,4,0,4,24/1/2013,1,0,NA,22/2/2013,0,NA
+Chinstrap penguin,C18,2012-2013,16/12/2012,2,0,2,24/1/2013,0,0,NA,22/2/2013,0,NA
+Chinstrap penguin,C26,2012-2013,16/12/2012,295,19,314,24/1/2013,190,30,NA,22/2/2013,122,NA
+Chinstrap penguin,C69,2012-2013,17/12/2012,85,4,89,24/1/2013,36,8,NA,19/2/2013,22,NA
+Chinstrap penguin,C46,2012-2013,17/12/2012,60,5,65,25/1/2013,10,2,NA,19/2/2013,10,NA
+Chinstrap penguin,C47,2012-2013,17/12/2012,86,17,103,25/1/2013,78,4,NA,19/2/2013,52,NA
+Chinstrap penguin,C79,2012-2013,17/12/2012,101,3,104,25/1/2013,48,5,NA,19/2/2013,31,NA
+Chinstrap penguin,C80,2012-2013,17/12/2012,445,23,468,25/1/2013,227,28,NA,19/2/2013,185,NA
+Chinstrap penguin,C81,2012-2013,17/12/2012,90,4,94,25/1/2013,32,0,NA,19/2/2013,24,NA
+Chinstrap penguin,C15,2013-2014,18/12/2013,42,7,49,25/1/2014,47,4,NA,13/2/2014,43,NA
+Chinstrap penguin,C16,2013-2014,18/12/2013,80,7,87,25/1/2014,55,7,NA,13/2/2014,51,NA
+Chinstrap penguin,C17,2013-2014,18/12/2013,2,0,2,25/1/2014,1,0,NA,13/2/2014,1,NA
+Chinstrap penguin,C18,2013-2014,18/12/2013,1,0,1,25/1/2014,0,0,NA,13/2/2014,0,NA
+Chinstrap penguin,C26,2013-2014,18/12/2013,319,30,349,25/1/2014,347,22,NA,13/2/2014,299,NA
+Chinstrap penguin,C69,2013-2014,19/12/2013,83,1,84,22/1/2014,90,8,NA,14/2/2014,50,NA
+Chinstrap penguin,C46,2013-2014,19/12/2013,26,6,32,22/1/2014,7,2,NA,14/2/2014,0,NA
+Chinstrap penguin,C47,2013-2014,19/12/2013,76,12,88,22/1/2014,55,4,NA,14/2/2014,21,NA
+Chinstrap penguin,C79,2013-2014,19/12/2013,86,7,93,22/1/2014,86,13,NA,14/2/2014,71,NA
+Chinstrap penguin,C80,2013-2014,19/12/2013,484,26,510,22/1/2014,534,45,NA,14/2/2014,430,NA
+Chinstrap penguin,C81,2013-2014,19/12/2013,115,7,122,22/1/2014,37,4,NA,14/2/2014,25,NA
+Chinstrap penguin,C16,2014-2015,18/12/2014,64,5,69,27/1/2015,50,10,NA,14/2/2015,50,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C15,2014-2015,18/12/2014,51,3,54,27/1/2015,61,4,NA,14/2/2015,56,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C17,2014-2015,18/12/2014,8,6,14,27/1/2015,1,0,NA,14/2/2015,0,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C18,2014-2015,18/12/2014,1,1,2,27/1/2015,0,0,NA,14/2/2015,0,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C26,2014-2015,18/12/2014,354,15,369,27/1/2015,395,29,NA,14/2/2015,367,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C80,2014-2015,19/12/2014,541,34,575,26/1/2015,609,52,NA,13/2/2015,577,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C81,2014-2015,19/12/2014,58,25,83,26/1/2015,8,3,NA,13/2/2015,8,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C69,2014-2015,19/12/2014,99,13,112,26/1/2015,108,14,NA,13/2/2015,102,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C46,2014-2015,19/12/2014,39,6,45,26/1/2015,54,6,NA,13/2/2015,52,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C47,2014-2015,19/12/2014,84,17,101,26/1/2015,78,4,NA,13/2/2015,63,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C79,2014-2015,19/12/2014,107,2,109,26/1/2015,127,4,NA,13/2/2015,117,Fledglings only counted once overall as in small groups.  Each group counted more than once
+Chinstrap penguin,C69,2015-2016,16/12/2015,81,32,113,19/1/2016,76,12,NA,19/2/2016,18,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C46,2015-2016,16/12/2015,25,13,38,18/1/2016,26,5,NA,17/2/2016,17,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C47,2015-2016,16/12/2015,67,29,96,18/1/2016,33,4,NA,17/2/2016,10,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C79,2015-2016,16/12/2015,95,11,106,19/1/2016,83,6,NA,19/2/2016,42,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C80,2015-2016,16/12/2015,502,37,539,19/1/2016,440,70,NA,19/2/2016,252,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C81,2015-2016,16/12/2015,58,21,79,19/1/2016,20,5,NA,19/2/2016,1,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C15,2015-2016,17/12/2015,50,5,55,18/1/2016,65,3,NA,18/2/2016,43,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C16,2015-2016,17/12/2015,63,7,70,18/1/2016,32,8,NA,18/2/2016,14,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C17,2015-2016,17/12/2015,8,0,8,18/1/2016,3,0,NA,18/2/2016,0,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C18,2015-2016,17/12/2015,0,1,1,18/1/2016,0,0,NA,18/2/2016,0,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C26,2015-2016,17/12/2015,327,32,359,18/1/2016,353,72,NA,18/2/2016,245,Large numbers of dead chicks throughout.  Chick count possibly done a few days early (several still on eggs) but chicks were dying faster than hatching so count done before any more dead/eaten. Only 1 fledgling count necessary due to such low numbers of chicks
+Chinstrap penguin,C15,2016-2017,12/12/2016,35,9,44,20/1/2017,37,0,NA,15/2/2017,29,No data on nests with no eggs
+Chinstrap penguin,C16,2016-2017,12/12/2016,45,9,54,20/1/2017,2,2,NA,15/2/2017,2,No data on nests with no eggs
+Chinstrap penguin,C17,2016-2017,12/12/2016,4,2,6,20/1/2017,0,0,NA,15/2/2017,0,No data on nests with no eggs
+Chinstrap penguin,C18,2016-2017,12/12/2016,0,0,0,20/1/2017,0,0,NA,15/2/2017,0,No data on nests with no eggs
+Chinstrap penguin,C26,2016-2017,12/12/2016,217,53,270,20/1/2017,223,17,NA,15/2/2017,195,No data on nests with no eggs
+Chinstrap penguin,C46,2016-2017,12/12/2016,23,11,34,21/1/2017,25,0,NA,13/2/2017,22,No data on nests with no eggs
+Chinstrap penguin,C47,2016-2017,12/12/2016,33,35,68,21/1/2017,12,1,NA,13/2/2017,4,No data on nests with no eggs
+Chinstrap penguin,C69,2016-2017,14/12/2016,51,26,77,21/1/2017,31,6,NA,13/2/2017,26,No data on nests with no eggs
+Chinstrap penguin,C79,2016-2017,14/12/2016,67,15,82,21/1/2017,66,8,NA,13/2/2017,60,No data on nests with no eggs
+Chinstrap penguin,C80,2016-2017,14/12/2016,372,83,455,21/1/2017,333,28,NA,13/2/2017,286,No data on nests with no eggs
+Chinstrap penguin,C81,2016-2017,14/12/2016,23,23,46,21/1/2017,2,0,NA,13/2/2017,1,No data on nests with no eggs
+Chinstrap penguin,C66,2016-2017,14/12/2016,232,55,287,21/1/2017,308,29,NA,13/2/2017,281,No data on nests with no eggs
+Chinstrap penguin,C26,2017-2018,8/12/2017,219,16,235,21/1/2018,237,9,NA,11/2/2018,215,No data on nests with no eggs
+Chinstrap penguin,C46,2017-2018,8/12/2017,36,8,44,20/1/2018,30,3,NA,10/2/2018,29,No data on nests with no eggs
+Chinstrap penguin,C47,2017-2018,8/12/2017,25,2,27,20/1/2018,6,0,NA,10/2/2018,2,No data on nests with no eggs
+Chinstrap penguin,C15,2017-2018,8/12/2017,36,3,39,21/1/2018,47,0,NA,11/2/2018,40,No data on nests with no eggs
+Chinstrap penguin,C16,2017-2018,8/12/2017,39,14,53,21/1/2018,5,0,NA,11/2/2018,5,No data on nests with no eggs
+Chinstrap penguin,C17,2017-2018,8/12/2017,2,0,2,21/1/2018,0,0,NA,11/2/2018,0,No data on nests with no eggs
+Chinstrap penguin,C18,2017-2018,8/12/2017,0,0,0,21/1/2018,0,0,NA,11/2/2018,0,No data on nests with no eggs
+Chinstrap penguin,C79,2017-2018,9/12/2017,64,1,65,20/1/2018,63,7,NA,10/2/2018,58,No data on nests with no eggs
+Chinstrap penguin,C80,2017-2018,9/12/2017,366,20,386,20/1/2018,301,42,NA,10/2/2018,303,No data on nests with no eggs
+Chinstrap penguin,C81,2017-2018,9/12/2017,21,3,24,20/1/2018,0,2,NA,10/2/2018,0,No data on nests with no eggs
+Chinstrap penguin,C66,2017-2018,9/12/2017,225,16,241,20/1/2018,308,17,NA,10/2/2018,289,No data on nests with no eggs
+Chinstrap penguin,C69,2017-2018,9/12/2017,41,3,44,23/1/2018,40,0,NA,10/2/2018,40,No data on nests with no eggs
+Chinstrap penguin,C80,2018-2019,18/12/2018,326,46,372,17/1/2019,307,27,0,11/2/2019,271,NA
+Chinstrap penguin,C81,2018-2019,18/12/2018,4,35,39,17/1/2019,2,0,0,11/2/2019,0,NA
+Chinstrap penguin,C69,2018-2019,18/12/2018,38,10,48,17/1/2019,47,4,0,11/2/2019,39,NA
+Chinstrap penguin,C46,2018-2019,18/12/2018,22,7,29,17/1/2019,30,4,0,11/2/2019,28,NA
+Chinstrap penguin,C47,2018-2019,18/12/2018,18,38,56,17/1/2019,2,0,0,11/2/2019,2,NA
+Chinstrap penguin,C79,2018-2019,18/12/2018,59,13,72,17/1/2019,72,6,0,11/2/2019,67,NA
+Chinstrap penguin,C66,2018-2019,18/12/2018,218,33,251,17/1/2019,284,26,0,11/2/2019,294,NA
+Chinstrap penguin,C26,2018-2019,19/12/2018,190,27,217,18/1/2019,212,15,NA,11/2/2019,183,No data on nests with no eggs
+Chinstrap penguin,C15,2018-2019,19/12/2018,36,6,42,18/1/2019,53,2,0,11/2/2019,51,NA
+Chinstrap penguin,C16,2018-2019,19/12/2018,5,39,44,18/1/2019,2,0,0,11/2/2019,2,NA
+Chinstrap penguin,C17,2018-2019,19/12/2018,0,3,3,18/1/2019,0,0,0,11/2/2019,0,NA
+Chinstrap penguin,C18,2018-2019,19/12/2018,0,0,0,18/1/2019,0,0,0,11/2/2019,0,NA
+Chinstrap penguin,C15,2019-2020,11/12/2019,37,3,40,19/1/2020,44,3,NA,25/2/2020,23,No data on nests with no eggs
+Chinstrap penguin,C16,2019-2020,11/12/2019,19,13,32,19/1/2020,8,3,NA,25/2/2020,5,No data on nests with no eggs
+Chinstrap penguin,C17,2019-2020,11/12/2019,2,0,2,19/1/2020,0,0,NA,25/2/2020,0,No data on nests with no eggs
+Chinstrap penguin,C18,2019-2020,11/12/2019,0,0,0,19/1/2020,NA,NA,NA,25/2/2020,0,No data on nests with no eggs
+Chinstrap penguin,C26,2019-2020,11/12/2019,206,17,223,19/1/2020,237,6,NA,25/2/2020,156,No data on nests with no eggs
+Chinstrap penguin,C46,2019-2020,13/12/2019,25,3,28,20/1/2020,15,0,NA,24/2/2020,12,No data on nests with no eggs
+Chinstrap penguin,C47,2019-2020,13/12/2019,15,9,24,20/1/2020,NA,NA,NA,24/2/2020,0,No data on nests with no eggs
+Chinstrap penguin,C66,2019-2020,13/12/2019,229,25,254,20/1/2020,320,24,NA,24/2/2020,283,No data on nests with no eggs
+Chinstrap penguin,C69,2019-2020,13/12/2019,62,0,62,20/1/2020,75,4,NA,24/2/2020,67,No data on nests with no eggs
+Chinstrap penguin,C79,2019-2020,13/12/2019,66,4,70,20/1/2020,89,3,NA,24/2/2020,86,No data on nests with no eggs
+Chinstrap penguin,C80,2019-2020,13/12/2019,364,17,381,20/1/2020,374,22,NA,24/2/2020,339,No data on nests with no eggs
+Chinstrap penguin,C81,2019-2020,13/12/2019,1,3,4,20/1/2020,NA,NA,NA,24/2/2020,0,Fledgling count: possibly moved to C80
+Chinstrap penguin,C69,2020-2021,19/12/2020,69,1,70,21/1/2021,61,7,0,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C46,2020-2021,19/12/2020,25,0,25,21/1/2021,18,3,NA,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C47,2020-2021,19/12/2020,7,5,12,21/1/2021,5,0,0,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C79,2020-2021,19/12/2020,70,6,76,21/2/2021,61,7,0,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C80,2020-2021,19/12/2020,367,16,383,21/1/2021,290,37,0,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C81,2020-2021,19/12/2020,1,1,2,21/1/2021,0,0,0,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C15,2020-2021,20/12/2020,40,4,44,19/1/2021,40,2,NA,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C16,2020-2021,20/12/2020,17,9,26,19/1/2021,7,2,NA,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C17,2020-2021,20/12/2020,0,1,1,19/1/2021,0,0,NA,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C18,2020-2021,20/12/2020,0,0,0,19/1/2021,0,0,NA,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C26,2020-2021,20/12/2020,191,9,200,19/1/2021,233,13,0,NA,NA,No fledgling data as base closed early
+Chinstrap penguin,C66,2020-2021,20/12/2020,245,15,260,21/1/2021,264,21,0,NA,NA,No fledgling data as base closed early
