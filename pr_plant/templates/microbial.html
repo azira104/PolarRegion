@@ -72,7 +72,7 @@
 
   <script
     src="https://cdn.datatables.net/v/bs5/dt-1.13.8/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.11.0/r-2.5.0/sp-2.2.0/datatables.min.js">
-    </script>
+  </script>
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
@@ -91,98 +91,136 @@
   <header id="header" class="fixed-top bg-dark">
     <div class="container d-flex align-items-center justify-content-lg-between">
       <h1 class="logo me-auto me-lg-0">
-        <a href="index.html">
+        <a href="{% url 'mainpr:index'%}">
           <img src="{% static 'images/logo/polar.png' %}" alt="Home" class="img-fluid" />
         </a>
       </h1>
 
+      <!-- DATASETS NAVIGATION BAR -->
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li class="dropdown active">
-            <a href="#portfolio"><span>Datasets</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown">
+            <a href="#portfolio active"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown">
                 <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="{% url 'pr_antartic:antartic'%}">Mass</a></li>
-                  <li><a href="#">Sea Ice Extant</a></li>
-                  <li><a href="#">Temperature</a></li>
-                  <li><a href="#">Hotpoints(NASA)</a></li>
+                  <li><a href="{% url 'pr_antartic:antarticmass'%}">Antarctica Mass</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extent</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
+                  <li><a href="{% url 'pr_antartic:hotpoints'%}">Antarctic Hotpoints(NASA)</a></li>
                   <li><a href="#">Ice Radar</a></li>
+                  <li><a href="#">Snow Accumulation</a></li>
                 </ul>
+              </li>
               <li class="dropdown">
                 <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Sea Ice Graph</a></li>
+                  <li><a href="{% url 'pr_aa:aa1'%}">Sea Ice Graph</a></li>
                   <li><a href="{% url 'pr_aa:sulfurDioxide'%}">Sulphur Detection from Melting Ice Cores</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Comparison Northern City Climate</a></li>
-                  <li><a href="#">Global Warming Denmark</a></li>
-                  <li><a href="#">Sea Ice Extant</a></li>
-                  <li><a href="#">Sea Ice Masking Image</a></li>
-                  <li><a href="#">Streamgages in Alaska</a></li>
-                  <li><a href="#">Radium in Surface and Ground Water</a></li>
+                  <li><a href="{% url 'pr_arctic:climate'%}">Northern Cities Climate</a></li>
+                  <li><a href="{% url 'pr_arctic:iceextent'%}">Sea Ice Extent</a></li>
+                  <li><a href="#">Sea Ice Image Masking </a></li>
+                  <li><a href="{% url 'pr_arctic:streamgages'%}">VSGS Alaska Streamgages</a></li>
+                  <li><a href="{% url 'pr_arctic:simpsonlagoon'%}">Simpson Lagoon</a></li>
                   <li><a href="#">Arctic Sea Routes</a></li>
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#"><span>DNA</span> <i class="bi bi-chevron-right"></i></a>
+                <a href="#"><span>DNA/RNA</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li class="dropdown">
                     <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">Plankton</a></li>
-                      <li><a href="#">Pytoplankton</a></li>
+                      <li><a href="{% url 'pr_dna_rna:plankton'%}">Plankton_Tara-Ocean</a></li>
+                      <li><a href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a></li>
+                      <li><a href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a></li>
+                      <li><a href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a></li>
+                      <li class="dropdown">
+                        <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                          <li><a href="{% url 'pr_dna_rna:Cdata'%}">14C and 13C Data</a></li>
+                          <li><a href="{% url 'pr_dna_rna:nucleotide'%}">Nucleotide Reads</a></li>
+                          <li><a href="{% url 'pr_dna_rna:edaphic'%}">Edaphic Factors</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#">Genomes</a></li>
-                  <li><a href="#">Microbiota</a></li>
-                  <li><a href="#">Soil Sample</a></li>
+
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Animal</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Coral</a></li>
-                  <li><a href="#">Polar Bear</a></li>
-                  <li><a href="#">Beluga Whale</a></li>
-                  <li><a href="#">Bird</a></li>
-                  <li><a href="#">Penguin</a></li>
+                  <li><a href="{% url 'pr_animal:coral'%}">Coral</a></li>
+                  <li class="dropdown">
+                    <a href="#"><span>Polar Bear</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_animal:blood'%}">Bear Blood</a></li>
+                      <li><a href="{% url 'pr_animal:capSeq'%}">Bear Capture Sequence</a></li>
+                      <li><a href="{% url 'pr_animal:abdTemp'%}">Bear Abdominal Temperature</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#"><span>Penguin</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_animal:gentoo'%}">Gentoo</a></li>
+                      <li><a href="{% url 'pr_animal:adelie'%}">Adelie</a></li>
+                      <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
+                    </ul>
+                  </li>
+                  {% comment %} <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li> {% endcomment %}
+                  <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Ecosystem</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Aquatic</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="#">Marine</a></li>
-                      <li><a href="#">Freshwater</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Terrestrial</a></li>
+                  <li><a href="{% url 'pr_ecosystem:freshwater'%}">Freshwater</a></li>
+                  <li><a href="{% url 'pr_ecosystem:marine'%}">Marine</a></li>
+                  <li><a href="{% url 'pr_ecosystem:terrestrial'%}">Terrestrial</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#"><span>Plant</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% url 'pr_plant:microbial'%}">Microbial Symbionts</a></li>
+                  <li><a href="{% url 'pr_plant:algae'%}">Glacier Algae</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Marine Fungi</a></li>
-                  <li><a href="#">Palmer Penguin</a></li>
-
+                  <li><a href="{% url 'pr_population:penguinpopu'%}">Penguin Population</a></li>
+                  <li class="dropdown">
+                    <a href="#"><span>Palmer Penguin</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_population:palmerIter'%}">Iter</a></li>
+                      <li><a href="{% url 'pr_population:palmerSize'%}">Size</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'pr_population:mfungi'%}">Marine Fungi</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Influenza A</a></li>
-                  <li><a href="#">Cryptosporidium Oocyst and Giardia Cysts</a></li>
+                  <li class="dropdown">
+                    <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_disease:bELISA'%}">bELISA</a></li>
+                      <li><a href="{% url 'pr_disease:hi'%}">HI</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'pr_disease:crypto_giardia'%}">Crypto & Giardia</a></li>
                 </ul>
               </li>
             </ul>
@@ -198,111 +236,68 @@
   </header>
   <!-- End Header -->
 
-  <!-- hero -->
-  <!-- <div class="container1">
-    <h2 class="text-center">Sulfur Data from NEEM and WDC Ice Cores</h2>
-    <div class="content">
-      <section id="hero2" class="d-flex align-items-center justify-content-center"> -->
-
-  <!-- data tables -->
-  <!-- <table id="microbial_table" class="table table-bordered table-hover"
-          style="width: min-content; position: fixed;">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Plant</th>
-              <th>Response</th>
-              <th>Response Unit</th>
-              <th>Mean</th>
-              <th>n</th>
-              <th>Dispersion value</th>
-              <th>Dispersion measure</th>
-              <th>Cold condition</th>
-              <th>Temperature</th>
-              <th>Infection status</th>
-              <th>Microorganism</th>
-              <th>Comment</th>
-            </tr>
-          </thead>
-          {% csrf_token %}
-          <tbody>
-            {% for item in microbial%}
-            <tr>
-              <td>{{ item.id }}</td>
-              <td>{{ item.plant }}</td>
-              <td>{{ item.response }}</td>
-              <td>{{ item.response_unit }}</td>
-              <td>{{ item.mean }}</td>
-              <td>{{ item.n }}</td>
-              <td>{{ item.dispersion_value }}</td>
-              <td>{{ item.dispersion_measure }}</td>
-              <td>{{ item.cold_condition }}</td>
-              <td>{{ item.temperature }}</td>
-              <td>{{ item.infection_status }}</td>
-              <td>{{ item.microorganism }}</td>
-              <td>{{ item.comment }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </section>
+  <!-- Content -->
+  <section id="box">
+    <div class="card">
+      <h2>Plant biology variables under cold stress from published experiments (1975-2019) that include microbial
+        symbionts as an experimental factor</h2>
     </div>
-  </div> -->
-
- <section id="box">
-   <div class="card" >
-    <h2 class="text-center">Plant biology variables under cold stress from published experiments (1975-2019) that include microbial symbionts as an experimental factor</h2>
-   </div> 
 
     <div class="card-header">
+      <p>
+        The data compiles different aspects of plant biology (e.g., anatomy, physiology, fitness and gene-expression)
+        reported in scientific articles that experimentally explored the role of plant microbial symbionts in plant
+        tolerance to chilling (0-15 degrees Celsius) and freezing (under 0 degrees Celsius) conditions. Each variable
+        included in the dataset is composed of at least four values, representing the mean of the measured variable with
+        or without a given microbial symbiont and under control or cold conditions in a factorial design. The data were
+        generated for a meta-analysis, and so the level of replication and standard deviation or standard error, plus
+        other relevant information such as plant and microbial species, and source, are also included. Funding was provided by Posdoctoral-FONDECYT 3180441, FONDECYT 11140607 and the NERC-CONICYT awards (NE/P003079/1 - PII20150126).
+      </p>
     </div>
 
-      <div class="card-content">
-        <table id="microbial_table" class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Plant</th>
-              <th>Response</th>
-              <th>Response Unit</th>
-              <th>Mean</th>
-              <th>n</th>
-              <th>Dispersion value</th>
-              <th>Dispersion measure</th>
-              <th>Cold condition</th>
-              <th>Temperature</th>
-              <th>Infection status</th>
-              <th>Microorganism</th>
-              <th>Comment</th>
-            </tr>
-          </thead>
-          {% csrf_token %}
-          <tbody>
-            {% for item in microbial%}
-            <tr>
-              <td>{{ item.id }}</td>
-              <td>{{ item.plant }}</td>
-              <td>{{ item.response }}</td>
-              <td>{{ item.response_unit }}</td>
-              <td>{{ item.mean }}</td>
-              <td>{{ item.n }}</td>
-              <td>{{ item.dispersion_value }}</td>
-              <td>{{ item.dispersion_measure }}</td>
-              <td>{{ item.cold_condition }}</td>
-              <td>{{ item.temperature }}</td>
-              <td>{{ item.infection_status }}</td>
-              <td>{{ item.microorganism }}</td>
-              <td>{{ item.comment }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    
-</section>
-
-
-
+    <div class="card-content">
+      <table id="microbial_table" class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Plant</th>
+            <th>Response</th>
+            <th>Response Unit</th>
+            <th>Mean</th>
+            <th>n</th>
+            <th>Dispersion value</th>
+            <th>Dispersion measure</th>
+            <th>Cold condition</th>
+            <th>Temperature</th>
+            <th>Infection status</th>
+            <th>Microorganism</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        {% csrf_token %}
+        <tbody>
+          {% for item in microbial%}
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.plant }}</td>
+            <td>{{ item.response }}</td>
+            <td>{{ item.response_unit }}</td>
+            <td>{{ item.mean }}</td>
+            <td>{{ item.n }}</td>
+            <td>{{ item.dispersion_value }}</td>
+            <td>{{ item.dispersion_measure }}</td>
+            <td>{{ item.cold_condition }}</td>
+            <td>{{ item.temperature }}</td>
+            <td>{{ item.infection_status }}</td>
+            <td>{{ item.microorganism }}</td>
+            <td>{{ item.comment }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- End content -->
 
   <!-- Footer -->
   <footer id="footer">

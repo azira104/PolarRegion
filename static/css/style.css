@@ -123,7 +123,7 @@ h6 {
   transition: all 0.5s;
   position: relative;
   z-index: 997;
-  padding: 15px 0;
+  /* padding: 15px 0; */
   background-color: #010102;
 }
 
@@ -152,7 +152,7 @@ h6 {
   color: #ffc451;
 }
 
-#header .logo img {
+/* #header .logo img {
   max-height: 80px;
   top: 0px;
   bottom: 0px;
@@ -160,10 +160,27 @@ h6 {
   margin-right: 10px;
   left: 50px;
 }
+
 #header .logo img:first-child {
-  margin-right: 0; /* Remove margin for the first image to align to the left */
+  margin-right: 0;
+} */
+.logo1{
+  margin: auto;
+  max-height: 80px;
+  position:absolute;
+  left:50px;
+  top: 0px;
+  bottom: 0px;
 }
 
+.logo2{
+  margin: auto;
+  max-height: 70px;
+  position:absolute;
+  left:150px;
+  top: 0px;
+  bottom: 0px;
+}
 /*--------------------------------------------------------------
   #  Get Startet Button
   --------------------------------------------------------------*/
@@ -217,7 +234,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 20px 0 10px 30px;
   font-size: 15px;
   font-weight: 600;
   color: #fff;
@@ -1576,97 +1593,6 @@ html, body {
   width: 250px;
 }
 
-
-/* option button*/
-
-/* read more box */
-/* @import url(https://fonts.googleapis.com/css?family=Montserrat);
-* {
-  border: none;
-  margin: 0;
-  outline: 0 none;
-  padding: 0;
-  
-}
-
-.badunts {
-  padding: 10px;
-}
-
-.button-wrapper {
-  cursor: pointer;
-  display: block;
-  margin: 40px auto;
-  max-width: 255px;
-  position: relative;
-  transition: all 0.6s ease 0.15s;
-  width: 100%;
-  background-color: #ddd;
-  
-}
-.button-wrapper::before, .button-wrapper::after {
-  background: #398dee;
-  bottom: 2px;
-  content: "";
-  height: 4px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  transition: all 0.6s;
-  width: 25px;
-}
-.button-wrapper::before {
-  right: -12px;
-}
-.button-wrapper::after {
-  left: -12px;
-}
-.button-wrapper:hover {
-  background: #398dee;
-  transition: all 0.6s;
-}
-.button-wrapper:hover::before {
-  background: #fafafa;
-  right: -2px;
-  transform: scaleY(5);
-  width: 200px;
-}
-.button-wrapper:hover::after {
-  background: #fafafa;
-  left: -2px;
-  transform: scaleY(5);
-  width: 200px;
-}
-
-.submit {
-  background: none;
-  border: 2px solid #398dee;
-  color: #2f3b44;
-  cursor: pointer;
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
-  position:relative;
-  padding: 10px; 
-  width: 180px; 
-  height: 40px; 
-  z-index: 3;
- 
-  font-size: 12px; 
-  line-height: 0px; 
-  transition: all 0.6s ease 0.15s;
-}
-
-.submit + .submit {
-  margin-top: 10px; 
-}
-.submit:hover {
-  border: 2px solid transparent;
-  color: #398dee;
-  transition: all 0.6s;
-} */
 .underline-btn {
   display: inline-block;
   padding: 1em 0;
@@ -1901,12 +1827,12 @@ button.learn-more:hover .button-text {
 /* team */
 @import url('https://fonts.googleapis.com/css?family=Exo+2|Yatra+One');
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Exo 2', sans-serif;
-}
+} */
 
 .teamwrapper {
   margin-top: 60px;
@@ -2018,7 +1944,7 @@ button.learn-more:hover .button-text {
 
 div.content{
   color: white;
-} */
+} 
 
 #box {
   background-image: url('../images/bg2.jpg');
@@ -2027,32 +1953,42 @@ div.content{
 
 #box .card {
   width: auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: hidden;
+  background-color: transparent;
+}
+
+div.card h2 {
+  text-align: center;
+  color: whitesmoke;
+  
 }
 
 /* Header styling */
 #box .card-header {
-  padding: 10px;
-  background-color: #dadcdd;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 30px;
+  background-color: whitesmoke;
+}
+
+#box .card-header p {
+  color: black;
 }
 
 /* Content styling */
 #box .card-content {
-  padding: 20px;
+  padding: 50px;
+  background-color: whitesmoke;
+  margin: 20px;
 }
 
 #microbial_table_info .dataTables_info {
   color: #ffee00;
 }
+
+
 /* team page */
-
-
 .container {
-  max-width: 800px;
   margin: 20px auto;
   max-height: 10000px;
 }
@@ -2147,294 +2083,16 @@ div.content{
   border-radius: 4px;
 }
 /* page profile */
-@import url("https://fonts.googleapis.com/css?family=Maven+Pro|Oswald");
-* {
-  box-sizing: border-box;
-}
 
-
-/* body {
-  background: #0a1022;
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  overflow: hidden;
-  font-family: "Maven Pro";
-} */
-
-.main-container {
-  /* width: 100vw; */
-  height: 150vh;
-  display: flex;
-  overflow: hidden;
-  background: #e2e3e4;
-  font-family: "Maven Pro";
-  margin: auto;
-
-}
-.main-container .left-sidebar {
-  flex-grow: 2;
-  max-width: 320px;
-  border-right: 1px solid #1a233d;
-  position: relative;
-  transition: all 0.5s;
-  box-shadow: 2px 0px 5px #03050a;
-}
-.main-container .left-sidebar .inner {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.main-container .left-sidebar .inner .user-profile {
-  flex-grow: 2;
-  max-height: 410px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.5s;
-  border: #1b202e;
-  position: relative;
-  overflow: hidden;
-}
-.main-container .left-sidebar .inner .user-profile .user-background {
-  position: absolute;
-  background: url("https://gravatar.com/avatar/de84db04b0c7b43efdc840391ffe56ff");
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  filter: blur(25px);
-  z-index: -1;
-}
-.main-container .left-sidebar .inner .user-profile .user-background::after {
-  display: flex;
-  position: relative;
-  background-image: linear-gradient(to bottom, rgba(23, 32, 61, 0.3) 0, #0a1022 95%);
-  height: 100%;
-  width: 100%;
-  content: "";
-}
-.main-container .left-sidebar .inner .user-profile .user-image {
-  margin: 50px 0 25px 0;
-  border-color: #1a233d;
-  transition: all 0.5s;
-}
-.main-container .left-sidebar .inner .user-profile .user-image img {
-  width: 150px;
-  border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.5s;
-}
-.main-container .left-sidebar .inner .user-profile .user-info {
-  text-align: center;
-}
-.main-container .left-sidebar .inner .user-profile .user-info .user-name {
-  font-family: "Oswald";
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #fcfbfb;
-}
-.main-container .left-sidebar .inner .user-profile .user-info .user-location {
-  color: #D1D3DA;
-}
-.main-container .left-sidebar .inner .user-profile .user-info .user-location i::before {
-  transform: rotate(180deg);
-  color: #eb1f1f;
-}
-.main-container .left-sidebar .inner .main-menu {
-  flex-grow: 5;
-}
-.main-container .left-sidebar .inner .social-links {
-  flex-grow: 1;
-  max-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.main-container .left-sidebar .inner .social-links a {
-  padding: 0 10px;
-  color: #fff;
-  font-size: 1.3rem;
-}
-.main-container .left-sidebar.minimize {
-  max-width: 100px;
-}
-.main-container .left-sidebar.minimize .inner .user-profile {
-  border-bottom: 1px solid #1a233d;
-  max-height: 130px;
-}
-.main-container .left-sidebar.minimize .inner .user-profile .user-image {
-  margin: 25px 0;
-}
-.main-container .left-sidebar.minimize .inner .user-profile .user-image img {
-  width: 75px;
-}
-.main-container .left-sidebar.minimize .inner .user-profile .user-info {
-  height: 0px;
-  transition-delay: 0s;
-  animation: animate-sidebar-text 0.5s;
-}
-.main-container .left-sidebar.minimize .inner .social-links {
-  max-height: 200px;
-  flex-direction: column;
-}
-.main-container .left-sidebar.minimize .inner .social-links a {
-  padding: 10px 0;
-}
-.main-container .left-sidebar.minimize .toggle-button i::before {
-  transform: rotate(180deg);
-}
-.main-container .main-content {
-  flex-grow: 10;
-  display: flex;
-  justify-content: center;
-}
-.main-container .main-content > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-
-.main-container .main-content .modal {
-  border: 1px solid #1a233d;
-  padding: 0 20px;
-  width: 50%;
-  border-radius: 25px;
-  display: none;
-}
-.main-container .main-content .modal.show {
-  display: inherit;
-}
-.main-container .main-content .modal .heading h2 {
-  font-size: 1.3rem;
-  padding: 10px 0;
-  letter-spacing: 0.1rem;
-  font-weight: 400;
-}
-.main-container .main-content .modal .heading h3 {
-  letter-spacing: -0.03rem;
-  font-family: "Oswald";
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.main-container .right-sidebar {
-  flex-grow: 1;
-  
-  border-left: 1px solid #1a233d;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.main-container .right-sidebar .btn {
-  border-top: 1px solid #1a233d;
-  height: 50px;
-  line-height: 50px;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-}
-.main-container .right-sidebar .btn:hover {
-  background: #1c2541;
-}
-
-
-.toggle-button {
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  border: 1px solid #1a233d;
-  width: 25px;
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
-  border-radius: 0 50% 50% 0;
-  cursor: pointer;
-  transform: translate(0, -50%);
-  box-shadow: 2px 0px 5px #03050a;
-  background: #0a1022;
-  z-index: 1;
-}
-.toggle-button:hover {
-  background: #1a233d;
-}
-.toggle-button i::before {
-  transition: all 0.25s;
-}
-
-@keyframes animate-sidebar-text {
-  100% {
-    opacity: 0;
-    margin-top: -5px;
-  }
-}
-.main-content {
-  padding: 50px;
-  display: flex;
-  
-}
-.main-content {
-  padding: 20px;
-  border: 1px solid #ddd;
-}
-
-.section2 {
-  margin-bottom: 20px;
-}
-
-.section2 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.section-title {
-  display: block;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.award-details {
-  list-style: none;
-  padding: 0;
-}
-
-.award-details li {
-  margin-bottom: 20px;
-}
-
-.bi {
-  margin-right: 5px;
-}
-
-.research-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-}
-#container2 {
-  margin: 5%;
-}
-
-.card2 {
-  width: 400px;
-  background: #f7f7f7;
-  padding: 20px;
-  border-radius: 10px; /* Adjust the value for rounded corners */
-  margin-bottom: 20px; /* Add margin between containers for spacing */
-  box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
-  border-bottom: 5px solid #ddd;
-}
 /* new page */
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
 
-* {
+/* * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+} */
 
 .container2 {
   background: #e9e9e9;
