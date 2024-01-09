@@ -24,15 +24,18 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet" />
 
-  <!-- footer icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
   <!-- Hover -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+
+  <!-- Contact -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+  <!--search-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
 
   <!-- Vendor CSS Files -->
   <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -66,8 +69,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.css"
     integrity="sha512-HajDJcB2lLZX5Ap4mVymNO6VLqj7mXIOEwEhugvcIPPdNLhTzY/fF2MhhATfWkS7NsOR/Bd4R1ztgNOy/9ID4A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!--Container Link WEBSITE-->
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
@@ -80,7 +81,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
 
 <body>
   <!-- ======= Header ======= -->
@@ -232,137 +232,163 @@
   </header>
   <!-- End Header -->
 
-  <!-- hero -->
-  <section id="hero2">
-    <div class="container" data-aos="fade-up">
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="floating-card">
-          <h2>Charctic Interactive Sea Ice Graph
-          </h2>
-          <p>This dataset includes graphs depicting the extent of sea ice in both the Arctic and Antarctica. These
-            graphs show how much sea ice there is in these polar regions over time. Researchers or scientists likely use
-            this information to understand changes in the amount of sea ice and to study trends in the Arctic and
-            Antarctic environments.</p>
-
-          <div class="flex-container">
-            <div class="data">
-              <h3>The dataset collected from</h3>
-              <img src="{% static 'images/logo8.png' %}" alt="GBIF Logo" style="max-height: 120px;">
-            </div>
-            <div class="data2">
-              <h3>Citation</h3>
-              <p style="font-style: italic;">NSIDC (2019). Charctic Interactive Sea Ice Graph | Arctic Sea Ice News and
-                Analysis. [online] Nsidc.org. Available at:
-                <a href="https://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/">https://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/</a> </p>
-            </div>
-
-          </div>
-
-
-
-          <button class="learn-more"
-            onclick="openUrl('https://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/')">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Find out more</span>
-          </button>
-
-        </div>
+  <body>
+    <!-- Content -->
+    <section id="box">
+      <div class="card">
+        <h2>Plant biology variables under cold stress from published experiments (1975-2019) that include microbial
+          symbionts as an experimental factor</h2>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-lg-4">
-            <div class="footer-logo" style="width: 200px;">
-              <img src="/static/images/logo/umk.png" style="width: 150px;">
-              <img src="/static/images/logo/aibig.png" style="width: 150px;">
-              <img src="/static/images/logo/ypasm.png" style="width: 150px;">
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-4">
-            <h4>Contact</h4>
-            <div>
-              <i class="fas fa-map-marker-alt" style="font-size: 24px; margin-right: 10px;"></i>
-              <span>Institute For Artificial Intelligence & Big Data,</span>
-              <br>
-              <span>Universiti Malaysia Kelantan, City Campus, Pengkalan Chepa,</span>
-              <br>
-              <span>16100 Kota Bharu, Kelantan</span>
-            </div>
-            <div style="margin-top: 10px;">
-              <i class="fas fa-phone" style="font-size: 24px; margin-right: 10px;"></i>
-              <span>(+609) 771 7177</span>
-            </div>
-            <div style="margin-top: 10px;">
-              <i class="fas fa-envelope" style="font-size: 24px; margin-right: 10px;"></i>
-              <span>aibig@umk.edu.my</span>
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-4" style="margin-top: 10px;">
-            <h4>Follow Us</h4>
-            <!-- Replace these URLs with your actual social media profile URLs -->
-            <a href="https://www.instagram.com/" target="_blank" style="margin-right: 10px;"><i class="fab fa-instagram"
-                style="font-size: 24px;"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;"><i class="fab fa-facebook"
-                style="font-size: 24px;"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"
-                style="font-size: 24px;"></i></a>
-          </div>
-        </div>
-
-
+      <div class="card-header">
+        <p>
+          The data compiles different aspects of plant biology (e.g., anatomy, physiology, fitness and gene-expression)
+          reported in scientific articles that experimentally explored the role of plant microbial symbionts in plant
+          tolerance to chilling (0-15 degrees Celsius) and freezing (under 0 degrees Celsius) conditions. Each variable
+          included in the dataset is composed of at least four values, representing the mean of the measured variable
+          with
+          or without a given microbial symbiont and under control or cold conditions in a factorial design. The data
+          were
+          generated for a meta-analysis, and so the level of replication and standard deviation or standard error, plus
+          other relevant information such as plant and microbial species, and source, are also included. Funding was
+          provided by Posdoctoral-FONDECYT 3180441, FONDECYT 11140607 and the NERC-CONICYT awards (NE/P003079/1 -
+          PII20150126).
+        </p>
       </div>
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>AIBIG</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+
+      <div class="card-content">
+        <table id="bELISA_table" class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Lab ID</th>
+              <th>Field ID</th>
+              <th>Host species</th>
+              <th>Age</th>
+              <th>Sampling date</th>
+              <th>Location</th>
+              <th>Location notes</th>
+              <th>Lat</th>
+              <th>Long</th>
+              <th>Test date</th>
+              <th>Sample ABS</th>
+              <th>Negative control</th>
+              <th>S/N ratio</th>
+              <th>Result</th>
+              <th>Replicate</th>
+            </tr>
+          </thead>
+          {% csrf_token %}
+          <tbody>
+            {% for item in bELISA%}
+            <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.lab_ID }}</td>
+              <td>{{ item.field_ID }}</td>
+              <td>{{ item.host_species }}</td>
+              <td>{{ item.age }}</td>
+              <td>{{ item.sampling_date }}</td>
+              <td>{{ item.location }}</td>
+              <td>{{ item.location_notes }}</td>
+              <td>{{ item.lat }}</td>
+              <td>{{ item.long }}</td>
+              <td>{{ item.test_date }}</td>
+              <td>{{ item.sample_ABS }}</td>
+              <td>{{ item.neg_ctrl }}</td>
+              <td>{{ item.S_N_ratio }}</td>
+              <td>{{ item.result }}</td>
+              <td>{{ item.replicate }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
-  </footer>
-  <!-- end -->
+    </section>
+    <!-- End content -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-lg-4">
+              <div class="footer-logo" style="width: 200px;">
+                <img src="/static/images/logo/umk.png" style="width: 150px;">
+                <img src="/static/images/logo/aibig.png" style="width: 150px;">
+                <img src="/static/images/logo/polar1.png" style="width: 150px;">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              <h4>Contact</h4>
+              <div>
+                <i class="fas fa-map-marker-alt" style="font-size: 24px; margin-right: 10px;"></i>
+                <span>Institute For Artificial Intelligence & Big Data,</span>
+                <br>
+                <span>Universiti Malaysia Kelantan, City Campus, Pengkalan Chepa,</span>
+                <br>
+                <span>16100 Kota Bharu, Kelantan</span>
+              </div>
+              <div style="margin-top: 10px;">
+                <i class="fas fa-phone" style="font-size: 24px; margin-right: 10px;"></i>
+                <span>(+609) 771 7177</span>
+              </div>
+              <div style="margin-top: 10px;">
+                <i class="fas fa-envelope" style="font-size: 24px; margin-right: 10px;"></i>
+                <span>aibig@umk.edu.my</span>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-4" style="margin-top: 10px;">
+              <h4>Follow Us</h4>
+              <!-- Replace these URLs with your actual social media profile URLs -->
+              <a href="https://www.instagram.com/" target="_blank" style="margin-right: 10px;"><i
+                  class="fab fa-instagram" style="font-size: 24px;"></i></a>
+              <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;"><i class="fab fa-facebook"
+                  style="font-size: 24px;"></i></a>
+              <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"
+                  style="font-size: 24px;"></i></a>
+            </div>
+          </div>
 
-  <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
-    integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
-    integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
-    integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
-    integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
-    integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="{% static 'js/main.js' %}"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script>
-    function openUrl(url) {
-      window.open(url, '_blank');
-    }
-  </script>
-</body>
+
+        </div>
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong><span>AIBIG</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+    </footer>
+    <!-- end -->
+
+    <!-- CDN JS FILE -->
+    <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+      integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
+      integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+      integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
+      integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
+      integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Template Main Js File -->
+    <script src="{% static 'js/pr_plant.js' %}"></script>
+  </body>
 
 </html>

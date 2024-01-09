@@ -91,98 +91,136 @@
   <header id="header" class="fixed-top bg-dark">
     <div class="container d-flex align-items-center justify-content-lg-between">
       <h1 class="logo me-auto me-lg-0">
-        <a href="index.html">
+        <a href="{% url 'mainpr:index'%}">
           <img src="{% static 'images/logo/polar.png' %}" alt="Home" class="img-fluid" />
         </a>
       </h1>
 
+      <!-- DATASETS NAVIGATION BAR -->
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li class="dropdown active">
-            <a href="#portfolio"><span>Datasets</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown">
+            <a href="#portfolio active"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown">
                 <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="{% url 'pr_antartic:antartic'%}">Mass</a></li>
-                  <li><a href="#">Sea Ice Extant</a></li>
-                  <li><a href="#">Temperature</a></li>
-                  <li><a href="#">Hotpoints(NASA)</a></li>
+                  <li><a href="{% url 'pr_antartic:antarticmass'%}">Antarctica Mass</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extent</a></li>
+                  <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
+                  <li><a href="{% url 'pr_antartic:hotpoints'%}">Antarctic Hotpoints(NASA)</a></li>
                   <li><a href="#">Ice Radar</a></li>
+                  <li><a href="#">Snow Accumulation</a></li>
                 </ul>
+              </li>
               <li class="dropdown">
                 <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Sea Ice Graph</a></li>
+                  <li><a href="{% url 'pr_aa:aa1'%}">Sea Ice Graph</a></li>
                   <li><a href="{% url 'pr_aa:sulfurDioxide'%}">Sulphur Detection from Melting Ice Cores</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Comparison Northern City Climate</a></li>
-                  <li><a href="#">Global Warming Denmark</a></li>
-                  <li><a href="#">Sea Ice Extant</a></li>
-                  <li><a href="#">Sea Ice Masking Image</a></li>
-                  <li><a href="#">Streamgages in Alaska</a></li>
-                  <li><a href="#">Radium in Surface and Ground Water</a></li>
+                  <li><a href="{% url 'pr_arctic:climate'%}">Northern Cities Climate</a></li>
+                  <li><a href="{% url 'pr_arctic:iceextent'%}">Sea Ice Extent</a></li>
+                  <li><a href="#">Sea Ice Image Masking </a></li>
+                  <li><a href="{% url 'pr_arctic:streamgages'%}">VSGS Alaska Streamgages</a></li>
+                  <li><a href="{% url 'pr_arctic:simpsonlagoon'%}">Simpson Lagoon</a></li>
                   <li><a href="#">Arctic Sea Routes</a></li>
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#"><span>DNA</span> <i class="bi bi-chevron-right"></i></a>
+                <a href="#"><span>DNA/RNA</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li class="dropdown">
                     <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">Plankton</a></li>
-                      <li><a href="#">Pytoplankton</a></li>
+                      <li><a href="{% url 'pr_dna_rna:plankton'%}">Plankton_Tara-Ocean</a></li>
+                      <li><a href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a></li>
+                      <li><a href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a></li>
+                      <li><a href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a></li>
+                      <li class="dropdown">
+                        <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                          <li><a href="{% url 'pr_dna_rna:Cdata'%}">14C and 13C Data</a></li>
+                          <li><a href="{% url 'pr_dna_rna:nucleotide'%}">Nucleotide Reads</a></li>
+                          <li><a href="{% url 'pr_dna_rna:edaphic'%}">Edaphic Factors</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#">Genomes</a></li>
-                  <li><a href="#">Microbiota</a></li>
-                  <li><a href="#">Soil Sample</a></li>
+
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Animal</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Coral</a></li>
-                  <li><a href="#">Polar Bear</a></li>
-                  <li><a href="#">Beluga Whale</a></li>
-                  <li><a href="#">Bird</a></li>
-                  <li><a href="#">Penguin</a></li>
+                  <li><a href="{% url 'pr_animal:coral'%}">Coral</a></li>
+                  <li class="dropdown">
+                    <a href="#"><span>Polar Bear</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_animal:blood'%}">Bear Blood</a></li>
+                      <li><a href="{% url 'pr_animal:capSeq'%}">Bear Capture Sequence</a></li>
+                      <li><a href="{% url 'pr_animal:abdTemp'%}">Bear Abdominal Temperature</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#"><span>Penguin</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_animal:gentoo'%}">Gentoo</a></li>
+                      <li><a href="{% url 'pr_animal:adelie'%}">Adelie</a></li>
+                      <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li>
+                  <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Ecosystem</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Aquatic</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="#">Marine</a></li>
-                      <li><a href="#">Freshwater</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Terrestrial</a></li>
+                  <li><a href="{% url 'pr_ecosystem:freshwater'%}">Freshwater</a></li>
+                  <li><a href="{% url 'pr_ecosystem:marine'%}">Marine</a></li>
+                  <li><a href="{% url 'pr_ecosystem:terrestrial'%}">Terrestrial</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#"><span>Plant</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% url 'pr_plant:microbial'%}">Microbial Symbionts</a></li>
+                  <li><a href="{% url 'pr_plant:algae'%}">Glacier Algae</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Marine Fungi</a></li>
-                  <li><a href="#">Palmer Penguin</a></li>
-
+                  <li><a href="{% url 'pr_population:penguinpopu'%}">Penguin Population</a></li>
+                  <li class="dropdown">
+                    <a href="#"><span>Palmer Penguin</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_population:palmerIter'%}">Iter</a></li>
+                      <li><a href="{% url 'pr_population:palmerSize'%}">Size</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'pr_population:mfungi'%}">Marine Fungi</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Influenza A</a></li>
-                  <li><a href="#">Cryptosporidium Oocyst and Giardia Cysts</a></li>
+                  <li class="dropdown">
+                    <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="{% url 'pr_disease:bELISA'%}">bELISA</a></li>
+                      <li><a href="{% url 'pr_disease:hi'%}">HI</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'pr_disease:crypto_giardia'%}">Crypto & Giardia</a></li>
                 </ul>
               </li>
             </ul>
@@ -198,56 +236,87 @@
   </header>
   <!-- End Header -->
 
-  <!-- hero -->
-  <div class="container1">
-    <h2 class="text-center">Sulfur Data from NEEM and WDC Ice Cores</h2>
-    <div class="content">
-      <section id="hero2" class="d-flex align-items-center justify-content-center">
-
-        <!-- data tables -->
-        <table id="algae_table" class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Type</th>
-              <th>f</th>
-              <th>fm.</th>
-              <th>par</th>
-              <th>y</th>
-              <th>etr</th>
-              <th>rep</th>
-              <th>treat</th>
-              <th>npq</th>
-              <th>etrmax</th>
-              <th>alpha</th>
-              <th>ek</th>
-            </tr>
-          </thead>
-          {% csrf_token %}
-          <tbody>
-            {% for item in algae%}
-            <tr>
-              <td>{{ item.id }}</td>
-              <td>{{ item.type }}</td>
-              <td>{{ item.f }}</td>
-              <td>{{ item.fm }}</td>
-              <td>{{ item.par }}</td>
-              <td>{{ item.y }}</td>
-              <td>{{ item.etr }}</td>
-              <td>{{ item.rep }}</td>
-              <td>{{ item.treat }}</td>
-              <td>{{ item.npq }}</td>
-              <td>{{ item.etrmax }}</td>
-              <td>{{ item.alpha }}</td>
-              <td>{{ item.ek }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </section>
+  <!-- Content -->
+  <section id="box">
+    <div class="card">
+      <h2>Glacier algal abundance, photophysiology, pigmentation, bio-optical properties growth and
+        impacts to albedo in the Greenland Ice Sheet Dark Zone, July-August 2016</h2>
     </div>
-  </div>
 
+    <div class="card-header">
+      <p>The abundance, photophysiology, pigmentation, bio-optical properties, cellular energy balance and instantaneous
+        radiative forcing of glacier algal assemblages from the surface of the Greenland Ice Sheet (GrIS) are quantified
+        throughout the 2016 ablation season. The effects of assemblages on ice surface albedo are further derived using
+        a newly developed model of glacier algal blooms for the GrIS, radiative transfer modelling using BioSNICAR-GO,
+        and comparisons to MODIS broadband albedo observations over the same season. Data represent a composite of
+        in-situ observations, in-situ incubations studies, laboratory analyses, modelling and remote sensing. All in
+        -situ work was performed at site S6 of the K-Transect in the southwestern GrIS ablation zone as part of the
+        Black and Bloom project. Funding was provided by the NERC 'Black and Bloom' grant NE/M021025/1 and the Marie
+        Sklodowska-Curie grant agreement No 675546.</p>
+    </div>
+
+    <div class="card-content">
+      <table id="algae_table" class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>f</th>
+            <th>fm.</th>
+            <th>par</th>
+            <th>y</th>
+            <th>etr</th>
+            <th>rep</th>
+            <th>treat</th>
+            <th >npq</th>
+            <th>etrmax</th>
+            <th>alpha</th>
+            <th>ek</th>
+          </tr>
+        </thead>
+        {% csrf_token %}
+        <tbody>
+          {% for item in algae%}
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.type }}</td>
+            <td>{{ item.f }}</td>
+            <td>{{ item.fm }}</td>
+            <td>{{ item.par }}</td>
+            <td>{{ item.y }}</td>
+            <td>{{ item.etr }}</td>
+            <td>{{ item.rep }}</td>
+            <td>{{ item.treat }}</td>
+            <td>{{ item.npq }}</td>
+            <td>{{ item.etrmax }}</td>
+            <td>{{ item.alpha }}</td>
+            <td>{{ item.ek }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <br>
+      <p>
+      
+          <h5>READ ME</h5>
+          <th>ID</th><br>
+          <th>Type = Type of measurement taken (Fo=in dark/F=in light)</th><br>
+          <th>f = Minimum fluorescence</th><br>
+          <th>fm. = Maximum fluorescence</th><br>
+          <th>par = Photosynthetically active radiation</th><br>
+          <th>y = PSII quantum yield</th><br>
+          <th>etr = Electron transport rate</th><br>
+          <th>rep = Replicate number</th><br>
+          <th>treatment = Treatment type (0 = dark, 50 = 50% ambient light, full = 100% ambient light)</th><br>
+          <th>npq = Stern-volmer non-photochemical quanching</th><br>
+          <th>etrmax = Maximum rate of electron transport</th><br>
+          <th>alpha = Light uilitisation efficiency</th><br>
+          <th>ek = Light saturation coefficient </th><br>
+       
+      </p>
+    </div>
+  </section>
+  <!-- End content -->
 
   <!-- Footer -->
   <footer id="footer">
