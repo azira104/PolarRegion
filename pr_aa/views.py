@@ -10,9 +10,6 @@ from django.contrib.auth.decorators import login_required
 from .models import sulfur
 
 # Create your views here.
-def seaice(request):
-    return render(request, 'seaice.html')
-
 def sulfurDioxide(request):
     sulfur_data = sulfur.objects.all()
     return render(request, 'sulfurDioxide.html', {'sulfur': sulfur_data})

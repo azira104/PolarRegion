@@ -167,8 +167,8 @@ h6 {
 .logo1{
   margin: auto;
   max-height: 80px;
-  position:absolute;
-  left:50px;
+  position: absolute;
+  left: 90px;
   top: 0px;
   bottom: 0px;
 }
@@ -176,8 +176,8 @@ h6 {
 .logo2{
   margin: auto;
   max-height: 70px;
-  position:absolute;
-  left:150px;
+  position: absolute;
+  left: 200px;
   top: 0px;
   bottom: 0px;
 }
@@ -584,12 +584,17 @@ section {
 
 .about .content ul {
   list-style: none;
+  color: #000;
   padding: 0;
 }
 
 .about .content ul li {
   padding: 0 0 8px 26px;
   position: relative;
+}
+
+.fst-italic {
+  color: #000;
 }
 
 .about .content ul i {
@@ -1989,8 +1994,9 @@ div.card h2 {
 
 /* team page */
 .container {
-  margin: 20px auto;
+  /* margin: 20px auto; */
   max-height: 10000px;
+  padding: 10px;
 }
 
 .profile-sidebar {

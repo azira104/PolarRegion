@@ -69,7 +69,7 @@
         integrity="sha512-HajDJcB2lLZX5Ap4mVymNO6VLqj7mXIOEwEhugvcIPPdNLhTzY/fF2MhhATfWkS7NsOR/Bd4R1ztgNOy/9ID4A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    {% comment %} <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" /> {% endcomment %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!--Container Link WEBSITE-->
@@ -89,323 +89,176 @@
 
 
 <body>
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top bg-dark" style="background-color: black;" >
-        <div class="container d-flex align-items-center justify-content-lg-between">
-            <h1 class="logo me-auto me-lg-0">
-                <a href="{% url 'mainpr:index'%}" class="d-flex align-items-center">
-                    <img src="{% static 'images/logo/polar.png' %}" alt="Logo 1" class="img-fluid logo-img" />
-                    <img src="{% static 'images/logo/logoypasm.png' %}" alt="Logo 2" class="img-fluid logo-img" />
-                </a>
-            </h1>
-            <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1> -->
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    {%include 'header.html'%}
 
-            <nav id="navbar" class="navbar order-last order-lg-0">
-                <ul>
-                    <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li class="dropdown">
-                        <a href="#portfolio active"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li class="dropdown">
-                                <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="{% url 'pr_antartic:antartic'%}">Antarctica Mass</a></li>
-                                    <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extant</a></li>
-                                    <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
-                                    <li><a href="#">Antarctic Hotpoints(NASA)</a></li>
-                                    <li><a href="#">Ice Radar</a></li>
-                                    <li><a href="#">Snow Accumulation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="{% url 'pr_aa:aa1'%}">Sea Ice Graph</a></li>
-                                    <li><a href="#">Sulphur Detection from Melting Ice Cores</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Northern Cities Climate</a></li>
-                                    <li><a href="#">Sea Ice Extent</a></li>
-                                    <li><a href="#">Sea Ice Image Masking </a></li>
-                                    <li><a href="#">VSGS Alaska Streamgages</a></li>
-                                    <li><a href="#">Simpson Lagoon</a></li>
-                                    <li><a href="#">Arctic Sea Routes</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>DNA</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li class="dropdown">
-                                        <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
-                                        <ul>
-                                            <li><a href="#">Plankton_Tara-Ocean</a></li>
-                                            <li><a href="#">Pytoplankton</a></li>
-                                            <li><a href="#">Ice Krill</a></li>
-                                            <li><a href="#">Bacteria</a></li>
-                                            <li class="dropdown">
-                                                <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
-                                                <ul>
-                                                    <li><a href="#">14C and 13C Data</a></li>
-                                                    <li><a href="#">Nucleotide Reads</a></li>
-                                                    <li><a href="#">Edaphic Factors</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>Animal</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Coral</a></li>
-                                    <li><a href="#">Polar Bear</a></li>
-                                    <li class="dropdown">
-                                        <a href="#"><span>Polar Bear</span> <i class="bi bi-chevron-right"></i></a>
-                                        <ul>
-                                            <li><a href="#">Bear Blood</a></li>
-                                            <li><a href="#">Bear Capture Sequence</a></li>
-                                            <li><a href="#">Bear Abdominal Temperature</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Krill Base</a></li>
-                                    <li><a href="#">Giant Petrel Bird</a></li>
-                                    <li><a href="#">Penguin</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>Ecosystem</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="{% url 'pr_ecosystem:freshwater'%}">Freshwater</a></li>
-                                    <li><a href="{% url 'pr_ecosystem:marine'%}">Marine</a></li>
-                                    <li><a href="{% url 'pr_ecosystem:terrestrial'%}">Terrestrial</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>Plant</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Microbial Symbionts</a></li>
-                                    <li><a href="#">Glacier Algae</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li class="dropdown">
-                                        <a href="{% url 'pr_population:penguinpopu'%}"><span>Penguin Population</span>
-                                            <i class="bi bi-chevron-right"></i></a>
-                                        <ul>
-                                            <li><a href="#">Adelie</a></li>
-                                            <li><a href="#">Chinstrap</a></li>
-                                            <li><a href="#">Gentoo</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="{% url 'pr_population:palmer'%}"><span>Palmer Penguin</span> <i
-                                                class="bi bi-chevron-right"></i></a>
-                                        <ul>
-                                            <li><a href="#">Iter</a></li>
-                                            <li><a href="#">Size</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <li><a href="{% url 'pr_population:mfungi'%}">Marine Fungi</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li class="dropdown">
-                                        <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
-                                        <ul>
-                                            <li><a href="#">bELISA</a></li>
-                                            <li><a href="#">HI</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Crypto & Giardia</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
-            <!-- .navbar -->
-
-
-
-            <a href="#contact" class="get-started-btn scrollto">Contact Us</a>
-        </div>
-    </header>
-    <!-- End Header -->
     <!--Start Page Profile-->
     <div class="container2">
         <div class="profile-header">
-          <div class="profile-img">
-            <img src="{% static 'images/team/Dr.akmal.jpg' %}" width="200" alt="Profile Image">
-          </div>
-          <div class="profile-nav-info">
-            <h3 class="user-name">DR. MUHAMMAD AKMAL BIN REMLI</h3>
-            <div class="address">
-              <p id="state" class="state">Universiti Malaysia Kelantan,Kelantan,</p>
-              <span id="country" class="country">Malaysia</span>
+            <div class="profile-img">
+                <img src="{% static 'images/team/Dr.akmal.jpg' %}" width="200" alt="Profile Image">
             </div>
-      
-          </div>
-        </div>
-      
-        <div class="main-bd">
-          <div class="left-side">
-            <div class="profile-side">
-              <p class="mobile-no"><i class="fa fa-phone"></i>  09-7717174</p>
-              <p class="user-mail"><i class="fa fa-envelope"></i> akmal@umk.edu.my</p>
-              <div class="user-bio">
-                <h3>Role</h3>
-                <p class="bio">
-                    Project Leader
-                    Institute for Artificial Intelligence and Big Data,Universiti Malaysia Kelantan
-                </p>
-              </div>
-            </div>
-      
-          </div>
-          <div class="right-side">
-      
-            <div class="nav">
-              <ul>
-                <li onclick="tabs(0)" class="user-post active">EDUCATION(S)</li>
-                <li onclick="tabs(1)" class="user-review">RESEARCH AWARD(S)</li>
-                <li onclick="tabs(2)" class="user-setting"> Academic Profile</li>
-              </ul>
-            </div>
-            <div class="profile-body">
-              <div class="profile-posts tab">
-                <h1>Your Education</h1>
-                <div class="timeline">
-                    <li class="timeline-item">
-                        <div class="timeline-info">
-                            <span>(2018: Universiti Teknologi Malaysia)</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <p>Ijazah Doktor Falsafah Sains Komputer</p>
-                        </div>
-                    </li>
-                
-                    <li class="timeline-item">
-                        <div class="timeline-info">
-                            <span>(2014: Universiti Teknologi Malaysia)</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            
-                            <p>Ijazah Sarjana Sains Sains Komputer</p>
-                        </div>
-                    </li>
-                
-                    <li class="timeline-item">
-                        <div class="timeline-info">
-                            <span>(2006 : Universiti Teknologi Malaysia)</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <p>Ijazah Sarjana Muda Sains Komputer.</p>
-                        </div>
-                    </li>
+            <div class="profile-nav-info">
+                <h3 class="user-name">DR. MUHAMMAD AKMAL BIN REMLI</h3>
+                <div class="address">
+                    <p id="state" class="state">Universiti Malaysia Kelantan,Kelantan,</p>
+                    <span id="country" class="country">Malaysia</span>
+                </div>
 
-                    <li class="timeline-item">
-                        <div class="timeline-info">
-                            <span>(2000 : Sek Men Teknik Kuala Krai)</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <p>Sijil Pelajaran Malaysia.</p>
-                        </div>
-                    </li>
-                </div>
-              </div>
-              <div class="profile-reviews tab">
-                <h1>Research Achievements</h1>
-                
-                <ul class="research-list">
-                    <!-- Entry 1 -->
-                    <li>
-                        <h2>Product Name: S-IOTP: Integrated Solar-IoT Monitoring and Predictive Maintenance Systems for Irrigation</h2>
-                        
-                        <p class="award">Award: GOLD</p>
-                        <p class="role">Role: Member</p>
-                        <p class="exhibition">Exhibition: CRI 2021 UMK</p>
-                    </li>
-                
-                    <!-- Entry 2 -->
-                    <li>
-                        <h2>S-IOTP: Integrated Solar-IoT Monitoring and Predictive Maintenance Systems for Irrigation</h2>
-                        <p class="award">Award: GOLD</p>
-                        <p class="role">Role: Member</p>
-                        <p class="exhibition">Exhibition: INTERNATIONAL EXHIBITION & SYMPOSIUM ON PRODUCTIVITY, INNOVATION, KNOWLEDGE, EDUCATION & DESIGN (i-SPiKE 2021)</p>
-                    </li>
-                
-                    <!-- Entry 3 -->
-                    <li>
-                        <h2>Product Name: High-Precision of Solar Tracking System For Smart Irrigation System using IoT</h2>
-                    
-                        <p class="award">Award: SILVER</p>
-                        <p class="role">Role: Member</p>
-                        <p class="exhibition">Exhibition: eCRI2020</p>
-                    </li>
-                
-                    <!-- Entry 4 -->
-                    <li>
-                        <h2>Product Name:  Low Cost of Temperature-Controlled Apparatus For Pigment Extraction using Cloud Monitoring</h2>
-                        <p class="award">Award: BRONZE</p>
-                        <p class="role">Role: Member</p>
-                        <p class="exhibition">Exhibition: eCRI2020</p>
-                    </li>
-                
-                    
-                </ul>
-              </div>
-              <div class="profile-settings tab">
-                <div class="account-setting">
-                  <h1>Academic Profile</h1>
-                  <div class="profile-section">
-                    <div class="profile">
-                        <img src="{% static 'images/logo-putih/scopus.png' %}" alt="SCOPUS Logo">
-                        <h3>SCOPUS</h3>
-                        <p>Explore my publications and citations on SCOPUS.</p>
-                        <a href="https://www.scopus.com/authid/detail.uri?authorId=57211546984">Visit SCOPUS Profile</a>
-                    </div>
-                
-                    <!-- Google Scholar Profile -->
-                    <div class="profile">
-                        <img src="{% static 'images/logo-putih/GOOGLE.png' %}" alt="Google Scholar Logo">
-                        <h3>Google Scholar</h3>
-                        <p>View my research articles on Google Scholar.</p>
-                        <a href="https://scholar.google.com/citations?user=Ayk0V9EAAAAJ&hl=en">Visit Google Scholar Profile</a>
-                    </div>
-                
-                    <!-- Web of Science (WOS) Profile -->
-                    <div class="profile">
-                        <img src="{% static 'images/logo-putih/wos1.png' %}" alt="Web of Science Logo">
-                        <h3>Web of Science (WOS)</h3>
-                        <p>Access my publications and citation metrics on WOS.</p>
-                        <a href="https://www.webofscience.com/wos/author/record/1335627">Visit WOS Profile</a>
-                    </div>
-                </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
+
+        <div class="main-bd">
+            <div class="left-side">
+                <div class="profile-side">
+                    <p class="mobile-no"><i class="fa fa-phone"></i> 09-7717174</p>
+                    <p class="user-mail"><i class="fa fa-envelope"></i> akmal@umk.edu.my</p>
+                    <div class="user-bio">
+                        <h3>Role</h3>
+                        <p class="bio">
+                            Project Leader
+                            Institute for Artificial Intelligence and Big Data,Universiti Malaysia Kelantan
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right-side">
+
+                <div class="nav">
+                    <ul>
+                        <li onclick="tabs(0)" class="user-post active">EDUCATION(S)</li>
+                        <li onclick="tabs(1)" class="user-review">RESEARCH AWARD(S)</li>
+                        <li onclick="tabs(2)" class="user-setting"> Academic Profile</li>
+                    </ul>
+                </div>
+                <div class="profile-body">
+                    <div class="profile-posts tab">
+                        <h1>Your Education</h1>
+                        <div class="timeline">
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span>(2018: Universiti Teknologi Malaysia)</span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>Ijazah Doktor Falsafah Sains Komputer</p>
+                                </div>
+                            </li>
+
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span>(2014: Universiti Teknologi Malaysia)</span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+
+                                    <p>Ijazah Sarjana Sains Sains Komputer</p>
+                                </div>
+                            </li>
+
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span>(2006 : Universiti Teknologi Malaysia)</span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>Ijazah Sarjana Muda Sains Komputer.</p>
+                                </div>
+                            </li>
+
+                            <li class="timeline-item">
+                                <div class="timeline-info">
+                                    <span>(2000 : Sek Men Teknik Kuala Krai)</span>
+                                </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>Sijil Pelajaran Malaysia.</p>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="profile-reviews tab">
+                        <h1>Research Achievements</h1>
+
+                        <ul class="research-list">
+                            <!-- Entry 1 -->
+                            <li>
+                                <h2>Product Name: S-IOTP: Integrated Solar-IoT Monitoring and Predictive Maintenance
+                                    Systems for Irrigation</h2>
+
+                                <p class="award">Award: GOLD</p>
+                                <p class="role">Role: Member</p>
+                                <p class="exhibition">Exhibition: CRI 2021 UMK</p>
+                            </li>
+
+                            <!-- Entry 2 -->
+                            <li>
+                                <h2>S-IOTP: Integrated Solar-IoT Monitoring and Predictive Maintenance Systems for
+                                    Irrigation</h2>
+                                <p class="award">Award: GOLD</p>
+                                <p class="role">Role: Member</p>
+                                <p class="exhibition">Exhibition: INTERNATIONAL EXHIBITION & SYMPOSIUM ON PRODUCTIVITY,
+                                    INNOVATION, KNOWLEDGE, EDUCATION & DESIGN (i-SPiKE 2021)</p>
+                            </li>
+
+                            <!-- Entry 3 -->
+                            <li>
+                                <h2>Product Name: High-Precision of Solar Tracking System For Smart Irrigation System
+                                    using IoT</h2>
+
+                                <p class="award">Award: SILVER</p>
+                                <p class="role">Role: Member</p>
+                                <p class="exhibition">Exhibition: eCRI2020</p>
+                            </li>
+
+                            <!-- Entry 4 -->
+                            <li>
+                                <h2>Product Name: Low Cost of Temperature-Controlled Apparatus For Pigment Extraction
+                                    using Cloud Monitoring</h2>
+                                <p class="award">Award: BRONZE</p>
+                                <p class="role">Role: Member</p>
+                                <p class="exhibition">Exhibition: eCRI2020</p>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="profile-settings tab">
+                        <div class="account-setting">
+                            <h1>Academic Profile</h1>
+                            <div class="profile-section">
+                                <div class="profile">
+                                    <img src="{% static 'images/logo-putih/scopus.png' %}" alt="SCOPUS Logo">
+                                    <h3>SCOPUS</h3>
+                                    <p>Explore my publications and citations on SCOPUS.</p>
+                                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57211546984">Visit SCOPUS
+                                        Profile</a>
+                                </div>
+
+                                <!-- Google Scholar Profile -->
+                                <div class="profile">
+                                    <img src="{% static 'images/logo-putih/GOOGLE.png' %}" alt="Google Scholar Logo">
+                                    <h3>Google Scholar</h3>
+                                    <p>View my research articles on Google Scholar.</p>
+                                    <a href="https://scholar.google.com/citations?user=Ayk0V9EAAAAJ&hl=en">Visit Google
+                                        Scholar Profile</a>
+                                </div>
+
+                                <!-- Web of Science (WOS) Profile -->
+                                <div class="profile">
+                                    <img src="{% static 'images/logo-putih/wos1.png' %}" alt="Web of Science Logo">
+                                    <h3>Web of Science (WOS)</h3>
+                                    <p>Access my publications and citation metrics on WOS.</p>
+                                    <a href="https://www.webofscience.com/wos/author/record/1335627">Visit WOS
+                                        Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer id="footer" style="height: 100%;">
@@ -459,7 +312,7 @@
                     <!-- You can delete the links only if you purchased the pro version. -->
                     <!-- Licensing information: https://bootstrapmade.com/license/ -->
                     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-                    
+
                 </div>
             </div>
     </footer>
@@ -498,37 +351,37 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         // Your JavaScript code here
-        $(".nav ul li").click(function() {
-          $(this)
-            .addClass("active")
-            .siblings()
-            .removeClass("active");
+        $(".nav ul li").click(function () {
+            $(this)
+                .addClass("active")
+                .siblings()
+                .removeClass("active");
         });
-    
+
         const tabBtn = document.querySelectorAll(".nav ul li");
         const tab = document.querySelectorAll(".tab");
-    
+
         function tabs(panelIndex) {
-          tab.forEach(function(node) {
-            node.style.display = "none";
-          });
-          tab[panelIndex].style.display = "block";
+            tab.forEach(function (node) {
+                node.style.display = "none";
+            });
+            tab[panelIndex].style.display = "block";
         }
-        
-    
+
+
         bioText();
-    
+
         function addLength() {
-          bio.innerText = bio.oldText;
-          bio.innerHTML +=
-            "&nbsp;" + `<span onclick='bioText()' id='see-less-bio'>See Less</span>`;
-          document.getElementById("see-less-bio").addEventListener("click", () => {
-            document.getElementById("see-less-bio").style.display = "none";
-          });
+            bio.innerText = bio.oldText;
+            bio.innerHTML +=
+                "&nbsp;" + `<span onclick='bioText()' id='see-less-bio'>See Less</span>`;
+            document.getElementById("see-less-bio").addEventListener("click", () => {
+                document.getElementById("see-less-bio").style.display = "none";
+            });
         }
-    
+
         if (document.querySelector(".alert-message").innerText > 9) {
-          document.querySelector(".alert-message").style.fontSize = ".7rem";
+            document.querySelector(".alert-message").style.fontSize = ".7rem";
         }
     </script>
 </body>

@@ -83,158 +83,7 @@
 </head>
 
 <body>
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top bg-dark">
-    <div class="container d-flex align-items-center justify-content-lg-between">
-      <h1 class="logo me-auto me-lg-0">
-
-        {% comment %} <a href="{% url 'mainpr:index'%}">
-          <img src="{% static 'images/logo/polar.png' %}" alt="Home" class="img-fluid" /> {% endcomment %}
-        <a href="index.html">
-          <img class="logo1" src="{% static 'images/logo/polar.png' %}" alt="Logo 1" class="img-fluid logo-img" />
-          <img class="logo2" src="{% static 'images/logo/logoypasm.png' %}" alt="Logo 2" class="img-fluid logo-img" />
-        </a>
-      </h1>
-
-      <!-- DATASETS NAVIGATION BAR -->
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li class="dropdown">
-            <a href="#portfolio active"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown">
-                <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_antartic:antarticmass'%}">Antarctica Mass</a></li>
-                  <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extent</a></li>
-                  <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
-                  <li><a href="{% url 'pr_antartic:hotpoints'%}">Antarctic Hotpoints(NASA)</a></li>
-                  <li><a href="#">Ice Radar</a></li>
-                  <li><a href="#">Snow Accumulation</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_aa:aa1'%}">Sea Ice Graph</a></li>
-                  <li><a href="{% url 'pr_aa:sulfurDioxide'%}">Sulphur Detection from Melting Ice Cores</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_arctic:climate'%}">Northern Cities Climate</a></li>
-                  <li><a href="{% url 'pr_arctic:iceextent'%}">Sea Ice Extent</a></li>
-                  <li><a href="#">Sea Ice Image Masking </a></li>
-                  <li><a href="{% url 'pr_arctic:streamgages'%}">VSGS Alaska Streamgages</a></li>
-                  <li><a href="{% url 'pr_arctic:simpsonlagoon'%}">Simpson Lagoon</a></li>
-                  <li><a href="#">Arctic Sea Routes</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>DNA/RNA</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_dna_rna:plankton'%}">Plankton_Tara-Ocean</a></li>
-                      <li><a href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a></li>
-                      <li><a href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a></li>
-                      <li><a href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a></li>
-                      <li class="dropdown">
-                        <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
-                        <ul>
-                          <li><a href="{% url 'pr_dna_rna:Cdata'%}">14C and 13C Data</a></li>
-                          <li><a href="{% url 'pr_dna_rna:nucleotide'%}">Nucleotide Reads</a></li>
-                          <li><a href="{% url 'pr_dna_rna:edaphic'%}">Edaphic Factors</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Animal</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_animal:coral'%}">Coral</a></li>
-                  <li class="dropdown">
-                    <a href="#"><span>Polar Bear</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_animal:blood'%}">Bear Blood</a></li>
-                      <li><a href="{% url 'pr_animal:capSeq'%}">Bear Capture Sequence</a></li>
-                      <li><a href="{% url 'pr_animal:abdTemp'%}">Bear Abdominal Temperature</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#"><span>Penguin</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_animal:gentoo'%}">Gentoo</a></li>
-                      <li><a href="{% url 'pr_animal:adelie'%}">Adelie</a></li>
-                      <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
-                    </ul>
-                  </li>
-                  <!-- <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li> -->
-                  <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Ecosystem</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_ecosystem:freshwater'%}">Freshwater</a></li>
-                  <li><a href="{% url 'pr_ecosystem:marine'%}">Marine</a></li>
-                  <li><a href="{% url 'pr_ecosystem:terrestrial'%}">Terrestrial</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Plant</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_plant:microbial'%}">Microbial Symbionts</a></li>
-                  <li><a href="{% url 'pr_plant:algae'%}">Glacier Algae</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_population:penguinpopu'%}">Penguin Population</a></li>
-                  <li class="dropdown">
-                    <a href="#"><span>Palmer Penguin</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_population:palmerIter'%}">Iter</a></li>
-                      <li><a href="{% url 'pr_population:palmerSize'%}">Size</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="{% url 'pr_population:mfungi'%}">Marine Fungi</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_disease:bELISA'%}">bELISA</a></li>
-                      <li><a href="{% url 'pr_disease:hi'%}">HI</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="{% url 'pr_disease:crypto_giardia'%}">Crypto & Giardia</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
-
-      <a href="#contact" class="get-started-btn scrollto">Contact Us</a>
-    </div>
-  </header>
-  <!-- End Header -->
+  {%include 'header.html'%}
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
@@ -285,30 +134,27 @@
               About the Website
             </h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Welcome to our online Polar Region data hub!
             </p>
             <ul>
               <li>
-                <i class="ri-check-double-line"></i> Ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
+                <i class="ri-check-double-line"></i> <b>Explore the collection of information</b> Provide all the public
+                data collected from online data repository.
               </li>
               <li>
-                <i class="ri-check-double-line"></i> Duis aute irure dolor in
-                reprehenderit in voluptate velit.
+                <i class="ri-check-double-line"></i> <b>Data visualization</b> Present some data visualizations that
+                illustrate the relevant information.
               </li>
               <li>
-                <i class="ri-check-double-line"></i> Ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate trideta storacalaperda mastiro
-                dolore eu fugiat nulla pariatur.
+                <i class="ri-check-double-line"></i> <b>Easy access to reliable data</b> All information comes from
+                scientific studies and observations.
               </li>
             </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-              aute irure dolor in reprehenderit in voluptate velit esse cillum
-              dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident
+            <p style="color: black">
+              This website is a collaborative effort with Yayasan Penyelidikan Antartika Sultan Mizan. This research
+              project has involved a team of 6 dedicated members and collaborators working tirelessly to contribute
+              their expertise. Together, we've pooled our resources, knowledge, and passion for the polar regions to
+              compile a comprehensive database.
             </p>
           </div>
         </div>
@@ -1087,95 +933,95 @@
             </div>
             <div class="team_member">
               <a href="{% url 'mainpr:dralfonso'%}">
-              <div class="member_img">
-                <img src="{% static 'images/team/dr.alfonso.jpg' %}" alt="our_team">
-                <div class="social_media">
-                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
-                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
-                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                <div class="member_img">
+                  <img src="{% static 'images/team/dr.alfonso.jpg' %}" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
                 </div>
-              </div>
-              <h3>ASSOCIATE PROFESSOR DR. ALFONSO GONZÁLEZ BRIONES</h3>
+                <h3>ASSOCIATE PROFESSOR DR. ALFONSO GONZÁLEZ BRIONES</h3>
               </a>
             </div>
             <div class="team_member">
               <a href="{% url 'mainpr:profsaberi'%}">
-              <div class="member_img">
-                <img src="{% static 'images/team/Prof Saberi.jpg' %}" alt="our_team">
-                <div class="social_media">
-                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
-                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
-                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                <div class="member_img">
+                  <img src="{% static 'images/team/Prof Saberi.jpg' %}" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
                 </div>
-              </div>
-              <h3>Professor Dr. Mohd Saberi Mohamad</h3>
+                <h3>Professor Dr. Mohd Saberi Mohamad</h3>
               </a>
             </div>
             <div class="team_member">
               <a href="{% url 'mainpr:drismail'%}">
-              <div class="member_img">
-                <img src="{% static 'images/team/Prof.Ismail.jpg' %}" alt="our_team">
-                <div class="social_media">
-                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
-                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
-                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                <div class="member_img">
+                  <img src="{% static 'images/team/Prof.Ismail.jpg' %}" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
                 </div>
-              </div>
-              <h3>Associate Prof.Ts.Dr.Ismail Bin Ahmedy</h3>
+                <h3>Associate Prof.Ts.Dr.Ismail Bin Ahmedy</h3>
               </a>
             </div>
             <div class="team_member">
               <a href="{% url 'mainpr:drchin'%}">
-              <div class="member_img">
-                <img src="{% static 'images/team/Dr Chin.jpg' %}" alt="our_team">
-                <div class="social_media">
-                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
-                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
-                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                <div class="member_img">
+                  <img src="{% static 'images/team/Dr Chin.jpg' %}" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
                 </div>
-              </div>
-              <h3>DR CHIN SIOK-FONG</h3>
+                <h3>DR CHIN SIOK-FONG</h3>
               </a>
             </div>
             <div class="team_member">
               <a href="{% url 'mainpr:drsarahani'%}">
-              <div class="member_img">
-                <img src="{% static 'images/team/drsarahani.png' %}" alt="our_team">
-                <div class="social_media">
-                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
-                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
-                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                <div class="member_img">
+                  <img src="{% static 'images/team/drsarahani.png' %}" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
                 </div>
-              </div>
-              <h3>DR SARAHANI BINTI HARUN</h3>
+                <h3>DR SARAHANI BINTI HARUN</h3>
               </a>
             </div>
 
             <div class="team_member">
               <a href="{% url 'mainpr:haznirah'%}">
-              <div class="member_img">
-                <img src="{% static 'images/team/haznirah.jpg' %}" alt="our_team">
-                <div class="social_media">
-                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
-                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
-                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                <div class="member_img">
+                  <img src="{% static 'images/team/haznirah.jpg' %}" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
                 </div>
-              </div>
-              <h3>NUR HAZNIRAH BINTI HAZMAN</h3>
+                <h3>NUR HAZNIRAH BINTI HAZMAN</h3>
               </a>
             </div>
 
             <div class="team_member">
               <a href="{% url 'mainpr:azira'%}">
-              <div class="member_img">
-                <img src="{% static 'images/team/rohaiza.png' %}" alt="our_team">
-                <div class="social_media">
-                  <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
-                  <div class="twitter item"><i class="fab fa-twitter"></i></div>
-                  <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                <div class="member_img">
+                  <img src="{% static 'images/team/rohaiza.png' %}" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
                 </div>
-              </div>
-              <h3>ROHAIZAAZIRA BINTI MOHD ZAWAWI</h3>
+                <h3>ROHAIZAAZIRA BINTI MOHD ZAWAWI</h3>
               </a>
             </div>
           </div>
