@@ -88,152 +88,7 @@
 
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top bg-dark">
-    <div class="container d-flex align-items-center justify-content-lg-between">
-      <h1 class="logo me-auto me-lg-0">
-        <a href="{% url 'mainpr:index'%}">
-          <img src="{% static 'images/logo/polar.png' %}" alt="Home" class="img-fluid" />
-        </a>
-      </h1>
-
-      <!-- DATASETS NAVIGATION BAR -->
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li class="dropdown">
-            <a href="#portfolio active"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown">
-                <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_antartic:antarticmass'%}">Antarctica Mass</a></li>
-                  <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extent</a></li>
-                  <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
-                  <li><a href="{% url 'pr_antartic:hotpoints'%}">Antarctic Hotpoints(NASA)</a></li>
-                  <li><a href="#">Ice Radar</a></li>
-                  <li><a href="#">Snow Accumulation</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_aa:aa1'%}">Sea Ice Graph</a></li>
-                  <li><a href="{% url 'pr_aa:sulfurDioxide'%}">Sulphur Detection from Melting Ice Cores</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_arctic:climate'%}">Northern Cities Climate</a></li>
-                  <li><a href="{% url 'pr_arctic:iceextent'%}">Sea Ice Extent</a></li>
-                  <li><a href="#">Sea Ice Image Masking </a></li>
-                  <li><a href="{% url 'pr_arctic:streamgages'%}">VSGS Alaska Streamgages</a></li>
-                  <li><a href="{% url 'pr_arctic:simpsonlagoon'%}">Simpson Lagoon</a></li>
-                  <li><a href="#">Arctic Sea Routes</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>DNA/RNA</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_dna_rna:plankton'%}">Plankton_Tara-Ocean</a></li>
-                      <li><a href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a></li>
-                      <li><a href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a></li>
-                      <li><a href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a></li>
-                      <li class="dropdown">
-                        <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
-                        <ul>
-                          <li><a href="{% url 'pr_dna_rna:Cdata'%}">14C and 13C Data</a></li>
-                          <li><a href="{% url 'pr_dna_rna:nucleotide'%}">Nucleotide Reads</a></li>
-                          <li><a href="{% url 'pr_dna_rna:edaphic'%}">Edaphic Factors</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Animal</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_animal:coral'%}">Coral</a></li>
-                  <li class="dropdown">
-                    <a href="#"><span>Polar Bear</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_animal:blood'%}">Bear Blood</a></li>
-                      <li><a href="{% url 'pr_animal:capSeq'%}">Bear Capture Sequence</a></li>
-                      <li><a href="{% url 'pr_animal:abdTemp'%}">Bear Abdominal Temperature</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#"><span>Penguin</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_animal:gentoo'%}">Gentoo</a></li>
-                      <li><a href="{% url 'pr_animal:adelie'%}">Adelie</a></li>
-                      <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
-                    </ul>
-                  </li>
-                  {% comment %} <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li> {% endcomment %}
-                  <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Ecosystem</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_ecosystem:freshwater'%}">Freshwater</a></li>
-                  <li><a href="{% url 'pr_ecosystem:marine'%}">Marine</a></li>
-                  <li><a href="{% url 'pr_ecosystem:terrestrial'%}">Terrestrial</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Plant</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_plant:microbial'%}">Microbial Symbionts</a></li>
-                  <li><a href="{% url 'pr_plant:algae'%}">Glacier Algae</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_population:penguinpopu'%}">Penguin Population</a></li>
-                  <li class="dropdown">
-                    <a href="#"><span>Palmer Penguin</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_population:palmerIter'%}">Iter</a></li>
-                      <li><a href="{% url 'pr_population:palmerSize'%}">Size</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="{% url 'pr_population:mfungi'%}">Marine Fungi</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_disease:bELISA'%}">bELISA</a></li>
-                      <li><a href="{% url 'pr_disease:hi'%}">HI</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="{% url 'pr_disease:crypto_giardia'%}">Crypto & Giardia</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
-
-      <a href="#contact" class="get-started-btn scrollto">Contact Us</a>
-    </div>
-  </header>
+  {%include 'header.html'%}
   <!-- End Header -->
 
   <!-- Content -->
@@ -290,63 +145,7 @@
   <!-- End content -->
 
   <!-- Footer -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-lg-4">
-            <div class="footer-logo" style="width: 200px;">
-              <img src="/static/images/logo/umk.png" style="width: 150px;">
-              <img src="/static/images/logo/aibig.png" style="width: 150px;">
-              <img src="/static/images/logo/polar1.png" style="width: 150px;">
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-4">
-            <h4>Contact</h4>
-            <div>
-              <i class="fas fa-map-marker-alt" style="font-size: 24px; margin-right: 10px;"></i>
-              <span>Institute For Artificial Intelligence & Big Data,</span>
-              <br>
-              <span>Universiti Malaysia Kelantan, City Campus, Pengkalan Chepa,</span>
-              <br>
-              <span>16100 Kota Bharu, Kelantan</span>
-            </div>
-            <div style="margin-top: 10px;">
-              <i class="fas fa-phone" style="font-size: 24px; margin-right: 10px;"></i>
-              <span>(+609) 771 7177</span>
-            </div>
-            <div style="margin-top: 10px;">
-              <i class="fas fa-envelope" style="font-size: 24px; margin-right: 10px;"></i>
-              <span>aibig@umk.edu.my</span>
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-4" style="margin-top: 10px;">
-            <h4>Follow Us</h4>
-            <!-- Replace these URLs with your actual social media profile URLs -->
-            <a href="https://www.instagram.com/" target="_blank" style="margin-right: 10px;"><i class="fab fa-instagram"
-                style="font-size: 24px;"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;"><i class="fab fa-facebook"
-                style="font-size: 24px;"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"
-                style="font-size: 24px;"></i></a>
-          </div>
-        </div>
-
-
-      </div>
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>AIBIG</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-  </footer>
+  {%include 'footer.html'%}
   <!-- end -->
 
   <!-- CDN JS FILE -->
@@ -371,7 +170,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Template Main Js File -->
-  <script src="{% static 'js/pr_plant.js' %}"></script>
+  <script src="{% static 'js/pr_animal.js' %}"></script>
 </body>
 
 </html>
