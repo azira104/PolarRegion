@@ -84,266 +84,63 @@
 
 <body>
     <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top bg-dark">
-    <div class="container d-flex align-items-center justify-content-lg-between">
-      <h1 class="logo me-auto me-lg-0">
-        <a href="{% url 'mainpr:index'%}">
-          <img src="{% static 'images/logo/polar.png' %}" alt="Home" class="img-fluid" />
-        </a>
-      </h1>
-
-      <!-- DATASETS NAVIGATION BAR -->
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li class="dropdown">
-            <a href="#portfolio active"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown">
-                <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_antartic:antarticmass'%}">Antarctica Mass</a></li>
-                  <li><a href="{% url 'pr_antartic:antartic1'%}">Sea Ice Extent</a></li>
-                  <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
-                  <li><a href="{% url 'pr_antartic:hotpoints'%}">Antarctic Hotpoints(NASA)</a></li>
-                  <li><a href="#">Ice Radar</a></li>
-                  <li><a href="#">Snow Accumulation</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_aa:aa1'%}">Sea Ice Graph</a></li>
-                  <li><a href="{% url 'pr_aa:sulfurDioxide'%}">Sulphur Detection from Melting Ice Cores</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_arctic:climate'%}">Northern Cities Climate</a></li>
-                  <li><a href="{% url 'pr_arctic:iceextent'%}">Sea Ice Extent</a></li>
-                  <li><a href="#">Sea Ice Image Masking </a></li>
-                  <li><a href="{% url 'pr_arctic:streamgages'%}">VSGS Alaska Streamgages</a></li>
-                  <li><a href="{% url 'pr_arctic:simpsonlagoon'%}">Simpson Lagoon</a></li>
-                  <li><a href="#">Arctic Sea Routes</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>DNA/RNA</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Organism</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_dna_rna:plankton'%}">Plankton_Tara-Ocean</a></li>
-                      <li><a href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a></li>
-                      <li><a href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a></li>
-                      <li><a href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a></li>
-                      <li class="dropdown">
-                        <a href="#"><span>Fungi</span> <i class="bi bi-chevron-right"></i></a>
-                        <ul>
-                          <li><a href="{% url 'pr_dna_rna:Cdata'%}">14C and 13C Data</a></li>
-                          <li><a href="{% url 'pr_dna_rna:nucleotide'%}">Nucleotide Reads</a></li>
-                          <li><a href="{% url 'pr_dna_rna:edaphic'%}">Edaphic Factors</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Animal</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_animal:coral'%}">Coral</a></li>
-                  <li class="dropdown">
-                    <a href="#"><span>Polar Bear</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_animal:blood'%}">Bear Blood</a></li>
-                      <li><a href="{% url 'pr_animal:capSeq'%}">Bear Capture Sequence</a></li>
-                      <li><a href="{% url 'pr_animal:abdTemp'%}">Bear Abdominal Temperature</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#"><span>Penguin</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_animal:gentoo'%}">Gentoo</a></li>
-                      <li><a href="{% url 'pr_animal:adelie'%}">Adelie</a></li>
-                      <li><a href="{% url 'pr_animal:chinstrap'%}">Chinstrap</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="{% url 'pr_animal:krillBase'%}">Krill Base</a></li>
-                  <li><a href="{% url 'pr_animal:bird'%}">Giant Petrel Bird</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Ecosystem</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_ecosystem:freshwater'%}">Freshwater</a></li>
-                  <li><a href="{% url 'pr_ecosystem:marine'%}">Marine</a></li>
-                  <li><a href="{% url 'pr_ecosystem:terrestrial'%}">Terrestrial</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Plant</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_plant:microbial'%}">Microbial Symbionts</a></li>
-                  <li><a href="{% url 'pr_plant:algae'%}">Glacier Algae</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Population</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{% url 'pr_population:penguinpopu'%}">Penguin Population</a></li>
-                  <li class="dropdown">
-                    <a href="#"><span>Palmer Penguin</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_population:palmerIter'%}">Iter</a></li>
-                      <li><a href="{% url 'pr_population:palmerSize'%}">Size</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="{% url 'pr_population:mfungi'%}">Marine Fungi</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li class="dropdown">
-                    <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="{% url 'pr_disease:bELISA'%}">bELISA</a></li>
-                      <li><a href="{% url 'pr_disease:hi'%}">HI</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="{% url 'pr_disease:crypto_giardia'%}">Crypto & Giardia</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
-
-      <a href="#contact" class="get-started-btn scrollto">Contact Us</a>
-    </div>
-  </header>
-  <!-- End Header -->
+    <!-- ======= Header ======= -->
+    {%include 'header.html'%}
 
     <!-- hero -->
-    <section id="hero2">
-        <div class="container" data-aos="fade-up">
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-                <div class="floating-card">
-                    <h2>Arctic Species Trend Index (ASTI) : Terrestrial</h2>
-                    <p>The Circumpolar Biodiversity Monitoring Program (CBMP) is a global effort involving scientists,
-                        governments, Indigenous groups, and conservation organizations. It focuses on keeping track of
-                        Arctic plants and animals to help with conservation. They use various measures, like counting
-                        species and studying habitats, to understand how the Arctic environment is changing.
+    <section class="sec1">
+        <div class="topbar" style="height: 500px">
+            <div class="topcontent">
+                <div style="display: flex; align-items: center;">
+                    <h2><img src="{% static 'images/logo/gbif.jpg' %}" alt="Logo"
+                            style="max-width: 100%; max-height: 100px;"></h2>
+                    <marquee class="category-class" behavior="scroll" direction="left" scrollamount="9">Arctic Species Trend Index (ASTI) : Terrestrial</marquee>
+                </div>
+                <div>
 
-                        One important tool they use is the Arctic Species Trend Index (ASTI), which monitors the trends
-                        of over 300 Arctic animals. This helps us understand the overall health of the Arctic ecosystem.
-                        The goal is to develop strategies to protect the Arctic environment as it faces significant
-                        changes.
-
-                        The CBMP covers the entire Arctic region and aims to provide information that can guide policies
-                        to protect this unique and changing environment.</p>
-
-                    <div class="flex-container">
-                        <div class="data">
-                            <h3>The dataset collected from</h3>
-                            <img src="{% static 'images/logo/gbif.svg' %}" alt="GBIF Logo">
+                    <p class="head-desc">
+                        The Circumpolar Biodiversity Monitoring Program (CBMP), a key initiative of the Conservation of Arctic Flora and Fauna (CAFF) under the Arctic Council, unites scientists, government agencies, Indigenous organizations, and conservation groups. Together, they aim to monitor the Arctic's living resources in a coordinated manner. CBMP experts are developing four plans covering major Arctic ecosystems (Marine, Freshwater, Coastal, Terrestrial). The program seeks to provide valuable data for effective conservation policies, contributing to the well-being of the Arctic's unique biodiversity through international collaboration.
+                    </p>
+                    <div
+                        style="display: flex;grid-template-rows: repeat(2, 1fr);gap: 30vh;padding: 10px 50px;justify-items: start;align-content: stretch;align-items: center;justify-content: space-between;">
+                        <!-- Row 1: Category -->
+                        <div style="display: flex; align-items: center;">
+                            <p style="color: gray; font-family: 'poppins'; font-size: 15px; margin: 0;"><b>Category:</b>
+                                Ecosystem</p>
                         </div>
-                        <div class="data2">
-                            <h3>Citation</h3>
-                            <p style="font-style: italic;">Barry T, Helgason H (2019). Arctic Species Trend Index (ASTI)
-                                : Freshwater. Version 1.3.
-                                Conservation of Arctic Flora and Fauna. Occurrence dataset
-                                <a href="https://doi.org/10.15468/dtfeld">https://doi.org/10.15468/dtfeld</a> accessed
-                                via GBIF.org on 2023-12-05.</p>
+                        <!-- Row 3: Citation -->
+                        <div id="citation" style="display: flex; align-items: center;">
+                            <p style="color: gray; font-family: 'poppins'; font-size: 12px; margin: 0;">
+                                <b style="font-size: medium;">Citation:</b> Barry, Tom. “Arctic Species Trend Index
+                                (ASTI) : Terrestrial.” Www.gbif.org,
+                                www.gbif.org/dataset/3e7837d0-4318-4dea-8800-f2b208b25148#citation,
+                                https://doi.org/10.15468/gd0xmy. Accessed 13 June 2023.
+
+                            </p>
                         </div>
+                    </div>
+                    <div class="linker">
+                        <button><a href="https://www.gbif.org/dataset/3e7837d0-4318-4dea-8800-f2b208b25148"
+                                style="color: white;"> View Data</a></button>
 
                     </div>
 
-
-
-                    <button class="learn-more" onclick="openUrl('https://www.gbif.org/dataset/3e7837d0-4318-4dea-8800-f2b208b25148')">
-                        <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Find out more</span>
-                    </button>
-
                 </div>
             </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-4">
-                        <div class="footer-logo" style="width: 200px;">
-                            <img src="/static/images/logo/umk.png" style="width: 150px;">
-                            <img src="/static/images/logo/aibig.png" style="width: 150px;">
-                            <img src="/static/images/logo/ypasm.png" style="width: 150px;">
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-4">
-                        <h4>Contact</h4>
-                        <div>
-                            <i class="fas fa-map-marker-alt" style="font-size: 24px; margin-right: 10px;"></i>
-                            <span>Institute For Artificial Intelligence & Big Data,</span>
-                            <br>
-                            <span>Universiti Malaysia Kelantan, City Campus, Pengkalan Chepa,</span>
-                            <br>
-                            <span>16100 Kota Bharu, Kelantan</span>
-                        </div>
-                        <div style="margin-top: 10px;">
-                            <i class="fas fa-phone" style="font-size: 24px; margin-right: 10px;"></i>
-                            <span>(+609) 771 7177</span>
-                        </div>
-                        <div style="margin-top: 10px;">
-                            <i class="fas fa-envelope" style="font-size: 24px; margin-right: 10px;"></i>
-                            <span>aibig@umk.edu.my</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-4" style="margin-top: 10px;">
-                        <h4>Follow Us</h4>
-                        <!-- Replace these URLs with your actual social media profile URLs -->
-                        <a href="https://www.instagram.com/" target="_blank" style="margin-right: 10px;"><i
-                                class="fab fa-instagram" style="font-size: 24px;"></i></a>
-                        <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;"><i
-                                class="fab fa-facebook" style="font-size: 24px;"></i></a>
-                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"
-                                style="font-size: 24px;"></i></a>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>AIBIG</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    <!-- All the links in the footer should remain intact. -->
-                    <!-- You can delete the links only if you purchased the pro version. -->
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
-            </div>
-    </footer>
+    {%include 'footer.html'%}
     <!-- end -->
+
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
+    <!--JS-->
+    <script src="{% static 'js/main.js' %}"></script>
 
     <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
