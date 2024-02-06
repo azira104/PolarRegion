@@ -9,6 +9,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -168,7 +169,7 @@ h6 {
   margin: auto;
   max-height: 80px;
   position:absolute;
-  left:50px;
+  left:90px;
   top: 0px;
   bottom: 0px;
 }
@@ -177,7 +178,7 @@ h6 {
   margin: auto;
   max-height: 70px;
   position:absolute;
-  left:150px;
+  left:200px;
   top: 0px;
   bottom: 0px;
 }
@@ -585,11 +586,16 @@ section {
 .about .content ul {
   list-style: none;
   padding: 0;
+  color: #000;
+}
+.fst-italic{
+  color: #000;
 }
 
 .about .content ul li {
   padding: 0 0 8px 26px;
   position: relative;
+  color: #000;
 }
 
 .about .content ul i {
@@ -1698,7 +1704,7 @@ border-radius: 0px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   text-align: justify;
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -1988,8 +1994,9 @@ div.card h2 {
 
 
 /* team page */
+
 .container {
-  margin: 20px auto;
+  padding:10px;
   max-height: 10000px;
 }
 
@@ -2097,7 +2104,7 @@ div.card h2 {
 .container2 {
   background: #e9e9e9;
   overflow-x: hidden;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   font-family: "Poppins", sans-serif;
   margin: 0 100px;
 }
@@ -2654,4 +2661,366 @@ strong {
   text-decoration: none;
   color: #3498db;
   font-weight: bold;
+}
+/* nav-tab */
+.tabmenu-wrap {
+  padding: 0;
+
+  .custom-tab-nav {
+    display: table;
+    width: 100%;
+
+    .tab-item {
+      display: table-cell;
+      width: 50px;
+
+      .tab-link {
+        position: relative;
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        color: #919191;
+        text-align: center;
+        border-bottom: 1px solid #ebe5da;
+        padding: 15px 10px; /* Adjust padding as needed */
+        margin: 0; /* Set margin to 0 */
+        text-decoration: none;
+        transition: 0.4s;
+
+        &:after {
+          content: "";
+          transition: 0.4s;
+          width: 0;
+          height: 3px;
+          background-color: #172349;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          opacity: 0;
+        }
+      }
+
+      &.on {
+        .tab-link {
+          color: #172349;
+          margin: 0px;
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-con {
+    padding: 15px 10px;
+
+    .con-box {
+      display: none;
+    }
+  }
+
+  #tabcon-01 {
+    display: block;
+  }
+}
+
+/* photo carousel */
+.gallery-container {
+  background: #f9f9f9;
+}
+
+.gallery-column {
+  max-width: 260px;
+}
+
+.gallery-column img {
+  margin: 5px;
+}
+
+.gallery-column .scale {
+  transform: scaleY(1.05);
+  padding-top: 5px;
+}
+#slider-container {
+  display: flex;
+  overflow: hidden;
+  gap: 20px;
+  padding: 20px;
+}
+
+.my-card {
+  /* border: 0.5px solid black; */
+  padding: 10px 0 00;
+  width: 700px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+  display: none;
+  flex: 0 0 20%; /* Fixed width for each card, assuming 4 cards in a row */
+  box-sizing: border-box;
+  background-color: #f8f4f4;
+}
+.my-card:hover {
+  border: 1px solid #004da0; /* Change the color to the desired border color */
+  box-shadow: 0 4px 8px rgba(102, 102, 102, 0.836); /* Add shadow on hover */
+  cursor: pointer;
+}
+
+.my-card.active {
+  display: block; /* Show active cards */
+}
+.card-container {
+  display: flex;
+  overflow: hidden; /* Hide overflow to keep the width fixed */
+  padding: 10px;
+  gap: 1.5rem;
+}
+
+.my-card h2 {
+  background-size: cover;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #d7eaff; /* Change the text color as needed */
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0 0 10px 0;
+
+}
+.my-card p {
+  
+  color: #333; /* Change the text color as needed */
+  padding: 0px;
+}
+#viewAllBeauty {
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#viewAllBeauty:hover {
+  background-color: #2980b9;
+}
+
+.hidden {
+  display: none;
+}
+
+.bi {
+  vertical-align: text-bottom;
+}
+#Category{
+  bottom: 0px;
+  gap: 1rem;
+}
+.info-desc {
+  font-family:sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.006em;
+  font-weight: 400;
+  overflow: hidden;
+  color: var(--chakra-colors-grey-900);
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--chakra-line-clamp);
+  text-align: justify;
+  height: 100px;
+}
+.card-info{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.file-info{
+  position: absolute;
+  font-size: 13px;
+  font-family:monospace;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+ }
+  
+
+.file-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navigation-btn {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 100px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+  top: 40%;
+}
+
+.navigation-btn:hover {
+  background-color: #004da0;
+  
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-card.hidden {
+  display: none;
+}
+#viewAllBtn {
+  cursor: pointer;
+  color: #000000;
+  font-weight: bolder;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#viewAllBtn:hover {
+  background-color: #2980b9;
+}
+
+.grid-item {
+  grid-column: span 1; /* Each grid item spans one column */
+  background-color: #3498db; /* Just for visualization, you can customize this */
+  padding: 20px;
+  color: #fff;
+}
+.sec1{
+  padding: 0px;
+}
+.topbar{
+  width: 100%;
+  margin-inline: auto;
+  max-width: 100%;
+  padding: 0px;
+  background-image: url('https://images.pexels.com/photos/6732067/pexels-photo-6732067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  /* opacity: 50%; */
+  /* background-color: #141414; */
+  height: 400px;
+}
+.topbar:after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: .5;
+  background: #000;
+}
+.topcontent h2{
+  box-sizing: border-box;
+  font-family: 'poppins';
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+  color: white;
+  padding: 50px 50px 20px;
+  margin: 0 50px 0 0;
+}
+.head-desc {
+  padding: 0 50px;
+  color: white;
+  font-family: 'Poppins';
+  font-size: 15px;
+  font-weight: 500;
+  text-align: justify;
+}
+.category-class{
+  padding: 0;
+  text-transform:uppercase;
+  color: wheat;
+  font-weight: bolder;
+}
+.grid-container {
+  display: flex;
+}
+
+.content2{
+  max-height: 800px;
+  max-width: 200px;
+  background-color: whitesmoke;
+  color:rgb(0, 0, 0);
+  padding: 10px;
+  flex: 1;
+  border: 0.3px solid grey;
+  transition: box-shadow 0.3s; /* Adding a smooth transition effect */
+}
+
+.content2:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust the shadow properties as needed */
+}
+.content2 a{
+  display: inline-block;
+  font-family: 'poppins';
+  font-size: 15px;
+  padding: 10px;
+  background-color: #501ddb;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 150px;
+  border: 1px;
+  border-radius: 10px;
+  margin: 20px;
+}
+.content2 a:hover {
+  box-shadow: 0 0 10px gray;
+}
+
+
+.chart {
+  flex: 2;
+  padding: 10px;
+}
+.linker button {
+  width: 200px;
+  margin: 10px 50px;
+  padding: 10px;
+  background-color: deepskyblue;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+  border: none;
+  font-family: inherit;
+}
+
+.linker button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 10px white;
 }

@@ -293,4 +293,112 @@
   
   })()
   //Map
-  
+let currentStartIndexClimatology = 0;
+let currentStartIndexBiodiversity = 0;
+let currentStartIndexMolecular = 0;
+let currentStartIndexDisease = 0;
+
+const cardsPerPage = 4;
+const climatologyCards = document.querySelectorAll('#slider-container-climatology .my-card');
+const biodiversityCards = document.querySelectorAll('#slider-container-biodiversity .my-card');
+const molecularCards = document.querySelectorAll('#slider-container-Molecular .my-card');
+const diseaseCards = document.querySelectorAll('#slider-container-Disease .my-card');
+
+const totalClimatologyCards = climatologyCards.length;
+const totalBiodiversityCards = biodiversityCards.length;
+const totalMolecularCards = molecularCards.length;
+const totalDiseaseCards = diseaseCards.length;
+
+function navigateCards(direction, category) {
+  let currentStartIndex;
+  let totalCards;
+  let cards;
+
+  switch (category) {
+    case 'Climatology':
+      currentStartIndex = currentStartIndexClimatology;
+      totalCards = totalClimatologyCards;
+      cards = climatologyCards;
+      break;
+    case 'Biodiversity':
+      currentStartIndex = currentStartIndexBiodiversity;
+      totalCards = totalBiodiversityCards;
+      cards = biodiversityCards;
+      break;
+    case 'Molecular':
+      currentStartIndex = currentStartIndexMolecular;
+      totalCards = totalMolecularCards;
+      cards = molecularCards;
+      break;
+    case 'Disease':
+      currentStartIndex = currentStartIndexDisease;
+      totalCards = totalDiseaseCards;
+      cards = diseaseCards;
+      break;
+    default:
+      return; // Unknown category
+  }
+
+  if (direction === 'left') {
+    currentStartIndex = Math.max(currentStartIndex - cardsPerPage, 0);
+  } else if (direction === 'right') {
+    currentStartIndex = Math.min(currentStartIndex + cardsPerPage, totalCards - cardsPerPage);
+  }
+
+  switch (category) {
+    case 'Climatology':
+      currentStartIndexClimatology = currentStartIndex;
+      updateCardVisibility(category, currentStartIndexClimatology, cards);
+      break;
+    case 'Biodiversity':
+      currentStartIndexBiodiversity = currentStartIndex;
+      updateCardVisibility(category, currentStartIndexBiodiversity, cards);
+      break;
+    case 'Molecular':
+      currentStartIndexMolecular = currentStartIndex;
+      updateCardVisibility(category, currentStartIndexMolecular, cards);
+      break;
+    case 'Disease':
+      currentStartIndexDisease = currentStartIndex;
+      updateCardVisibility(category, currentStartIndexDisease, cards);
+      break;
+    default:
+      return;
+  }
+}
+
+function updateCardVisibility(category, startIndex, cards) {
+  cards.forEach((card, index) => {
+    const isVisible = index >= startIndex && index < startIndex + cardsPerPage;
+    card.style.display = isVisible ? 'block' : 'none';
+  });
+}
+
+// Show the initial set of cards for all categories
+updateCardVisibility('Climatology', currentStartIndexClimatology, climatologyCards);
+updateCardVisibility('Biodiversity', currentStartIndexBiodiversity, biodiversityCards);
+updateCardVisibility('Molecular', currentStartIndexMolecular, molecularCards);
+updateCardVisibility('Disease', currentStartIndexDisease, diseaseCards);
+
+// auto copy
+document.getElementById('citation').addEventListener('click', function() {
+  // Create a temporary textarea to hold the text
+  var textArea = document.createElement('textarea');
+  textArea.value = "Citation: Barry, Tom. “Arctic Species Trend Index (ASTI) : Freshwater.” Www.gbif.org, www.gbif.org/dataset/ebc62d60-afa9-4396-9e93-a0354d448b83/metrics, https://doi.org/10.15468/dtfeld. Accessed 4 Feb. 2024";
+
+  // Append the textarea to the document
+  document.body.appendChild(textArea);
+
+  // Select the text in the textarea
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text to the clipboard
+  document.execCommand('copy');
+
+  // Remove the temporary textarea
+  document.body.removeChild(textArea);
+
+  alert('Citation copied to clipboard!');
+});  
+
