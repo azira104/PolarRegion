@@ -9,7 +9,7 @@ app_name = 'pr_antartic'
 urlpatterns = [
     path('antartic/', views.antartic, name='antartic'),
     path('antartic1/', views.antartic1, name='antartic1'),
-    path('antartic2/', views.antartic1, name='antartic2'),
+    path('antartic2/', views.antartic2, name='antartic2'),
     path('antarticmass', views.antarticmass, name='antarticmass'),
     path('hotpoints', views.hotpoints, name='hotpoints')
 ]
