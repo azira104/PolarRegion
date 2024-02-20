@@ -5,14 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Polar Region</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{% static 'images/logo/12.png' %}"
-    />
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    {%include 'title.html'%}
 
     <!-- Swipe -->
     <link
@@ -156,7 +149,7 @@
             </p>
             <p
               style="
-                color: gray;
+                color: rgb(255, 255, 255);
                 font-family: 'poppins';
                 font-size: 15 px;
                 padding: 10px 50px;
@@ -172,8 +165,8 @@
         <div class="content2">
           <a
             class="button"
-            href="{% static 'data/pr_animal/corals_worldwide_test_set.csv' %}"
-            download="Antartica_mass.csv"
+            href="{% url 'pr_plant:download_microbial_symbionts_csv' %}"
+            download="download_microbial_symbionts.csv"
           >
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
@@ -221,7 +214,7 @@
               font-weight: bold;
             "
           >
-            CSV file downloaded from NASA website
+            CSV file downloaded from <a href="https://ramadda.data.bas.ac.uk/repository/entry/show?entryid=f1c473de-8c60-47d6-95a5-70c5b519bb8c">https://ramadda.data.bas.ac.uk/repository/entry/show?entryid=f1c473de-8c60-47d6-95a5-70c5b519bb8c</a>
           </p>
         </div>
       </div>

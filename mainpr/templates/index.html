@@ -1,16 +1,19 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
+  <!--
+     © 2024 Rohaizaazira, NurHaznirah, AIBIG
+  -->
 
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Polar Region</title>
-  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/12.png' %}" />
-  <meta content="" name="description" />
-  <meta content="" name="keywords" />
-
+  <title>PolarBytes</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/logo-pb1.png' %}" />
+  <meta name="description" content="PolarBytes is a data repository focusing on the polar regions, including Antarctica and the Arctic. Explore our collection of data related to aibig, ypasm, and more.">
+  <meta name="keywords" content="aibig, ypasm, polar region, antarctica, arctic, umk, polarbytes, data repository">
+  
   <!-- Swipe -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -28,6 +31,61 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
 
+  <!-- Contact -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+  <!--search-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!--template js-->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+  <script src="{% static 'js/photo.js' %}" type="text/babel"></script> -->
+
+
+  <!-- Vendor CSS Files -->
+  <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
+
+  <!-- CDN CSS FILE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css"
+    integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+    integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css"
+    integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css"
+    integrity="sha512-T+KoG3fbDoSnlgEXFQqwcTC9AdkFIxhBlmoaFqYaIjq2ShhNwNao9AKaLUPMfwiBPL0ScxAtc+UYbHAgvd+sjQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.css"
+    integrity="sha512-HajDJcB2lLZX5Ap4mVymNO6VLqj7mXIOEwEhugvcIPPdNLhTzY/fF2MhhATfWkS7NsOR/Bd4R1ztgNOy/9ID4A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+  <!-- =======================================================
+  * Template Name: Gp
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
   <!-- Contact -->
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -124,6 +182,7 @@
   <!-- End Hero -->
 
   <main id="main">
+
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
@@ -154,29 +213,18 @@
             <h3>
               About the Website
             </h3>
-            <p class="fst-italic">
-              Welcome to our online Polar Region data hub!
-            </p>
-            <ul>
-              <li>
-                <i class="ri-check-double-line"></i> <b>Explore the collection of information</b> Provide all the public
-                data collected from online data repository.
-              </li>
-              <li>
-                <i class="ri-check-double-line"></i> <b>Data visualization</b> Present some data visualizations that
-                illustrate the relevant information.
-              </li>
-              <li>
-                <i class="ri-check-double-line"></i> <b>Easy access to reliable data</b> All information comes from
-                scientific studies and observations.
-              </li>
-            </ul>
-            <p style="color: black">
-              This website is a collaborative effort with Yayasan Penyelidikan Antartika Sultan Mizan. This research
-              project has involved a team of 6 dedicated members and collaborators working tirelessly to contribute
-              their expertise. Together, we've pooled our resources, knowledge, and passion for the polar regions to
-              compile a comprehensive database.
-            </p>
+            <div class="col-12 col-md-7 col-xl-9 text">
+              <p><span class="word-spacing">PolarBytes Repository is an <strong>online data repository</strong>dedicated
+                  to providing <strong> comprehensive information</strong> about the Polar Regions. We offer<strong> a
+                    collection of data </strong> sourced from reputable online repositories, along with<strong> data
+                    visualizations </strong> that make the information easily accessible. </p>
+              <p><span class="word-spacing">Our goal is to provide <strong> reliable data </strong> from scientific
+                  studies and observations, ensuring that users have access to <strong>accurate information </strong>
+                  about the polar regions. Collaborating with Yayasan Penyelidikan Antartika Sultan Mizan, our team is
+                  committed to compiling a <strong>comprehensive database</strong> that serves as a valuable resource
+                  for researchers, educators, and anyone interested in the Polar Regions.</p>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -238,15 +286,11 @@
           <div class="col-lg-20 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-aa">Arctic & Antarctica</li>
-              <li data-filter=".filter-anta">Antarctica</li>
-              <li data-filter=".filter-tic">Arctic</li>
-              <li data-filter=".filter-dna">DNA</li>
-              <li data-filter=".filter-animal">Animal</li>
-              <li data-filter=".filter-p">Plant</li>
-              <li data-filter=".filter-eco">Ecosystem</li>
-              <li data-filter=".filter-popu">Population</li>
-              <li data-filter=".filter-disease">Disease</li>
+              <li data-filter=".filter-cl">Climatology</li>
+              <li data-filter=".filter-ml">Molecular Biology</li>
+              <li data-filter=".filter-b">Biodiversity</li>
+              <li data-filter=".filter-d">Disease</li>
+
             </ul>
           </div>
         </div>
@@ -254,7 +298,7 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
           <!-- arctic and antartic -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-aa">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/ice.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -273,11 +317,11 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-aa">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/Sulphur.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Arctic & Antarctica</h4>
+                <h4>Arctic & Antarctica 2</h4>
                 <p>Sulphur Detection from Melting Ice cores</p>
                 <p>
                   <a class="underline-btn" href="{% url 'pr_aa:sulfurDioxide' %}">View the dataset</a><br />
@@ -291,14 +335,14 @@
 
           <!-- antartic -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-anta">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/mass.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Antarctica 1</h4>
                 <p>Antarctic Mass</p>
                 <p>
-                  <a class="underline-btn" href="{% url 'pr_antartic:antartic' %}">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_antartic:antarticmass' %}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -307,14 +351,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-anta">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/extent.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Antarctica 2</h4>
                 <p>Sea Ice Extent</p>
                 <p>
-                  <a class="underline-btn" href="{% url 'pr_antartic:antartic1'%}">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_antartic:AntarcticaRoutes'%}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -323,7 +367,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-anta">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/termo.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -334,19 +378,19 @@
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
-                <p>Antartctic Temperature</p>
+                <p>Antarctic Temperature</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-anta">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/hotpoint.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Antarctica 4</h4>
                 <p>Antarctic Hotpoint(NASA)</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_antartic:hotpoints'%}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -355,14 +399,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-anta">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/radar.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Antarctica 5</h4>
                 <p>Ice Radar</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_antartic:iceradar'%}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -371,14 +415,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-anta">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/snow.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Antarctica 6</h4>
                 <p>Snow Accumulation</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_antartic:snow'%}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -389,7 +433,7 @@
 
           <!-- Arctic -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-tic">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/climate.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -407,7 +451,7 @@
 
 
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-tic">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/e.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -422,7 +466,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-tic">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/alaska.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -438,14 +482,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-tic">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/masking.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Arctic 4</h4>
                 <p>Sea Ice Image Masking</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_arctic:masking'%}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -454,7 +498,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-tic">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/water.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -470,14 +514,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-tic">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/sea.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Arctic 6</h4>
                 <p>Arctic Sea Routes</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_arctic:searoutes'%}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -487,14 +531,14 @@
           </div>
 
           <!-- animal -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-animal">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/coral.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Animal 1</h4>
                 <p>Coral</p>
                 <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_animal:coral'%}">View the Dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -503,14 +547,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-animal">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/bird.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Animal 2</h4>
                 <p>Giant Petrel Bird</p>
                 <p>
-                  <a class="underline-btn" href="#">View the dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_animal:bird'%}">View the dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -520,37 +564,21 @@
           </div>
 
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-animal">
-            <div class="portfolio-wrap">
-              <img src="{% static 'images/portfolio/krill.jpg' %}" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Animal 3</h4>
-                <p>Krill Base</p>
-                <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
-                </p>
-              </div>
-              <div class="image-caption" style="text-align: center; color: white;">
-                <p>Krill Base</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-animal">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/penguin.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Animal 4</h4>
+                <h4>Animal 3</h4>
                 <p>Penguin</p>
                 <!-- <div class="portfolio-links"> -->
                 <p>
-                  <a class="underline-btn" href="#">Gentoo Penguin</a><br />
+                  <a class="underline-btn" href="{% url 'pr_animal:gentoo'%}">Gentoo Penguin</a><br />
                 </p>
                 <p>
-                  <a class="underline-btn" href="#">Chinstrap Penguin</a><br />
+                  <a class="underline-btn" href="{% url 'pr_animal:chinstrap'%}">Chinstrap Penguin</a><br />
                 </p>
                 <p>
-                  <a class="underline-btn" href="#">Adelie Penguin</a><br />
+                  <a class="underline-btn" href="{% url 'pr_animal:adelie'%}">Adelie Penguin</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -559,20 +587,20 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-animal">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/polar-bear.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>Animal 5</h4>
+                <h4>Animal 4</h4>
                 <p>Polar Bear</p>
                 <p>
-                  <a class="underline-btn" href="#">Bear Blood</a><br />
+                  <a class="underline-btn" href="{% url 'pr_animal:blood'%}">Bear Blood</a><br />
                 </p>
                 <p>
-                  <a class="underline-btn" href="#">Bear Capture Sequence</a><br />
+                  <a class="underline-btn" href="{% url 'pr_animal:capSeq'%}">Bear Capture Sequence</a><br />
                 </p>
                 <p>
-                  <a class="underline-btn" href="#">Bear Abdominal Temperature</a><br />
+                  <a class="underline-btn" href="{% url 'pr_animal:abdTemp'%}">Bear Abdominal Temperature</a><br />
                 </p>
 
               </div>
@@ -585,18 +613,17 @@
 
 
           <!-- DNA -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-dna">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/organism.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>DNA 1</h4>
+                <h4>Molecular Biology 1</h4>
                 <p>Organism</p>
-                <p><a class="underline-btn" href="#">Microbial Symbionts</a><br /></p>
-                <p>
-                  <a class="underline-btn" href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a><br />
+
+                <a class="underline-btn" href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a><br />
                 </p>
                 <p><a class="underline-btn" href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a><br /></p>
-                <p><a class="underline-btn" href="#">Bacteria</a><br /></p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a><br /></p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
                 <p>Organism</p>
@@ -604,15 +631,15 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-dna">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/genome.png' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
-                <h4>DNA 2</h4>
+                <h4>Molecular Biology 2</h4>
                 <p>Fungi</p>
-                <p><a class="underline-btn" href="#">14C and 13C Data</a><br /></p>
-                <p><a class="underline-btn" href="#">Nucleotide Reads</a><br /></p>
-                <p><a class="underline-btn" href="#">Edaphic Factors</a><br /></p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:Cdata'%}">14C and 13C Data</a><br /></p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:nucleotide'%}">Nucleotide Reads</a><br /></p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:edaphic'%}">Edaphic Factors</a><br /></p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
                 <p>Fungi</p>
@@ -623,17 +650,18 @@
 
 
           <!-- DISEASE -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-disease">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-d">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/A.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Disease 1</h4>
                 <p>Influenza </p>
                 <p>
-                  <a class="underline-btn" href="#">bELISA (Blocking Enzyme-Linked Immunosorbent assay)</a><br />
+                  <a class="underline-btn" href="{% url 'pr_disease:bELISA'%}">bELISA (Blocking Enzyme-Linked
+                    Immunosorbent assay)</a><br />
                 </p>
                 <p>
-                  <a class="underline-btn" href="#">HI (Hemagglutination Inhibition)</a><br />
+                  <a class="underline-btn" href="{% url 'pr_disease:hi'%}">HI (Hemagglutination Inhibition)</a><br />
                 </p>
               </div>
 
@@ -643,14 +671,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-disease">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-d">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/cyst.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Disease 2</h4>
                 <p>Cryptosporidium Oocyst and Giardia Cysts</p>
                 <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_disease:crypto_giardia'%}">View the Dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -661,21 +689,17 @@
           </div>
 
           <!-- POPULATION -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-popu">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/pp.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Population1</h4>
                 <p>Population of Penguin</p>
                 <p>
-                  <a class="underline-btn" href="#">Adelie Penguin</a><br />
+                  <a class="underline-btn" href="{% url 'pr_population:penguinpopu'%}">Population of Penguin in Polar
+                    Regions</a><br />
                 </p>>
-                <p>
-                  <a class="underline-btn" href="#">Chinstrap Penguin</a><br />
-                </p>>
-                <p>
-                  <a class="underline-btn" href="#">Gentoo Penguin</a><br />
-                </p>>
+
 
               </div>
 
@@ -685,14 +709,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-popu">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/marine.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Population 2</h4>
                 <p>Marine Fungi</p>
                 <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_population:mfungi'%}">View the Dataset</a><br />
                 </p>>
               </div>
 
@@ -702,17 +726,17 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-popu">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/palmer.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Population 3</h4>
                 <p>Palmer Penguin</p>
                 <p>
-                  <a class="underline-btn" href="#">Iter</a><br />
+                  <a class="underline-btn" href="{% url 'pr_population:palmerIter'%}">Iter</a><br />
                 </p>
                 <p>
-                  <a class="underline-btn" href="#">Size</a><br />
+                  <a class="underline-btn" href="{% url 'pr_population:palmerSize'%}">Size</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -722,14 +746,14 @@
 
           </div>
           <!-- ECOSYSTEM -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-eco">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/water.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Ecosystem 1</h4>
                 <p>Freshwater</p>
                 <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_ecosystem:freshwater'%}">View the Dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -737,14 +761,14 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-eco">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/teres.jpg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Ecosystem 2</h4>
                 <p>Terrestial</p>
                 <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_ecosystem:terrestrial'%}">View the Dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -753,14 +777,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-eco">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/water1.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Ecosystem 3</h4>
                 <p>Marine</p>
                 <p>
-                  <a class="underline-btn" href="#">View the Dataset</a><br />
+                  <a class="underline-btn" href="{% url 'pr_ecosystem:marine'%}">View the Dataset</a><br />
                 </p>
               </div>
               <div class="image-caption" style="text-align: center; color: white;">
@@ -769,7 +793,7 @@
             </div>
           </div>
           <!-- PLANT -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-p">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/algae.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -785,7 +809,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-p">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
             <div class="portfolio-wrap">
               <img src="{% static 'images/portfolio/cold.jpeg' %}" class="img-fluid" alt="" />
               <div class="portfolio-info">
@@ -803,6 +827,8 @@
           <!-- END SECTION FOR PHOTO CARD -->
         </div>
       </div>
+      <p style="font-size: smaller; font-style: italic; padding: 10px 80px; text-align: right;">All photos are reserved
+        to <a href="https://www.pexels.com/" style="color: red;">pexels.com</a></p>
     </section>
     <!-- End Portfolio Section -->
 
@@ -813,479 +839,6 @@
     </section>
 
     <!-- End Counts Section -->
-    <!--new dataset-->
-    <div class="container">
-      <div class="section-title">
-        <h2>Dataset</h2>
-        <p>Check our Dataset</p>
-      </div>
-      <div class="header-container">
-        <h2 style="text-decoration: solid; letter-spacing: 0.4rem;">
-          <b class="bi bi-globe-americas" style="padding: 100px; font-family: Poppins;">Climatology</b>
-        </h2>
-
-      </div>
-
-      <div id="slider-container-climatology" class="card-container">
-        <div class="navigation-buttons">
-          <button class="navigation-btn prev-btn" onclick="navigateCards('left')">
-            <img src="https://img.icons8.com/material-outlined/24/000000/back.png" alt="Backward Arrow Icon">
-          </button>
-        </div>
-        <div class="my-card" data-category="Climatology" onclick="showHiddenCard()">
-          <a href="{% url 'pr_antartic:antartic1' %}">
-            <div class="card-info">
-
-              <h2 style="background-image: url('/static/images/data/pexels-photo-1616403.jpeg');">Antarctica Mass</h2>
-              <p class="info-desc">The data compiles different aspects of plant biology (e.g., anatomy, physiology,
-                fitness and
-                gene-expression) reported in scientific articles that experimentally explored the role of plant
-                microbial
-                symbionts in plant tolerance to chilling (0-15 degrees Celsius) and freezing (under 0 degrees Celsius)
-                conditions. Each variable included in the dataset is composed of at least four values, representing the
-                mean of the measured variable with or without a given microbial symbiont and under control or cold
-                conditions in a factorial design. The data were generated for a meta-analysis, and so the level of
-                replication and standard deviation or standard error, plus other relevant information such as plant and
-                microbial species, and source, are also included. Funding was provided by Posdoctoral-FONDECYT 3180441,
-                FONDECYT 11140607 and the NERC-CONICYT awards (NE/P003079/1 - PII20150126).</p>
-              <div class="file-info">
-                <p class="bi bi-filetype-csv file-icon">CSV</p>
-                <p class="bi bi-card-list" id="Category">Antarctica</p>
-              </div>
-
-
-
-            </div>
-          </a>
-        </div>
-        <div class="my-card" data-category="Climatology" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2 style="background-image: url('/static/images/data/pexels-photo-1616403.jpeg');"> Sea Ice Graph</h2>
-            <p class="info-desc">This dataset includes graphs depicting the extent of sea ice in both the Arctic and
-              Antarctica. These graphs show how much sea ice there is in these polar regions over time. Researchers or
-              scientists likely use this information to understand changes in the amount of sea ice and to study trends
-              in the Arctic and Antarctic environments.
-
-            </p>
-            <div class="file-info">
-              <p class="bi bi-filetype-csv file-icon">CSV</p>
-              <p class="bi bi-card-list" id="Category">Arctic & Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card" data-category="Climatology" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2 style="background-image: url('/static/images/data/pexels-photo-1616403.jpeg');">Northern Cities Climate
-            </h2>
-            <p class="info-desc">Plant biology variables under cold stress from published experiments (1975-2019) that
-              include microbial
-              symbionts as an experimental factor</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Arctic</p>
-            </div>
-          </div>
-        </div>
-        <div class="my-card" data-category="Climatology" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2 style="background-image: url('/static/images/data/pexels-photo-1616403.jpeg');"> Sea Ice Extent</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-
-        <!-- Additional cards go here with class "hidden" -->
-        <div class="my-card hidden" data-category="Climatology">
-          <div class="card-info">
-            <h2 style="background-image: url('/static/images/data/pexels-photo-1616403.jpeg');"> Antarctica Mass</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card hidden" data-category="Climatology">
-          <div class="card-info">
-            <h2 style="background-image: url('/static/images/data/pexels-photo-1616403.jpeg');"> Antarctica Mass</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-            </div>
-
-
-          </div>
-        </div>
-        <!-- <div id="slider-container-climatology" class="card-container"> -->
-        <div class="navigation-buttons">
-          <button class="navigation-btn next-btn" onclick="navigateCards('right')">
-            <img src="https://img.icons8.com/material-outlined/24/000000/forward.png" alt="Forward Arrow Icon">
-          </button>
-        </div>
-        <!-- </div> -->
-
-      </div>
-    </div>
-    <!--Biodiversity-->
-    <div class="container">
-
-      <div class="header-container">
-        <h2 style="text-decoration: solid; letter-spacing: 0.4rem;">
-          <b style="padding: 100px; font-family: Poppins;"><img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADpklEQVR4nO2ZW4hNURjHf+5yTwhJBiHUDCKRIky533ItEVIemMwkIZkXmSjEg9w1yi2UB3fy4hHFiBjkNjJokMswg6NV/1Wr1dnmpNn7nGH/6+vsvdY5a33/vb7rPhAjRowYMWJkNrIkdRotgRKJua6zyAaWSnKoQ2gAjANW1yCTgcZkIBoBy4EyIJGilAMFQFMyyHzuSbnPwEBgN3ATmAgUewT2A6+d+/vAkHSTmAV8cZT6JsW7ysxWAc+c+V/AbGCG7n8AFUAlMDddJKZJEavkT6BK16XA5gCTqgbeAXuBVlproE51ZjqILJOdvwLygA7AwRT94xbQArgMfJR/DQK+6zMyxy5W5DHKtwemABf0tIOUvwR0B04CW3Widu6D1q6Qz0QSAPIcBUzUyU/xFN7oBF6JTE/gq+YuAm1knuZ+ZdgkGkoRq9x7ib3frUiV7437YnxrNNADmCozO+DMv9bJh4YJAYo91+kYU9sIDAdGaNz/7mlgrciY623AbQWAGU5onhQmkQ1JFHsCtFYJsl9jb4GhGn/shd8xIpDQ6R5xotlsZw2zV2goTEJknxJaspMarPmER8ZeXwO6BcwVhkHAxPv+AUQeysZzlQes5Gq81Ms1FU6+MQHgbMBDKNSetVY1m17iLrAwgIglswMocmSHR+I40ElrtgN21hDlCrVnSW31M1lazCWyx6uXapIbQHPghHLGZZE5FSURdLz9tLghUQ+YniIJkyvGA0u88S1AL+DRH4j0C6shGyS7P64nejQFIosVDHyFTWmyQLmkMoBIaGgCnNdGx0TmCnBI9dINT5nPSmwPnLBsSXyX03dW+eITCTX85nqbTRO5YcAoPXlbZljFkXmdUVlSrYLTmlrvgMg1PsoS5aqy+Q8pm+XljUrZeLEIGDOaBzRTcWjmRwJ9gE/O78q0V2RFoyEwFnih+zOqhm2ztUkOW6F7U0+h6GXXsKX7LmdsBRGgidPaJpOujh+ZDnK9M2dP5bD3G2Nm63Rdoj0iwYCASGNkkQrIhApC4wNPdUrVSRKrMdWOwDmZp+kWI8V0r9W1ckQvJBKKSvOB+pI9CrlrRMZU020Vos1aaWl1UdltmyMr5XrxUO6MvVe4biNCJqH2BbYD13W65sGkFcbM7nhksp3y3JUqNVJ5TqV7T9/PCDT2XtAVyFeS+ZD1kZeKTqF2gn+Lhkpkc+TARUnEhNouUeSJ2kSO8xI7Y8znv/5b4Z/5oydGjBgxYvzb+A2eOOLkSmie3wAAAABJRU5ErkJggg==">Biodiversity</b>
-        </h2>
-
-      </div>
-
-      <div id="slider-container-biodiversity" class="card-container">
-        <div class="navigation-buttons">
-          <button class="navigation-btn prev-btn" onclick="navigateCards('left')">
-            <img src="https://img.icons8.com/material-outlined/24/000000/back.png" alt="Backward Arrow Icon">
-          </button>
-        </div>
-        <div class="my-card" data-category="Biodiversity" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2 style="background-image: url('/static/images/data/4.jpeg');"> Freshwater</h2>
-            <p class="info-desc">he Circumpolar Biodiversity Monitoring Program (CBMP) is a global effort involving
-              scientists, governments, Indigenous groups, and conservation organizations. It focuses on keeping track of
-              Arctic plants and animals to help with conservation. They use various measures, like counting species and
-              studying habitats, to understand how the Arctic environment is changing. One important tool they use is
-              the Arctic Species Trend Index (ASTI), which monitors the trends of over 300 Arctic animals. This helps us
-              understand the overall health of the Arctic ecosystem. The goal is to develop strategies to protect the
-              Arctic environment as it faces significant changes. The CBMP covers the entire Arctic region and aims to
-              provide information that can guide policies to protect this unique and changing environment.</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card" data-category="Biodiversity" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2 style="background-image: url('/static/images/data/4.jpeg');"> Microbial Symbiants</h2>
-            <p class="info-desc">The data compiles different aspects of plant biology (e.g., anatomy, physiology,
-              fitness and gene-expression) reported in scientific articles that experimentally explored the role of
-              plant microbial symbionts in plant tolerance to chilling (0-15 degrees Celsius) and freezing (under 0
-              degrees Celsius) conditions. Each variable included in the dataset is composed of at least four values,
-              representing the mean of the measured variable with or without a given microbial symbiont and under
-              control or cold conditions in a factorial design. The data were generated for a meta-analysis, and so the
-              level of replication and standard deviation or standard error, plus other relevant information such as
-              plant and microbial species, and source, are also included. Funding was provided by Posdoctoral-FONDECYT
-              3180441, FONDECYT 11140607 and the NERC-CONICYT awards (NE/P003079/1 - PII20150126).
-            </p>
-            <div class="file-info">
-              <p class="bi bi-filetype-csv file-icon">CSV</p>
-              <p class="bi bi-card-list" id="Category">Arctic & Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card" data-category="Biodiversity" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2 style="background-image: url('/static/images/data/4.jpeg');">Northern Cities Climate</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Arctic</p>
-            </div>
-          </div>
-        </div>
-        <div class="my-card" data-category="Biodiversity" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2 style="background-image: url('/static/images/data/4.jpeg');"> Sea Ice Extent</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-
-        <!-- Additional cards go here with class "hidden" -->
-        <div class="my-card hidden" data-category="Biodiversity">
-          <div class="card-info">
-            <h2> Antarctica Mass</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card hidden" data-category="Biodiversity">
-          <div class="card-info">
-            <h2> Antarctica Mass</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-            </div>
-
-
-          </div>
-        </div>
-        <div class="navigation-buttons">
-          <button class="navigation-btn next-btn" onclick="navigateCards('right')">
-            <img src="https://img.icons8.com/material-outlined/24/000000/forward.png" alt="Forward Arrow Icon">
-          </button>
-        </div>
-
-      </div>
-    </div>
-
-    <!--Molecular Biology-->
-    <div class="container">
-
-      <div class="header-container">
-        <h2 style="text-decoration: solid; letter-spacing: 0.4rem;">
-          <b style="padding: 100px; font-family: Poppins;"><img width="64" height="64"
-              src="https://img.icons8.com/glyph-neue/64/physics.png" alt="physics" />Molecular Biology</b>
-        </h2>
-
-      </div>
-
-      <div id="slider-container-Molecular" class="card-container">
-        <div class="navigation-buttons">
-          <button class="navigation-btn prev-btn" onclick="navigateCards('left')">
-            <img src="https://img.icons8.com/material-outlined/24/000000/back.png" alt="Backward Arrow Icon">
-          </button>
-        </div>
-        <div class="my-card" data-category="Molecular" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2> Antarctica Mass</h2>
-            <p class="info-desc">The data compiles different aspects of plant biology (e.g., anatomy, physiology,
-              fitness and
-              gene-expression) reported in scientific articles that experimentally explored the role of plant
-              microbial
-              symbionts in plant tolerance to chilling (0-15 degrees Celsius) and freezing (under 0 degrees Celsius)
-              conditions. Each variable included in the dataset is composed of at least four values, representing the
-              mean of the measured variable with or without a given microbial symbiont and under control or cold
-              conditions in a factorial design. The data were generated for a meta-analysis, and so the level of
-              replication and standard deviation or standard error, plus other relevant information such as plant and
-              microbial species, and source, are also included. Funding was provided by Posdoctoral-FONDECYT 3180441,
-              FONDECYT 11140607 and the NERC-CONICYT awards (NE/P003079/1 - PII20150126).</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card" data-category="Molecular" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2> Sea Ice Graph</h2>
-            <p class="info-desc">This dataset includes graphs depicting the extent of sea ice in both the Arctic and
-              Antarctica. These graphs show how much sea ice there is in these polar regions over time. Researchers or
-              scientists likely use this information to understand changes in the amount of sea ice and to study
-              trends in the Arctic and Antarctic environments.
-
-            </p>
-            <div class="file-info">
-              <p class="bi bi-filetype-csv file-icon">CSV</p>
-              <p class="bi bi-card-list" id="Category">Arctic & Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card" data-category="Molecular" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2>Northern Cities Climate</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Arctic</p>
-            </div>
-          </div>
-        </div>
-        <div class="my-card" data-category="Molecular" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2> Sea Ice Extent</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-
-        <!-- Additional cards go here with class "hidden" -->
-        <div class="my-card hidden" data-category="Molecular">
-          <div class="card-info">
-            <h2> Antarctica Mass</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card hidden" data-category="Molecular">
-          <div class="card-info">
-            <h2> Antarctica Mass</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-            </div>
-
-
-          </div>
-        </div>
-        <div class="navigation-buttons">
-          <button class="navigation-btn next-btn" onclick="navigateCards('right')">
-            <img src="https://img.icons8.com/material-outlined/24/000000/forward.png" alt="Forward Arrow Icon">
-          </button>
-        </div>
-
-      </div>
-    </div>
-    <!--Disease-->
-    <div class="container">
-
-      <div class="header-container">
-        <h2 style="text-decoration: solid; letter-spacing: 0.4rem;">
-          <b style="padding: 100px; font-family: Poppins;"><img width="64" height="64"
-              src="https://img.icons8.com/sf-black-filled/64/virus.png" alt="virus" />Disease</b>
-        </h2>
-
-      </div>
-
-      <div id="slider-container-Disease" class="card-container">
-        <div class="navigation-buttons">
-          <button class="navigation-btn prev-btn" onclick="navigateCards('left')">
-            <img src="https://img.icons8.com/material-outlined/24/000000/back.png" alt="Backward Arrow Icon">
-          </button>
-        </div>
-        <div class="my-card" data-category="Disease" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2> Antarctica Mass</h2>
-            <p class="info-desc">The data compiles different aspects of plant biology (e.g., anatomy, physiology,
-              fitness and
-              gene-expression) reported in scientific articles that experimentally explored the role of plant
-              microbial
-              symbionts in plant tolerance to chilling (0-15 degrees Celsius) and freezing (under 0 degrees Celsius)
-              conditions. Each variable included in the dataset is composed of at least four values, representing the
-              mean of the measured variable with or without a given microbial symbiont and under control or cold
-              conditions in a factorial design. The data were generated for a meta-analysis, and so the level of
-              replication and standard deviation or standard error, plus other relevant information such as plant and
-              microbial species, and source, are also included. Funding was provided by Posdoctoral-FONDECYT 3180441,
-              FONDECYT 11140607 and the NERC-CONICYT awards (NE/P003079/1 - PII20150126).</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card" data-category="Disease" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2> Sea Ice Graph</h2>
-            <p class="info-desc">This dataset includes graphs depicting the extent of sea ice in both the Arctic and
-              Antarctica. These graphs show how much sea ice there is in these polar regions over time. Researchers or
-              scientists likely use this information to understand changes in the amount of sea ice and to study
-              trends in the Arctic and Antarctic environments.
-
-            </p>
-            <div class="file-info">
-              <p class="bi bi-filetype-csv file-icon">CSV</p>
-              <p class="bi bi-card-list" id="Category">Arctic & Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card" data-category="Disease" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2>Northern Cities Climate</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Arctic</p>
-            </div>
-          </div>
-        </div>
-        <div class="my-card" data-category="Disease" onclick="showHiddenCard(this)">
-          <div class="card-info">
-            <h2> Sea Ice Extent</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-
-        <!-- Additional cards go here with class "hidden" -->
-        <div class="my-card hidden" data-category="Disease">
-          <div class="card-info">
-            <h2> Antarctica Mass</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-
-            </div>
-
-
-          </div>
-        </div>
-        <div class="my-card hidden" data-category="Disease">
-          <div class="card-info">
-            <h2> Antarctica Mass</h2>
-            <p class="info-desc">Description 1</p>
-            <div class="file-info">
-              <i class="bi bi-filetype-csv file-icon">CSV</i>
-              <p class="bi bi-card-list" id="Category">Antarctica</p>
-            </div>
-
-
-          </div>
-        </div>
-        <div class="navigation-buttons">
-          <button class="navigation-btn next-btn" onclick="navigateCards('right')">
-            <img src="https://img.icons8.com/material-outlined/24/000000/forward.png" alt="Forward Arrow Icon">
-          </button>
-        </div>
-
-      </div>
-    </div>
 
 
 
@@ -1315,7 +868,11 @@
           <div class="col-lg-6">
             <!-- Contact Form -->
             <div class="form-overlay position-absolute top-0 end-0 p-5 rounded">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div id="contact-us-url" data-url="{{ contact_us_url }}"></div>
+              <form action="mailto: aibig@umk.edu.my?subject=PolarBytes:%20Contact%20Us%20Email" method="post"
+                role="form" class="django-form" enctype="text/plain">
+
+                {% csrf_token %}
                 <div class="text-center mb-4">
                   <h3 class="fw-bold">Contact Us</h3>
                 </div>
@@ -1338,8 +895,6 @@
                     </div>
                   </div>
                 </div>
-
-
 
                 <!-- Your Message -->
                 <div class="mb-3">
@@ -1398,6 +953,11 @@
     integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     $(document).ready(function () {
       $('.btn').click(function () {
@@ -1409,6 +969,7 @@
   </script>>
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/contact.js' %}"></script>
 
   <!--searching-->
   <script>

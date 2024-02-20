@@ -6,10 +6,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Polar Region</title>
-  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/12.png' %}" />
-  <meta content="" name="description" />
-  <meta content="" name="keywords" />
+  {%include 'title.html'%}
 
   <!-- Swipe -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -24,18 +21,14 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet" />
 
+  <!-- footer icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Hover -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
-
-  <!-- Contact -->
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-  <!--search-->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
 
   <!-- Vendor CSS Files -->
   <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -70,6 +63,10 @@
     integrity="sha512-HajDJcB2lLZX5Ap4mVymNO6VLqj7mXIOEwEhugvcIPPdNLhTzY/fF2MhhATfWkS7NsOR/Bd4R1ztgNOy/9ID4A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+  
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 
@@ -84,155 +81,133 @@
 
 <body>
   {%include 'header.html'%}
-  <body>
-    <!-- Content -->
-    <section id="box">
-      <div class="card">
-        <h2>Plant biology variables under cold stress from published experiments (1975-2019) that include microbial
-          symbionts as an experimental factor</h2>
-      </div>
-
-      <div class="card-header">
-        <p>
-          The data compiles different aspects of plant biology (e.g., anatomy, physiology, fitness and gene-expression)
-          reported in scientific articles that experimentally explored the role of plant microbial symbionts in plant
-          tolerance to chilling (0-15 degrees Celsius) and freezing (under 0 degrees Celsius) conditions. Each variable
-          included in the dataset is composed of at least four values, representing the mean of the measured variable
-          with
-          or without a given microbial symbiont and under control or cold conditions in a factorial design. The data
-          were
-          generated for a meta-analysis, and so the level of replication and standard deviation or standard error, plus
-          other relevant information such as plant and microbial species, and source, are also included. Funding was
-          provided by Posdoctoral-FONDECYT 3180441, FONDECYT 11140607 and the NERC-CONICYT awards (NE/P003079/1 -
-          PII20150126).
-        </p>
-      </div>
-
-      <div class="card-content">
-        <table id="streamgages_table" class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Agency</th>
-              <th>Location ID</th>
-              <th>Name</th>
-              <th>Latitude</th>
-              <th>Longitude</th>
-              <th>Latitude&Longitude type</th>
-              <th>Country</th>
-              <th>Hydrologic unit</th>
-              <th>Drainage area</th>
-              <th>Datum of page</th>
-              <th>Datum type</th>
-            </tr>
-          </thead>
-          {% csrf_token %}
-          <tbody>
-            {% for item in streamgages%}
-            <tr>
-              <td>{{ item.id }}</td>
-              <td>{{ item.agency }}</td>
-              <td>{{ item.location_id }}</td>
-              <td>{{ item.name }}</td>
-              <td>{{ item.latitude }}</td>
-              <td>{{ item.longitude }}</td>
-              <td>{{ item.lat_long_type }}</td>
-              <td>{{ item.country }}</td>
-              <td>{{ item.hydrologic_unit }}</td>
-              <td>{{ item.drainage_area }}</td>
-              <td>{{ item.datum_of_page }}</td>
-              <td>{{ item.datum_type }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <!-- End content -->
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-lg-4">
-              <div class="footer-logo" style="width: 200px;">
-                <img src="/static/images/logo/umk.png" style="width: 150px;">
-                <img src="/static/images/logo/aibig.png" style="width: 150px;">
-                <img src="/static/images/logo/polar1.png" style="width: 150px;">
-              </div>
-            </div>
-            <div class="col-sm-12 col-lg-4">
-              <h4>Contact</h4>
-              <div>
-                <i class="fas fa-map-marker-alt" style="font-size: 24px; margin-right: 10px;"></i>
-                <span>Institute For Artificial Intelligence & Big Data,</span>
-                <br>
-                <span>Universiti Malaysia Kelantan, City Campus, Pengkalan Chepa,</span>
-                <br>
-                <span>16100 Kota Bharu, Kelantan</span>
-              </div>
-              <div style="margin-top: 10px;">
-                <i class="fas fa-phone" style="font-size: 24px; margin-right: 10px;"></i>
-                <span>(+609) 771 7177</span>
-              </div>
-              <div style="margin-top: 10px;">
-                <i class="fas fa-envelope" style="font-size: 24px; margin-right: 10px;"></i>
-                <span>aibig@umk.edu.my</span>
-              </div>
-            </div>
-            <div class="col-sm-12 col-lg-4" style="margin-top: 10px;">
-              <h4>Follow Us</h4>
-              <!-- Replace these URLs with your actual social media profile URLs -->
-              <a href="https://www.instagram.com/" target="_blank" style="margin-right: 10px;"><i
-                  class="fab fa-instagram" style="font-size: 24px;"></i></a>
-              <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;"><i class="fab fa-facebook"
-                  style="font-size: 24px;"></i></a>
-              <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"
-                  style="font-size: 24px;"></i></a>
-            </div>
-          </div>
-
-
+  <section class="sec1">
+    <div class="topbar">
+      <div class="topcontent">
+        <div style="display: flex; align-items: center;">
+          <h2>USGS Alaska Streamgages</h2>
+          <marquee class="category-class" behavior="scroll" direction="left" scrollamount="9">USGS periodically adds streamgages throughout the United States. This dataset has all Alaska streamgages as of May 17, 2023</marquee>
         </div>
-        <div class="container">
-          <div class="copyright">
-            &copy; Copyright <strong><span>AIBIG</span></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
+        <div>
+          <p class="head-desc">The US Geological Survey has over 10,000 streamgages (metal devices that measure rivers and waterways) around the United States. There are 276 of them in Alaska as of May 17, 2023.</p>
+          <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;"><b>Category:</b>
+            Arctic</p>
         </div>
-    </footer>
-    <!-- end -->
+        <div style="padding: 10px 50px;">
+          <a class="csv-btn" href="{% url 'pr_arctic:download_alaska_streamgages_csv' %}" download="alaska_streamgages_data.csv">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" style="height: 15px; width: 15px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z"></path>
+            </svg>
+            Download File
+        </a>
+        </div>
 
-    <!-- CDN JS FILE -->
-    <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
-      integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
-      integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
-      integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
-      integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
-      integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Template Main Js File -->
-    <script src="{% static 'js/pr_plant.js' %}"></script>
-  </body>
+      </div>
+      <br>
+
+    </div>
+    <div class="grid-container">
+      <div class="chart">
+        <div class="card-content">
+          <table id="streamgages_table" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Agency</th>
+                <th>Location ID</th>
+                <th>Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Latitude&Longitude type</th>
+                <th>Country</th>
+                <th>Hydrologic unit</th>
+                <th>Drainage area</th>
+                <th>Datum of page</th>
+                <th>Datum type</th>
+              </tr>
+            </thead>
+            {% csrf_token %}
+            <tbody>
+              {% for item in streamgages%}
+              <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.agency }}</td>
+                <td>{{ item.location_id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.latitude }}</td>
+                <td>{{ item.longitude }}</td>
+                <td>{{ item.lat_long_type }}</td>
+                <td>{{ item.country }}</td>
+                <td>{{ item.hydrologic_unit }}</td>
+                <td>{{ item.drainage_area }}</td>
+                <td>{{ item.datum_of_page }}</td>
+                <td>{{ item.datum_type }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  </section>
+  <!-- Footer -->
+  {%include 'footer.html'%}
+  <!-- end -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
+    integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+    integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
+    integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
+    integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+<!--button-->
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.bootstrap4.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- DataTables JavaScript -->
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- DataTables Buttons JavaScript -->
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+
+<script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/pr_artic.js' %}"></script>
+</body>
 
 </html>

@@ -10,3 +10,32 @@ $('.tabmenu-wrap .custom-tab-nav').find('.tab-link').on('click', function(e) {
     $tab_contents.hide();
     $(id).show();
 });
+$(document).ready(function() {
+    $('#antarticmass_table').DataTable({
+        paging:true,
+        dom: 'Bfrtip',
+        
+        buttons: [
+            {
+                extend: 'csv',
+                className: 'csv-btn', 
+                text: 'Export to CSV' // Optionally change the button text
+            }
+        ]
+    });
+
+  });
+
+  $(document).ready(function() {
+    $('#hotpoints_table').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'csv',
+                className: 'csv-btn', 
+                text: 'Export to CSV' // Optionally change the button text
+            }
+        ]
+    });
+
+  });

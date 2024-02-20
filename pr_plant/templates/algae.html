@@ -5,14 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Polar Region</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{% static 'images/logo/12.png' %}"
-    />
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    {%include 'title.html'%}
 
     <!-- Swipe -->
     <link
@@ -163,8 +156,8 @@
         <div class="content2">
           <a
             class="button"
-            href="{% static 'data/pr_animal/corals_worldwide_test_set.csv' %}"
-            download="Antartica_mass.csv"
+            href="{% url 'pr_plant:download_glacier_algae_csv' %}"
+            download="download_glacier_algae.csv"
           >
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"

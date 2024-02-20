@@ -83,123 +83,84 @@
 
 
 <body>
-  {%include 'header.html'%}
+    <!-- ======= Header ======= -->
+    <!-- ======= Header ======= -->
+    {%include 'header.html'%}
 
     <!-- hero -->
-    <section id="hero2">
-        <div class="container" data-aos="fade-up">
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-                <div class="floating-card">
-                    <h2>Hypometabolism to survive the long polar night in the diatom Fragilariopsis cylindrus
+    <section class="sec1">
+        <div class="topbar2">
+            <div class="video-container">
+                <video autoplay loop muted>
+                    <source src="/static/images/bg24.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            <div class="topcontent">
+                <div style="display: flex; align-items: center;">
+                    <h2><img src="{% static 'images/logo7.png' %}" alt="Logo"
+                            style="max-width: 100%; max-height: 100px;"></h2>
+                    <marquee class="category-class" behavior="scroll" direction="left" scrollamount="9">Hypometabolism
+                        to survive the long polar night in the diatom Fragilariopsis cylindrus</marquee>
+                </div>
+                <div>
 
-                    </h2>
-                    <p>The dataset gathered focuses on a small organism known as Fragilariopsis
-                        cylindrus, commonly referred to as diatoms, which are essential components of polar ecosystems
-                        supporting food chains. Understanding how these diatoms cope with dark and cold polar nights is
-                        of utmost importance. <br>
+                    <p class="head-desc">
+                        The dataset gathered focuses on a small organism known as Fragilariopsis cylindrus, commonly
+                        referred to as diatoms, which are essential components of polar ecosystems supporting food
+                        chains. Understanding how these diatoms cope with dark and cold polar nights is of utmost
+                        importance.
                         In the study, it was found that when subjected to prolonged darkness, diatoms enter a low-energy
                         mode. During this period, the diatoms refrain from division, and their molecular activity slows
                         down. The researcher observed that these organisms manage to derive some energy by employing a
                         specific respiratory process, gradually utilizing stored proteins, carbohydrates, and fats.The
                         study conducted by the researcher highlights the robust nature of these diatoms, showcasing
                         their ability to endure prolonged darkness in cold temperatures.
-                    </p>
 
-                    <div class="flex-container">
-                        <div class="data">
-                            <h3>The dataset collected from</h3>
-                            <img src="{% static 'images/logo7.png' %}" alt="NCBI Logo" style="max-height: 120px;">
-                            <img src="{% static 'images/logo/geo.gif' %}" alt="NCBI Logo" style="max-height: 120px;">
+                    </p>
+                    </p>
+                    <div
+                        style="display: flex;grid-template-rows: repeat(2, 1fr);gap: 30vh;padding: 10px 50px;justify-items: start;align-content: stretch;align-items: center;justify-content: space-between;">
+                        <!-- Row 1: Category -->
+                        <div style="display: flex; align-items: center;">
+                            <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 15px; margin: 0;"><b>Category:</b>
+                                Molecular Biology</p>
                         </div>
-                        <div class="data2">
-                            <h3>Citation</h3>
-                            <p style="font-style: italic;">Joli, N., Concia, L., Babin , M. and Bowler , C. (2023).
-                                Hypometabolism to survive the long polar night in the diatom Fragilariopsis cylindrus.
-                                [online] NCBI. Available at:
-                                <a
-                                    href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218215.">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218215.</a>
-                                [Accessed 10 Dec. 2023].</p>
+                        <!-- Row 3: Citation -->
+                        <div id="citation" style="display: flex; align-items: center;">
+                            <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 12px; margin: 0;">
+                                <b style="font-size: medium;">Citation:</b> Joli, N., Concia, L., Babin , M. and Bowler , C. (2023). Hypometabolism to survive the long polar night in the diatom Fragilariopsis cylindrus. [online] NCBI. Available at: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218215. [Accessed 10 Dec. 2023].
+                                    </p>
                         </div>
                     </div>
-
-
-
-                    <button class="learn-more"
-                        onclick="openUrl('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218215')">
-                        <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Find out more</span>
-                    </button>
+                    <div class="linker">
+                        <button
+                            onclick="openUrl('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218215')">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">View Data</span>
+                        </button>
+                        
+                    </div>
 
                 </div>
             </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-4">
-                        <div class="footer-logo" style="width: 200px;">
-                            <img src="/static/images/logo/umk.png" style="width: 150px;">
-                            <img src="/static/images/logo/aibig.png" style="width: 150px;">
-                            <img src="/static/images/logo/ypasm.png" style="width: 150px;">
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-4">
-                        <h4>Contact</h4>
-                        <div>
-                            <i class="fas fa-map-marker-alt" style="font-size: 24px; margin-right: 10px;"></i>
-                            <span>Institute For Artificial Intelligence & Big Data,</span>
-                            <br>
-                            <span>Universiti Malaysia Kelantan, City Campus, Pengkalan Chepa,</span>
-                            <br>
-                            <span>16100 Kota Bharu, Kelantan</span>
-                        </div>
-                        <div style="margin-top: 10px;">
-                            <i class="fas fa-phone" style="font-size: 24px; margin-right: 10px;"></i>
-                            <span>(+609) 771 7177</span>
-                        </div>
-                        <div style="margin-top: 10px;">
-                            <i class="fas fa-envelope" style="font-size: 24px; margin-right: 10px;"></i>
-                            <span>aibig@umk.edu.my</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-4" style="margin-top: 10px;">
-                        <h4>Follow Us</h4>
-                        <!-- Replace these URLs with your actual social media profile URLs -->
-                        <a href="https://www.instagram.com/" target="_blank" style="margin-right: 10px;"><i
-                                class="fab fa-instagram" style="font-size: 24px;"></i></a>
-                        <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;"><i
-                                class="fab fa-facebook" style="font-size: 24px;"></i></a>
-                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"
-                                style="font-size: 24px;"></i></a>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>AIBIG</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    <!-- All the links in the footer should remain intact. -->
-                    <!-- You can delete the links only if you purchased the pro version. -->
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
-            </div>
-    </footer>
+    {%include 'footer.html'%}
     <!-- end -->
+
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
+    <!--JS-->
+    <script src="{% static 'js/main.js' %}"></script>
 
     <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
@@ -228,17 +189,5 @@
         }
     </script>
 </body>
-
-<!-- scroll -->
-<script>
-    function scrollToPortfolio() {
-        var element = document.getElementById('portfolio');
-        if (element) {
-            element.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    }
-</script>
 
 </html>

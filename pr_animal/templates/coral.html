@@ -6,10 +6,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Polar Region</title>
-  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/12.png' %}" />
-  <meta content="" name="description" />
-  <meta content="" name="keywords" />
+  {%include 'title.html'%}
 
   <!-- Swipe -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -93,7 +90,7 @@
             highlighting key characteristics of global ocean areas. The intention is to support predictions of coral
             habitats in specific regions. The dataset encompasses habitats for both hard and soft corals, offering a
             comprehensive overview of the diverse environments these marine organisms inhabit.</p>
-          <p style="color: gray; font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;"><b>Category:</b>
+          <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;"><b>Category:</b>
             Animal</p>
         </div>
 
@@ -105,7 +102,7 @@
     <div class="grid-container">
       <div class="content2">
 
-        <a class="button" href="{% static 'data/pr_animal/corals_worldwide_test_set.csv' %}" download="Antartica_mass.csv">
+        <a class="button" href="{% url 'pr_animal:download_coral_csv' %}" download="download_coral.csv">
           <svg class="w-6 h-6 text-gray-800 dark:text-white" style="height: 15px; width:15px;" aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
@@ -122,7 +119,7 @@
         <p style="font-family: sans-serif; font-size: 10px;font-weight: bolder; padding: 10px;">COLLECTION METHODOLOGY
         </p>
         <p style="font-family: 'Poppins'; font-size: 15px; padding: 11px; font-weight: bold;">CSV file downloaded from
-          NASA website</p>
+          https://www.kaggle.com/datasets/natalialimanska/corals-worldwide-distribution</p>
       </div>
 
 

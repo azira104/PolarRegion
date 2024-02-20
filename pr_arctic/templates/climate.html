@@ -6,10 +6,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Polar Region</title>
-  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/12.png' %}" />
-  <meta content="" name="description" />
-  <meta content="" name="keywords" />
+  {%include 'title.html'%}
 
   <!-- Swipe -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -100,8 +97,9 @@
             standard deviation or standard error, plus other relevant information such as plant and microbial species,
             and source, are also included. Funding was provided by Posdoctoral-FONDECYT 3180441, FONDECYT 11140607 and
             the NERC-CONICYT awards (NE/P003079/1 - PII20150126). </p>
-          <p style="color: gray; font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;"><b>Category:</b>
-            Antarctic</p>
+          <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;">
+            <b>Category:</b>
+            Arctic</p>
         </div>
 
 
@@ -112,24 +110,27 @@
     <div class="grid-container">
       <div class="content2">
 
-        <a class="button" href="{% static 'data/pr_antarctic/Antartica_mass.csv' %}" download="Antartica_mass.csv">
-          <svg class="w-6 h-6 text-gray-800 dark:text-white" style="height: 15px; width:15px;" aria-hidden="true"
+        <a class="button" href="{% url 'pr_arctic:download_northern_climate_csv' %}"
+          download="northern_climate_data.csv">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" style="height: 15px; width: 15px" aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
-              d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z" />
-          </svg> Download File
+              d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z">
+            </path>
+          </svg>
+          Download File
         </a>
 
       </div>
       <div class="chart">
-        <iframe width="100%" height="700"
-          src="https://lookerstudio.google.com/embed/reporting/16846822-d99f-437f-b5e1-fd86997c37e2/page/dRMpD"
+        <iframe width="100%" height="750px"
+          src="https://lookerstudio.google.com/embed/reporting/f29b46d5-6135-4e4b-b868-c796df0e742c/page/6FZqD"
           frameborder="0" style="border:0" allowfullscreen
           sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         <p style="font-family: sans-serif; font-size: 10px;font-weight: bolder; padding: 10px;">COLLECTION METHODOLOGY
         </p>
         <p style="font-family: 'Poppins'; font-size: 15px; padding: 11px; font-weight: bold;">CSV file downloaded from
-          NASA website</p>
+          https://www.kaggle.com/code/brsdincer/antarctica-hotpoints-climate-change-nasa/input</p>
       </div>
 
 

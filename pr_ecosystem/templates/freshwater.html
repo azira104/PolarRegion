@@ -89,7 +89,14 @@
 
     <!-- hero -->
     <section class="sec1">
-        <div class="topbar" style="height: 500px">
+        <div class="topbar2">
+            <div class="video-container">
+                <video autoplay loop muted>
+                    <source src="/static/images/bg24.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
             <div class="topcontent">
                 <div style="display: flex; align-items: center;">
                     <h2><img src="{% static 'images/logo/gbif.jpg' %}" alt="Logo"
@@ -117,12 +124,12 @@
                         style="display: flex;grid-template-rows: repeat(2, 1fr);gap: 30vh;padding: 10px 50px;justify-items: start;align-content: stretch;align-items: center;justify-content: space-between;">
                         <!-- Row 1: Category -->
                         <div style="display: flex; align-items: center;">
-                            <p style="color: gray; font-family: 'poppins'; font-size: 15px; margin: 0;"><b>Category:</b>
+                            <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 15px; margin: 0;"><b>Category:</b>
                                 Plant</p>
                         </div>
                         <!-- Row 3: Citation -->
                         <div id="citation" style="display: flex; align-items: center;">
-                            <p style="color: gray; font-family: 'poppins'; font-size: 12px; margin: 0;">
+                            <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 12px; margin: 0;">
                                 <b style="font-size: medium;">Citation:</b> Barry, Tom. “Arctic Species Trend Index (ASTI) : Freshwater.”
                                 Www.gbif.org, www.gbif.org/dataset/ebc62d60-afa9-4396-9e93-a0354d448b83/metrics,
                                 https://doi.org/10.15468/dtfeld. Accessed 4 Feb. 2024
@@ -130,7 +137,14 @@
                         </div>
                     </div>
                     <div class="linker">
-                        <button><a href="https://www.gbif.org/dataset/ebc62d60-afa9-4396-9e93-a0354d448b83/metrics" style="color: white;"> View Data</a></button>
+                        <button
+                            onclick="openUrl('https://www.gbif.org/dataset/ebc62d60-afa9-4396-9e93-a0354d448b83/metrics')">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">View Data</span>
+                        </button>
+                        
                         
                     </div>
 

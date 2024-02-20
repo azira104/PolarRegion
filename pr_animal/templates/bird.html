@@ -96,11 +96,8 @@
             chicks are monitored by direct counts at nine sites on the west coast of the island. The nest surveys are
             undertaken from December to January, with chick counts completed in mid-March. This work was funded by
             Natural Environment Research Council (UK) core funding to the British Antarctic Survey.<br>
-            <i>Dunn, M. J., Adlard, S., Lynnes, A., Briggs, D., Fox, D., & Philips, R. (2021). Population size and
-              breeding success of Southern giant petrels (Macronectes giganteus), at Signy Island, South Orkney Islands,
-              1996 to 2019 (Version 1.0) [Data set]. NERC EDS UK Polar Data Centre.
-              https://doi.org/10.5285/78284ADB-92BE-4BEA-AB10-080779EE58C3</i></p>
-          <p style="color: gray; font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;"><b>Category:</b>
+            </p>
+          <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;"><b>Category:</b>
             Animal</p>
         </div>
 
@@ -111,15 +108,12 @@
     </div>
     <div class="grid-container">
       <div class="content2">
-
-        <a class="button" href="{% static 'data/pr_animal/corals_worldwide_test_set.csv' %}"
-          download="Antartica_mass.csv">
-          <svg class="w-6 h-6 text-gray-800 dark:text-white" style="height: 15px; width:15px;" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
-              d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z" />
-          </svg> Download File
-        </a>
+        <a class="button" href="{% url 'pr_animal:download_bird_csv' %}" download="giant_petrel_data.csv">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" style="height: 15px; width: 15px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z"></path>
+          </svg>
+          Download File
+      </a>
 
       </div>
       <div class="chart">
@@ -127,7 +121,7 @@
         <p style="font-family: sans-serif; font-size: 10px;font-weight: bolder; padding: 10px;">COLLECTION METHODOLOGY
         </p>
         <p style="font-family: 'Poppins'; font-size: 15px; padding: 11px; font-weight: bold;">CSV file downloaded from
-          NASA website</p>
+          <i>Dunn, M. J., Adlard, S., Lynnes, A., Briggs, D., Fox, D., & Philips, R. (2021). Population size and breeding success of Southern giant petrels (Macronectes giganteus), at Signy Island, South Orkney Islands, 1996 to 2019 (Version 1.0) [Data set]. NERC EDS UK Polar Data Centre. https://doi.org/10.5285/78284ADB-92BE-4BEA-AB10-080779EE58C3</i></p>
       </div>
 
 

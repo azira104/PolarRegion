@@ -5,6 +5,9 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+/*
+  © 2024 Rohaizaazira, NurHaznirah, AIBIG
+*/
 (function() {
     "use strict";
   
@@ -401,4 +404,5 @@ document.getElementById('citation').addEventListener('click', function() {
 
   alert('Citation copied to clipboard!');
 });  
+AOS.init();
 

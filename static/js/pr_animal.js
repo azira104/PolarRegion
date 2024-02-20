@@ -15,7 +15,13 @@ $(document).ready(function () {
       },
   
       dom: "Bfrtip",
-      buttons: ["csv"],
+      buttons: [
+        {
+          extend: 'csv',
+          className: 'csv-btn', 
+          text: 'Export to CSV' // Optionally change the button text
+      }
+    ]
     });
 
     $('#adelie_table').DataTable( {
@@ -30,7 +36,13 @@ $(document).ready(function () {
         },
     
         dom: "Bfrtip",
-        buttons: ["csv"],
+        buttons: [
+          {
+            extend: 'csv',
+            className: 'csv-btn', 
+            text: 'Export to CSV' // Optionally change the button text
+        }
+      ]
       });
 
       $('#gentoo_table').DataTable( {
@@ -45,7 +57,13 @@ $(document).ready(function () {
         },
     
         dom: "Bfrtip",
-        buttons: ["csv"],
+        buttons: [
+          {
+            extend: 'csv',
+            className: 'csv-btn', 
+            text: 'Export to CSV' // Optionally change the button text
+        }
+      ]
       });
 
       $('#chinstrap_table').DataTable( {
@@ -60,7 +78,13 @@ $(document).ready(function () {
         },
     
         dom: "Bfrtip",
-        buttons: ["csv"],
+        buttons: [
+          {
+            extend: 'csv',
+            className: 'csv-btn', 
+            text: 'Export to CSV' // Optionally change the button text
+        }
+      ]
       });
 
       $('#bird_table').DataTable( {
@@ -75,7 +99,13 @@ $(document).ready(function () {
         },
     
         dom: "Bfrtip",
-        buttons: ["csv"],
+        buttons: [
+          {
+            extend: 'csv',
+            className: 'csv-btn', 
+            text: 'Export to CSV' // Optionally change the button text
+        }
+      ]
       });
 
       $('#bearblood_table').DataTable( {
@@ -90,7 +120,13 @@ $(document).ready(function () {
         },
     
         dom: "Bfrtip",
-        buttons: ["csv"],
+        buttons: [
+          {
+            extend: 'csv',
+            className: 'csv-btn', 
+            text: 'Export to CSV' // Optionally change the button text
+        }
+      ]
       });
 
       $('#bearAbdTemp_table').DataTable( {
@@ -105,7 +141,13 @@ $(document).ready(function () {
         },
     
         dom: "Bfrtip",
-        buttons: ["csv"],
+        buttons: [
+          {
+            extend: 'csv',
+            className: 'csv-btn', 
+            text: 'Export to CSV' // Optionally change the button text
+        }
+      ]
       });
 
       $('#bearCapSeq_table').DataTable( {
@@ -120,7 +162,13 @@ $(document).ready(function () {
         },
     
         dom: "Bfrtip",
-        buttons: ["csv"],
+        buttons: [
+          {
+            extend: 'csv',
+            className: 'csv-btn', 
+            text: 'Export to CSV' // Optionally change the button text
+        }
+      ]
       });
   });
   

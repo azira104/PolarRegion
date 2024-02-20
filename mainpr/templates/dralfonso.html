@@ -6,10 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Polar Region</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'images/logo/12.png' %}" />
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    {%include 'title.html'%}
 
     <!-- Swipe -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -92,12 +89,17 @@
     {%include 'header.html'%}
     <!--Start Page Profile-->
     <div class="container2">
+      <div class="breadcrumbs">
+        <a href="{% url 'mainpr:index'%}">Home</a> &gt;
+        <a href="{% url 'mainpr:index' %}#team">Team</a> &gt;
+        <span>Associate Professor.Dr Alfonso</span>
+    </div>
         <div class="profile-header">
           <div class="profile-img">
             <img src="{% static 'images/team/dr.alfonso.jpg' %}" width="200" alt="Profile Image">
           </div>
           <div class="profile-nav-info">
-            <h3 class="user-name">ASSC.PROF.DR ALFONSO GONZÁLEZ BRIONES</h3>
+            <h3 class="user-name">Associate Professor.DR ALFONSO GONZÁLEZ BRIONES</h3>
             <div class="address">
               <p id="state" class="state">Calle Espejo s/n, Salamanca</p>
               <span id="country" class="country">Spain</span>
@@ -110,7 +112,12 @@
           <div class="left-side">
             <div class="profile-side">
               <p class="mobile-no"><i class="fa fa-phone"></i>  (+34) 923 294 400</p>
-              <p class="user-mail"><i class="fa fa-envelope"></i> akmal@umk.edu.my</p>
+              <p>
+                <a href="http://es.linkedin.com/in/alfonsogonzalezbriones/" target="_blank" rel="noopener noreferrer" style="color: black;">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    alfonsogonzalezbriones
+                </a>
+            </p>
               <div class="user-bio">
                 <h3>Role</h3>
                 <p class="bio">
@@ -302,41 +309,7 @@
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        // Your JavaScript code here
-        $(".nav ul li").click(function() {
-          $(this)
-            .addClass("active")
-            .siblings()
-            .removeClass("active");
-        });
-    
-        const tabBtn = document.querySelectorAll(".nav ul li");
-        const tab = document.querySelectorAll(".tab");
-    
-        function tabs(panelIndex) {
-          tab.forEach(function(node) {
-            node.style.display = "none";
-          });
-          tab[panelIndex].style.display = "block";
-        }
-        
-    
-        bioText();
-    
-        function addLength() {
-          bio.innerText = bio.oldText;
-          bio.innerHTML +=
-            "&nbsp;" + `<span onclick='bioText()' id='see-less-bio'>See Less</span>`;
-          document.getElementById("see-less-bio").addEventListener("click", () => {
-            document.getElementById("see-less-bio").style.display = "none";
-          });
-        }
-    
-        if (document.querySelector(".alert-message").innerText > 9) {
-          document.querySelector(".alert-message").style.fontSize = ".7rem";
-        }
-    </script>
+    <script src="{% static 'js/team.js' %}"></script>
 </body>
 
 </html>

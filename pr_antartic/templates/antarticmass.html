@@ -6,10 +6,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Polar Region</title>
-  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/12.png' %}" />
-  <meta content="" name="description" />
-  <meta content="" name="keywords" />
+  {%include 'title.html'%}
 
   <!-- Swipe -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -24,18 +21,14 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet" />
 
+  <!-- footer icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Hover -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
-
-  <!-- Contact -->
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-  <!--search-->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
 
   <!-- Vendor CSS Files -->
   <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -70,6 +63,10 @@
     integrity="sha512-HajDJcB2lLZX5Ap4mVymNO6VLqj7mXIOEwEhugvcIPPdNLhTzY/fF2MhhATfWkS7NsOR/Bd4R1ztgNOy/9ID4A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+  
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 
@@ -84,83 +81,113 @@
 
 <body>
   {%include 'header.html'%}
-  <body>
-    <!-- Content -->
-    <section id="box">
-      <div class="card">
-        <h2>Plant biology variables under cold stress from published experiments (1975-2019) that include microbial
-          symbionts as an experimental factor</h2>
+  <section class="sec1">
+    <div class="topbar">
+      <div class="topcontent">
+        <div style="display: flex; align-items: center;">
+          <h2>Antarctic Mass</h2>
+          <marquee class="category-class" behavior="scroll" direction="left" scrollamount="9">NASA Antarctica Monthly Mass Data</marquee>
+        </div>
+        <div>
+          <p class="head-desc">Since 2002, NASA has been using satellite data to monitor the mass of Antarctica. This dataset consist of the monthly observations measured in gigaton. This data can be found on NASA's climate change website: https://climate.nasa.gov/</p>
+          <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;"><b>Category:</b>
+            Antarctica</p>
+        </div>
+       
+
+
+      </div>
+      <br>
+
+    </div>
+    <div class="grid-container">
+      <div class="chart">
+        <div class="card-content">
+          <table id="antarticmass_table" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Year</th>
+                <th>Antarctic mass</th>
+                <th>Antarctic mass 1 sigma incertainty</th>
+              </tr>
+            </thead>
+            {% csrf_token %}
+            <tbody>
+              {% for item in antarticmass%}
+              <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.year }}</td>
+                <td>{{ item.antarctic_mass }}</td>
+                <td>{{ item.antarcticMass_1sigma_uncertainty }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <div class="card-header">
-        <p>
-          The data compiles different aspects of plant biology (e.g., anatomy, physiology, fitness and gene-expression)
-          reported in scientific articles that experimentally explored the role of plant microbial symbionts in plant
-          tolerance to chilling (0-15 degrees Celsius) and freezing (under 0 degrees Celsius) conditions. Each variable
-          included in the dataset is composed of at least four values, representing the mean of the measured variable
-          with
-          or without a given microbial symbiont and under control or cold conditions in a factorial design. The data
-          were
-          generated for a meta-analysis, and so the level of replication and standard deviation or standard error, plus
-          other relevant information such as plant and microbial species, and source, are also included. Funding was
-          provided by Posdoctoral-FONDECYT 3180441, FONDECYT 11140607 and the NERC-CONICYT awards (NE/P003079/1 -
-          PII20150126).
-        </p>
-      </div>
 
-      <div class="card-content">
-        <table id="antarticmass_table" class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Year</th>
-              <th>Antarctic mass</th>
-              <th>Antarctic mass 1 sigma incertainty</th>
-            </tr>
-          </thead>
-          {% csrf_token %}
-          <tbody>
-            {% for item in antarticmass%}
-            <tr>
-              <td>{{ item.id }}</td>
-              <td>{{ item.year }}</td>
-              <td>{{ item.antarctic_mass }}</td>
-              <td>{{ item.antarcticMass_1sigma_uncertainty }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <!-- End content -->
 
-    <!-- Footer -->
-    {%include 'footer.html'%}
-    <!-- end -->
+    </div>
 
-    <!-- CDN JS FILE -->
-    <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
-      integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
-      integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
-      integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
-      integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
-      integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Template Main Js File -->
-    <script src="{% static 'js/pr_plant.js' %}"></script>
-  </body>
+  </section>
+  <!-- Footer -->
+  {%include 'footer.html'%}
+  <!-- end -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
+    integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+    integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
+    integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
+    integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+<!--button-->
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.bootstrap4.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- DataTables JavaScript -->
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- DataTables Buttons JavaScript -->
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+<!-- Include DataTables and Buttons -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.5/b-2.0.1/b-html5-2.0.1/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.5/b-2.0.1/b-html5-2.0.1/datatables.min.js"></script>
+
+<script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/pr_antartic.js' %}"></script>
+</body>
 
 </html>

@@ -6,10 +6,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Polar Region</title>
-  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/12.png' %}" />
-  <meta content="" name="description" />
-  <meta content="" name="keywords" />
+  {%include 'title.html'%}
 
   <!-- Swipe -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -93,12 +90,13 @@
           <p class="head-desc">Count data for three species of pygoscelid penguins at three sites near Anvers Island,
             Antarctica. The three sites are Neko Harbor, Petermann Island, and the Orne Islands, and the data included
             spans the period between 1984 and 2019. Data was accessed using the online Mapping Application for Penguin
-            Populations and Projected Dynamics. Citation for MAPPPD:
+            Populations and Projected Dynamics. 
+            Citation for MAPPPD:
 
             <i>Humphries G.R.W., Che-Castaldo C., Naveen R., Schwaller M., McDowall P., Schrimpf M., and Lynch H.J. 2017.
             Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic
             management and decision support. Polar Records</i> </p>
-          <p style="color: gray; font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;"><b>Category:</b>
+          <p style="color: rgb(255, 255, 255); font-family: 'poppins'; font-size: 15 px;padding: 10px 50px;"><b>Category:</b>
             Population</p>
         </div>
 
@@ -110,11 +108,9 @@
     <div class="grid-container">
       <div class="content2">
 
-        <a class="button" href="{% static 'data/pr_antarctic/Antartica_mass.csv' %}" download="Antartica_mass.csv">
-          <svg class="w-6 h-6 text-gray-800 dark:text-white" style="height: 15px; width:15px;" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
-              d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z" />
+        <a class="button" href="{% url 'pr_population:download_penguin_population_csv' %}" download="penguin_population_data.csv">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" style="height: 15px; width: 15px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z"></path>
           </svg> Download File
         </a>
 
@@ -124,11 +120,7 @@
           src="https://lookerstudio.google.com/embed/reporting/cc135da0-87db-490a-b8c4-9ea533472109/page/ObNpD"
           frameborder="0" style="border:0" allowfullscreen
           sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-        <p style="font-family: sans-serif; font-size: 10px;font-weight: bolder; padding: 10px;">COLLECTION METHODOLOGY
-        </p>
-        <p style="font-family: 'Poppins'; font-size: 15px; padding: 11px; font-weight: bold;">CSV file downloaded from
-          NASA website</p>
-      </div>
+        
 
 
 

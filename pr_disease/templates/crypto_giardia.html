@@ -146,10 +146,11 @@
             </p>
             <p
               style="
-                color: gray;
+                color: rgb(255, 255, 255);
                 font-family: 'poppins';
                 font-size: 15 px;
                 padding: 10px 50px;
+                font-weight: bold;
               "
             >
               <b>Category:</b>Disease
@@ -160,28 +161,12 @@
       </div>
       <div class="grid-container">
         <div class="content2">
-          <a
-            class="button"
-            href="{% static 'data/pr_animal/corals_worldwide_test_set.csv' %}"
-            download="Antartica_mass.csv"
-          >
-            <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
-              style="height: 15px; width: 15px"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z"
-              />
+          <a class="button" href="{% url 'pr_disease:download_wildlife_cysts_oocysts_csv' %}" download="Wildlife_cysts_oocysts.csv">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" style="height: 15px; width: 15px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z"></path>
             </svg>
             Download File
-          </a>
+        </a>
         </div>
         <div class="chart">
           <iframe

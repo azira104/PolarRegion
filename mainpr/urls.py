@@ -8,7 +8,7 @@ app_name = 'mainpr'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('inner-page/', views.inner_page, name='inner-page'),
+    path('machine-learning/', views.ml, name='ml'),
     path('portfolio-details/', views.portfolio_details, name='portfolio-details'),
     path('team/Dr.Akmal', views.drakmal, name='drakmal'),
     path('team/Dr.mae',views.drmae, name='drmae'),

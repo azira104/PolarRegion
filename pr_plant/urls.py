@@ -8,5 +8,7 @@ app_name = 'pr_plant'
 
 urlpatterns = [
     path('microbial', views.microbial, name='microbial'),
-    path('algae', views.algae, name='algae')
+    path('algae', views.algae, name='algae'),
+     path('download-microbial-symbionts-csv/', views.download_microbial_symbionts_csv, name='download_microbial_symbionts_csv'),
+     path('download-glacier-algae-csv/', views.download_glacier_algae_csv, name='download_glacier_algae_csv'),
 ]
