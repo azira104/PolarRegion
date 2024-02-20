@@ -1,0 +1,281 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    {%include 'title.html'%}
+
+    <!-- Swipe -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
+
+    <!-- footer icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <!-- Hover -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+
+    <!-- Vendor CSS Files -->
+    <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
+
+    <!-- CDN CSS FILE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css"
+        integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css"
+        integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css"
+        integrity="sha512-T+KoG3fbDoSnlgEXFQqwcTC9AdkFIxhBlmoaFqYaIjq2ShhNwNao9AKaLUPMfwiBPL0ScxAtc+UYbHAgvd+sjQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+        integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.css"
+        integrity="sha512-HajDJcB2lLZX5Ap4mVymNO6VLqj7mXIOEwEhugvcIPPdNLhTzY/fF2MhhATfWkS7NsOR/Bd4R1ztgNOy/9ID4A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!--Container Link WEBSITE-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Gp
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+
+<body>
+    {%include 'header.html'%}
+    <!--Start Page Profile-->
+    <div class="container2">
+      <div class="breadcrumbs">
+        <a href="{% url 'mainpr:index'%}">Home</a> &gt;
+        <a href="{% url 'mainpr:index' %}#team">Team</a> &gt;
+        <span>Nur Haznirah</span>
+    </div>
+        <div class="profile-header">
+          <div class="profile-img">
+            <img src="{% static 'images/team/haznirah.jpg' %}" width="200" alt="Profile Image">
+          </div>
+          <div class="profile-nav-info">
+            <h3 class="user-name">NUR HAZNIRAH BINTI HAZMAN</h3>
+            <div class="address">
+              <p id="state" class="state">Universiti Teknologi Malaysia, Johor Bahru</p>
+              <span id="country" class="country">Malaysia</span>
+            </div>
+      
+          </div>
+        </div>
+      
+        <div class="main-bd">
+          <div class="left-side">
+            <div class="profile-side">
+              
+              <p class="user-mail"><i class="fa fa-envelope"></i> nurhaznirahh@gmail.com</p>
+              <div class="user-bio">
+                <h3>Role</h3>
+                <p class="bio">
+                    Internship Student
+                </p>
+              </div>
+            </div>
+      
+          </div>
+          <div class="right-side">
+      
+            <div class="nav">
+              <ul>
+                <li onclick="tabs(0)" class="user-post active">EDUCATION(S)</li>
+                <li onclick="tabs(1)" class="user-review">RESEARCH AWARD(S)</li>
+                <li onclick="tabs(2)" class="user-setting"> Academic Profile</li>
+              </ul>
+            </div>
+            <div class="profile-body">
+              <div class="profile-posts tab">
+                <h1>Your Education</h1>
+                <div class="timeline">
+                    <li class="timeline-item">
+                        <div class="timeline-info">
+                            <span>(2020-Current: Universiti Teknologi Malaysia)</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <p>Bachelor of Computer Science(Bioinformatic) with Honor </p>
+                        </div>
+                    </li>
+                
+                    <li class="timeline-item">
+                        <div class="timeline-info">
+                            <span>(2019: Kolej Matrikulasi Perlis)</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            
+                            <p>Matriculation Qualification Certificate</p>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-info">
+                            <span>(2014-2018: MRSM Jeli,Kelantan)</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            
+                            <p>Sijil Pelajaran Tinggi Malaysia</p>
+                        </div>
+                    </li>
+                
+                </div>
+              </div>
+              <div class="profile-reviews tab">
+                <h1>Research Achievements</h1>
+                
+               <p><i>No record(s) Found</i></p>
+              </div>
+              <div class="profile-settings tab">
+                <div class="account-setting">
+                  <h1>Academic Profile</h1>
+                  <p><i>No record(s) Found</i></p>
+                  
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <footer id="footer" style="height: 100%;">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-4">
+                        <div class="footer-logo" style="width: 200px;">
+                            <img src="/static/images/logo/umk.png" style="width: 150px;">
+                            <img src="/static/images/logo/aibig.png" style="width: 150px;">
+                            <img src="/static/images/logo/ypasm.png" style="width: 150px;">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <h4>Contact</h4>
+                        <div>
+                            <i class="fas fa-map-marker-alt" style="font-size: 24px; margin-right: 10px;"></i>
+                            <span>Institute For Artificial Intelligence & Big Data,</span>
+                            <br>
+                            <span>Universiti Malaysia Kelantan, City Campus, Pengkalan Chepa,</span>
+                            <br>
+                            <span>16100 Kota Bharu, Kelantan</span>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <i class="fas fa-phone" style="font-size: 24px; margin-right: 10px;"></i>
+                            <span>(+609) 771 7177</span>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <i class="fas fa-envelope" style="font-size: 24px; margin-right: 10px;"></i>
+                            <span>aibig@umk.edu.my</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-4" style="margin-top: 10px;">
+                        <h4>Follow Us</h4>
+                        <!-- Replace these URLs with your actual social media profile URLs -->
+                        <a href="https://www.instagram.com/" target="_blank" style="margin-right: 10px;"><i
+                                class="fab fa-instagram" style="font-size: 24px;"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;"><i
+                                class="fab fa-facebook" style="font-size: 24px;"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"
+                                style="font-size: 24px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>AIBIG</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+                    
+                </div>
+            </div>
+    </footer>
+    <!-- end -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
+        integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+        integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
+        integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
+        integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        function openUrl(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{% static 'js/team.js' %}"></script>
+</body>
+
+</html>

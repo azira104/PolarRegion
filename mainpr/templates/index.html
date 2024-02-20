@@ -1,1053 +1,1012 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
+  <!--
+     © 2024 Rohaizaazira, NurHaznirah, AIBIG
+  -->
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Polar Region Data</title>
-    <link rel="icon" href="{%static '/images/favicon.png' %}" type="image/x-icon">
+  <title>PolarBytes</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/logo-pb1.png' %}" />
+  <meta name="description" content="PolarBytes is a data repository focusing on the polar regions, including Antarctica and the Arctic. Explore our collection of data related to aibig, ypasm, and more.">
+  <meta name="keywords" content="aibig, ypasm, polar region, antarctica, arctic, umk, polarbytes, data repository">
+  
+  <!-- Swipe -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Hover -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+
+  <!-- Contact -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+  <!--search-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!--template js-->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+  <script src="{% static 'js/photo.js' %}" type="text/babel"></script> -->
 
 
-    <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Vendor CSS Files -->
+  <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- CDN CSS FILE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css"
+    integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+    integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css"
+    integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css"
+    integrity="sha512-T+KoG3fbDoSnlgEXFQqwcTC9AdkFIxhBlmoaFqYaIjq2ShhNwNao9AKaLUPMfwiBPL0ScxAtc+UYbHAgvd+sjQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.css"
+    integrity="sha512-HajDJcB2lLZX5Ap4mVymNO6VLqj7mXIOEwEhugvcIPPdNLhTzY/fF2MhhATfWkS7NsOR/Bd4R1ztgNOy/9ID4A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
-        rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: Gp
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <!-- Contact -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <!--search-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+  <!--template js-->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+  <script src="{% static 'js/photo.js' %}" type="text/babel"></script> -->
 
-    <link href="{% static 'css/templatemo-topic-listing.css' %}" rel="stylesheet">
 
-    <!--
+  <!-- Vendor CSS Files -->
+  <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
 
-TemplateMo 590 topic listing
+  <!-- CDN CSS FILE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css"
+    integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+    integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css"
+    integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css"
+    integrity="sha512-T+KoG3fbDoSnlgEXFQqwcTC9AdkFIxhBlmoaFqYaIjq2ShhNwNao9AKaLUPMfwiBPL0ScxAtc+UYbHAgvd+sjQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.css"
+    integrity="sha512-HajDJcB2lLZX5Ap4mVymNO6VLqj7mXIOEwEhugvcIPPdNLhTzY/fF2MhhATfWkS7NsOR/Bd4R1ztgNOy/9ID4A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-https://templatemo.com/tm-590-topic-listing
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 
--->
+  <!-- =======================================================
+  * Template Name: Gp
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body id="top">
-
-    <main>
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <div style="display: flex; align-items: center;">
-                        <img src="{% static 'images/favicon.png' %}" class="custom-block-image img-fluid" alt="logo" style="width: 100px; height: 100px;">
-                    <!-- <i class="bi bi-back"></i> -->
-                    <span>POLAR REGION </span>
-                    </div>
-                </a>
-                <div class="d-lg-none ms-auto me-4">
-                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                </div>
-            </div>
-            <!-- <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="{% static 'images/favicon.png' %}" class="custom-block-image img-fluid" alt="logo" style="width: 100px; height: 100px;">
-                    <span>Topic</span>
-                </a>
-                <div class="d-lg-none ms-auto me-4">
-                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                </div>
-            </div> -->
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">Browse Data</a>
-                        </li>
-
-
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">FAQs</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                        </li>
-                    </ul>
-
-                    <div class="d-none d-lg-block">
-                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-
-        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-8 col-12 mx-auto">
-                        <h1 class="text-white text-center">Discover. Learn. Enjoy</h1>
-
-                        <h6 class="text-center">platform for creatives around the world</h6>
-
-                        <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-text bi-search" id="basic-addon1">
-
-                                </span>
-
-                                <input name="keyword" type="search" class="form-control" id="keyword"
-                                    placeholder="Design, Code, Marketing, Finance ..." aria-label="Search">
-
-                                <button type="submit" class="form-control">Search</button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <section class="featured-section">
-            <div class="container">
-                <div class="row justify-content-center">
-
-                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block bg-white shadow-lg">
-                            <a href="topics-detail.html">
-                                <div class="d-flex">
-                                    <div>
-                                        <h5 class="mb-2">Web Design</h5>
-
-                                        <p class="mb-0">When you search for free CSS templates, you will notice that
-                                            TemplateMo is one of the best websites.</p>
-                                    </div>
-
-                                    <span class="badge bg-design rounded-pill ms-auto">14</span>
-                                </div>
-
-                                <img src="{% static 'images/topics/undraw_Remote_design_team_re_urdx.png'%}"
-                                    class="custom-block-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <div class="custom-block custom-block-overlay">
-                            <div class="d-flex flex-column h-100">
-                                <img src="images/businesswoman-using-tablet-analysis.jpg"
-                                    class="custom-block-image img-fluid" alt="">
-
-                                <div class="custom-block-overlay-text d-flex">
-                                    <div>
-                                        <h5 class="text-white mb-2">Finance</h5>
-
-                                        <p class="text-white">Topic Listing Template includes homepage, listing page,
-                                            detail page, and contact page. You can feel free to edit and adapt for your
-                                            CMS requirements.</p>
-
-                                        <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
-                                    </div>
-
-                                    <span class="badge bg-finance rounded-pill ms-auto">25</span>
-                                </div>
-
-                                <div class="social-share d-flex">
-                                    <p class="text-white me-4">Share:</p>
-
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-twitter"></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-facebook"></a>
-                                        </li>Designms-auto"></a>
-                                </div>
-
-                                <div class="section-overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <section class="explore-section section-padding" id="section_2">
-            <div class="container">
-
-                <div class="col-12 text-center">
-                    <h2 class="mb-4">Browse Data</h1>
-                </div>
-
-            </div>
-            </div>
-
-            <div class="container-fluid">
-                <div class="row">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="dna-tab" data-bs-toggle="tab"
-                                data-bs-target="#dna-tab-pane" type="button" role="tab" aria-controls="dna-tab-pane"
-                                aria-selected="true">DNA/RNA</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link " id="animal-tab" data-bs-toggle="tab"
-                                data-bs-target="#animal-tab-pane" type="button" role="tab"
-                                aria-controls="animal-tab-pane" aria-selected="true">Animal</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link " id="design-tab" data-bs-toggle="tab"
-                                data-bs-target="#plant-tab-pane" type="button" role="tab" aria-controls="plant-tab-pane"
-                                aria-selected="true">Plant</button>
-                        </li>
-
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="ecosystem-tab-pane" data-bs-toggle="tab"
-                                data-bs-target="#ecosystem-tab-pane" type="button" role="tab"
-                                aria-controls="ecosystem-tab-pane" aria-selected="false">Ecosystem</button>
-                        </li>
-
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="population-tab" data-bs-toggle="tab"
-                                data-bs-target="#population-tab-pane" type="button" role="tab"
-                                aria-controls="population-tab-pane" aria-selected="false">Population</button>
-                        </li>
-
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="arctic-tab" data-bs-toggle="tab"
-                                data-bs-target="#disease-tab-pane" type="button" role="tab"
-                                aria-controls="disease-tab-pane" aria-selected="false">Disease</button>
-                        </li>
-
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="arctic-tab" data-bs-toggle="tab"
-                                data-bs-target="#arctic-tab-pane" type="button" role="tab"
-                                aria-controls="arctic-tab-pane" aria-selected="false">Arctic</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="arctic-tab" data-bs-toggle="tab"
-                                data-bs-target="#antartic-tab-pane" type="button" role="tab"
-                                aria-controls="antartic-tab-pane" aria-selected="false">Antartic</button>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-12">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="dna-tab-pane" role="tabpanel"
-                                aria-labelledby="dna-tab" tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Web Design</h5>
-
-                                                        <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
-                                                    </div>
-
-                                                    <span class="badge bg-design rounded-pill ms-auto">14</span>
-                                                </div>
-
-                                                <img src="{% static 'images/topics/undraw_Remote_design_team_re_urdx.png' %}"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Graphic</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-design rounded-pill ms-auto">75</span>
-                                                </div>
-
-                                                <img src="{%static 'images/topics/undraw_Redesign_feedback_re_jvm0.png' %}"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Logo Design</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-design rounded-pill ms-auto">100</span>
-                                                </div>
-
-                                                <img src="images/topics/colleagues-working-cozy-office-medium-shot.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="animal-tab-pane" role="tabpanel" aria-labelledby="animal-tab"
-                                tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Advertising</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-advertising rounded-pill ms-auto">30</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_online_ad_re_ol62.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Video Content</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-advertising rounded-pill ms-auto">65</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Group_video_re_btu7.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Viral Tweet</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-advertising rounded-pill ms-auto">50</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_viral_tweet_gndb.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="plant-tab-pane" role="tabpanel" aria-labelledby="plant-tab"
-                                tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Advertising</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-advertising rounded-pill ms-auto">30</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_online_ad_re_ol62.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Video Content</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-advertising rounded-pill ms-auto">65</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Group_video_re_btu7.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Viral Tweet</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-advertising rounded-pill ms-auto">50</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_viral_tweet_gndb.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="ecosystem-tab-pane" role="tabpanel"
-                                aria-labelledby="ecosystem-tab" tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Investment</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-finance rounded-pill ms-auto">30</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Finance_re_gnv2.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="custom-block custom-block-overlay">
-                                            <div class="d-flex flex-column h-100">
-                                                <img src="images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg"
-                                                    class="custom-block-image img-fluid" alt="">
-
-                                                <div class="custom-block-overlay-text d-flex">
-                                                    <div>
-                                                        <h5 class="text-white mb-2">Finance</h5>
-
-                                                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur
-                                                            adipisicing elit. Sint animi necessitatibus aperiam
-                                                            repudiandae nam omnis</p>
-
-                                                        <a href="topics-detail.html"
-                                                            class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
-                                                    </div>
-
-                                                    <span class="badge bg-finance rounded-pill ms-auto">25</span>
-                                                </div>
-
-                                                <div class="social-share d-flex">
-                                                    <p class="text-white me-4">Share:</p>
-
-                                                    <ul class="social-icon">
-                                                        <li class="social-icon-item">
-                                                            <a href="#" class="social-icon-link bi-twitter"></a>
-                                                        </li>
-
-                                                        <li class="social-icon-item">
-                                                            <a href="#" class="social-icon-link bi-facebook"></a>
-                                                        </li>
-
-                                                        <li class="social-icon-item">
-                                                            <a href="#" class="social-icon-link bi-pinterest"></a>
-                                                        </li>
-                                                    </ul>
-
-                                                    <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
-                                                </div>
-
-                                                <div class="section-overlay"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="population-tab-pane" role="tabpanel"
-                                aria-labelledby="population-tab" tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Penguin</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-music rounded-pill ms-auto">45</span>
-                                                </div>
-
-                                                <img src="{%static 'images/topics/penguin.png' %}"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Marine Fungi</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-music rounded-pill ms-auto">45</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_happy_music_g6wc.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Palmer Penguin</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-music rounded-pill ms-auto">20</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Podcast_audience_re_4i5q.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="disease-tab-pane" role="tabpanel"
-                                aria-labelledby="disease-tab" tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Graduation</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-education rounded-pill ms-auto">80</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Graduation_re_gthn.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Educator</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-education rounded-pill ms-auto">75</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Educator_re_ju47.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="arctic-tab-pane" role="tabpanel" aria-labelledby="arctic-tab"
-                                tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Graduation</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-education rounded-pill ms-auto">80</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Graduation_re_gthn.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Educator</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-education rounded-pill ms-auto">75</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Educator_re_ju47.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="antartic-tab-pane" role="tabpanel"
-                                aria-labelledby="antartic-tab" tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Composing Song</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-music rounded-pill ms-auto">45</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Compose_music_re_wpiw.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Online Music</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-music rounded-pill ms-auto">45</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_happy_music_g6wc.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Podcast</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-music rounded-pill ms-auto">20</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Podcast_audience_re_4i5q.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-        </section>
-        <section class="explore-section section-padding" id="section_3">
-            <div class="container">
-
-                <div class="col-12 text-center">
-                    <h2 class="mb-4">
-                        </h1>
-                </div>
-
-            </div>
-            </div>
-
-            <div class="container-fluid">
-                <div class="row">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="AA-tab" data-bs-toggle="tab"
-                                data-bs-target="#AA-tab-pane" type="button" role="tab" aria-controls="AA-tab-pane"
-                                aria-selected="false">Arctic &
-                                Antartic</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-
-
-                    <div class="tab-pane fade" id="AA-tab-pane" role="tabpanel" aria-labelledby="AA-tab" tabindex="0">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                <div class="custom-block bg-white shadow-lg">
-                                    <a href="topics-detail.html">
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5 class="mb-2">Composing Song</h5>
-
-                                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                            </div>
-
-                                            <span class="badge bg-music rounded-pill ms-auto">45</span>
-                                        </div>
-
-                                        <img src="images/topics/undraw_Compose_music_re_wpiw.png"
-                                            class="custom-block-image img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                <div class="custom-block bg-white shadow-lg">
-                                    <a href="topics-detail.html">
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5 class="mb-2">Online Music</h5>
-
-                                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                            </div>
-
-                                            <span class="badge bg-music rounded-pill ms-auto">45</span>
-                                        </div>
-
-                                        <img src="images/topics/undraw_happy_music_g6wc.png"
-                                            class="custom-block-image img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="custom-block bg-white shadow-lg">
-                                    <a href="topics-detail.html">
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5 class="mb-2">Podcast</h5>
-
-                                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                            </div>
-
-                                            <span class="badge bg-music rounded-pill ms-auto">20</span>
-                                        </div>
-
-                                        <img src="images/topics/undraw_Podcast_audience_re_4i5q.png"
-                                            class="custom-block-image img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            </div>
-        </section>
-
-
-
-
-        <section class="faq-section section-padding" id="section_4">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12">
-                        <h2 class="mb-4">Frequently Asked Questions</h2>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                    <div class="col-lg-5 col-12">
-                        <img src="{% static 'images/faq_graphic.jpg'%}" class="img-fluid" alt="FAQs">
-                    </div>
-
-                    <div class="col-lg-6 col-12 m-auto">
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What is Topic Listing?
-                                    </button>
-                                </h2>
-
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Topic Listing is free Bootstrap 5 CSS template. <strong>You are not allowed to
-                                            redistribute this template</strong> on any other template collection website
-                                        without our permission. Please contact TemplateMo for more detail. Thank you.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How to find a topic?
-                                    </button>
-                                </h2>
-
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        You can search on Google with <strong>keywords</strong> such as templatemo
-                                        portfolio, templatemo one-page layouts, photography, digital marketing, etc.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Does it need to paid?
-                                    </button>
-                                </h2>
-
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        You can modify any of this with custom CSS or overriding our default variables.
-                                        It's also worth noting that just about any HTML can go within the
-                                        <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <section class="contact-section section-padding section-bg" id="section_5">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12 text-center">
-                        <h2 class="mb-5">Get in touch</h2>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="{% static 'images/umk.png' %}" alt="UMK Logo" class="img-fluid" style="max-width: 80px;">
-                            <img src="{% static 'images/aibig.png' %}" alt="AIBIG Logo" class="img-fluid" style="max-width: 80px;">
-                        </div>
-                    
-                        <hr>
-                    
-                        <p class="mb-1">Follow us on:</p>
-                    
-                        <div class="d-flex">
-                            <!-- Add your social media icons here, e.g., Font Awesome icons -->
-                            <i class="bi bi-facebook me-2"></i>
-                            <i class="bi bi-twitter me-2"></i>
-                            <i class="bi bi-instagram me-2"></i>
-                            <!-- Add more social media icons as needed -->
-                        </div>
-                    </div>                    
-
-                    <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                        <iframe class="google-map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.750422257073!2d102.28132917498988!3d6.164169193823082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaea54001bd690427%3A0xa5cc68e433b8c3bb!2sInstitut%20Kepintaran%20Buatan%20dan%20Data%20Raya%20(AIBIG)!5e0!3m2!1sen!2smy!4v1698110143890!5m2!1sen!2smy"
-                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
-                        <h4 class="mb-3">Head office</h4>
-
-                        <p>Institut Kepintaran Buatan dan Data Raya (AIBIG), Universiti Malaysia Kelantan Kampus Kota, Taman Bendahara, 16100 Kota Bharu, Kelantan</p>
-
-                        <hr>
-
-                        <p class="d-flex align-items-center mb-1">
-                            <span class="me-2">Phone</span>
-
-                            <a href="tel: +609-771-7177" class="site-footer-link">
-                                +609-771-7177
-                            </a>
-                        </p>
-
-                        <p class="d-flex align-items-center">
-                            <span class="me-2">Email</span>
-
-                            <a href="mailto:aibig@umk.edu.my" class="site-footer-link">
-                                aibig@umk.edu.my
-                            </a>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer section-padding">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-3 col-12 mb-4 pb-2">
-                    <a class="navbar-brand mb-2" href="index.html">
-                        <i class="bi-back"></i>
-                        <span>Topic</span>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-6">
-                    <h6 class="site-footer-title mb-3">Resources</h6>
-
-                    <ul class="site-footer-links">
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Home</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">How it works</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">FAQs</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
-                    <h6 class="site-footer-title mb-3">Information</h6>
-
-                    <p class="text-white d-flex mb-1">
-                        <a href="tel: 305-240-9671" class="site-footer-link">
-                            305-240-9671
-                        </a>
-                    </p>
-
-                    <p class="text-white d-flex">
-                        <a href="mailto:info@company.com" class="site-footer-link">
-                            info@company.com
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            English</button>
-
-                        <ul class="dropdown-menu">
-                            <li><button class="dropdown-item" type="button">Thai</button></li>
-
-                            <li><button class="dropdown-item" type="button">Myanmar</button></li>
-
-                            <li><button class="dropdown-item" type="button">Arabic</button></li>
-                        </ul>
-                    </div>
-
-                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
-                        <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
-                        Distribution <a href="https://themewagon.com">ThemeWagon</a></p>
-
-                </div>
-
-            </div>
+<body>
+  {%include 'header.html'%}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <video autoplay muted loop poster="/static/images/poster-image.jpg" id="bgVideo">
+      <source src="/static/images/bg4.mp4" type="video/mp4">
+      <!-- Add additional source elements for different video formats if needed -->
+      Your browser does not support the video tag.
+    </video>
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1>Collection of Data in Polar Regions<span>.</span></h1>
+          <h2>
+            This dataset encompasses information on climate, glaciological, oceanographic, ecological, geological data,
+            satellite imagery, and more.
+          </h2>
         </div>
-    </footer>
+      </div>
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-xl-6 col-md-12">
+          <div class="searchbar">
+            <div class="search">
+              <h2>Search Dataset</h2>
+              <h4>Click on the search icon, then type your keyword.</h4>
+              <div>
+                <input id="search-input" type="text" placeholder="Search . . ." onkeydown="handleSearch(event)"
+                  required />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+
+            <div class="gallery-container">
+              <div class="gallery-row d-flex flex-row flex-wrap justify-content-center">
+                <div class="gallery-column d-flex flex-column">
+                  <img src="{% static 'images/slider/2.jpg' %}" class="img-fluid">
+                  <img src="{% static 'images/slider/1.jpg' %}" class="img-fluid">
+                  <img src="{% static 'images/slider/3.jpg' %}" class="img-fluid">
+
+                </div>
+
+                <div class="gallery-column d-flex flex-column">
+                  <img src="{% static 'images/slider/4.png' %}" class="img-fluid scale"
+                    style="max-width: 74%; max-height: 100%;">
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-6 order-1 order-lg-2" id="app"></div> -->
+
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>
+              About the Website
+            </h3>
+            <div class="col-12 col-md-7 col-xl-9 text">
+              <p><span class="word-spacing">PolarBytes Repository is an <strong>online data repository</strong>dedicated
+                  to providing <strong> comprehensive information</strong> about the Polar Regions. We offer<strong> a
+                    collection of data </strong> sourced from reputable online repositories, along with<strong> data
+                    visualizations </strong> that make the information easily accessible. </p>
+              <p><span class="word-spacing">Our goal is to provide <strong> reliable data </strong> from scientific
+                  studies and observations, ensuring that users have access to <strong>accurate information </strong>
+                  about the polar regions. Collaborating with Yayasan Penyelidikan Antartika Sultan Mizan, our team is
+                  committed to compiling a <strong>comprehensive database</strong> that serves as a valuable resource
+                  for researchers, educators, and anyone interested in the Polar Regions.</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo1.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo2.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo3.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo4.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo5.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo6.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo7.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo8.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/ENA.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/logo/geo.gif' %}" class="img-fluid" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Clients Section -->
 
 
-    <!-- JAVASCRIPT FILES -->
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'js/click-scroll.js' %}"></script>
-    <script src="{% static 'js/custom.js' %}"></script>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Dataset</h2>
+          <p>Check our Dataset</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-20 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-cl">Climatology</li>
+              <li data-filter=".filter-ml">Molecular Biology</li>
+              <li data-filter=".filter-b">Biodiversity</li>
+              <li data-filter=".filter-d">Disease</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <!-- arctic and antartic -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/ice.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Arctic and Antarctica 1</h4>
+                <p>Sea Ice Graph</p>
+                <!-- <div class="portfolio-links"> -->
+                <p>
+                  <a class="{% url 'pr_aa:aa1'%}" href="#">View the dataset</a>
+                  <br />
+                </p>
+
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sea Ice Graph</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/Sulphur.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Arctic & Antarctica 2</h4>
+                <p>Sulphur Detection from Melting Ice cores</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_aa:sulfurDioxide' %}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sulphur Detection From Melting Ice Cores</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- antartic -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/mass.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Antarctica 1</h4>
+                <p>Antarctic Mass</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_antartic:antarticmass' %}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Antarctic Mass</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/extent.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Antarctica 2</h4>
+                <p>Sea Ice Extent</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_antartic:AntarcticaRoutes'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sea Ice Extent</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/termo.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Antarctica 3</h4>
+                <p>Antarctic Temperature</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_antartic:antartic2'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Antarctic Temperature</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/hotpoint.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Antarctica 4</h4>
+                <p>Antarctic Hotpoint(NASA)</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_antartic:hotpoints'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Antarctic Hotpoints (NASA)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/radar.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Antarctica 5</h4>
+                <p>Ice Radar</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_antartic:iceradar'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Ice Radar</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/snow.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Antarctica 6</h4>
+                <p>Snow Accumulation</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_antartic:snow'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Snow Accumulation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arctic -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/climate.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Arctic 1</h4>
+                <p>Northen Cities Climate</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_arctic:climate'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Northen Cities Climate</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/e.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Arctic 2</h4>
+                <p>Sea Ice Extent</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_arctic:iceextent'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sea Ice Extent</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/alaska.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Arctic 3</h4>
+                <p>VSGS Alaska Streamgage </p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_arctic:streamgages'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>VSGS Alaska Streamgage</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/masking.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Arctic 4</h4>
+                <p>Sea Ice Image Masking</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_arctic:masking'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Sea Ice Image Masking</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/water.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Arctic 5</h4>
+                <p>Simpson Lagoon</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_arctic:simpsonlagoon'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Simpson Lagoon</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cl">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/sea.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Arctic 6</h4>
+                <p>Arctic Sea Routes</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_arctic:searoutes'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Arctic Sea Routes</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- animal -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/coral.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Animal 1</h4>
+                <p>Coral</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_animal:coral'%}">View the Dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Coral</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/bird.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Animal 2</h4>
+                <p>Giant Petrel Bird</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_animal:bird'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Giant Petrel Bird</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/penguin.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Animal 3</h4>
+                <p>Penguin</p>
+                <!-- <div class="portfolio-links"> -->
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_animal:gentoo'%}">Gentoo Penguin</a><br />
+                </p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_animal:chinstrap'%}">Chinstrap Penguin</a><br />
+                </p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_animal:adelie'%}">Adelie Penguin</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Penguin</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/polar-bear.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Animal 4</h4>
+                <p>Polar Bear</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_animal:blood'%}">Bear Blood</a><br />
+                </p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_animal:capSeq'%}">Bear Capture Sequence</a><br />
+                </p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_animal:abdTemp'%}">Bear Abdominal Temperature</a><br />
+                </p>
+
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Polar Bear</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- DNA -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/organism.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Molecular Biology 1</h4>
+                <p>Organism</p>
+
+                <a class="underline-btn" href="{% url 'pr_dna_rna:phytoplankton'%}">Pytoplankton</a><br />
+                </p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:iceKrill'%}">Ice Krill</a><br /></p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:bacteria'%}">Bacteria</a><br /></p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Organism</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/genome.png' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Molecular Biology 2</h4>
+                <p>Fungi</p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:Cdata'%}">14C and 13C Data</a><br /></p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:nucleotide'%}">Nucleotide Reads</a><br /></p>
+                <p><a class="underline-btn" href="{% url 'pr_dna_rna:edaphic'%}">Edaphic Factors</a><br /></p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Fungi</p>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- DISEASE -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-d">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/A.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Disease 1</h4>
+                <p>Influenza </p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_disease:bELISA'%}">bELISA (Blocking Enzyme-Linked
+                    Immunosorbent assay)</a><br />
+                </p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_disease:hi'%}">HI (Hemagglutination Inhibition)</a><br />
+                </p>
+              </div>
+
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Influenza</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-d">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/cyst.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Disease 2</h4>
+                <p>Cryptosporidium Oocyst and Giardia Cysts</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_disease:crypto_giardia'%}">View the Dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Cryptosporidium Oocyst and Giardia Cysts</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- POPULATION -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/pp.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Population1</h4>
+                <p>Population of Penguin</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_population:penguinpopu'%}">Population of Penguin in Polar
+                    Regions</a><br />
+                </p>>
+
+
+              </div>
+
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Population of Penguin</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/marine.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Population 2</h4>
+                <p>Marine Fungi</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_population:mfungi'%}">View the Dataset</a><br />
+                </p>>
+              </div>
+
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Marine Fungi</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/palmer.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Population 3</h4>
+                <p>Palmer Penguin</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_population:palmerIter'%}">Iter</a><br />
+                </p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_population:palmerSize'%}">Size</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Palmer Penguin</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- ECOSYSTEM -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/water.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Ecosystem 1</h4>
+                <p>Freshwater</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_ecosystem:freshwater'%}">View the Dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Freshwater</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/teres.jpg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Ecosystem 2</h4>
+                <p>Terrestial</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_ecosystem:terrestrial'%}">View the Dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Terrestial</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/water1.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Ecosystem 3</h4>
+                <p>Marine</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_ecosystem:marine'%}">View the Dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Marine</p>
+              </div>
+            </div>
+          </div>
+          <!-- PLANT -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/algae.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Plant 1</h4>
+                <p>Glacier Algae (Greenland)</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_plant:algae'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Glacier Algae (Greenland)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <img src="{% static 'images/portfolio/cold.jpeg' %}" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Plant 2</h4>
+                <p>Microbial Symbiants</p>
+                <p>
+                  <a class="underline-btn" href="{% url 'pr_plant:microbial'%}">View the dataset</a><br />
+                </p>
+              </div>
+              <div class="image-caption" style="text-align: center; color: white;">
+                <p>Microbial Symbiants</p>
+              </div>
+            </div>
+          </div>
+          <!-- END SECTION FOR PHOTO CARD -->
+        </div>
+      </div>
+      <p style="font-size: smaller; font-style: italic; padding: 10px 80px; text-align: right;">All photos are reserved
+        to <a href="https://www.pexels.com/" style="color: red;">pexels.com</a></p>
+    </section>
+    <!-- End Portfolio Section -->
+
+
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- End Counts Section -->
+
+
+
+
+
+
+    {%include 'team.html'%}
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Get in touch with us</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- Map container -->
+            <div class="map-container position-relative" style="height: 300px;">
+              <iframe style="border: 0; width: 100%; height: 100%;"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.996870414427!2d102.283134!3d6.1643303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaea54001bd690427%3A0xa5cc68e433b8c3bb!2sInstitut%20Kepintaran%20Buatan%20dan%20Data%20Raya%20(AIBIG)!5e0!3m2!1sen!2smy!4v1698819880045!5m2!1sen!2smy"
+                frameborder="0" allowfullscreen title="Google Map"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <!-- Contact Form -->
+            <div class="form-overlay position-absolute top-0 end-0 p-5 rounded">
+              <div id="contact-us-url" data-url="{{ contact_us_url }}"></div>
+              <form action="mailto: aibig@umk.edu.my?subject=PolarBytes:%20Contact%20Us%20Email" method="post"
+                role="form" class="django-form" enctype="text/plain">
+
+                {% csrf_token %}
+                <div class="text-center mb-4">
+                  <h3 class="fw-bold">Contact Us</h3>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <!-- Your Name -->
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Your Name</label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <!-- Your Email -->
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Your Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com"
+                        required>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Your Message -->
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea name="message" id="message" class="form-control" placeholder="Write your message here"
+                    required></textarea>
+                </div>
+
+                <div class="text-center">
+                  <!-- Send Message Button -->
+                  <button type="submit" class="btn btn-primary btn-md">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- End #main -->
+
+  {%include 'footer.html'%}
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <!-- <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script> -->
+
+  <!-- JS FILE CDN -->
+  <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
+    integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+    integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
+    integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.js"
+    integrity="sha512-7lBbuusIAUyaO2heHRa1NjHgSAXvhYau0iv4ZNnvnSN3gwGR6SjA4fHvjP4V6VyWwpOgv8yedI7HT+pg2aVyiw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.btn').click(function () {
+        $(this).toggleClass('active');
+        $('.box').toggleClass('open');
+        $('.team-members .profile').not($(this).closest('.profile')).toggleClass('shifted');
+      });
+    });
+  </script>>
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/contact.js' %}"></script>
+
+  <!--searching-->
+  <script>
+    function handleSearch(event) {
+      if (event.key === 'Enter') {
+        searchDataset();
+      }
+    }
+
+    function searchDataset() {
+      var searchKeyword = document.getElementById('search-input').value.toLowerCase();
+      var portfolioItems = document.querySelectorAll('.portfolio-item');
+      var firstVisibleItem = null;
+
+      portfolioItems.forEach(function (item) {
+        var itemText = item.textContent.toLowerCase();
+        if (itemText.includes(searchKeyword)) {
+          item.style.display = 'block';
+          if (!firstVisibleItem) {
+            firstVisibleItem = item;
+          }
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      if (firstVisibleItem) {
+        // Scroll to the first visible item
+        firstVisibleItem.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+  </script>
+
+
+
 
 </body>
 
