@@ -7,7 +7,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 app_name = 'mainpr'
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('polar', views.index, name='index'),
     path('machine-learning/', views.ml, name='ml'),
     path('portfolio-details/', views.portfolio_details, name='portfolio-details'),
     path('team/Dr.Akmal', views.drakmal, name='drakmal'),
