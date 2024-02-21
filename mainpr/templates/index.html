@@ -147,7 +147,12 @@
   {%include 'header.html'%}
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center justify-content-center">   
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <video autoplay muted loop id="bgVideo">
+      <source src="{% static 'images/bg4.mp4' %}" type="video/mp4">
+      <!-- Add additional source elements for different video formats if needed -->
+      Your browser does not support the video tag.
+    </video>
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-6 col-lg-8">
