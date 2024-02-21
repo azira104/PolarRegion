@@ -28,6 +28,7 @@ SECRET_KEY = '%sk%6wlh4@pu**6q83q&4lsk1w2$*_4201&jz)&)d&$=j1ire@'
 DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['10.21.12.60', 'localhost', '127.0.0.1','103.101.246.45']
+FORCE_SCRIPT_NAME = '/polar'
 
 
 # Application definition
