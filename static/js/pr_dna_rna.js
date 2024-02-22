@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#Cdata_table').DataTable({
       paging: true, // Enable pagination
+      dom: 'Bfrtip',
       buttons: [
         {
           extend: 'csv',
@@ -12,6 +13,7 @@ $(document).ready(function() {
     });
     $('#edaphic_table').DataTable({
         paging: true, // Enable pagination
+        dom: 'Bfrtip',
         buttons: [
           {
             extend: 'csv',
@@ -23,6 +25,7 @@ $(document).ready(function() {
       });
       $('#nucleotide_table').DataTable({
         paging: true, // Enable pagination
+        dom: 'Bfrtip',
         buttons: [
           {
             extend: 'csv',
