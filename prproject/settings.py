@@ -25,9 +25,15 @@ load_dotenv()
 SECRET_KEY = '%sk%6wlh4@pu**6q83q&4lsk1w2$*_4201&jz)&)d&$=j1ire@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+isdebug = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['10.21.12.60', 'localhost', '127.0.0.1','103.101.246.45']
+if isdebug == 'False':
+    DEBUG = False
+else:
+    DEBUG = True
+
+ALLOWED_HOSTS = ['10.21.12.60', 'localhost', '127.0.0.1','103.101.246.45','polarbytes.umk.edu.my','https://polarbytes.umk.edu.my']
+CSRF_TRUSTED_ORIGINS = ['https://*.polarbytes.umk.edu.my','https://*.127.0.0.1']
 
 
 # Application definition
