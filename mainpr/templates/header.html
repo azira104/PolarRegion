@@ -24,55 +24,6 @@
 
                     <ul>
                         <li class="dropdown">
-                            <a href="#"><span>Climatology</span> <i class="bi bi-chevron-right"></i></a>
-                            <ul>
-                                <li class="dropdown">
-                                    <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
-                                    <ul>
-                                        <li><a href="{% url 'pr_arctic:climate'%}">Northern Cities Climate</a></li>
-                                        <li><a href="{% url 'pr_arctic:iceextent'%}">Sea Ice Extent</a></li>
-                                        <li><a href="{% url 'pr_arctic:masking'%}">Sea Ice Image Masking </a></li>
-                                        <li><a href="{% url 'pr_arctic:streamgages'%}">VSGS Alaska Streamgages</a></li>
-                                        <li><a href="{% url 'pr_arctic:simpsonlagoon'%}">Simpson Lagoon</a></li>
-                                        <li><a href="{% url 'pr_arctic:searoutes'%}">Arctic Sea Routes</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                                    <ul>
-                                        <li><a href="{% url 'pr_antartic:antarticmass'%}">Antarctica Mass</a></li>
-                                        <li><a href="{% url 'pr_antartic:AntarcticaRoutes'%}">Sea Ice Extent</a></li>
-                                        <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
-                                        <li><a href="{% url 'pr_antartic:hotpoints'%}">Antarctic Hotpoints(NASA)</a>
-                                        </li>
-                                        <li><a href="{% url 'pr_antartic:iceradar'%}">Ice Radar</a></li>
-                                        <li><a href="{% url 'pr_antartic:snow'%}">Snow Accumulation</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
-                                    <ul>
-                                        <li><a href="{% url 'pr_aa:seaice'%}">Sea Ice Graph</a></li>
-                                        <li><a href="{% url 'pr_aa:sulfurDioxide'%}">Sulphur Detection from Melting Ice
-                                                Cores</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#"><span>Disease</span> <i class="bi bi-chevron-right"></i></a>
-                            <ul>
-                                <li class="dropdown">
-                                    <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
-                                    <ul>
-                                        <li><a href="{% url 'pr_disease:bELISA'%}">bELISA</a></li>
-                                        <li><a href="{% url 'pr_disease:hi'%}">HI</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{% url 'pr_disease:crypto_giardia'%}">Crypto & Giardia</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
                             <a href="#"><span>Biodiversity</span> <i class="bi bi-chevron-right"></i></a>
                             <ul>
                                 <li class="dropdown"><a href="#"><span>Population</span><i
@@ -133,6 +84,56 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Climatology</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><span>Arctic</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a href="{% url 'pr_arctic:climate'%}">Northern Cities Climate</a></li>
+                                        <li><a href="{% url 'pr_arctic:iceextent'%}">Sea Ice Extent</a></li>
+                                        <li><a href="{% url 'pr_arctic:masking'%}">Sea Ice Image Masking </a></li>
+                                        <li><a href="{% url 'pr_arctic:streamgages'%}">VSGS Alaska Streamgages</a></li>
+                                        <li><a href="{% url 'pr_arctic:simpsonlagoon'%}">Simpson Lagoon</a></li>
+                                        <li><a href="{% url 'pr_arctic:searoutes'%}">Arctic Sea Routes</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#"><span>Antarctica</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a href="{% url 'pr_antartic:antarticmass'%}">Antarctica Mass</a></li>
+                                        <li><a href="{% url 'pr_antartic:AntarcticaRoutes'%}">Sea Ice Extent</a></li>
+                                        <li><a href="{% url 'pr_antartic:antartic2'%}">Antarctica Temperature</a></li>
+                                        <li><a href="{% url 'pr_antartic:hotpoints'%}">Antarctic Hotpoints(NASA)</a>
+                                        </li>
+                                        <li><a href="{% url 'pr_antartic:iceradar'%}">Ice Radar</a></li>
+                                        <li><a href="{% url 'pr_antartic:snow'%}">Snow Accumulation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#"><span>Arctic & Antarctica</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a href="{% url 'pr_aa:seaice'%}">Sea Ice Graph</a></li>
+                                        <li><a href="{% url 'pr_aa:sulfurDioxide'%}">Sulphur Detection from Melting Ice
+                                                Cores</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Diseases</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#"><span>Influenza</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a href="{% url 'pr_disease:bELISA'%}">bELISA</a></li>
+                                        <li><a href="{% url 'pr_disease:hi'%}">HI</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'pr_disease:crypto_giardia'%}">Crypto & Giardia</a></li>
+                            </ul>
+                        </li>
+
                         <li class="dropdown">
                             <a href="#"><span>Molecular Biology</span> <i class="bi bi-chevron-right"></i></a>
                             <ul>
