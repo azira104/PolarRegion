@@ -148,8 +148,8 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
-    <video autoplay muted loop poster="/static/images/poster-image.jpg" id="bgVideo">
-      <source src="/static/images/bg4.mp4" type="video/mp4">
+    <video autoplay muted loop poster="{% static 'images/poster-image.jpg' %}" id="bgVideo">
+      <source src="{%static 'images/bg4.mp4' %}" type="video/mp4">
       <!-- Add additional source elements for different video formats if needed -->
       Your browser does not support the video tag.
     </video>
@@ -192,8 +192,8 @@
             <div class="gallery-container">
               <div class="gallery-row d-flex flex-row flex-wrap justify-content-center">
                 <div class="gallery-column d-flex flex-column">
-                  <img src="{% static 'images/slider/2.jpg' %}" class="img-fluid">
-                  <img src="{% static 'images/slider/1.jpg' %}" class="img-fluid">
+                  <img src="{% static 'images/slider/2.JPG' %}" class="img-fluid">
+                  <img src="{% static 'images/slider/1.JPG' %}" class="img-fluid">
                   <img src="{% static 'images/slider/3.jpg' %}" class="img-fluid">
 
                 </div>
@@ -214,7 +214,7 @@
               About the Website
             </h3>
             <div class="col-12 col-md-7 col-xl-9 text">
-              <p><span class="word-spacing">PolarBytes is an <strong>modern data platform</strong>dedicated
+              <p><span class="word-spacing">PolarBytes is an <strong>modern data platform</strong> dedicated
                   to providing <strong> comprehensive information</strong> about the Polar Regions. We offer<strong> a
                     collection of data </strong> sourced from reputable online repositories, along with<strong> data
                     visualizations </strong> that make the information easily accessible. </p>
