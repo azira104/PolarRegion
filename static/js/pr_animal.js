@@ -13,7 +13,7 @@ $(document).ready(function () {
         header: true,
         footer: true,
       },
-  
+      paging:true,
       dom: "Bfrtip",
       buttons: [
         {
@@ -34,7 +34,7 @@ $(document).ready(function () {
           header: true,
           footer: true,
         },
-    
+        paging: true,
         dom: "Bfrtip",
         buttons: [
           {
@@ -55,7 +55,7 @@ $(document).ready(function () {
           header: true,
           footer: true,
         },
-    
+        paging:true,
         dom: "Bfrtip",
         buttons: [
           {
@@ -76,7 +76,7 @@ $(document).ready(function () {
           header: true,
           footer: true,
         },
-    
+        paging:true,
         dom: "Bfrtip",
         buttons: [
           {
@@ -97,7 +97,7 @@ $(document).ready(function () {
           header: true,
           footer: true,
         },
-    
+        paging:true,
         dom: "Bfrtip",
         buttons: [
           {
@@ -118,7 +118,7 @@ $(document).ready(function () {
           header: true,
           footer: true,
         },
-    
+        paging:true,
         dom: "Bfrtip",
         buttons: [
           {
@@ -139,7 +139,7 @@ $(document).ready(function () {
           header: true,
           footer: true,
         },
-    
+        paging:true,
         dom: "Bfrtip",
         buttons: [
           {
@@ -160,7 +160,7 @@ $(document).ready(function () {
           header: true,
           footer: true,
         },
-    
+        paging:true,
         dom: "Bfrtip",
         buttons: [
           {

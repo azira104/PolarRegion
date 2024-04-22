@@ -33,3 +33,5 @@ urlpatterns = [
     path('', include ('pr_arctic.urls')),
     path('', include ('pr_antartic.urls')),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

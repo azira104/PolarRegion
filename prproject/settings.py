@@ -11,11 +11,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 from pathlib import Path
 import os
-
+from dotenv import load_dotenv
+import pymysql
+pymysql.version_info = (2, 0, 3, "final", 0)
+pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
+load_dotenv()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -23,9 +25,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%sk%6wlh4@pu**6q83q&4lsk1w2$*_4201&jz)&)d&$=j1ire@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+isdebug = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = []
+if isdebug == 'False':
+    DEBUG = False
+else:
+    DEBUG = True
+
+ALLOWED_HOSTS = ['10.21.12.60', 'localhost', '127.0.0.1','103.101.246.45','polarbytes.umk.edu.my','https://polarbytes.umk.edu.my']
+CSRF_TRUSTED_ORIGINS = ['https://*.polarbytes.umk.edu.my','https://*.127.0.0.1']
 
 
 # Application definition
@@ -86,9 +94,9 @@ WSGI_APPLICATION = 'prproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'polarregion',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST':'localhost',
         'PORT':'3306',
     }
@@ -131,7 +139,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = os.getenv('STATIC_URL')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
