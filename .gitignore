@@ -120,7 +120,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
+myvenv/
+myvenv/Scripts/
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -152,4 +153,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 static/images/bg5.mp4
+<<<<<<< HEAD
+=======
+/myvenv
+.myvenv/pyvenv.cfg
+>>>>>>> development
 /.myvenv

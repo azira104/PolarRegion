@@ -34,7 +34,8 @@ def haznirah(request):
     return render(request, 'haznirah.html')
 def azira(request):
     return render(request, 'azira.html')
-
+def ainin(request):
+    return render(request, 'ainin.html')
 def ml(request):
     return render(request, 'ml.html')
 

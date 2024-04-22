@@ -19,4 +19,5 @@ urlpatterns = [
     path('team/Dr.Sarahani',views.drsarahani, name='drsarahani'),
     path('team/Haznirah',views.haznirah, name='haznirah'),
     path('team/Azira',views.azira, name='azira'),
+    path('team/Ainin',views.ainin, name='ainin'),
 ]
