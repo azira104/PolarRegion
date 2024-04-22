@@ -1,7 +1,7 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
-<!--
+  <!--
      © 2024 Rohaizaazira, NurHaznirah, AIBIG
   -->
 
@@ -11,10 +11,9 @@
 
   <title>PolarBytes</title>
   <link rel="icon" type="image/x-icon" href="{% static 'images/logo/logo-pb1.png' %}" />
-  <meta name="description"
-    content="PolarBytes is a data repository focusing on the polar regions, including Antarctica and the Arctic. Explore our collection of data related to aibig, ypasm, and more.">
+  <meta name="description" content="PolarBytes is a modern data platform focusing on the polar regions, including Antarctica and the Arctic. Explore our collection of data related to aibig, ypasm, and more.">
   <meta name="keywords" content="aibig, ypasm, polar region, antarctica, arctic, umk, polarbytes, data repository">
-
+  
   <!-- Swipe -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -149,19 +148,18 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
-    <video autoplay muted loop poster="{% static 'images/poster-image.jpg' %}" id="bgVideo">
-      <source src="{%static 'images/bg4.mp4' %}" type="video/mp4">
+    <video autoplay muted loop poster="/static/images/poster-image.jpg" id="bgVideo">
+      <source src="/static/images/bg4.mp4" type="video/mp4">
       <!-- Add additional source elements for different video formats if needed -->
       Your browser does not support the video tag.
     </video>
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-6 col-lg-8">
-          <h1 style="font-size:30px;line-height: 25px;">Unlock insights into the dynamic polar environments and
-            contribute to the advancement of knowledge in polar sciences<span>.</span></h1>
+          <h1>Collection of Data in Polar Regions<span>.</span></h1>
           <h2>
-            Browse our extensive scientific data repository on the biodiversity, climatology, molecular biology and
-            diseases in one of Earth’s most fascinating and vital ecosystems.
+            This dataset encompasses information on climate, glaciological, oceanographic, ecological, geological data,
+            satellite imagery, and more.
           </h2>
         </div>
       </div>
@@ -194,8 +192,8 @@
             <div class="gallery-container">
               <div class="gallery-row d-flex flex-row flex-wrap justify-content-center">
                 <div class="gallery-column d-flex flex-column">
-                  <img src="{% static 'images/slider/2.JPG' %}" class="img-fluid">
-                  <img src="{% static 'images/slider/1.JPG' %}" class="img-fluid">
+                  <img src="{% static 'images/slider/2.jpg' %}" class="img-fluid">
+                  <img src="{% static 'images/slider/1.jpg' %}" class="img-fluid">
                   <img src="{% static 'images/slider/3.jpg' %}" class="img-fluid">
 
                 </div>
@@ -216,17 +214,17 @@
               About the Website
             </h3>
             <div class="col-12 col-md-7 col-xl-9 text">
-              <p><span class="word-spacing">PolarBytes Repository is an <strong>online data repository</strong>
-                  featuring meticulously
-                  curated <strong>collection of datasets</strong> sourced from various online scientific repositories,
-                  supplemented with
-                  <strong>informative data visualisations.</strong></p>
-              <p><span class="word-spacing">In partnership with Yayasan Penyelidikan Antartika Sultan Mizan (YPASM), our
-                  dedicated team is committed to compiling a <strong>comprehensive database about the polar regions.</strong> Our aim is
-                  to provide <strong>access to scientifically-backed, reliable data and accurate information </strong>essential for
-                  researchers, educators and anyone passionate about advancing knowledge in polar studies.</p>
+              <p><span class="word-spacing">PolarBytes is an <strong>modern data platform</strong>dedicated
+                  to providing <strong> comprehensive information</strong> about the Polar Regions. We offer<strong> a
+                    collection of data </strong> sourced from reputable online repositories, along with<strong> data
+                    visualizations </strong> that make the information easily accessible. </p>
+              <p><span class="word-spacing">Our goal is to provide <strong> reliable data </strong> from scientific
+                  studies and observations, ensuring that users have access to <strong>accurate information </strong>
+                  about the polar regions. Collaborating with Yayasan Penyelidikan Antartika Sultan Mizan, our team is
+                  committed to compiling a <strong>comprehensive database</strong> that serves as a valuable resource
+                  for researchers, educators, and anyone interested in the Polar Regions.</p>
             </div>
-
+            
           </div>
         </div>
       </div>
@@ -251,7 +249,7 @@
               <img src="{% static 'images/logo4.png' %}" class="img-fluid" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="{% static 'images/logo5.PNG' %}" class="img-fluid" alt="" />
+              <img src="{% static 'images/logo5.png' %}" class="img-fluid" alt="" />
             </div>
             <div class="swiper-slide">
               <img src="{% static 'images/logo6.png' %}" class="img-fluid" alt="" />
@@ -280,18 +278,19 @@
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>DATASETS</h2>
-          <p>BROWSE DATA COLLECTION</p>
+          <h2>Dataset</h2>
+          <p>Check our Dataset</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-20 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-b">Biodiversity</li>
               <li data-filter=".filter-cl">Climatology</li>
-              <li data-filter=".filter-d">Disease</li>
               <li data-filter=".filter-ml">Molecular Biology</li>
+              <li data-filter=".filter-b">Biodiversity</li>
+              <li data-filter=".filter-d">Disease</li>
+
             </ul>
           </div>
         </div>
@@ -307,7 +306,7 @@
                 <p>Sea Ice Graph</p>
                 <!-- <div class="portfolio-links"> -->
                 <p>
-                  <a class="underline-btn" href="{% url 'pr_aa:seaice'%}">View the dataset</a>
+                  <a class="{% url 'pr_aa:aa1'%}" href="#">View the dataset</a>
                   <br />
                 </p>
 
@@ -828,6 +827,8 @@
           <!-- END SECTION FOR PHOTO CARD -->
         </div>
       </div>
+      <p style="font-size: smaller; font-style: italic; padding: 10px 80px; text-align: right;">All photos are reserved
+        to <a href="https://www.pexels.com/" style="color: red;">pexels.com</a></p>
     </section>
     <!-- End Portfolio Section -->
 
