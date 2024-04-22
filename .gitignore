@@ -154,3 +154,5 @@ cython_debug/
 #.idea/
 static/images/bg5.mp4
 /myvenv
+.myvenv/pyvenv.cfg
+/.myvenv
