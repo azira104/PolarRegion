@@ -141,16 +141,121 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    /* Custom styling for popup form and overlay */
+    .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+#openFormButton {
+  position: fixed;
+  bottom: 100px; /* Gap from the bottom edge */
+  right: -38px;  /* Gap from the right edge */
+  transform: rotate(270deg); /* Rotate the button by 270 degrees */
+  z-index: 1000; /* Ensure the button stays above other content */
+  padding: 5px 5px;  /* Smaller padding for a smaller button */
+  font-size: 14px;  /* Smaller font size */
+  border-radius: 10px; /* Optional: rounded corners */
+  height: 60px; /* Fixed height for the button */
+  outline: none; /* Remove the default focus style */
+}
+
+.popup-form {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  max-height: 80%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: none;
+  overflow-y: auto; /* Enable scrolling */
+}
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid transparent;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-close {
+  position: absolute; /* Place it relative to the popup form container */
+  top: 10px; /* Distance from the top of the form */
+  right: 10px; /* Distance from the right of the form */
+  font-size: 3rem; /* Adjust size */
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  color: #000;
+}
+
+
+/* Larger form elements for better usability */
+.form-control-lg, .form-select {
+  padding: 2px 2px;
+  font-size: 1.2rem;
+  border-radius: 2px;
+}
+
+/* Style the labels */
+.form-label {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Submit Button */
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background-color: #444;
+}
+
+/* Add spacing to form elements */
+.gap-3 > * {
+  margin-bottom: 1rem;
+}
+  </style>
 </head>
 
 <body>
   {%include 'header.html'%}
 
   <!-- ======= Hero Section ======= -->
+   <!-- poster="{% static 'images/poster-image.jpg' %}" -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
-    <video autoplay muted loop poster="{% static 'images/poster-image.jpg' %}" id="bgVideo">
+    <video autoplay muted loop  id="bgVideo">
       <source src="{%static 'images/bg4.mp4' %}" type="video/mp4">
-      <!-- Add additional source elements for different video formats if needed -->
       Your browser does not support the video tag.
     </video>
     <div class="container" data-aos="fade-up">
@@ -182,7 +287,85 @@
   <!-- End Hero -->
 
   <main id="main">
+    <div class="container mt-5">
+      <!-- Button to open form -->
+      <button class="btn btn-primary" id="openFormButton">Leave a Feedback</button>
+    </div>
+    
+  <!-- Popup Form -->
+<div class="popup-overlay" id="popupOverlay"></div>
+<div class="popup-form card shadow-lg p-4 position-relative" id="popupForm" style="width: 90%; max-width: 600px;">
+  <!-- Close Button -->
+<!-- Close Button -->
+<button type="button" class="btn-close" id="closeFormButton" aria-label="Close">&times;</button>
 
+  <!-- Form Title -->
+  <h4 class="text-center mb-4 fw-bold">Customer Feedback Form</h4>
+
+  <!-- Form -->
+  <form id="feedbackForm" method="POST" action="{% url 'mainpr:send_feedback' %}" class="d-flex flex-column gap-3">
+    {% csrf_token %}
+
+    <!-- Name -->
+    <div class="row">
+        <!-- Name -->
+        <div class="col-md-6">
+            <label for="name" class="form-label fw-bold">Your Name</label>
+            <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+            <label for="email" class="form-label fw-bold">Your Email</label>
+            <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+    </div>
+
+    <!-- Type of User -->
+    <div>
+        <label for="userType" class="form-label fw-bold">What type of user are you?</label>
+        <input type="text" class="form-control form-control-lg" id="userType" name="userType" placeholder="e.g., student, researcher, business professional" required>
+    </div>
+
+    <!-- Easy Navigation -->
+    <div>
+        <label for="easyNavigation" class="form-label fw-bold">Was it easy to navigate and find the data you were looking for?</label>
+        <select class="form-select form-control-lg" id="easyNavigation" name="easyNavigation" required>
+            <option value="" disabled selected>Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+
+    <!-- Issues or Challenges -->
+    <div>
+        <label for="issues" class="form-label fw-bold">Did you encounter any issues or challenges while browsing the website?</label>
+        <textarea class="form-control form-control-lg" id="issues" name="issues" rows="3" placeholder="Write about any issues or challenges..."></textarea>
+    </div>
+
+    <!-- Additional Features -->
+    <div>
+        <label for="additionalFeatures" class="form-label fw-bold">What additional features would make Polarbytes more useful for you?</label>
+        <textarea class="form-control form-control-lg" id="additionalFeatures" name="additionalFeatures" rows="3" placeholder="Describe any features you would like to see..."></textarea>
+    </div>
+
+    <!-- Other Feedback -->
+    <div>
+        <label for="otherFeedback" class="form-label fw-bold">Do you have any other feedback or suggestions to improve Polarbytes?</label>
+        <textarea class="form-control form-control-lg" id="otherFeedback" name="otherFeedback" rows="3" placeholder="Write your suggestions here..."></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center mt-4">
+        <button type="submit" class="btn btn-dark btn-lg px-5">Submit Feedback</button>
+    </div>
+</form>
+
+</div>
+
+
+    
+  
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
@@ -933,7 +1116,7 @@
   <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- JS FILE CDN -->
-  <script src="{% static 'js/purecounter_vanilla.js' %}"></script>
+  <!-- <script src="{% static 'js/purecounter_vanilla.js' %}"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
     integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -1003,10 +1186,162 @@
         });
       }
     }
+// Get references to elements
+// JavaScript
+
+// Utility to manage auto-trigger storage
+let timeSpentInterval;  // Variable to hold the interval ID
+
+const AUTO_TRIGGER_KEY = 'feedbackFormTriggered';
+const SUBMITTED_KEY = 'feedbackFormSubmitted';
+const LAST_TRIGGER_TIME = 'lastTriggerTime';
+const TOTAL_TIME_SPENT_KEY = 'totalTimeSpent'; // Track total time spent in minutes
+const TRIGGER_INTERVAL_DAYS = 14; // Interval for retry if not submitted
+const TRIGGER_TIME_THRESHOLD = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+// Function to check if the form can auto-open
+const canAutoOpen = () => {
+  // Check if the user has already submitted
+  const submitted = localStorage.getItem(SUBMITTED_KEY);
+  if (submitted) return false;
+
+  // Check the last trigger time
+  const lastTrigger = localStorage.getItem(LAST_TRIGGER_TIME);
+  if (lastTrigger) {
+    const now = Date.now();
+    const intervalMs = TRIGGER_INTERVAL_DAYS * 24 * 60 * 60 * 1000; // Convert days to ms
+    return now - parseInt(lastTrigger, 10) > intervalMs;
+  }
+
+  // Allow trigger if no prior record
+  return true;
+};
+
+// Save the last trigger time
+const recordTriggerTime = () => {
+  localStorage.setItem(LAST_TRIGGER_TIME, Date.now());
+};
+
+// Reset the total time spent to 0 after triggering the form
+const resetTotalTimeSpent = () => {
+  localStorage.setItem(TOTAL_TIME_SPENT_KEY, '0');
+};
+
+// Track time spent
+const trackTimeSpent = () => {
+  const previousTimeSpent = parseInt(localStorage.getItem(TOTAL_TIME_SPENT_KEY) || '0', 10);
+  const newTimeSpent = previousTimeSpent + 1000; // Increment by 1 second (1000ms)
+  localStorage.setItem(TOTAL_TIME_SPENT_KEY, newTimeSpent);
+};
+
+// Function to handle form submission
+const handleFormSubmission = (event) => {
+  event.preventDefault();
+
+  // Simulate AJAX submission
+  const submitButton = event.target.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.innerHTML = `<span class="spinner"></span> Submitting...`;
+
+  // Simulate success
+  setTimeout(() => {
+    alert('Thank you for your feedback!');
+    closePopup();
+
+    // Mark as submitted
+    localStorage.setItem(SUBMITTED_KEY, true);
+    recordTriggerTime();
+
+    // Reset total time spent after successful submission
+    resetTotalTimeSpent();
+
+    // Clear the interval that tracks time spent
+    clearInterval(timeSpentInterval);
+
+    // Clear the form
+    event.target.reset();
+    submitButton.disabled = false;
+    submitButton.innerHTML = 'Submit';
+  }, 2000);
+};
+
+// Open the popup
+const openPopup = () => {
+  document.getElementById('popupForm').style.display = 'block';
+  document.getElementById('popupOverlay').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  recordTriggerTime();
+
+  // Reset total time spent after the popup is triggered
+  resetTotalTimeSpent();
+
+  // Clear the interval that tracks time spent
+  clearInterval(timeSpentInterval);
+};
+
+// Open the popup (alternative version)
+const openPopup2 = () => {
+  document.getElementById('popupForm').style.display = 'block';
+  document.getElementById('popupOverlay').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+};
+
+// Close the popup
+const closePopup = () => {
+  document.getElementById('popupForm').style.display = 'none';
+  document.getElementById('popupOverlay').style.display = 'none';
+  document.body.style.overflow = 'auto';
+  $('#openFormButton').removeClass('active');
+};
+
+// Combine triggers
+const initializeAutoOpenTriggers = () => {
+  if (!canAutoOpen()) return;
+
+  const totalTimeSpent = parseInt(localStorage.getItem(TOTAL_TIME_SPENT_KEY) || '0', 10);
+  if (totalTimeSpent >= TRIGGER_TIME_THRESHOLD && canAutoOpen()) {
+    openPopup();
+  }
+
+  // Start the interval to track time spent
+  timeSpentInterval = setInterval(trackTimeSpent, 1000);
+
+  // Trigger on scroll
+  window.addEventListener('scroll', () => {
+    const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    if (scrollPercentage > 50 && canAutoOpen()) { 
+      openPopup();
+    }
+  });
+
+  // Trigger on multiple pages viewed
+  const pageViews = parseInt(localStorage.getItem('pageViews') || 0, 10) + 1;
+  localStorage.setItem('pageViews', pageViews);
+  if (pageViews >= 5 && canAutoOpen()) { // Trigger after 5 page views
+    setTimeout(() => {
+      openPopup();
+    }, 60000);
+  }
+};
+
+// Initialize triggers and event listeners
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize auto-open triggers
+  initializeAutoOpenTriggers();
+
+  // Add event listeners for the popup
+  document.getElementById('closeFormButton').addEventListener('click', closePopup);
+  document.getElementById('popupOverlay').addEventListener('click', closePopup);
+
+  // Handle form submission
+  document.getElementById('feedbackForm').addEventListener('submit', handleFormSubmission);
+
+  // Add click listener for the "Leave a Feedback" button to open the form
+  document.getElementById('openFormButton').addEventListener('click', openPopup2);
+});
+
+
   </script>
-
-
-
 
 </body>
 

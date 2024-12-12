@@ -55,6 +55,12 @@ INSTALLED_APPS = [
     'pr_disease.apps.PrDiseaseConfig',
     'pr_arctic.apps.PrArcticConfig',
     'pr_antartic.apps.PrAntarticConfig',
+    'restapi.apps.RestapiConfig',
+    'rest_framework',
+    'drf_spectacular',
+
+
+
 ]
 
 MIDDLEWARE = [
@@ -68,7 +74,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'prproject.urls'
-
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -101,7 +109,17 @@ DATABASES = {
         'PORT':'3306',
     }
 }
+# Configure email backend (for development)
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# DEFAULT_FROM_EMAIL = 'webmaster@yourdomain.com'
 
+# For production, use your email service, like Gmail, SendGrid, etc.
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'tuaniqram0@gmail.com'
+EMAIL_HOST_PASSWORD = 'hpqreyachruonhye'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

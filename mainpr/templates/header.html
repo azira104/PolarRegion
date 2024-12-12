@@ -160,6 +160,14 @@
                 </li>
                 <li><a class="nav-link scrollto" href="{% url 'mainpr:ml'%}">Machine Learning</a></li>
                 <li><a class="nav-link scrollto" href="{% url 'mainpr:index' %}#team">Team</a></li>
+                <li class="dropdown">
+                    <a href="#API active"><span>API</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="{% url 'api'%}">REST API UI</a></li>
+                        <li><a href="{% url 'swagger-ui'%}">Swagger UI</a></li>
+                        <li><a href="{% url 'schema'%}">Download API schema</a></li>
+                    </ul>
+                </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>

@@ -20,4 +20,6 @@ urlpatterns = [
     path('team/Haznirah',views.haznirah, name='haznirah'),
     path('team/Azira',views.azira, name='azira'),
     path('team/Ainin',views.ainin, name='ainin'),
+    path('send_feedback/', views.send_feedback, name='send_feedback'),
+
 ]

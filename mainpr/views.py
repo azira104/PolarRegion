@@ -9,7 +9,78 @@ from django.core.mail import send_mail
 from django.conf import settings
 # from .forms import ContactForm
 from django.urls import reverse
+# views.py
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from email.mime.image import MIMEImage
+from django.utils.html import strip_tags
+from django.core.mail import EmailMultiAlternatives
+from django.contrib.staticfiles import finders
+from functools import lru_cache
+#import response
 
+from rest_framework import generics, permissions, status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+from.models import *
+@api_view(['GET'])
+def getroutes(request):
+    routes = [
+        'GET /api',]
+    
+    return Response(routes)
+@lru_cache()
+def get_logo_data():
+    with open(finders.find('images/logo/pbxaibig.png'), 'rb') as f:
+        logo_data = f.read()
+    return MIMEImage(logo_data)
+def send_feedback(request):
+    if request.method == 'POST':
+        # Get the form data
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        user_type = request.POST.get('userType')
+        easy_navigation = request.POST.get('easyNavigation')
+        issues = request.POST.get('issues', '')
+        additional_features = request.POST.get('additionalFeatures', '')
+        other_feedback = request.POST.get('otherFeedback', '')
+
+        # Prepare the context for the email
+        context = {
+            'name': name,
+            'user_type': user_type,
+            'easy_navigation': easy_navigation,
+            'issues': issues,
+            'additional_features': additional_features,
+            'other_feedback': other_feedback,
+        }
+        subject = 'New Feedback Received'
+        from_email = email
+        to = settings.EMAIL_HOST_USER
+
+        html_content = render_to_string('feedback_email.html', context)
+        text_content = strip_tags(html_content)
+
+        msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+        msg.attach_alternative(html_content, "text/html")
+        logo = get_logo_data()
+        logo.add_header('Content-ID', '<logo>')
+        msg.attach(logo)
+        try:
+            msg.send()
+        except Exception as e:
+            print(f"Error sending email: {e}")
+            return {'message': 'An error occurred while sending the email.', 'bg': 'bg-danger'}
+
+
+
+        # Return success response
+        return JsonResponse({'status': 'success', 'message': 'Thank you for your feedback!'})
+
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method.'})
 
 # Create your views here.
 def index(request):
