@@ -3,7 +3,7 @@
 
 <head>
   <link rel="stylesheet" type="text/css" hs-webfonts="true" href="https://fonts.googleapis.com/css?family=Lato|Lato:i,b,bi">
-  <title>Email template</title>
+  <title>FeedBack</title>
   <meta property="og:title" content="Email template">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,13 +104,13 @@
     <table role="presentation" border="0" cellpadding="0" cellspacing="10px" style="padding: 30px 30px 30px 60px;">
       <tr>
         <td>
-          <h2>Feedback from {{ name }}, {{{{ user_type }}}}</h2>
+          <h2>Feedback from {{ name }}, {{ user_type }}</h2>
           <p>We hope this message finds you well. Below is the feedback provided:</p>
           <p><strong>Feedback details:</strong></p>
           <table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%" style="border-collapse: collapse; margin: 30px 0px; font-size: 16px;">
             <tr style="background-color: #F5F8FA;">
-              <th align="left" style="padding: 15px; color: #253342; font-weight: bold; border-bottom: 2px solid #00A4BD;">Category</th>
-              <th align="left" style="padding: 15px; color: #253342; font-weight: bold; border-bottom: 2px solid #00A4BD;">Details</th>
+              <th align="left" style="padding: 15px; color: #253342; font-weight: bold; border-bottom: 2px solid #00A4BD; width: 40%;">Category</th>
+              <th align="left" style="padding: 15px; color: #253342; font-weight: bold; border-bottom: 2px solid #00A4BD; width: 60%;">Details</th>
             </tr>
             <tr style="background-color: #FFFFFF;">
               <td style="padding: 15px; border-bottom: 1px solid #E8E8E8;"><strong>Easy Navigation</strong></td>
@@ -118,7 +118,7 @@
             </tr>
             <tr style="background-color: #F9FAFB;">
               <td style="padding: 15px; border-bottom: 1px solid #E8E8E8;"><strong>Issues or Challenges</strong></td>
-              <td style="padding: 15px; border-bottom: 1px solid #E8E8E8;">{{ issues_or_challenges }}</td>
+              <td style="padding: 15px; border-bottom: 1px solid #E8E8E8;">{{ issues }}</td>
             </tr>
             <tr style="background-color: #FFFFFF;">
               <td style="padding: 15px; border-bottom: 1px solid #E8E8E8;"><strong>Additional Features</strong></td>

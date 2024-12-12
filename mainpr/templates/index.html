@@ -165,6 +165,49 @@
   height: 60px; /* Fixed height for the button */
   outline: none; /* Remove the default focus style */
 }
+#toast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 20px;  /* Position from the top */
+    right: 20px;  /* Position from the right */
+    z-index: 1000;
+}
+
+.toast {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fade-in 0.3s ease-in-out;
+    max-width: 300px;  /* Optional: Restrict max width of toast */
+    word-wrap: break-word;
+}
+
+.toast.success {
+    background-color: #4caf50;
+}
+
+.toast.error {
+    background-color: #f44336;
+}
+
+.toast.info {
+    background-color: #2196f3;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);  /* Toast comes from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .popup-form {
   position: fixed;
@@ -1236,33 +1279,88 @@ const trackTimeSpent = () => {
 
 // Function to handle form submission
 const handleFormSubmission = (event) => {
-  event.preventDefault();
+    event.preventDefault(); // Prevent the default form submission
 
-  // Simulate AJAX submission
-  const submitButton = event.target.querySelector('button[type="submit"]');
-  submitButton.disabled = true;
-  submitButton.innerHTML = `<span class="spinner"></span> Submitting...`;
+    const submitButton = event.target.querySelector('button[type="submit"]');
 
-  // Simulate success
-  setTimeout(() => {
-    alert('Thank you for your feedback!');
-    closePopup();
+    // Disable the button and show the spinner
+    submitButton.disabled = true;
+    submitButton.innerHTML = `
+        <span class="spinner"></span> Submitting...
+    `;
 
-    // Mark as submitted
-    localStorage.setItem(SUBMITTED_KEY, true);
-    recordTriggerTime();
+    // Create a FormData object from the form
+    const formData = new FormData(event.target);
 
-    // Reset total time spent after successful submission
-    resetTotalTimeSpent();
+    // Send the form data to the server using AJAX (Fetch API)
+    fetch('/send_feedback/', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value // Add CSRF token
+        }
+    })
+        .then(response => {
+            if (response.ok) {
+                // Mark as submitted to avoid re-triggering
+                localStorage.setItem(SUBMITTED_KEY, true);
 
-    // Clear the interval that tracks time spent
-    clearInterval(timeSpentInterval);
+                // Record the trigger time
+                recordTriggerTime();
 
-    // Clear the form
-    event.target.reset();
-    submitButton.disabled = false;
-    submitButton.innerHTML = 'Submit';
-  }, 2000);
+                // Reset total time spent
+                resetTotalTimeSpent();
+
+                // Clear the interval tracking time spent
+                clearInterval(timeSpentInterval);
+
+                // Reset the form
+                document.getElementById('feedbackForm').reset();
+
+                // Close the popup form
+                closePopup();
+
+                // Show toast notification
+                showToast('Thank you for your feedback!', 'success');
+            } else {
+                showToast('There was an error submitting your feedback.', 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showToast('There was an error submitting your feedback.', 'error');
+        })
+        .finally(() => {
+            // Re-enable the button and restore its original text
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Submit';
+        });
+};
+
+
+const showToast = (message, type = 'info') => {
+    const toastContainer = document.getElementById('toast-container') || createToastContainer();
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+
+    // Auto-remove the toast after 3 seconds
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+
+    toastContainer.appendChild(toast);
+};
+
+const createToastContainer = () => {
+    const container = document.createElement('div');
+    container.id = 'toast-container';
+    container.style.position = 'fixed';
+    container.style.bottom = '20px';
+    container.style.right = '20px';
+    container.style.zIndex = '1000';
+    document.body.appendChild(container);
+    return container;
 };
 
 // Open the popup
@@ -1274,9 +1372,6 @@ const openPopup = () => {
 
   // Reset total time spent after the popup is triggered
   resetTotalTimeSpent();
-
-  // Clear the interval that tracks time spent
-  clearInterval(timeSpentInterval);
 };
 
 // Open the popup (alternative version)
@@ -1303,8 +1398,7 @@ const initializeAutoOpenTriggers = () => {
     openPopup();
   }
 
-  // Start the interval to track time spent
-  timeSpentInterval = setInterval(trackTimeSpent, 1000);
+  setInterval(trackTimeSpent, 1000);
 
   // Trigger on scroll
   window.addEventListener('scroll', () => {
@@ -1339,7 +1433,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add click listener for the "Leave a Feedback" button to open the form
   document.getElementById('openFormButton').addEventListener('click', openPopup2);
 });
-
 
   </script>
 
