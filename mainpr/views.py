@@ -107,8 +107,24 @@ def azira(request):
     return render(request, 'azira.html')
 def ainin(request):
     return render(request, 'ainin.html')
+
 def ml(request):
-    return render(request, 'ml.html')
+    selected_option = request.GET.get('option', None)
+    title = "Machine Learning - Polar Region"
+    if selected_option == 'microbial_symbionts':
+        title = "Classification Plant Tolerance to Chiling and Freezing Condition using Support Vector Machine (SVM)"
+    elif selected_option == 'northern_cities_climate':
+        title = "Analysis of Temperature Change in Artic Cities"
+    elif selected_option == 'crypto_giardia':
+        title = "Analyzing Cryptosporidium and Giardia in Arctic Wildlife: Data Visualization"
+    elif selected_option == 'fungi':
+        title = "Predicting Fungal Abundance in Soil Samples Based on Edaphic Factors Using Random Forest"
+    
+    context = {
+        'selected_option': selected_option,
+        'title': title,
+    }
+    return render(request, 'ml.html', context)
 
 def portfolio_details(request):
     return render(request, 'portfolio-details.html')

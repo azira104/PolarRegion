@@ -18,7 +18,7 @@
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet" />
 
   <!-- Hover -->
@@ -85,8 +85,18 @@
 
 <body>
   {%include 'header.html'%}
-  <h1 id="introduction">Classification Plant Tolerance to Chiling and Freezing Condition using Support Vector Machine (SVM)</h1>
-  {%include 'pr_plant_microbialSymbionts.html'%}
+  <h1 id="introduction">{{title}}</h1>
+{% if selected_option == 'microbial_symbionts' %}
+  {% include 'pr_plant_microbialSymbiontsv1.html' %}
+{% elif selected_option == 'northern_cities_climate' %}
+  {% include 'pr_arctic_climate.html' %}
+{% elif selected_option == 'crypto_giardia' %}
+  {% include 'pr_disease_crypto_giardia.html' %}
+{% elif selected_option == 'fungi' %}
+  {% include 'mergeAdaphicCarbon.html' %}
+{% else %}
+  <p>No content available. Please select an option from the menu.</p>
+{% endif %}
     
     
 

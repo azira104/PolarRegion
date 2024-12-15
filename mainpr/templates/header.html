@@ -18,7 +18,6 @@
             <ul>
                 <li><a class="nav-link scrollto " href="{% url 'mainpr:index'%}">Home</a></li>
                 <li><a class="nav-link scrollto" href="{% url 'mainpr:index' %}#about">About</a></li>
-
                 <li class="dropdown">
                     <a href="#portfolio active"><span>Dataset</span> <i class="bi bi-chevron-down"></i></a>
 
@@ -158,7 +157,35 @@
                         </li>
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto" href="{% url 'mainpr:ml'%}">Machine Learning</a></li>
+                <li class="dropdown">
+                    <a href="#portfolio active"><span>Machine Learning</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="#"><span>Biodiversity</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="{% url 'mainpr:ml' %}?option=microbial_symbionts">Microbial symbionts</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Climatology</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="{% url 'mainpr:ml' %}?option=northern_cities_climate">Northern Cities Climate</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Diseases</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="{% url 'mainpr:ml' %}?option=crypto_giardia">Cryptosporidium and Giardia</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Molecular Biology</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="{% url 'mainpr:ml' %}?option=fungi">Fungi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li><a class="nav-link scrollto" href="{% url 'mainpr:index' %}#team">Team</a></li>
                 <li class="dropdown">
                     <a href="#API active"><span>API</span> <i class="bi bi-chevron-down"></i></a>
