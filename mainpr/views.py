@@ -41,7 +41,7 @@ def send_feedback(request):
     if request.method == 'POST':
         # Get the form data
         name = request.POST.get('name')
-        email = request.POST.get('email')
+        email = request.POST.get('email')  # User's email
         user_type = request.POST.get('userType')
         easy_navigation = request.POST.get('easyNavigation')
         issues = request.POST.get('issues', '')
@@ -58,29 +58,37 @@ def send_feedback(request):
             'other_feedback': other_feedback,
         }
         subject = 'New Feedback Received'
-        from_email = email
-        to = settings.EMAIL_HOST_USER
+        from_email = settings.EMAIL_HOST_USER  # Use your configured mail server address
+        to = settings.EMAIL_HOST_USER          # Feedback recipient email
 
+        # Render email content
         html_content = render_to_string('feedback_email.html', context)
         text_content = strip_tags(html_content)
 
+        # Create the email object
         msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
         msg.attach_alternative(html_content, "text/html")
+
+        # Add reply-to header with user's email
+        if email:
+            msg.reply_to = [email]  # Ensure the user's email is easy to reply to
+
+        # Attach a logo
         logo = get_logo_data()
         logo.add_header('Content-ID', '<logo>')
         msg.attach(logo)
+
         try:
             msg.send()
         except Exception as e:
             print(f"Error sending email: {e}")
-            return {'message': 'An error occurred while sending the email.', 'bg': 'bg-danger'}
-
-
+            return JsonResponse({'status': 'error', 'message': 'An error occurred while sending the email.', 'bg': 'bg-danger'})
 
         # Return success response
         return JsonResponse({'status': 'success', 'message': 'Thank you for your feedback!'})
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request method.'})
+
 
 # Create your views here.
 def index(request):
