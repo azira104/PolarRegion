@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\polar_pr\PolarRegion\hazEnv"
+VIRTUAL_ENV="C:\Users\ir40c\github\PolarRegion\hazEnv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
