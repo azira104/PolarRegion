@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Visitor Analytics | PolarBytes</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/logo-pb1.png' %}" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+  {% include 'header.html' %}
+
+  <main id="main" class="visitor-analytics-page">
+    <section class="analytics-hero">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>Analytics</h2>
+          <p>Website Visitor Overview</p>
+        </div>
+
+        <div class="row g-4 analytics-grid">
+          <div class="col-lg-3 col-md-6">
+            <div class="analytics-card summary-card">
+              <span class="label">Total visitors</span>
+              <strong>{{ total_visitors }}</strong>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="analytics-card summary-card">
+              <span class="label">Page views</span>
+              <strong>{{ total_page_views }}</strong>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="analytics-card summary-card">
+              <span class="label">Visitors today</span>
+              <strong>{{ visitors_today }}</strong>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="analytics-card summary-card">
+              <span class="label">Visitors this week</span>
+              <strong>{{ visitors_this_week }}</strong>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="analytics-card summary-card">
+              <span class="label">Visitors this month</span>
+              <strong>{{ visitors_this_month }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="analytics-details">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="analytics-card panel-card">
+              <h3>Most visited pages</h3>
+              <div class="metric-list">
+                {% for page, count in most_visited_pages %}
+                  <div class="metric-row">
+                    <div class="metric-head">
+                      <span>{{ page }}</span>
+                      <span>{{ count }}</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-bar" style="width: {% widthratio count total_page_views 100 %}%;"></div>
+                    </div>
+                  </div>
+                {% empty %}
+                  <p>No page statistics are available yet.</p>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="analytics-card panel-card">
+              <h3>Visitor locations</h3>
+              <div class="metric-list">
+                {% for country, count in top_countries %}
+                  <div class="metric-row">
+                    <div class="metric-head">
+                      <span>{{ country }}</span>
+                      <span>{{ count }}</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-bar progress-accent" style="width: {% widthratio count total_visitors 100 %}%;"></div>
+                    </div>
+                  </div>
+                {% empty %}
+                  <p>No location statistics are available yet.</p>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="analytics-card panel-card">
+              <h3>Device types</h3>
+              <ul class="data-list">
+                {% for device, count in top_devices %}
+                  <li><span>{{ device|title }}</span><strong>{{ count }}</strong></li>
+                {% empty %}
+                  <li><span>No device data yet</span><strong>0</strong></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="analytics-card panel-card">
+              <h3>Traffic sources</h3>
+              <ul class="data-list">
+                {% for source, count in top_sources %}
+                  <li><span>{{ source|title }}</span><strong>{{ count }}</strong></li>
+                {% empty %}
+                  <li><span>No traffic sources yet</span><strong>0</strong></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="analytics-card panel-card">
+              <h3>Summary</h3>
+              <div class="summary-box">
+                <p>Current sessions are being tracked with lightweight middleware and stored in the database for reporting.</p>
+                <small>Designed to match the PolarBytes style and remain mobile-friendly.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>

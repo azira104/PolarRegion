@@ -8,6 +8,7 @@ app_name = 'mainpr'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('visitor-analytics/', views.visitor_analytics, name='visitor_analytics'),
     path('machine-learning/', views.ml, name='ml'),
     path('portfolio-details/', views.portfolio_details, name='portfolio-details'),
     path('team/Dr.Akmal', views.drakmal, name='drakmal'),
